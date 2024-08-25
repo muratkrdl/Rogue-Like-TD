@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Tower
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: MainLevel
+    uniqueID: 2844363481
+    locked: 0
+  - name: LevelDetails1
+    uniqueID: 2740649695
+    locked: 0
+  - name: LevelDetails2
+    uniqueID: 1742628647
+    locked: 0
+  - name: LevelDetails3
+    uniqueID: 2902984627
+    locked: 0
+  - name: Enemies
+    uniqueID: 1055387437
+    locked: 0
+  - name: Player
+    uniqueID: 1088397577
+    locked: 0
+  - name: Towers
+    uniqueID: 3674150541
+    locked: 0
+  - name: Skills
+    uniqueID: 2851050805
+    locked: 0
+  - name: FX
+    uniqueID: 2158933099
+    locked: 0
+  - name: UI
+    uniqueID: 1048535633
+    locked: 0
