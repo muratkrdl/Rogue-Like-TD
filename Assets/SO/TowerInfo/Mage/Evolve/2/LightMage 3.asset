@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27b9f301155fbd344912f33d706ff910, type: 3}
+  m_Name: LightMage 3
+  m_EditorClassIdentifier: 
+  towercode: 7
+  towerImageIcon: {fileID: 21300000, guid: c5b21118253064149b0400a342c88aba, type: 3}
+  towerIcon: {fileID: 1990215080, guid: 5b3dcab5622c5064187c2b67c0d5ea6e, type: 3}
+  Name: LightMageIII
+  maxHealth: 100
+  damageType: 2
+  BaseDamageRange: {x: 6, y: 8}
+  DamageTypeColor: {r: 0.47058824, g: 0, b: 1, a: 1}
+  towerCost: 33
+  sellPrice: 333
+  Range: 5
+  Description: Using mage to kill enemy

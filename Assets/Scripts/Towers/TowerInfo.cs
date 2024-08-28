@@ -15,6 +15,7 @@ public class TowerInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     [SerializeField] TextMeshProUGUI towerCostText;
     [SerializeField] Image rangeCircle;
     [SerializeField] Image towerIcon;
+    [SerializeField] Image towerImageIcon;
 
     [SerializeField] GameObject InfosParent;
 
@@ -32,6 +33,8 @@ public class TowerInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         descriptionText.text = towerInfoSO.Description;
         towerCostText.text = towerInfoSO.towerCost.ToString();
         towerIcon.sprite = towerInfoSO.towerIcon;
+        if(towerImageIcon != null)
+            towerImageIcon.sprite = towerInfoSO.towerImageIcon;
     }
 
     public void SetTowerInfoSo(TowerInfoSo newInfo)
@@ -48,6 +51,11 @@ public class TowerInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public void OnPointerExit(PointerEventData eventData)
     {
         SetInfoParentObject(false);
+    }
+
+    public void OnClick_SetTowerCodeOnTowerInfoKeeper()
+    {
+        GetComponentInParent<TowerInfoKeeper>().ClickedTowerCode = towerInfoSO.towercode;
     }
 
     public void SetInfoParentObject(bool value)

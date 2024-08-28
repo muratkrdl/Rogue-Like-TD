@@ -8,8 +8,6 @@ public class PlaceTower : MonoBehaviour
     [SerializeField] PlaceTowerAnimation placeTowerAnimation;
     [SerializeField] LevelUpTower levelUpTower;
 
-    [SerializeField] Image placeTowerCanvas;
-
     [SerializeField] Image levelUpTowerCanvas;
 
     [SerializeField] GameObject[] towers;
@@ -17,33 +15,55 @@ public class PlaceTower : MonoBehaviour
     void OnMouseDown() 
     {
         if(MainTowerManager.Instance.GetIsIn) return;
-
         placeTowerAnimation.ChangeAnimation();
         InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { towerInfoSo1 = towerInfoKeeper.GetCurrentTowerInfo });
     }
 
-    public void OnClick_BuildTower(int i)
+    public void OnClick_BuildTower()
     {
-        TowerInfoSo clickedTowerInfoSO = towerInfoKeeper.GetTowerInfoSo(i, 1);
+        TowerInfoSo clickedTowerInfoSO = towerInfoKeeper.GetTowerInfoSo(towerInfoKeeper.ClickedTowerCode, 1);
         if(!Bank.Instance.CanUseMoney(clickedTowerInfoSO.towerCost)) return;
         
         Bank.Instance.OnChangeMoneyAmount?.Invoke(this, new() { amount = -clickedTowerInfoSO.towerCost } );
 
+        placeTowerAnimation.CloseAnimation();
         OnClick_ChangeLevelUpCanvas();
 
-        Animator clickedTowersAnimator = towers[i].GetComponentInChildren<Animator>();
+        Animator clickedTowersAnimator;
+        string choosenAnimName = ConstStrings.TOWER_LEVEL_UP;
 
-        towers[i].SetActive(true);
-        clickedTowersAnimator.SetTrigger(ConstStrings.TOWER_LEVEL_UP);
-        towerInfoKeeper.SetCurrentTowerInfo(i, 1);
+        if(towerInfoKeeper.ClickedTowerCode <= 3)
+        {
+            clickedTowersAnimator = towers[towerInfoKeeper.ClickedTowerCode].GetComponent<Animator>();
+            towers[towerInfoKeeper.ClickedTowerCode].SetActive(true);
+        }
+        else
+        {
+            TowerChange closeTowerChange = towers[towerInfoKeeper.GetCurrentTowerCode].GetComponent<TowerChange>();
+            clickedTowersAnimator = closeTowerChange.GetOpenTower.GetComponent<Animator>();
+            closeTowerChange.ChangeTower();
+            if(towerInfoKeeper.ClickedTowerCode % 2 == 0)
+            {
+                choosenAnimName = ConstStrings.TOWER_LEVEL_UP_EVOLVE1;
+            }
+            else
+            {
+                choosenAnimName = ConstStrings.TOWER_LEVEL_UP_EVOLVE2;
+            }
+
+            GetComponentInChildren<EvolvedBuildAnim>().PlayBuildAnim();
+        }
+
+        clickedTowersAnimator.SetTrigger(choosenAnimName);
+        towerInfoKeeper.CurrentTowerLevel = 1;
+        towerInfoKeeper.SetCurrentTowerInfo(towerInfoKeeper.ClickedTowerCode, towerInfoKeeper.CurrentTowerLevel);
         levelUpTower.UpdateTowerCostText();
         levelUpTower.SetAnimator = clickedTowersAnimator;
     }
 
     void OnClick_ChangeLevelUpCanvas()
     {
-        placeTowerCanvas.gameObject.SetActive(false);
-        levelUpTowerCanvas.gameObject.SetActive(true);
+        GetComponent<BaseTowerPanelKeeper>().OpenCanvas(levelUpTowerCanvas);
         Invoke(nameof(ForInvokeSpriteRenderer), 1.5f);
     }
 

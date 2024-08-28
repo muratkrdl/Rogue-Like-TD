@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewTower", menuName = "TowerInfoSO")]
 public class TowerInfoSo : ScriptableObject
 {
+    public int towercode;
     public Sprite towerImageIcon;
     public Sprite towerIcon;
     public string Name;
@@ -20,5 +21,6 @@ public enum DamageType
 {
     none,
     physical,
-    magic
+    magic,
+    truedamage
 }
