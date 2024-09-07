@@ -97,4 +97,12 @@ public class TowerInfoKeeper : MonoBehaviour
         return returnTowerInfoSO;
     }
 
+    public void ResetAllValues()
+    {
+        currentTowerInfo = null;
+        currentTowerLevel = 1;
+        currentTowerCode = 0;
+        clickedTowerCode = 0;
+    }
+
 }

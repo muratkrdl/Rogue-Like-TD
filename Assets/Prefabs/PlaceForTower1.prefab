@@ -4227,7 +4227,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4, y: 5.3333335}
+  m_Size: {x: 5.340287, y: 4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -9419,6 +9419,12 @@ MonoBehaviour:
   towerInfoKeeper: {fileID: 3576927315637164909}
   placeTowerAnimation: {fileID: 7809519412660083193}
   levelUpTower: {fileID: 8306796489310481619}
+  towerChanges:
+  - {fileID: 2727482949341953650}
+  - {fileID: 5448555865589397901}
+  - {fileID: 7507854482381805702}
+  - {fileID: 3578671481824395556}
+  placeTowerCanvas: {fileID: 3488325394498478544}
   levelUpTowerCanvas: {fileID: 1422587025611173543}
   towers:
   - {fileID: 3479069896582846160}

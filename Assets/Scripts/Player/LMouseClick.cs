@@ -14,6 +14,16 @@ public class LMouseClick : MonoBehaviour
 
     RaycastHit2D hit;
 
+    PlaceTower lastClickedTower;
+
+    public PlaceTower GetLastClickedTower
+    {
+        get
+        {
+            return lastClickedTower;
+        }
+    }
+
     void Awake() 
     {
         Instance = this;    
@@ -30,6 +40,14 @@ public class LMouseClick : MonoBehaviour
             if(hit.collider == null)
             {
                 CloseEverything();
+                lastClickedTower = null;
+            }
+            else
+            {
+                if(hit.collider.TryGetComponent<PlaceTower>(out var clickedTower))
+                {
+                    lastClickedTower = clickedTower;
+                }
             }
         }
     }

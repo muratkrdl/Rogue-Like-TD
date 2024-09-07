@@ -29,4 +29,9 @@ public class EvolvedBuildAnim : MonoBehaviour
         GetComponent<Animator>().SetTrigger(ConstStrings.TOWER_LEVEL_UP);
     }
 
+    public void PlayDestroyAnim()
+    {
+        GetComponent<Animator>().SetTrigger(ConstStrings.BUILD_TOWER_ANIM_DESTROY);
+    }
+
 }

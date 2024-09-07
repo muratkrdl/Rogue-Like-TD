@@ -92,6 +92,8 @@ public class LevelUpTower : MonoBehaviour
             levelUpTowerIcon.rectTransform.localPosition = new(levelUpTowerIcon.rectTransform.localPosition.x, evolvedTowerIconTransformY);
             return;
         }
+
+        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { isMainTower = false, towerInfoSo1 = towerInfoKeeper.GetCurrentTowerInfo } );
         UpdateTowerCostText();
     }
 
@@ -108,6 +110,14 @@ public class LevelUpTower : MonoBehaviour
         TowerInfoSo nextLevelTowerInfo = towerInfoKeeper.GetTowerInfoSo(towerInfoKeeper.GetCurrentTowerCode, towerInfoKeeper.CurrentTowerLevel + 1);
         costText.text = nextLevelTowerInfo.towerCost.ToString();
         levelUpTowerInfo.SetTowerInfoSo(nextLevelTowerInfo);
+    }
+
+    public void ResetAllValues()
+    {
+        SetAnimator = null;
+        levelUpTowerIcon.rectTransform.sizeDelta = new(initialNormalTowerIconX, initialNormalTowerIconY);
+        levelUpTowerIcon.rectTransform.localPosition = new(levelUpTowerIcon.rectTransform.localPosition.x, initialNormalTowerIconTransformY);
+        isTowerFull = false;
     }
 
 }

@@ -20,4 +20,11 @@ public class TowerChange : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void Reset()
+    {
+        if(!openTower.activeSelf) return;
+        openTower.SetActive(false);
+        openTower.GetComponent<Animator>().SetTrigger(ConstStrings.TOWER_RESET);
+    }
+
 }

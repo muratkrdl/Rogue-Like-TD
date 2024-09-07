@@ -60,13 +60,21 @@ public class InfoPanel : MonoBehaviour
 
         infoIcon.sprite = e.towerInfoSo1.towerImageIcon;
         infoName.text = e.towerInfoSo1.Name;
+
         // heartText.text = getcomponent currenthealth
+
         damageText.text = e.towerInfoSo1.BaseDamageRange.x.ToString() + "-" + e.towerInfoSo1.BaseDamageRange.y.ToString();
         damageText.color = e.towerInfoSo1.DamageTypeColor;
 
         sellButton.gameObject.SetActive(!e.isMainTower);
         getInOutButton.gameObject.SetActive(e.isMainTower);
         sellPriceText.text = e.towerInfoSo1.sellPrice.ToString();
+    }
+
+    public void OnClick_SellButton()
+    {
+        LMouseClick.Instance.GetLastClickedTower.ResetAllValues();
+        Bank.Instance.OnChangeMoneyAmount?.Invoke(this, new() { amount = currentTowerInfoSO.sellPrice } );
     }
 
     public void OnClick_InOut()

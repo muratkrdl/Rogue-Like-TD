@@ -8,6 +8,9 @@ public class PlaceTower : MonoBehaviour
     [SerializeField] PlaceTowerAnimation placeTowerAnimation;
     [SerializeField] LevelUpTower levelUpTower;
 
+    [SerializeField] TowerChange[] towerChanges;
+
+    [SerializeField] Image placeTowerCanvas;
     [SerializeField] Image levelUpTowerCanvas;
 
     [SerializeField] GameObject[] towers;
@@ -54,6 +57,8 @@ public class PlaceTower : MonoBehaviour
             GetComponentInChildren<EvolvedBuildAnim>().PlayBuildAnim();
         }
 
+        clickedTowersAnimator.ResetTrigger(ConstStrings.TOWER_RESET);
+
         clickedTowersAnimator.SetTrigger(choosenAnimName);
         towerInfoKeeper.CurrentTowerLevel = 1;
         towerInfoKeeper.SetCurrentTowerInfo(towerInfoKeeper.ClickedTowerCode, towerInfoKeeper.CurrentTowerLevel);
@@ -64,12 +69,37 @@ public class PlaceTower : MonoBehaviour
     void OnClick_ChangeLevelUpCanvas()
     {
         GetComponent<BaseTowerPanelKeeper>().OpenCanvas(levelUpTowerCanvas);
-        Invoke(nameof(ForInvokeSpriteRenderer), 1.5f);
+        Invoke(nameof(ForInvokeSpriteRendererFalse), 1.5f);
     }
 
-    void ForInvokeSpriteRenderer()
+    void ForInvokeSpriteRendererFalse()
     {
         GetComponent<SpriteRenderer>().enabled = false;
+    }
+
+    void ForInvokeSpriteRendererTrue()
+    {
+        GetComponent<SpriteRenderer>().enabled = true;
+    }
+
+    public void ResetAllValues()
+    {
+        GetComponentInChildren<EvolvedBuildAnim>().PlayDestroyAnim();
+        Invoke(nameof(ForInvokeSpriteRendererTrue), .5f);
+        GetComponent<BaseTowerPanelKeeper>().OpenCanvas(placeTowerCanvas);
+        foreach (var item in towers)
+        {
+            if(!item.activeSelf) continue;
+            item.SetActive(false);
+            item.GetComponent<Animator>().SetTrigger(ConstStrings.TOWER_RESET);
+        }
+        foreach (var item in towerChanges)
+        {
+            item.Reset();
+        }
+
+        levelUpTower.ResetAllValues();
+        towerInfoKeeper.ResetAllValues();
     }
 
 }
