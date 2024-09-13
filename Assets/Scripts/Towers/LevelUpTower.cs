@@ -58,7 +58,7 @@ public class LevelUpTower : MonoBehaviour
     {
         if(GetComponentInChildren<EvolvedBuildAnim>().GetIsBusy) return;
 
-        TowerInfoSo clickedNextLevelTowerInfo = towerInfoKeeper.GetTowerInfoSo(towerInfoKeeper.GetCurrentTowerCode, towerInfoKeeper.CurrentTowerLevel + 1);
+        TowerInfoSo clickedNextLevelTowerInfo = AllTowerInfos.Instance.GetTowerInfoSo(towerInfoKeeper.GetCurrentTowerCode, towerInfoKeeper.CurrentTowerLevel + 1);
         if(!Bank.Instance.CanUseMoney(clickedNextLevelTowerInfo.towerCost)) return;
 
         Bank.Instance.OnChangeMoneyAmount?.Invoke(this, new() { amount = -clickedNextLevelTowerInfo.towerCost });
@@ -93,7 +93,7 @@ public class LevelUpTower : MonoBehaviour
             return;
         }
 
-        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { isMainTower = false, towerInfoSo1 = towerInfoKeeper.GetCurrentTowerInfo } );
+        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { isMainTower = false, towerInfoSo1 = towerInfoKeeper.GetCurrentTowerInfo, tower = transform } );
         UpdateTowerCostText();
     }
 
@@ -101,13 +101,13 @@ public class LevelUpTower : MonoBehaviour
     {
         int firstTowerCode = (towerInfoKeeper.GetCurrentTowerCode +2) * 2;
 
-        firstEvolveInfoPanel.SetTowerInfoSo(towerInfoKeeper.GetTowerInfoSo(firstTowerCode, 1));
-        secondEvolveInfoPanel.SetTowerInfoSo(towerInfoKeeper.GetTowerInfoSo(firstTowerCode +1, 1));
+        firstEvolveInfoPanel.SetTowerInfoSo(AllTowerInfos.Instance.GetTowerInfoSo(firstTowerCode, 1));
+        secondEvolveInfoPanel.SetTowerInfoSo(AllTowerInfos.Instance.GetTowerInfoSo(firstTowerCode +1, 1));
     }
 
     public void UpdateTowerCostText()
     {
-        TowerInfoSo nextLevelTowerInfo = towerInfoKeeper.GetTowerInfoSo(towerInfoKeeper.GetCurrentTowerCode, towerInfoKeeper.CurrentTowerLevel + 1);
+        TowerInfoSo nextLevelTowerInfo = AllTowerInfos.Instance.GetTowerInfoSo(towerInfoKeeper.GetCurrentTowerCode, towerInfoKeeper.CurrentTowerLevel + 1);
         costText.text = nextLevelTowerInfo.towerCost.ToString();
         levelUpTowerInfo.SetTowerInfoSo(nextLevelTowerInfo);
     }

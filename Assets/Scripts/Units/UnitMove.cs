@@ -1,0 +1,59 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+
+public class UnitMove : MonoBehaviour
+{
+    [SerializeField] UnitValues unitValues;
+
+    NavMeshAgent navMeshAgent;
+
+    Vector2 lastDir;
+
+    public Vector2 GetLastDir
+    {
+        get
+        {
+            // return new Vector2(Mathf.Sign(lastDir.x), Mathf.Sign(lastDir.y));
+            return new Vector2(Mathf.Clamp(lastDir.x, -1, 1), Mathf.Clamp(lastDir.y, -1, 1f));
+        }
+    }
+
+    void Start() 
+    {
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent.updateRotation = false;
+        navMeshAgent.updateUpAxis = false;
+    }
+
+    void Update() 
+    {
+        if(navMeshAgent.velocity.x != 0 || navMeshAgent.velocity.y != 0)
+        {
+            lastDir = navMeshAgent.velocity;
+        }
+        if(Mathf.Abs(lastDir.x) > Mathf.Epsilon)
+        {
+            transform.localScale = new(-Mathf.Sign(lastDir.x), transform.localScale.y, transform.localScale.z);
+        }
+    }
+
+    public void MoveUnit() 
+    {
+        if(!navMeshAgent.isStopped)
+        {
+            navMeshAgent.SetDestination(unitValues.GetUnitSetTarget().GetCurrentTarget.position);
+        }
+    }
+
+    public void StopUnit() 
+    {
+        if(!navMeshAgent.isStopped)
+        {
+            Vector2 offset = (unitValues.GetUnitSetTarget().GetCurrentTarget.position - transform.position).normalized;
+            offset += new Vector2(transform.position.x, transform.position.y);
+            navMeshAgent.SetDestination(offset);
+        }
+    }
+}

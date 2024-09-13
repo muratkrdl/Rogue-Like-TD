@@ -9151,6 +9151,7 @@ GameObject:
   - component: {fileID: 3108020673407034939}
   - component: {fileID: 8503957429973817715}
   - component: {fileID: 2478451709264928315}
+  - component: {fileID: 2188698859356426637}
   - component: {fileID: 7809519412660083193}
   - component: {fileID: 8152655119034128251}
   - component: {fileID: 3576927315637164909}
@@ -9302,6 +9303,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9375, y: 1.90625}
   m_EdgeRadius: 0
+--- !u!114 &2188698859356426637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7957579231689928260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7313ac843b0103d4a9d48012bdaed78d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7809519412660083193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9403,6 +9416,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: de3d84e621744a4459a9eee1a3356290, type: 2}
   - {fileID: 11400000, guid: a6391cee3e148a340a9d89f61d48e790, type: 2}
   - {fileID: 11400000, guid: 1584bc1cce0bb1b4586bfe3e230993d2, type: 2}
+  towerHealth: {fileID: 2188698859356426637}
   rangeCircle: {fileID: 1930184904448211443}
 --- !u!114 &7089088770521703637
 MonoBehaviour:

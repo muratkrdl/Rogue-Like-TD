@@ -12,6 +12,7 @@ public class InfoPanel : MonoBehaviour
     {
         public TowerInfoSo towerInfoSo1;
         public bool isMainTower;
+        public Transform tower;
     }
 
     [SerializeField] Animator animator;
@@ -26,6 +27,15 @@ public class InfoPanel : MonoBehaviour
     [SerializeField] Image getInOutButton;
 
     TowerInfoSo currentTowerInfoSO;
+    TowerHealth currentTowerHealth;
+
+    public TowerInfoSo GetCurrentTowerInfoSO
+    {
+        get
+        {
+            return currentTowerInfoSO;
+        }
+    }
 
     void Awake() 
     {
@@ -44,6 +54,11 @@ public class InfoPanel : MonoBehaviour
 
     void InfoPanel_OnClickedTowerInfo(object sender, OnClickedTowerInfoEventArg e)
     {
+        if(e.tower.TryGetComponent<TowerHealth>(out var towerHealth))
+        {
+            currentTowerHealth = towerHealth;
+        }
+        
         if(e.towerInfoSo1 == null)
         {
             SetInfoPanelAnim(false);
@@ -51,6 +66,7 @@ public class InfoPanel : MonoBehaviour
         }
         else if(currentTowerInfoSO == e.towerInfoSo1 && animator.GetBool(ConstStrings.INFO_PANEL_ANIMATOR_ISIN))
         {
+            heartText.text = currentTowerHealth.GetCurrentHealth.ToString();
             return;
         }
 
@@ -61,7 +77,7 @@ public class InfoPanel : MonoBehaviour
         infoIcon.sprite = e.towerInfoSo1.towerImageIcon;
         infoName.text = e.towerInfoSo1.Name;
 
-        // heartText.text = getcomponent currenthealth
+        heartText.text = currentTowerHealth.GetCurrentHealth.ToString();
 
         damageText.text = e.towerInfoSo1.BaseDamageRange.x.ToString() + "-" + e.towerInfoSo1.BaseDamageRange.y.ToString();
         damageText.color = e.towerInfoSo1.DamageTypeColor;

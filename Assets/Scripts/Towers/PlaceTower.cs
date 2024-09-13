@@ -19,12 +19,12 @@ public class PlaceTower : MonoBehaviour
     {
         if(MainTowerManager.Instance.GetIsIn) return;
         placeTowerAnimation.ChangeAnimation();
-        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { towerInfoSo1 = towerInfoKeeper.GetCurrentTowerInfo });
+        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { towerInfoSo1 = towerInfoKeeper.GetCurrentTowerInfo, tower = transform });
     }
 
     public void OnClick_BuildTower()
     {
-        TowerInfoSo clickedTowerInfoSO = towerInfoKeeper.GetTowerInfoSo(towerInfoKeeper.ClickedTowerCode, 1);
+        TowerInfoSo clickedTowerInfoSO = AllTowerInfos.Instance.GetTowerInfoSo(towerInfoKeeper.ClickedTowerCode, 1);
         if(!Bank.Instance.CanUseMoney(clickedTowerInfoSO.towerCost)) return;
         
         Bank.Instance.OnChangeMoneyAmount?.Invoke(this, new() { amount = -clickedTowerInfoSO.towerCost } );
