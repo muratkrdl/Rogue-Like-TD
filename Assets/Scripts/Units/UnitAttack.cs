@@ -8,6 +8,8 @@ public class UnitAttack : MonoBehaviour
 {
     [SerializeField] UnitValues unitValues;
 
+    [SerializeField] int projectileCode;
+
     public async UniTaskVoid Attack()
     {
         while(true)
@@ -30,6 +32,18 @@ public class UnitAttack : MonoBehaviour
     public void AnimEvent_LongRangeAttack()
     {
         // spawn projectile
-        
+        var projectile = ProjectileObjectPool.Instance.GetProjectile(projectileCode);
+        if(projectile != null)
+        {
+            projectile.SetValues(unitValues.GetUnitSetTarget().GetCurrentTarget, unitValues.GetProjectileOutPos,AllProjectileSOs.Instance.GetProjectiileSO(projectileCode));
+        }
+        else
+        {
+            projectile = Instantiate(unitValues.GetProjectilePrefab, unitValues.GetProjectileOutPos.position, Quaternion.identity, 
+            ProjectileObjectPool.Instance.GetInstantiatedObjParent(projectileCode)).GetComponent<Projectile>();
+            projectile.SetValues(unitValues.GetUnitSetTarget().GetCurrentTarget, unitValues.GetProjectileOutPos, AllProjectileSOs.Instance.GetProjectiileSO(projectileCode));
+
+            ProjectileObjectPool.Instance.OnCreatedProjectileObj?.Invoke(this, new() { code = projectileCode, createdObj = projectile } );
+        }
     }
 }

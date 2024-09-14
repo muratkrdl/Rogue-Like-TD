@@ -6,6 +6,7 @@ public class UnitValues : MonoBehaviour
 {
     [SerializeField] UnitSO enemySO;
     [SerializeField] GameObject projectilePrefab;
+    [SerializeField] Transform projectileOutPos;
 
     [SerializeField] UnitAnimator unitAnimator;
     [SerializeField] UnitMove unitMove;
@@ -29,6 +30,13 @@ public class UnitValues : MonoBehaviour
         get
         {
             return projectilePrefab;
+        }
+    }
+    public Transform GetProjectileOutPos
+    {
+        get
+        {
+            return projectileOutPos;
         }
     }
 
