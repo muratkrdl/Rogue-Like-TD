@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering.BuiltIn.ShaderGraph;
 using UnityEngine;
 
 public class TowerHealth : MonoBehaviour, IDamageable
 {
-    int currenthealth;
+    int currenthealth = 100;
 
     public int GetCurrentHealth
     {
@@ -22,9 +23,22 @@ public class TowerHealth : MonoBehaviour, IDamageable
     public void TakeDamage(int amount)
     {
         currenthealth -= amount;
-        if(InfoPanel.Instance.GetCurrentTowerInfoSO != GetComponent<TowerInfoKeeper>().GetCurrentTowerInfo) return;
+        bool value;
+        TowerInfoSo so;
+        if(TryGetComponent<TowerInfoKeeper>(out var keeper))
+        {
+            so = keeper.GetCurrentTowerInfo;
+            value = false;
+        }
+        else
+        {
+            so = GetComponent<MainTower>().GetTowerInfoSo;
+            value = true;
+        }
+        
+        if(InfoPanel.Instance.GetCurrentTowerInfoSO != so) return;
 
-        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { isMainTower = false, towerInfoSo1 = GetComponent<TowerInfoKeeper>().GetCurrentTowerInfo, tower = transform } );
+        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { isMainTower = value, towerInfoSo1 = so, tower = transform } );
     }
 
 }

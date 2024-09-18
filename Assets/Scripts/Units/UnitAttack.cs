@@ -17,7 +17,7 @@ public class UnitAttack : MonoBehaviour
             if(!unitValues.IsAttacking) break;
             Debug.Log("Attacking");
             unitValues.GetUnitAnimator().SetTrigger("Attack");
-            await UniTask.Delay(TimeSpan.FromSeconds(unitValues.EnemySO.TimeBetweenAttack), cancellationToken: unitValues.GetUnitStateController().GetTokenSource.Token);
+            await UniTask.Delay(TimeSpan.FromSeconds(unitValues.UnitSO.TimeBetweenAttack), cancellationToken: unitValues.GetUnitStateController().GetTokenSource.Token);
         }
     }
 
@@ -25,7 +25,7 @@ public class UnitAttack : MonoBehaviour
     {
         if(unitValues.GetUnitSetTarget().GetCurrentTarget.TryGetComponent<IDamageable>(out var component))
         {
-            component.TakeDamage(unitValues.EnemySO.AttackDamage);
+            component.TakeDamage(unitValues.UnitSO.AttackDamage);
         }
     }
 

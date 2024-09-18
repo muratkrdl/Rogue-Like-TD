@@ -163,6 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitValues: {fileID: 5059640932281186905}
+  projectileCode: 0
 --- !u!114 &3929127170169211815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,8 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa8a61f7f587024cb2f1ea650f0185b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitValues: {fileID: 5059640932281186905}
-  go: {fileID: 0}
 --- !u!114 &3781101182845093605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,6 +222,7 @@ MonoBehaviour:
   unitSetTarget: {fileID: 777554590277233064}
   unitAttack: {fileID: 81491868166505899}
   unitStateController: {fileID: 3781101182845093605}
+  isEnemy: 1
 --- !u!1 &8362051447031276470
 GameObject:
   m_ObjectHideFlags: 0

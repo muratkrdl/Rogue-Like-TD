@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class UnitSetTarget : MonoBehaviour
 {
-    [SerializeField] UnitValues unitValues;
     Transform currentTarget;
-
-    [SerializeField] Transform go;
+    Transform currentDestPos;
 
     public Transform GetCurrentTarget
     {
@@ -17,47 +15,35 @@ public class UnitSetTarget : MonoBehaviour
         }
     }
 
+    public Transform GetCurrentDestPos
+    {
+        get
+        {
+            return currentDestPos;
+        }
+    }
+
     void Start() 
     {
-        ChangeCurrentTarget(go);
-    }
-    
-    public void CheckClosePlayerandTower() // singleton bir yapıya parametreler girdirerek kullan
-    {
-        if(unitValues.IsChasing) return;
-        
-        if(Mathf.Abs(Vector2.Distance(transform.position, GlobalUnitTargets.Instance.GetPlayerTarget().position)) <= unitValues.EnemySO.AttackRange + 2)
-        {
-            ChangeCurrentTarget(GlobalUnitTargets.Instance.GetPlayerTarget());
-            unitValues.IsChasing = true;
-        }
-        else
-        {
-            foreach (var item in GlobalUnitTargets.Instance.GetTowersPos())
-            {
-                if(item.GetComponent<TowerInfoKeeper>().GetCurrentTowerCode == -1) continue;
-                if(Mathf.Abs(Vector2.Distance(transform.position, item.position)) <= unitValues.EnemySO.AttackRange + 2)
-                {
-                    unitValues.IsChasing = true;
-                    // kulenin vurma yerlerine doğru ilerlesin
-                    ChangeCurrentTarget(item);
-                    break;
-                }
-                else
-                {
-                    continue;
-                }
-            }
-        }
+        SetCurrentTargetToMainTower();
     }
 
     public void SetCurrentTargetToMainTower()
     {
         currentTarget = GlobalUnitTargets.Instance.GetMainTower();
+        currentDestPos = GlobalUnitTargets.Instance.GetMainTower().GetComponent<TowerShootPointKeeper>().GetAvailablePoint().transform;
     }
 
-    public void ChangeCurrentTarget(Transform changeTransform)
+    public void ChangeCurrentTarget(Transform changeTransform, bool isTower)
     {
         currentTarget = changeTransform;
+        if(isTower)
+        {
+            currentDestPos = changeTransform.GetComponent<TowerShootPointKeeper>().GetAvailablePoint().transform;
+        }
+        else
+        {
+            currentDestPos = changeTransform;
+        }
     }
 }

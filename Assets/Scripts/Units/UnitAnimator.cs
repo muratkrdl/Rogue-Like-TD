@@ -10,9 +10,9 @@ public class UnitAnimator : MonoBehaviour
 
     void Update()
     {
-        animator.SetFloat("Speed", unitValues.GetUnitMove().GetLastDir.sqrMagnitude);
-        animator.SetFloat("LastX", unitValues.GetUnitMove().GetLastDir.x);
-        animator.SetFloat("LastY", unitValues.GetUnitMove().GetLastDir.y);
+        animator.SetFloat("Speed", unitValues.GetUnitMove().LastDir.sqrMagnitude);
+        animator.SetFloat("LastX", unitValues.GetUnitMove().LastDir.x);
+        animator.SetFloat("LastY", unitValues.GetUnitMove().LastDir.y);
     }
 
     public void SetTrigger(string name)

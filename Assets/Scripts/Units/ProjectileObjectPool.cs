@@ -16,9 +16,13 @@ public class ProjectileObjectPool : MonoBehaviour
 
     [SerializeField] Transform[] listsParent;
 
+    [Header("Projectiles")]
     [SerializeField] List<Projectile> man_With_Bow_Projectiles;
     [SerializeField] List<Projectile> wizard_Projectiles;
     [SerializeField] List<Projectile> others;
+
+    [Header("Guards")]
+    [SerializeField] List<GameObject> guard_Unit;
 
     void Awake() 
     {
@@ -37,7 +41,7 @@ public class ProjectileObjectPool : MonoBehaviour
 
     void ProjectileObjectPool_OnCreatedProjectileObj(object sender, OnCreatedProjectileObjEventArgs e)
     {
-        GetList(e.code).Add(e.createdObj);
+        GetProjectileList(e.code).Add(e.createdObj);
     }
 
     public Transform GetInstantiatedObjParent(int code)
@@ -45,7 +49,7 @@ public class ProjectileObjectPool : MonoBehaviour
         return listsParent[code];
     }
 
-    public List<Projectile> GetList(int code)
+    public List<Projectile> GetProjectileList(int code)
     {
         return code switch
         {
@@ -56,9 +60,18 @@ public class ProjectileObjectPool : MonoBehaviour
         };
     }
 
+    public List<GameObject> GetGuardList(int code)
+    {
+        return code switch
+        {
+            0 => guard_Unit,
+            _ => throw new()
+        };
+    }
+
     public Projectile GetProjectile(int code)
     {
-        foreach (var item in GetList(code))
+        foreach (var item in GetProjectileList(code))
         {
             if(item.GetIsAvailable)
             {

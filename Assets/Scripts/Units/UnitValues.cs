@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UnitValues : MonoBehaviour
 {
-    [SerializeField] UnitSO enemySO;
+    [SerializeField] UnitSO unitSO;
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] Transform projectileOutPos;
 
@@ -14,15 +14,17 @@ public class UnitValues : MonoBehaviour
     [SerializeField] UnitAttack unitAttack;
     [SerializeField] UnitStateController unitStateController;
 
-    public UnitSO EnemySO
+    [SerializeField] bool isEnemy;
+
+    public UnitSO UnitSO
     {
         get
         {
-            return enemySO;
+            return unitSO;
         }
         set
         {
-            enemySO = value;
+            unitSO = value;
         }
     }
     public GameObject GetProjectilePrefab
@@ -37,6 +39,13 @@ public class UnitValues : MonoBehaviour
         get
         {
             return projectileOutPos;
+        }
+    }
+    public bool GetIsEnemy
+    {
+        get
+        {
+            return isEnemy;
         }
     }
 

@@ -11,12 +11,16 @@ public class UnitMove : MonoBehaviour
 
     Vector2 lastDir;
 
-    public Vector2 GetLastDir
+    public Vector2 LastDir
     {
         get
         {
             // return new Vector2(Mathf.Sign(lastDir.x), Mathf.Sign(lastDir.y));
             return new Vector2(Mathf.Clamp(lastDir.x, -1, 1), Mathf.Clamp(lastDir.y, -1, 1f));
+        }
+        set
+        {
+            lastDir = value;
         }
     }
 
@@ -29,7 +33,7 @@ public class UnitMove : MonoBehaviour
 
     void Update() 
     {
-        if(navMeshAgent.velocity.x != 0 || navMeshAgent.velocity.y != 0)
+        if(navMeshAgent.velocity.x != 0 || navMeshAgent.velocity.y != 0 && !unitValues.IsAttacking)
         {
             lastDir = navMeshAgent.velocity;
         }
@@ -43,7 +47,7 @@ public class UnitMove : MonoBehaviour
     {
         if(!navMeshAgent.isStopped)
         {
-            navMeshAgent.SetDestination(unitValues.GetUnitSetTarget().GetCurrentTarget.position);
+            navMeshAgent.SetDestination(unitValues.GetUnitSetTarget().GetCurrentDestPos.position);
         }
     }
 
@@ -51,7 +55,7 @@ public class UnitMove : MonoBehaviour
     {
         if(!navMeshAgent.isStopped)
         {
-            Vector2 offset = (unitValues.GetUnitSetTarget().GetCurrentTarget.position - transform.position).normalized;
+            Vector2 offset = (unitValues.GetUnitSetTarget().GetCurrentDestPos.position - transform.position).normalized /2;
             offset += new Vector2(transform.position.x, transform.position.y);
             navMeshAgent.SetDestination(offset);
         }

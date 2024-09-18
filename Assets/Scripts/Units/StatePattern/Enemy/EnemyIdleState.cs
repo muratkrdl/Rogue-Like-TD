@@ -6,8 +6,9 @@ public class EnemyIdleState : IUnitState
 {
     public void EnterState(UnitValues unitValues)
     {
+        unitValues.IsChasing = false;
         unitValues.GetUnitSetTarget().SetCurrentTargetToMainTower();
-        unitValues.GetUnitSetTarget().CheckClosePlayerandTower();
+        GlobalUnitTargets.Instance.CheckClosePlayerandTower(unitValues, unitValues.transform);
         unitValues.GetUnitStateController().ChangeState(new EnemyWalkState());
     }
 

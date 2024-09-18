@@ -23,8 +23,8 @@ public class EnemyAttackState : IUnitState
     {
         Debug.Log("Updating Attack");
 
-        if(Mathf.Abs(Vector2.Distance(unitValues.GetUnitSetTarget().GetCurrentTarget.position, 
-        unitValues.transform.position)) > unitValues.EnemySO.AttackRange + .2f)
+        if(Mathf.Abs(Vector2.Distance(unitValues.GetUnitSetTarget().GetCurrentDestPos.position, 
+        unitValues.transform.position)) > unitValues.UnitSO.AttackRange + 2.1f)
         {
             unitValues.GetUnitStateController().ChangeState(new EnemyIdleState());
         }

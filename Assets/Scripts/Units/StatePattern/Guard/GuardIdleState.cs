@@ -18,6 +18,6 @@ public class GuardIdleState : IUnitState
     {
         Debug.Log("Updating Idle");
     
-        unitValues.GetUnitSetTarget().CheckClosePlayerandTower();
+        GlobalUnitTargets.Instance.CheckClosePlayerandTower(unitValues, unitValues.transform);
     }
 }
