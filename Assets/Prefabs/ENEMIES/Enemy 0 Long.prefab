@@ -16,10 +16,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 0 Long
       objectReference: {fileID: 0}
+    - target: {fileID: 938995263380344060, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4257688091429116912, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1969227853, guid: 9fc0f83e4ad984549bb1ebe169b65ea1, type: 3}
+    - target: {fileID: 4257688091429116912, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059640932281186905, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: unitSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 0dbadda088925af4d8b7e955d0471a6b, type: 2}
     - target: {fileID: 5059640932281186905, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
       propertyPath: enemySO
       value: 
@@ -67,6 +79,18 @@ PrefabInstance:
     - target: {fileID: 5512753383292458137, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757870025623372329, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: m_Height
+      value: 0.0043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757870025623372329, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: m_Radius
+      value: 0.0043
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362051447031276470, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

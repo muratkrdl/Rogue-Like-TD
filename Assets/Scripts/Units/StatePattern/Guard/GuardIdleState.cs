@@ -6,6 +6,8 @@ public class GuardIdleState : IUnitState
 {
     public void EnterState(UnitValues unitValues)
     {
+        unitValues.IsChasing = false;
+        
         Debug.Log("Entering Idle");
     }
 
@@ -16,8 +18,10 @@ public class GuardIdleState : IUnitState
 
     public void UpdateState(UnitValues unitValues)
     {
+        if(unitValues.IsDead) return;
+
+        // kule menziline düşman girince hareket ettir chasing i true yap
+
         Debug.Log("Updating Idle");
-    
-        GlobalUnitTargets.Instance.CheckClosePlayerandTower(unitValues, unitValues.transform);
     }
 }

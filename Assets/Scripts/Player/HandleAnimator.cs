@@ -11,11 +11,11 @@ public class HandleAnimator : MonoBehaviour
 
     void Update()
     {
-        animator.SetFloat(ConstStrings.PLAYER_ANIMATOR_X, getInputs.GetMoveInput.x);
-        animator.SetFloat(ConstStrings.PLAYER_ANIMATOR_y, getInputs.GetMoveInput.y);
-        animator.SetFloat(ConstStrings.PLAYER_ANIMATOR_SPEED, getInputs.GetMoveInput.sqrMagnitude);
-        animator.SetFloat(ConstStrings.PLAYER_ANIMATOR_LASTX, getInputs.GetLastMoveDir.x);
-        animator.SetFloat(ConstStrings.PLAYER_ANIMATOR_LASTY, getInputs.GetLastMoveDir.y);
+        animator.SetFloat(ConstStrings.UNIT_ANIMATOR_X, getInputs.GetMoveInput.x);
+        animator.SetFloat(ConstStrings.UNIT_ANIMATOR_y, getInputs.GetMoveInput.y);
+        animator.SetFloat(ConstStrings.UNIT_ANIMATOR_SPEED, getInputs.GetMoveInput.sqrMagnitude);
+        animator.SetFloat(ConstStrings.UNIT_ANIMATOR_LASTX, getInputs.GetLastMoveDir.x);
+        animator.SetFloat(ConstStrings.UNIT_ANIMATOR_LASTY, getInputs.GetLastMoveDir.y);
     }
 
 }

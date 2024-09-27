@@ -14,7 +14,7 @@ public class EnemyAttackState : IUnitState
     public void ExitState(UnitValues unitValues)
     {
         Debug.Log("Exiting Attack");
-        unitValues.GetUnitAnimator().ResetTrigger("Attack");
+        unitValues.GetUnitAnimator().ResetTrigger(ConstStrings.UNIT_ANIMATOR_ATTACK);
         unitValues.GetUnitStateController().ClearTokenSource();
         unitValues.IsAttacking = false;
     }
@@ -23,7 +23,9 @@ public class EnemyAttackState : IUnitState
     {
         Debug.Log("Updating Attack");
 
-        if(Mathf.Abs(Vector2.Distance(unitValues.GetUnitSetTarget().GetCurrentDestPos.position, 
+        unitValues.GetUnitMove().LastDir = -(unitValues.transform.position - unitValues.GetEnemySetTarget().GetCurrentTarget.position).normalized / 5;
+
+        if(Mathf.Abs(Vector2.Distance(unitValues.GetEnemySetTarget().GetCurrentDestPos.position, 
         unitValues.transform.position)) > unitValues.UnitSO.AttackRange + 2.1f)
         {
             unitValues.GetUnitStateController().ChangeState(new EnemyIdleState());

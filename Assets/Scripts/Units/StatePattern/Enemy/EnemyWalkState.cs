@@ -19,19 +19,19 @@ public class EnemyWalkState : IUnitState
         unitValues.GetUnitMove().MoveUnit();
         GlobalUnitTargets.Instance.CheckClosePlayerandTower(unitValues, unitValues.transform);
 
-        float distanceBetweenTarget = Mathf.Abs(Vector2.Distance(unitValues.GetUnitSetTarget().
+        float distanceBetweenTarget = Mathf.Abs(Vector2.Distance(unitValues.GetEnemySetTarget().
         GetCurrentDestPos.transform.position, unitValues.transform.position));
 
         if(unitValues.IsChasing)
         {
             if(distanceBetweenTarget >= unitValues.UnitSO.AttackRange + 4.5f)
             {
-                unitValues.GetUnitSetTarget().SetCurrentTargetToMainTower();
+                unitValues.GetEnemySetTarget().SetCurrentTargetToMainTower();
                 unitValues.IsChasing = false;
             }
         }
 
-        if(distanceBetweenTarget <= unitValues.UnitSO.AttackRange + .75f)
+        if(distanceBetweenTarget <= unitValues.UnitSO.AttackRange + .375f)
         {
             unitValues.GetUnitMove().StopUnit();
             unitValues.GetUnitStateController().ChangeState(new EnemyAttackState());

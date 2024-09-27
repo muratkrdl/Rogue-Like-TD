@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 6571014622266364658}
   - component: {fileID: 3295436381132888769}
   - component: {fileID: 7009989875555426431}
-  - component: {fileID: 5419086223494146176}
+  - component: {fileID: 3007425979089007179}
   - component: {fileID: 5520010960623146572}
   - component: {fileID: 1754666221791406274}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Guard 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayerID: 1055387437
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1464160640, guid: 0e55fb8ef735984418218dd6c20e4cd8, type: 3}
+  m_Sprite: {fileID: -354344099, guid: b09dcb2db827ee745b02664ebb930ffe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,16 +123,16 @@ NavMeshAgent:
   m_GameObject: {fileID: 772483093893245120}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.0043
   m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
+  m_Height: 0.0043
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitValues: {fileID: 1754666221791406274}
---- !u!114 &5419086223494146176
+--- !u!114 &3007425979089007179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 772483093893245120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfa8a61f7f587024cb2f1ea650f0185b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b464b288e580eb488b7290f0470d146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &5520010960623146572
@@ -214,14 +214,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844c44bfd8623dc4cbd3277d73618fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySO: {fileID: 11400000, guid: 981a8504c700a6441862a2805a836c5e, type: 2}
+  unitSO: {fileID: 11400000, guid: d177afb3f410e614fa9039a66f2a8e09, type: 2}
   projectilePrefab: {fileID: 0}
   projectileOutPos: {fileID: 5128172588592929555}
   unitAnimator: {fileID: 6571014622266364658}
   unitMove: {fileID: 7009989875555426431}
-  unitSetTarget: {fileID: 5419086223494146176}
   unitAttack: {fileID: 3295436381132888769}
   unitStateController: {fileID: 5520010960623146572}
+  enemySetTarget: {fileID: 0}
   isEnemy: 0
 --- !u!1 &5037989313430216849
 GameObject:
@@ -233,7 +233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5128172588592929555}
   - component: {fileID: 55625952560925539}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectileOutPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

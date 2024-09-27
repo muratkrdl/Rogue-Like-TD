@@ -10,9 +10,12 @@ public class UnitValues : MonoBehaviour
 
     [SerializeField] UnitAnimator unitAnimator;
     [SerializeField] UnitMove unitMove;
-    [SerializeField] UnitSetTarget unitSetTarget;
     [SerializeField] UnitAttack unitAttack;
     [SerializeField] UnitStateController unitStateController;
+    [SerializeField] UnitHealth unitHealth;
+
+    [SerializeField] EnemySetTarget enemySetTarget;
+    [SerializeField] GuardSetTarget guardSetTarget;
 
     [SerializeField] bool isEnemy;
 
@@ -25,6 +28,7 @@ public class UnitValues : MonoBehaviour
         set
         {
             unitSO = value;
+            unitHealth.CurrenHealth = unitSO.MaxHealth;
         }
     }
     public GameObject GetProjectilePrefab
@@ -51,6 +55,7 @@ public class UnitValues : MonoBehaviour
 
     bool isChasing = false;
     bool isAttacking = false;
+    bool isDead = false;
 
     public bool IsChasing
     {
@@ -74,6 +79,17 @@ public class UnitValues : MonoBehaviour
             isAttacking = value;
         }
     }
+    public bool IsDead
+    {
+        get
+        {
+            return isDead;
+        }
+        set
+        {
+            isDead = value;
+        }
+    }
 
     public UnitAnimator GetUnitAnimator()
     {
@@ -83,9 +99,13 @@ public class UnitValues : MonoBehaviour
     {
         return unitMove;
     }
-    public UnitSetTarget GetUnitSetTarget()
+    public EnemySetTarget GetEnemySetTarget()
     {
-        return unitSetTarget;
+        return enemySetTarget;
+    }
+    public GuardSetTarget GetGuardSetTarget()
+    {
+        return guardSetTarget;
     }
     public UnitAttack GetUnitAttack()
     {
@@ -94,5 +114,9 @@ public class UnitValues : MonoBehaviour
     public UnitStateController GetUnitStateController()
     {
         return unitStateController;
+    }
+    public UnitHealth GetUnitHealth()
+    {
+        return unitHealth;
     }
 }

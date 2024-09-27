@@ -10,7 +10,9 @@ public class TowerInfoSo : ScriptableObject
     public int maxHealth;
     public DamageType damageType;
     public Vector2 BaseDamageRange;
+    public float TimeBetweenAttack;
     public Color DamageTypeColor;
+    public int projectileCode;
     public int towerCost;
     public int sellPrice;
     public float Range;

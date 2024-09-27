@@ -19,9 +19,14 @@ public class UnitStateController : MonoBehaviour
         }
     }
 
-    void Start() 
+    public void StartFunc(int value)
     {
-        currentState = new EnemyIdleState();
+        currentState = value switch
+        {
+            0 => new EnemyIdleState(),
+            _ => new GuardIdleState(),
+        };
+
         currentState.EnterState(unitValues);
     }
 

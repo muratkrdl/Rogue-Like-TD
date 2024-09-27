@@ -36,7 +36,7 @@ public class GlobalUnitTargets : MonoBehaviour
         
         if(Mathf.Abs(Vector2.Distance(unit.position, GetPlayerTarget().position)) <= unitValues.UnitSO.AttackRange + 2)
         {
-            unitValues.GetUnitSetTarget().ChangeCurrentTarget(GetPlayerTarget(), false);
+            unitValues.GetEnemySetTarget().ChangeCurrentTarget(GetPlayerTarget(), false);
             unitValues.IsChasing = true;
         }
         else
@@ -48,7 +48,7 @@ public class GlobalUnitTargets : MonoBehaviour
                 {
                     Debug.Log(item);
                     unitValues.IsChasing = true;
-                    unitValues.GetUnitSetTarget().ChangeCurrentTarget(item, true);
+                    unitValues.GetEnemySetTarget().ChangeCurrentTarget(item, true);
                     break;
                 }
             }
