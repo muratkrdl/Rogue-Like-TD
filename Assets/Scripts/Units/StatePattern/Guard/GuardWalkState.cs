@@ -30,7 +30,7 @@ public class GuardWalkState : IUnitState
             }
             else if(distanceBetweenTarget <= unitValues.UnitSO.AttackRange + .375f)
             {
-                unitValues.GetUnitMove().StopUnit();
+                unitValues.GetUnitMove().StopUnit(false);
                 unitValues.GetUnitStateController().ChangeState(new GuardAttackState());
             }
         }
@@ -38,7 +38,7 @@ public class GuardWalkState : IUnitState
         {
             if(distanceBetweenTarget <= unitValues.UnitSO.AttackRange + .375f)
             {
-                unitValues.GetUnitMove().StopUnit();
+                unitValues.GetUnitMove().StopUnit(false);
                 unitValues.GetUnitStateController().ChangeState(new GuardIdleState());
             }
         }

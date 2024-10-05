@@ -30,7 +30,7 @@ public class UnitHealth : MonoBehaviour, IDamageable
         if(currenHealth <= 0)
         {
             unitValues.IsDead = true;
-            unitValues.GetUnitMove().StopSuddenly();
+            unitValues.GetUnitMove().StopUnit(true);
             unitValues.GetUnitAnimator().SetTrigger(ConstStrings.UNIT_ANIMATOR_DEATH);
             IUnitState state;
             if(unitValues.GetIsEnemy)

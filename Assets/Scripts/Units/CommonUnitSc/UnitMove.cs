@@ -49,22 +49,20 @@ public class UnitMove : MonoBehaviour
         }
     }
 
-    public void StopUnit() 
-    {
-        if(!unitValues.GetNavMeshAgent().isStopped)
-        {
-            Vector2 offset = (unitValues.GetEnemySetTarget().GetCurrentDestPos.position - transform.position).normalized;
-            offset += new Vector2(transform.position.x, transform.position.y /2);
-            unitValues.GetNavMeshAgent().SetDestination(offset);
-        }
-    }
-
-    public void StopSuddenly() 
+    public void StopUnit(bool isDying) 
     {
         if(!unitValues.GetNavMeshAgent().isStopped)
         {
             unitValues.GetNavMeshAgent().SetDestination(transform.position);
-            unitValues.GetEnemySetTarget().ChangeCurrentTarget(transform, false);
+
+            if(isDying)
+            {
+                unitValues.GetEnemySetTarget().ChangeCurrentTarget(transform, false);
+            }
+            //  Vector2 offset = (unitValues.GetEnemySetTarget().GetCurrentDestPos.position - transform.position).normalized;
+            //  offset += new Vector2(transform.position.x, transform.position.y /2);
+            //  unitValues.GetNavMeshAgent().SetDestination(offset);
         }
     }
+
 }
