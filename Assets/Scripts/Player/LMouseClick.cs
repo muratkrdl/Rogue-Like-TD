@@ -37,28 +37,38 @@ public class LMouseClick : MonoBehaviour
 
             hit = Physics2D.Raycast(ray.origin, ray.direction, range, layerMask);
 
+
             if(hit.collider == null)
             {
-                CloseEverything();
+                CloseEverything(false);
                 lastClickedTower = null;
             }
             else
             {
+                CloseEverything(true);
                 if(hit.collider.TryGetComponent<PlaceTower>(out var clickedTower))
                 {
+                    clickedTower.OnMouseDownEvent();
                     lastClickedTower = clickedTower;
+                }
+                else if(hit.collider.TryGetComponent<MainTower>(out var mainTower))
+                {
+                    mainTower.OnMouseDownEvent();
                 }
             }
         }
     }
 
-    public void CloseEverything()
+    public void CloseEverything(bool boolean)
     {
         foreach (var item in placeTowersAnimation)
         {
             item.CloseAnimation();
         }
-        InfoPanel.SetInfoPanelAnim(false);
+        if(!boolean)
+        {
+            InfoPanel.SetInfoPanelAnim(false);
+        }
     }
 
 }

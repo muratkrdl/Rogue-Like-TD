@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitValues: {fileID: 1754666221791406274}
+  navMeshAgent: {fileID: 6273950347998974529}
 --- !u!114 &3007425979089007179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +222,9 @@ MonoBehaviour:
   unitMove: {fileID: 7009989875555426431}
   unitAttack: {fileID: 3295436381132888769}
   unitStateController: {fileID: 5520010960623146572}
+  unitHealth: {fileID: 0}
   enemySetTarget: {fileID: 0}
+  guardSetTarget: {fileID: 3007425979089007179}
   isEnemy: 0
 --- !u!1 &5037989313430216849
 GameObject:

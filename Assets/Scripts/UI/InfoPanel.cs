@@ -1,5 +1,6 @@
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,7 @@ public class InfoPanel : MonoBehaviour
         public TowerInfoSo towerInfoSo1;
         public bool isMainTower;
         public Transform tower;
+        public bool underAttack;
     }
 
     [SerializeField] Animator animator;
@@ -28,6 +30,8 @@ public class InfoPanel : MonoBehaviour
 
     TowerInfoSo currentTowerInfoSO;
     TowerHealth currentTowerHealth;
+
+    bool isIn = false;
 
     public TowerInfoSo GetCurrentTowerInfoSO
     {
@@ -54,37 +58,44 @@ public class InfoPanel : MonoBehaviour
 
     void InfoPanel_OnClickedTowerInfo(object sender, OnClickedTowerInfoEventArg e)
     {
-        if(e.tower.TryGetComponent<TowerHealth>(out var towerHealth))
-        {
-            currentTowerHealth = towerHealth;
-        }
-        
-        if(e.towerInfoSo1 == null)
+        if(e.towerInfoSo1 == null || e.underAttack && !isIn)
         {
             SetInfoPanelAnim(false);
             return;
         }
-        else if(currentTowerInfoSO == e.towerInfoSo1 && animator.GetBool(ConstStrings.INFO_PANEL_ANIMATOR_ISIN))
-        {
-            heartText.text = currentTowerHealth.GetCurrentHealth.ToString();
-            return;
-        }
 
-        currentTowerInfoSO = e.towerInfoSo1;
+        if(e.underAttack && isIn)
+        {
+            if(currentTowerHealth == e.tower.GetComponent<TowerHealth>())
+                UpdateHP();
+            return;
+        } 
+        
+        if(e.tower.TryGetComponent<TowerHealth>(out var towerHealth))
+        {
+            currentTowerHealth = towerHealth;
+        }
 
         SetInfoPanelAnim(true);
 
-        infoIcon.sprite = e.towerInfoSo1.towerImageIcon;
-        infoName.text = e.towerInfoSo1.Name;
+        currentTowerInfoSO = e.towerInfoSo1;
+
+        infoIcon.sprite = currentTowerInfoSO.towerImageIcon;
+        infoName.text = currentTowerInfoSO.Name;
 
         heartText.text = currentTowerHealth.GetCurrentHealth.ToString();
 
-        damageText.text = e.towerInfoSo1.BaseDamageRange.x.ToString() + "-" + e.towerInfoSo1.BaseDamageRange.y.ToString();
-        damageText.color = e.towerInfoSo1.DamageTypeColor;
+        damageText.text = currentTowerInfoSO.BaseDamageRange.x.ToString() + "-" + currentTowerInfoSO.BaseDamageRange.y.ToString();
+        damageText.color = currentTowerInfoSO.DamageTypeColor;
 
         sellButton.gameObject.SetActive(!e.isMainTower);
         getInOutButton.gameObject.SetActive(e.isMainTower);
-        sellPriceText.text = e.towerInfoSo1.sellPrice.ToString();
+        sellPriceText.text = currentTowerInfoSO.sellPrice.ToString();
+    }
+
+    public void UpdateHP()
+    {
+        heartText.text = currentTowerHealth.GetCurrentHealth.ToString();
     }
 
     public void OnClick_SellButton()
@@ -100,14 +111,16 @@ public class InfoPanel : MonoBehaviour
 
     public void SetInfoPanelAnim(bool value)
     {
-        if(!value && animator.GetBool(ConstStrings.INFO_PANEL_ANIMATOR_ISIN))
+        if(!value && isIn)
         {
-            animator.SetBool(ConstStrings.INFO_PANEL_ANIMATOR_ISIN, value);
+            animator.SetTrigger(ConstStrings.INFO_PANEL_ANIMATOR_OUT);
         }
-        else if(value && !animator.GetBool(ConstStrings.INFO_PANEL_ANIMATOR_ISIN))
+        else if(value)
         {
-            animator.SetBool(ConstStrings.INFO_PANEL_ANIMATOR_ISIN, value);
+            animator.SetTrigger(ConstStrings.INFO_PANEL_ANIMATOR_IN);
         }
+
+        isIn = value;
     }
 
 }

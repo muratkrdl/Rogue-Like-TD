@@ -4,6 +4,10 @@ public class TowerUnitIdleState : ITowerUnitState
 {
     public void EnterState(TowerUnitValues unitValues)
     {
+        unitValues.GetTowerUnitStateController().ClearTokenSource();
+
+        unitValues.GetTowerUnitSetTarget().ClosestTarget();
+
         Debug.Log("Entering Idle");
     }
 
@@ -14,8 +18,15 @@ public class TowerUnitIdleState : ITowerUnitState
 
     public void UpdateState(TowerUnitValues unitValues)
     {
-        // eğer rangede varsa currenttarget yap ve saldırt
-
         Debug.Log("Updating Idle");
+
+        if(!unitValues.GetTowerUnitSetTarget().GetCurrentTarget.CompareTag(TagManager.ENEMY))
+        {
+            unitValues.GetTowerUnitSetTarget().ClosestTarget();
+            return;
+        }            
+
+        unitValues.GetTowerUnitStateController().ChangeState(new TowerUnitAttackState());
+
     }
 }

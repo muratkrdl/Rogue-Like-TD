@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class TowerHealth : MonoBehaviour, IDamageable
 {
+    [SerializeField] FireAnimator fireAnimator;
+
     int currenthealth = 100;
 
     public int GetCurrentHealth
@@ -18,11 +20,14 @@ public class TowerHealth : MonoBehaviour, IDamageable
     public void SetTowerHealth(int amount)
     {
         currenthealth = amount;
+        fireAnimator.SetMaxHealth = currenthealth;
+        fireAnimator.HealthChanged(currenthealth);
     }
 
     public void TakeDamage(int amount)
     {
         currenthealth -= amount;
+
         bool value;
         TowerInfoSo so;
         if(TryGetComponent<TowerInfoKeeper>(out var keeper))
@@ -35,10 +40,26 @@ public class TowerHealth : MonoBehaviour, IDamageable
             so = GetComponent<MainTower>().GetTowerInfoSo;
             value = true;
         }
+
+        if(currenthealth <= 0)
+        {
+            currenthealth = 0;
+
+            if(value)
+            {
+                // gameOver 
+            }
+            else
+            {
+                GetComponent<PlaceTower>().ResetAllValues();
+            }
+        }
         
+        fireAnimator.HealthChanged(currenthealth);
+
         if(InfoPanel.Instance.GetCurrentTowerInfoSO != so) return;
 
-        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { isMainTower = value, towerInfoSo1 = so, tower = transform } );
+        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { isMainTower = value, towerInfoSo1 = so, tower = transform, underAttack = true } );
     }
 
 }

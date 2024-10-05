@@ -6,12 +6,8 @@ public class TowerProjectileOutPos : MonoBehaviour
 {
     [SerializeField] TowerUnitValues towerUnitValues;
 
-    Vector2 value;
-
     void Update()
     {
-        value = new Vector2(Mathf.Sign(towerUnitValues.GetTowerUnitSetTarget().GetLastDir.x), Mathf.Sign(towerUnitValues.GetTowerUnitSetTarget().GetLastDir.y));
-        
-        transform.localPosition = new Vector2(-value.x / 3.07f, value.y / 7.40f);
+        transform.localPosition = new Vector2(towerUnitValues.GetTowerUnitSetTarget().GetLastDir.x / 3f, towerUnitValues.GetTowerUnitSetTarget().GetLastDir.y / 5);
     }
 }

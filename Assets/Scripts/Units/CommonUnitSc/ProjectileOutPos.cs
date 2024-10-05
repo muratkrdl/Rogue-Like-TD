@@ -15,8 +15,8 @@ public class ProjectileOutPos : MonoBehaviour
 
     void Update()
     {
-        value = new Vector2(Mathf.Sign(unitMove.LastDir.x), Mathf.Sign(unitMove.LastDir.y));
-        
+        value = new Vector2(Mathf.Clamp(unitMove.LastDir.x, -1, 1), Mathf.Clamp(unitMove.LastDir.y, -1, 1));
+
         transform.localPosition = new Vector2(-value.x / 4, value.y / 10);
     }
 

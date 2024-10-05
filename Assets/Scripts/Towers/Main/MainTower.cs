@@ -14,9 +14,9 @@ public class MainTower : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
+    public void OnMouseDownEvent()
     {
-        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { towerInfoSo1 = towerInfoSo, isMainTower = true, tower = transform } );
+        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { towerInfoSo1 = towerInfoSo, isMainTower = true, tower = transform, underAttack = false } );
     }
 
 }

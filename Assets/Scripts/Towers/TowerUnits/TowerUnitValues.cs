@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class TowerUnitValues : MonoBehaviour
 {
-    [SerializeField] GameObject projectilePrefab;
+    [SerializeField] GameObject parent;
+
     [SerializeField] Transform projectileOutPos;
 
     [SerializeField] TowerUnitAnimator towerUnitAnimator;
     [SerializeField] TowerUnitAttack towerUnitAttack;
     [SerializeField] TowerUnitStateController towerUnitStateController;
     [SerializeField] TowerUnitSetTarget towerUnitSetTarget;
+    [SerializeField] TowerEnemyKeeper towerEnemyKeeper;
 
     public TowerInfoSo GetTowerInfo => GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerInfo;
-    public GameObject GetProjectilePrefab
-    {
-        get
-        {
-            return projectilePrefab;
-        }
-    }
     public Transform GetProjectileOutPos
     {
         get
@@ -70,4 +65,9 @@ public class TowerUnitValues : MonoBehaviour
     {
         return towerUnitStateController;
     }
+    public TowerEnemyKeeper GetTowerEnemyKeeper()
+    {
+        return towerEnemyKeeper;
+    }
+
 }

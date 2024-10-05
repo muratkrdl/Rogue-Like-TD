@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4257688091429116912}
   - component: {fileID: 797303181046531299}
   - component: {fileID: 6757870025623372329}
+  - component: {fileID: 1536645320904230900}
   - component: {fileID: 4912728915979892433}
   - component: {fileID: 81491868166505899}
   - component: {fileID: 3929127170169211815}
@@ -19,9 +20,9 @@ GameObject:
   - component: {fileID: 3781101182845093605}
   - component: {fileID: 242690796602039640}
   - component: {fileID: 5059640932281186905}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy 0
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,19 +125,54 @@ NavMeshAgent:
   m_GameObject: {fileID: 938995263380344060}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.0043
   m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0.5
+  m_StoppingDistance: 0.25
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
+  m_Height: 0.0043
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!58 &1536645320904230900
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938995263380344060}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.15
 --- !u!114 &4912728915979892433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,13 +265,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitSO: {fileID: 11400000, guid: 981a8504c700a6441862a2805a836c5e, type: 2}
-  projectilePrefab: {fileID: 0}
   projectileOutPos: {fileID: 5380578302238724420}
+  navMeshAgent: {fileID: 6757870025623372329}
   unitAnimator: {fileID: 4912728915979892433}
   unitMove: {fileID: 3929127170169211815}
   unitAttack: {fileID: 81491868166505899}
   unitStateController: {fileID: 3781101182845093605}
-  unitHealth: {fileID: 0}
+  unitHealth: {fileID: 242690796602039640}
   enemySetTarget: {fileID: 777554590277233064}
   guardSetTarget: {fileID: 0}
   isEnemy: 1
@@ -249,7 +285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5380578302238724420}
   - component: {fileID: 1374752429396348443}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectileOutPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b9f301155fbd344912f33d706ff910, type: 3}
   m_Name: Archer 4
   m_EditorClassIdentifier: 
+  towercode: 0
   towerImageIcon: {fileID: 21300000, guid: 994b89a0a42f283479e35996b346e5a0, type: 3}
   towerIcon: {fileID: -391127116, guid: fd910dfda7e85de46abb1671f4093c98, type: 3}
   Name: ArcherIV
   maxHealth: 100
   damageType: 1
   BaseDamageRange: {x: 20, y: 25}
+  TimeBetweenAttack: 1.4
+  attackDelay: 5
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
+  projectileCode: 0
   towerCost: 44
   sellPrice: 444
   Range: 9

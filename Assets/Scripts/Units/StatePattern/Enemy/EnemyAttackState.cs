@@ -25,10 +25,17 @@ public class EnemyAttackState : IUnitState
 
         unitValues.GetUnitMove().LastDir = -(unitValues.transform.position - unitValues.GetEnemySetTarget().GetCurrentTarget.position).normalized / 5;
 
-        if(Mathf.Abs(Vector2.Distance(unitValues.GetEnemySetTarget().GetCurrentDestPos.position, 
-        unitValues.transform.position)) > unitValues.UnitSO.AttackRange + 2.1f)
+        if(Mathf.Abs(Vector2.Distance(unitValues.GetEnemySetTarget().GetCurrentDestPos.position, unitValues.transform.position)) >= unitValues.UnitSO.AttackRange + 3.5f)
         {
             unitValues.GetUnitStateController().ChangeState(new EnemyIdleState());
+        }
+
+        if(unitValues.GetEnemySetTarget().GetCurrentTarget.TryGetComponent<TowerInfoKeeper>(out var component))
+        {
+            if(component.GetCurrentTowerCode == -1)
+            {
+                unitValues.GetUnitStateController().ChangeState(new EnemyIdleState());
+            }
         }
     }
 }

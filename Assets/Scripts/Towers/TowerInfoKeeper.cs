@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class TowerInfoKeeper : MonoBehaviour
 {
+    [SerializeField] EvolvedBuildAnim evolvedBuildAnim;
+
     [SerializeField] TowerHealth towerHealth;
 
     [SerializeField] Image rangeCircle;
@@ -62,6 +64,7 @@ public class TowerInfoKeeper : MonoBehaviour
         currentTowerInfo = AllTowerInfos.Instance.GetTowerInfoSo(i, level);
         currentTowerCode = i;
         rangeCircle.transform.localScale = new(currentTowerInfo.Range, currentTowerInfo.Range);
+        GetComponentInChildren<TowerEnemyKeeper>().SetNewCollider(currentTowerInfo.Range);
         towerHealth.SetTowerHealth(GetCurrentTowerInfo.maxHealth);
     }
 
@@ -71,6 +74,12 @@ public class TowerInfoKeeper : MonoBehaviour
         currentTowerLevel = 1;
         currentTowerCode = -1;
         clickedTowerCode = 0;
+        rangeCircle.transform.localScale = Vector2.zero;
+    }
+
+    public EvolvedBuildAnim GetEvolvedBuildAnim()
+    {
+        return evolvedBuildAnim;
     }
 
 }

@@ -16,6 +16,7 @@ public class TowerChange : MonoBehaviour
 
     public void ChangeTower()
     {
+        GetComponentInChildren<TowerUnitStateController>().ClearTokenSource();
         openTower.SetActive(true);
         gameObject.SetActive(false);
     }

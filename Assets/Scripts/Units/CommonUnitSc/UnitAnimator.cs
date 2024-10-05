@@ -11,7 +11,7 @@ public class UnitAnimator : MonoBehaviour
 
     void Update()
     {
-        if(!unitValues.GetComponent<NavMeshAgent>().isStopped)
+        if(!unitValues.GetNavMeshAgent().isStopped)
         {
             animator.SetFloat(ConstStrings.UNIT_ANIMATOR_SPEED, unitValues.GetUnitMove().LastDir.sqrMagnitude);
         }

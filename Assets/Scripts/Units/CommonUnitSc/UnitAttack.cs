@@ -34,13 +34,17 @@ public class UnitAttack : MonoBehaviour
         var projectile = ProjectileObjectPool.Instance.GetProjectile(projectileCode);
         if(projectile != null) // CHECKPOOL
         {
-            projectile.SetValues(unitValues.GetEnemySetTarget().GetCurrentTarget, unitValues.GetProjectileOutPos,AllProjectileSOs.Instance.GetProjectiileSO(projectileCode));
+            projectile.SetValues(unitValues.GetEnemySetTarget().GetCurrentTarget, 
+            unitValues.GetProjectileOutPos, 
+            unitValues.UnitSO.AttackDamage);
         }
         else // SPAWN
         {
-            projectile = Instantiate(unitValues.GetProjectilePrefab, unitValues.GetProjectileOutPos.position, Quaternion.identity, 
+            projectile = Instantiate(ProjectileObjectPool.Instance.GetProjectilePrefab(projectileCode), unitValues.GetProjectileOutPos.position, Quaternion.identity, 
             ProjectileObjectPool.Instance.GetInstantiatedObjParent(projectileCode)).GetComponent<Projectile>();
-            projectile.SetValues(unitValues.GetEnemySetTarget().GetCurrentTarget, unitValues.GetProjectileOutPos, AllProjectileSOs.Instance.GetProjectiileSO(projectileCode));
+            projectile.SetValues(unitValues.GetEnemySetTarget().GetCurrentTarget, 
+            unitValues.GetProjectileOutPos, 
+            unitValues.UnitSO.AttackDamage);
 
             ProjectileObjectPool.Instance.OnCreatedProjectileObj?.Invoke(this, new() { code = projectileCode, createdObj = projectile } );
         }

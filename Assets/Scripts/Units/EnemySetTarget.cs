@@ -26,13 +26,11 @@ public class EnemySetTarget : MonoBehaviour
     void Start() 
     {
         GetComponent<UnitStateController>().StartFunc(0);
-        SetCurrentTargetToMainTower();
     }
 
     public void SetCurrentTargetToMainTower()
     {
-        currentTarget = GlobalUnitTargets.Instance.GetMainTower();
-        currentDestPos = GlobalUnitTargets.Instance.GetMainTower().GetComponent<TowerShootPointKeeper>().GetAvailablePoint().transform;
+        ChangeCurrentTarget(GlobalUnitTargets.Instance.GetMainTower(), true);
     }
 
     public void ChangeCurrentTarget(Transform changeTransform, bool isTower)

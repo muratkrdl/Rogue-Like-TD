@@ -47,7 +47,7 @@ public class MainTowerManager : MonoBehaviour
         {
             cinemachineVirtualCamera.GetComponent<Animator>().SetTrigger("Out");
         }
-        LMouseClick.Instance.CloseEverything();
+        LMouseClick.Instance.CloseEverything(false);
         isIn = !isIn;
         mainChar.SetActive(isIn);
     }

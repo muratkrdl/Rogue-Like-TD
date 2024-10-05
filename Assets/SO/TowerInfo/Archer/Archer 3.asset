@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b9f301155fbd344912f33d706ff910, type: 3}
   m_Name: Archer 3
   m_EditorClassIdentifier: 
+  towercode: 0
   towerImageIcon: {fileID: 21300000, guid: 994b89a0a42f283479e35996b346e5a0, type: 3}
   towerIcon: {fileID: -127352541, guid: f60ab5e028f5f51408ef2877482585e1, type: 3}
   Name: ArcherIII
   maxHealth: 100
   damageType: 1
   BaseDamageRange: {x: 14, y: 18}
+  TimeBetweenAttack: 1.6
+  attackDelay: 5
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
+  projectileCode: 0
   towerCost: 33
   sellPrice: 333
   Range: 8

@@ -11,6 +11,7 @@ public class TowerInfoSo : ScriptableObject
     public DamageType damageType;
     public Vector2 BaseDamageRange;
     public float TimeBetweenAttack;
+    public int attackDelay;
     public Color DamageTypeColor;
     public int projectileCode;
     public int towerCost;

@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class UnitValues : MonoBehaviour
 {
     [SerializeField] UnitSO unitSO;
-    [SerializeField] GameObject projectilePrefab;
     [SerializeField] Transform projectileOutPos;
 
+    [SerializeField] NavMeshAgent navMeshAgent;
     [SerializeField] UnitAnimator unitAnimator;
     [SerializeField] UnitMove unitMove;
     [SerializeField] UnitAttack unitAttack;
@@ -29,13 +30,6 @@ public class UnitValues : MonoBehaviour
         {
             unitSO = value;
             unitHealth.CurrenHealth = unitSO.MaxHealth;
-        }
-    }
-    public GameObject GetProjectilePrefab
-    {
-        get
-        {
-            return projectilePrefab;
         }
     }
     public Transform GetProjectileOutPos
@@ -91,6 +85,10 @@ public class UnitValues : MonoBehaviour
         }
     }
 
+    public NavMeshAgent GetNavMeshAgent()
+    {
+        return navMeshAgent;
+    }
     public UnitAnimator GetUnitAnimator()
     {
         return unitAnimator;

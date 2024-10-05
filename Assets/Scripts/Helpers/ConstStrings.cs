@@ -13,6 +13,12 @@ public static class ConstStrings
     public static string TOWER_LEVEL_UP_EVOLVE1 = "Anim1";
     public static string TOWER_LEVEL_UP_EVOLVE2 = "Anim2";
     public static string TOWER_GUARD_DOOR = "Door";
+    public static string TOWER_FIRE_ANIMATOR_HEALTH_PERCENT = "HealthPercent";
+    public static string TOWER_FIRE_ANIMATOR_ON_FIRE = "OnFire";
+    public static string TOWER_FIRE_ANIMATOR_RESET = "Reset";
     public static string BUILD_TOWER_ANIM_DESTROY = "Destroy";
-    public static string INFO_PANEL_ANIMATOR_ISIN = "IsIn";
+    public static string INFO_PANEL_ANIMATOR_IN = "In";
+    public static string INFO_PANEL_ANIMATOR_OUT = "Out";
+    public static string PROJECTILE_VFX_ANIMATE = "Animate";
+    public static string PROJECTILE_VFX_RESET = "Reset";
 }

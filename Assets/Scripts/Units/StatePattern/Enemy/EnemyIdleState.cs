@@ -9,7 +9,6 @@ public class EnemyIdleState : IUnitState
         unitValues.IsChasing = false;
         if(unitValues.IsDead) return;
         unitValues.GetEnemySetTarget().SetCurrentTargetToMainTower();
-        GlobalUnitTargets.Instance.CheckClosePlayerandTower(unitValues, unitValues.transform);
         unitValues.GetUnitStateController().ChangeState(new EnemyWalkState());
     }
 

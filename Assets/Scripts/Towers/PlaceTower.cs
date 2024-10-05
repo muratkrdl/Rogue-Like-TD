@@ -8,18 +8,16 @@ public class PlaceTower : MonoBehaviour
     [SerializeField] PlaceTowerAnimation placeTowerAnimation;
     [SerializeField] LevelUpTower levelUpTower;
 
-    [SerializeField] TowerChange[] towerChanges;
-
     [SerializeField] Image placeTowerCanvas;
     [SerializeField] Image levelUpTowerCanvas;
 
     [SerializeField] GameObject[] towers;
 
-    void OnMouseDown() 
+    public void OnMouseDownEvent() 
     {
         if(MainTowerManager.Instance.GetIsIn) return;
         placeTowerAnimation.ChangeAnimation();
-        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { towerInfoSo1 = towerInfoKeeper.GetCurrentTowerInfo, tower = transform });
+        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { towerInfoSo1 = towerInfoKeeper.GetCurrentTowerInfo, tower = transform, underAttack = false });
     }
 
     public void OnClick_BuildTower()
@@ -64,6 +62,7 @@ public class PlaceTower : MonoBehaviour
         towerInfoKeeper.SetCurrentTowerInfo(towerInfoKeeper.ClickedTowerCode, towerInfoKeeper.CurrentTowerLevel);
         levelUpTower.UpdateTowerCostText();
         levelUpTower.SetAnimator = clickedTowersAnimator;
+        levelUpTower.SetChoosenUnitAnimator(towerInfoKeeper.GetCurrentTowerCode , choosenAnimName);
     }
 
     void OnClick_ChangeLevelUpCanvas()
@@ -87,15 +86,13 @@ public class PlaceTower : MonoBehaviour
         GetComponentInChildren<EvolvedBuildAnim>().PlayDestroyAnim();
         Invoke(nameof(ForInvokeSpriteRendererTrue), .5f);
         GetComponent<BaseTowerPanelKeeper>().OpenCanvas(placeTowerCanvas);
+        
         foreach (var item in towers)
         {
             if(!item.activeSelf) continue;
             item.SetActive(false);
             item.GetComponent<Animator>().SetTrigger(ConstStrings.TOWER_RESET);
-        }
-        foreach (var item in towerChanges)
-        {
-            item.Reset();
+            item.GetComponent<TowerChange>().Reset();
         }
 
         levelUpTower.ResetAllValues();

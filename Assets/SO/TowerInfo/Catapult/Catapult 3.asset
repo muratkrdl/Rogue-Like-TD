@@ -19,7 +19,10 @@ MonoBehaviour:
   maxHealth: 100
   damageType: 1
   BaseDamageRange: {x: 5, y: 7}
+  TimeBetweenAttack: 2.4
+  attackDelay: 2
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
+  projectileCode: 5
   towerCost: 33
   sellPrice: 333
   Range: 7

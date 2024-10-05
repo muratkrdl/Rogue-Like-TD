@@ -7,8 +7,6 @@ public class UnitMove : MonoBehaviour
 {
     [SerializeField] UnitValues unitValues;
 
-    NavMeshAgent navMeshAgent;
-
     Vector2 lastDir;
 
     public Vector2 LastDir
@@ -26,16 +24,16 @@ public class UnitMove : MonoBehaviour
 
     void Start() 
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
-        navMeshAgent.updateRotation = false;
-        navMeshAgent.updateUpAxis = false;
+        unitValues.GetNavMeshAgent().updateRotation = false;
+        unitValues.GetNavMeshAgent().updateUpAxis = false;
     }
 
     void Update() 
     {
-        if(navMeshAgent.velocity.x != 0 || navMeshAgent.velocity.y != 0 && !unitValues.IsAttacking)
+        if(unitValues.IsDead) return;
+        if(unitValues.GetNavMeshAgent().velocity.x != 0 || unitValues.GetNavMeshAgent().velocity.y != 0 && !unitValues.IsAttacking)
         {
-            lastDir = navMeshAgent.velocity;
+            lastDir = unitValues.GetNavMeshAgent().velocity;
         }
         if(Mathf.Abs(lastDir.x) > Mathf.Epsilon)
         {
@@ -45,19 +43,28 @@ public class UnitMove : MonoBehaviour
 
     public void MoveUnit() 
     {
-        if(!navMeshAgent.isStopped)
+        if(!unitValues.GetNavMeshAgent().isStopped)
         {
-            navMeshAgent.SetDestination(unitValues.GetEnemySetTarget().GetCurrentDestPos.position);
+            unitValues.GetNavMeshAgent().SetDestination(unitValues.GetEnemySetTarget().GetCurrentDestPos.position);
         }
     }
 
     public void StopUnit() 
     {
-        if(!navMeshAgent.isStopped)
+        if(!unitValues.GetNavMeshAgent().isStopped)
         {
             Vector2 offset = (unitValues.GetEnemySetTarget().GetCurrentDestPos.position - transform.position).normalized;
             offset += new Vector2(transform.position.x, transform.position.y /2);
-            navMeshAgent.SetDestination(offset);
+            unitValues.GetNavMeshAgent().SetDestination(offset);
+        }
+    }
+
+    public void StopSuddenly() 
+    {
+        if(!unitValues.GetNavMeshAgent().isStopped)
+        {
+            unitValues.GetNavMeshAgent().SetDestination(transform.position);
+            unitValues.GetEnemySetTarget().ChangeCurrentTarget(transform, false);
         }
     }
 }

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,7 +20,10 @@ public class LevelUpTower : MonoBehaviour
     [SerializeField] float evolvedTowerIconX;
     [SerializeField] float evolvedTowerIconTransformY;
 
+    [SerializeField] Animator[] units;
+
     Animator animator;
+    Animator choosenUnitAnimator;
 
     float initialNormalTowerIconX;
     float initialNormalTowerIconY;
@@ -69,6 +69,8 @@ public class LevelUpTower : MonoBehaviour
         }
 
         animator.SetTrigger(ConstStrings.TOWER_LEVEL_UP);
+        if(choosenUnitAnimator != null)
+            choosenUnitAnimator.SetTrigger(ConstStrings.TOWER_LEVEL_UP);
         Invoke(nameof(UpdateTowerInfoSO), .1f);
     }
 
@@ -93,7 +95,7 @@ public class LevelUpTower : MonoBehaviour
             return;
         }
 
-        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { isMainTower = false, towerInfoSo1 = towerInfoKeeper.GetCurrentTowerInfo, tower = transform } );
+        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { isMainTower = false, towerInfoSo1 = towerInfoKeeper.GetCurrentTowerInfo, tower = transform, underAttack = false } );
         UpdateTowerCostText();
     }
 
@@ -114,10 +116,41 @@ public class LevelUpTower : MonoBehaviour
 
     public void ResetAllValues()
     {
+        if(animator == null) return;
+        animator.SetTrigger(ConstStrings.TOWER_RESET);
         SetAnimator = null;
         levelUpTowerIcon.rectTransform.sizeDelta = new(initialNormalTowerIconX, initialNormalTowerIconY);
         levelUpTowerIcon.rectTransform.localPosition = new(levelUpTowerIcon.rectTransform.localPosition.x, initialNormalTowerIconTransformY);
         isTowerFull = false;
+        choosenUnitAnimator.SetTrigger(ConstStrings.TOWER_RESET);
+        choosenUnitAnimator.GetComponent<TowerUnitValues>().GetTowerUnitStateController().ChangeState(new TowerUnitIdleState());
+        choosenUnitAnimator.GetComponent<TowerUnitValues>().GetTowerUnitSetTarget().SetTargetToBaseTarget();
+        choosenUnitAnimator.gameObject.SetActive(false);
+    }
+
+    public void SetChoosenUnitAnimator(int code, string str)
+    {
+        int realCode = code;
+        if(code > 3)
+        {
+            realCode = code switch
+            {
+                5 => 4,
+                6 => 5,
+                7 => 5,
+                8 => 6,
+                9 => 6,
+                10 => 7,
+                11 => 7,
+                _ => 4,
+            };
+        }
+        units[realCode].gameObject.SetActive(true);
+        choosenUnitAnimator = units[realCode];
+        if(code > 3)
+        {
+            choosenUnitAnimator.SetTrigger(str);
+        }
     }
 
 }

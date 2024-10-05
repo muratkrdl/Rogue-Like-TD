@@ -1,15 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerUnitSetTarget : MonoBehaviour
 {
-    [SerializeField] Transform fornow;
-
-    void Start() 
-    {
-        ChangeCurrentTarget(fornow);    
-    }
+    [SerializeField] Transform baseTarget;
 
     [SerializeField] TowerUnitValues towerUnitValues;
 
@@ -23,7 +19,7 @@ public class TowerUnitSetTarget : MonoBehaviour
     {
         get
         {
-            return lastDir.normalized;
+            return new Vector2(Mathf.Clamp(lastDir.x, -1, 1), Mathf.Clamp(lastDir.y, -1, 1f));
         }
     }
 
@@ -35,13 +31,30 @@ public class TowerUnitSetTarget : MonoBehaviour
         }
     }
 
+    void Start() 
+    {
+        ChangeCurrentTarget(baseTarget);
+
+        towerUnitValues.GetTowerEnemyKeeper().OnEnemyListKeeperChanged += TowerEnemyKeeper_OnEnemyListKeeperChanged;
+    }
+
+    void TowerEnemyKeeper_OnEnemyListKeeperChanged(object sender, TowerEnemyKeeper.OnEnemyListKeeperChangedEventArgs e)
+    {
+        if(e.isIn && !towerUnitValues.IsChasing)
+        {
+            ChangeCurrentTarget(e.enemyTransform);
+        }
+        else if(!e.isIn && e.enemyTransform == currentTarget)
+        {
+            ClosestTarget();
+        }
+    }
+
     void Update() 
     {
-        // if(!towerUnitValues.IsAttacking) return;
-
         lastDir = currentTarget.position - origin.position;
 
-        if(Mathf.Abs(lastDir.x) > Mathf.Epsilon)
+        if(Mathf.Abs(lastDir.x) > Mathf.Epsilon && towerUnitValues.GetTowerInfo.towercode <= 3)
         {
             transform.localScale = new(-Mathf.Sign(lastDir.x), transform.localScale.y, transform.localScale.z);
         }
@@ -50,6 +63,31 @@ public class TowerUnitSetTarget : MonoBehaviour
     public void ChangeCurrentTarget(Transform changeTransform)
     {
         currentTarget = changeTransform;
+    }
+
+    public void ClosestTarget()
+    {
+        Transform choosenTarget;
+        if(towerUnitValues.GetTowerEnemyKeeper().GetEnemiesInRangeList.Count > 0)
+        {
+            choosenTarget = towerUnitValues.GetTowerEnemyKeeper().GetClosestEnemy();
+        }
+        else
+        {
+            choosenTarget = baseTarget;
+        }
+
+        ChangeCurrentTarget(choosenTarget);
+    }
+
+    public void SetTargetToBaseTarget()
+    {
+        ChangeCurrentTarget(baseTarget);
+    }
+
+    void OnDestroy() 
+    {
+        towerUnitValues.GetTowerEnemyKeeper().OnEnemyListKeeperChanged -= TowerEnemyKeeper_OnEnemyListKeeperChanged;
     }
 
 }
