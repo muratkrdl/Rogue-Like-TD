@@ -9,6 +9,12 @@ public class Projectile : MonoBehaviour
     [SerializeField] Animator vfxAnimator;
 
     Transform target;
+    DamageType damageType;
+
+    public Transform GetTarget
+    {
+        get => target;
+    }
 
     bool isAvailable = false;
     bool damageable = true;
@@ -17,17 +23,15 @@ public class Projectile : MonoBehaviour
 
     public bool GetIsAvailable
     {
-        get
-        {
-            return isAvailable;
-        }
+        get => isAvailable;
     }
 
-    public void SetValues(Transform target, Transform projectileOutPos, float Damage)
+    public void SetValues(Transform target, Transform projectileOutPos, float Damage, DamageType damageType)
     {
         damageable = true;
         transform.position = projectileOutPos.position;
         this.target = target;
+        this.damageType = damageType;
         currentDamage = Damage;
         isAvailable = false;
         GetComponent<SpriteRenderer>().enabled = true;
@@ -45,7 +49,7 @@ public class Projectile : MonoBehaviour
             // Damage
             if(target.TryGetComponent<IDamageable>(out var component))
             {
-                component.TakeDamage((int) currentDamage);
+                component.TakeDamage((int) currentDamage, damageType);
             }
             damageable = false;
             VFX();
@@ -57,7 +61,7 @@ public class Projectile : MonoBehaviour
         vfxAnimator.SetTrigger(ConstStrings.PROJECTILE_VFX_ANIMATE);
     }
 
-    public void InstantiateObj()
+    public void InstantiateObj() // özel yerlerde alan hasarı vermek için vs kullan
     {
         Instantiate(spawnObj, transform.position, Quaternion.identity);
     }

@@ -16,11 +16,14 @@ MonoBehaviour:
   towerImageIcon: {fileID: 21300000, guid: 2e62d31d235d2be4985721050eaad207, type: 3}
   towerIcon: {fileID: 21300000, guid: 8bb2c4c33ba999f48b5165ca13c9cf6e, type: 3}
   Name: GuardianI
-  maxHealth: 100
+  maxHealth: 105
   damageType: 1
-  BaseDamageRange: {x: 1, y: 3}
+  BaseDamageRange: {x: 6, y: 9}
+  TimeBetweenAttack: 0
+  attackDelay: 0
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
-  towerCost: 11
-  sellPrice: 111
+  projectileCode: 0
+  towerCost: 70
+  sellPrice: 45
   Range: 4.5
-  Description: Guard to Towers
+  Description: Guard to Towers, each third strike will be blocked

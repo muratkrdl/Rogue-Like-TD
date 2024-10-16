@@ -8,10 +8,12 @@ public class MainTower : MonoBehaviour
 
     public TowerInfoSo GetTowerInfoSo
     {
-        get
-        {
-            return towerInfoSo;
-        }
+        get => towerInfoSo;
+    }
+
+    void Start() 
+    {
+        GetComponent<TowerHealth>().SetTowerHealth(towerInfoSo.maxHealth);
     }
 
     public void OnMouseDownEvent()

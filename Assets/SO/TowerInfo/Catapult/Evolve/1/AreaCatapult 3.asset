@@ -16,14 +16,14 @@ MonoBehaviour:
   towerImageIcon: {fileID: 21300000, guid: 57f98f8022760154cb9069ddfdce1a27, type: 3}
   towerIcon: {fileID: 1972882562, guid: cc812dee04b22a044973ea564a3ac658, type: 3}
   Name: AreaCatapultIII
-  maxHealth: 100
+  maxHealth: 300
   damageType: 1
-  BaseDamageRange: {x: 7, y: 8}
-  TimeBetweenAttack: 2
+  BaseDamageRange: {x: 54, y: 61}
+  TimeBetweenAttack: 1.5
   attackDelay: 5
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 15
-  towerCost: 33
-  sellPrice: 333
-  Range: 7
+  towerCost: 1300
+  sellPrice: 2450
+  Range: 6.7
   Description: Throws stones to the closest enemy

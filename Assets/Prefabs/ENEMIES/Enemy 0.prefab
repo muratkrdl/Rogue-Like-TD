@@ -81,9 +81,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1055387437
-  m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingLayerID: 1088397577
+  m_SortingLayer: 6
+  m_SortingOrder: -22
   m_Sprite: {fileID: -1464160640, guid: 0e55fb8ef735984418218dd6c20e4cd8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -127,9 +127,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.0043
   m_Speed: 1
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_Acceleration: 16
+  avoidancePriority: 0
+  m_AngularSpeed: 0
   m_StoppingDistance: 0.25
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -137,7 +137,7 @@ NavMeshAgent:
   m_Height: 0.0043
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0
 --- !u!58 &1536645320904230900
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfa8a61f7f587024cb2f1ea650f0185b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startUnitStateCode: 0
 --- !u!114 &3781101182845093605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578efb37385d14849895fe79fbea61a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  specialAnimator: {fileID: 0}
   unitValues: {fileID: 5059640932281186905}
 --- !u!114 &5059640932281186905
 MonoBehaviour:
@@ -275,6 +277,10 @@ MonoBehaviour:
   enemySetTarget: {fileID: 777554590277233064}
   guardSetTarget: {fileID: 0}
   isEnemy: 1
+  isSpecial: 0
+  hasLongRange: 0
+  damageType: 1
+  towerBasePosition: {fileID: 0}
 --- !u!1 &8362051447031276470
 GameObject:
   m_ObjectHideFlags: 0

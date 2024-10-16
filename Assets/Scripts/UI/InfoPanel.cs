@@ -35,10 +35,7 @@ public class InfoPanel : MonoBehaviour
 
     public TowerInfoSo GetCurrentTowerInfoSO
     {
-        get
-        {
-            return currentTowerInfoSO;
-        }
+        get => currentTowerInfoSO;
     }
 
     void Awake() 
@@ -100,6 +97,8 @@ public class InfoPanel : MonoBehaviour
 
     public void OnClick_SellButton()
     {
+        if(LMouseClick.Instance.GetLastClickedTower.GetComponent<TowerInfoKeeper>().GetCurrentTowerCode == -1) return;
+        
         LMouseClick.Instance.GetLastClickedTower.ResetAllValues();
         Bank.Instance.OnChangeMoneyAmount?.Invoke(this, new() { amount = currentTowerInfoSO.sellPrice } );
     }

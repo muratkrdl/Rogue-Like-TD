@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,12 @@ public class OnTrigger : MonoBehaviour
         if(other.CompareTag(TagManager.TOWER))
         {
             other.GetComponent<SpriteRenderer>().color = transparentColor;
-        }    
+        }
+        else if(other.CompareTag(TagManager.XPGEM))
+        {
+            ExperienceSystem.Instance.OnGetExperience?.Invoke(this, new() { name = other.name } );
+            other.gameObject.SetActive(false);
+        }
     }
 
     void OnTriggerExit2D(Collider2D other) 
@@ -20,6 +26,6 @@ public class OnTrigger : MonoBehaviour
         if(other.CompareTag(TagManager.TOWER))
         {
             other.GetComponent<SpriteRenderer>().color = normalColor;
-        }       
+        }
     }
 }

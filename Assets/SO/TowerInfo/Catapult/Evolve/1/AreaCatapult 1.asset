@@ -16,14 +16,14 @@ MonoBehaviour:
   towerImageIcon: {fileID: 21300000, guid: 57f98f8022760154cb9069ddfdce1a27, type: 3}
   towerIcon: {fileID: -1925550880, guid: cc812dee04b22a044973ea564a3ac658, type: 3}
   Name: AreaCatapultI
-  maxHealth: 100
+  maxHealth: 220
   damageType: 1
-  BaseDamageRange: {x: 7, y: 8}
+  BaseDamageRange: {x: 31, y: 38}
   TimeBetweenAttack: 2
   attackDelay: 5
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 13
-  towerCost: 11
-  sellPrice: 111
-  Range: 7
+  towerCost: 510
+  sellPrice: 700
+  Range: 6
   Description: Throws stones to the closest enemy

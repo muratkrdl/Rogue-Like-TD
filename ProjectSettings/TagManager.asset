@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Tower
   - Enemy
+  - MainTower
+  - Guard
+  - xpGem
   layers:
   - Default
   - TransparentFX

@@ -4,8 +4,6 @@ public class TowerUnitAttackState : ITowerUnitState
 {
     public void EnterState(TowerUnitValues unitValues)
     {
-        Debug.Log("Entering Attack");
-
         unitValues.IsAttacking = true;
         unitValues.IsChasing = true;
         unitValues.GetTowerUnitAttack().Attack().Forget();
@@ -17,8 +15,6 @@ public class TowerUnitAttackState : ITowerUnitState
         unitValues.GetTowerUnitStateController().ClearTokenSource();
         unitValues.IsAttacking = false;
         unitValues.IsChasing = false;
-
-        Debug.Log("Exiting Attack");
     }
 
     public void UpdateState(TowerUnitValues unitValues)
@@ -34,7 +30,5 @@ public class TowerUnitAttackState : ITowerUnitState
         {
             unitValues.GetTowerUnitStateController().ChangeState(new TowerUnitIdleState());
         }
-
-        Debug.Log("Updating Attack");
     }
 }

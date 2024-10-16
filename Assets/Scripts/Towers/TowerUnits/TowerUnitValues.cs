@@ -17,10 +17,7 @@ public class TowerUnitValues : MonoBehaviour
     public TowerInfoSo GetTowerInfo => GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerInfo;
     public Transform GetProjectileOutPos
     {
-        get
-        {
-            return projectileOutPos;
-        }
+        get => projectileOutPos;
     }
 
     bool isChasing = false;

@@ -7,19 +7,15 @@ public class TowerUnitIdleState : ITowerUnitState
         unitValues.GetTowerUnitStateController().ClearTokenSource();
 
         unitValues.GetTowerUnitSetTarget().ClosestTarget();
-
-        Debug.Log("Entering Idle");
     }
 
     public void ExitState(TowerUnitValues unitValues)
     {
-        Debug.Log("Exiting Idle");
+
     }
 
     public void UpdateState(TowerUnitValues unitValues)
     {
-        Debug.Log("Updating Idle");
-
         if(!unitValues.GetTowerUnitSetTarget().GetCurrentTarget.CompareTag(TagManager.ENEMY))
         {
             unitValues.GetTowerUnitSetTarget().ClosestTarget();

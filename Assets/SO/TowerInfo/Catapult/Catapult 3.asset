@@ -16,14 +16,14 @@ MonoBehaviour:
   towerImageIcon: {fileID: 21300000, guid: 076ec9a6bc41efb42850eacb56ef879a, type: 3}
   towerIcon: {fileID: 1428886454, guid: 7b4c82c4c5f5b1c41a9fb672f466f1e2, type: 3}
   Name: CatapultIII
-  maxHealth: 100
+  maxHealth: 180
   damageType: 1
-  BaseDamageRange: {x: 5, y: 7}
+  BaseDamageRange: {x: 20, y: 24}
   TimeBetweenAttack: 2.4
   attackDelay: 2
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 5
-  towerCost: 33
-  sellPrice: 333
-  Range: 7
+  towerCost: 265
+  sellPrice: 295
+  Range: 5.25
   Description: Throws stones to the closest enemy

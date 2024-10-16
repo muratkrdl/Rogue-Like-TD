@@ -41,6 +41,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0dbadda088925af4d8b7e955d0471a6b, type: 2}
     - target: {fileID: 5059640932281186905, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: hasLongRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059640932281186905, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 6627281165569680122, guid: 656f489496320f346845abd05013e829, type: 3}
@@ -85,12 +89,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6757870025623372329, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: m_Speed
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757870025623372329, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
       propertyPath: m_Height
       value: 0.0043
       objectReference: {fileID: 0}
     - target: {fileID: 6757870025623372329, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
       propertyPath: m_Radius
       value: 0.0043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757870025623372329, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8362051447031276470, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
       propertyPath: m_Layer

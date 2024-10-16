@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GuardWalkState : IUnitState
 {
     public void EnterState(UnitValues unitValues)
     {
-        Debug.Log("Entering Walk");
+
     }
 
     public void ExitState(UnitValues unitValues)
     {
-        Debug.Log("Exiting Walk");
+    
     }
 
     public void UpdateState(UnitValues unitValues)
@@ -19,16 +20,17 @@ public class GuardWalkState : IUnitState
         unitValues.GetUnitMove().MoveUnit();
 
         float distanceBetweenTarget = Mathf.Abs(Vector2.Distance(unitValues.GetGuardSetTarget().
-        GetCurrentDestPos.transform.position, unitValues.transform.position));
+        GetCurrentTarget.transform.position, unitValues.transform.position));
 
         if(unitValues.IsChasing)
         {
-            if(distanceBetweenTarget >= unitValues.UnitSO.AttackRange + 2f)
+            if(!unitValues.GetGuardSetTarget().TowerEnemyKeeper.ItemInList(unitValues.GetGuardSetTarget().GetCurrentTarget) || 
+            (unitValues.GetGuardSetTarget().GetCurrentTarget.TryGetComponent<UnitValues>(out var component) && component.IsDead))
             {
-                unitValues.GetGuardSetTarget().SetNormalPos();
+                unitValues.GetGuardSetTarget().ChangeCurrentTarget(unitValues.TowerBasePosition);
                 unitValues.IsChasing = false;
             }
-            else if(distanceBetweenTarget <= unitValues.UnitSO.AttackRange + .375f)
+            else if(distanceBetweenTarget <= unitValues.UnitSO.AttackRange + .15f)
             {
                 unitValues.GetUnitMove().StopUnit(false);
                 unitValues.GetUnitStateController().ChangeState(new GuardAttackState());
@@ -36,13 +38,11 @@ public class GuardWalkState : IUnitState
         }
         else
         {
-            if(distanceBetweenTarget <= unitValues.UnitSO.AttackRange + .375f)
+            if(distanceBetweenTarget <= unitValues.UnitSO.AttackRange + .01f)
             {
                 unitValues.GetUnitMove().StopUnit(false);
                 unitValues.GetUnitStateController().ChangeState(new GuardIdleState());
             }
         }
-
-        Debug.Log("Updating Walk");
     }
 }

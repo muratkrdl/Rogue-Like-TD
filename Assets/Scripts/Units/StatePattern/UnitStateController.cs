@@ -13,10 +13,7 @@ public class UnitStateController : MonoBehaviour
 
     public CancellationTokenSource GetTokenSource
     {
-        get
-        {
-            return cts;
-        }
+        get => cts;
     }
 
     public void StartFunc(int value)
@@ -24,7 +21,8 @@ public class UnitStateController : MonoBehaviour
         currentState = value switch
         {
             0 => new EnemyIdleState(),
-            _ => new GuardIdleState(),
+            1 => new GuardIdleState(),
+            _ => new SpecialEnemyIdleState(),
         };
 
         currentState.EnterState(unitValues);

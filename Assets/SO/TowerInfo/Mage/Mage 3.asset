@@ -16,14 +16,14 @@ MonoBehaviour:
   towerImageIcon: {fileID: 21300000, guid: fa968a8da5b959d478cfee77bf43147e, type: 3}
   towerIcon: {fileID: -300342932, guid: 7ca4aef2945ea0a4fa81a6a4c64b4cfc, type: 3}
   Name: MageIII
-  maxHealth: 100
+  maxHealth: 130
   damageType: 2
-  BaseDamageRange: {x: 5, y: 7}
-  TimeBetweenAttack: 1.8
+  BaseDamageRange: {x: 19, y: 22}
+  TimeBetweenAttack: 1.45
   attackDelay: 4
   DamageTypeColor: {r: 0.47058824, g: 0, b: 1, a: 1}
   projectileCode: 2
-  towerCost: 33
-  sellPrice: 333
-  Range: 5
+  towerCost: 250
+  sellPrice: 275
+  Range: 6
   Description: Using mage to kill enemy

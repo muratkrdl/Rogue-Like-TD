@@ -18,15 +18,12 @@ public class LMouseClick : MonoBehaviour
 
     public PlaceTower GetLastClickedTower
     {
-        get
-        {
-            return lastClickedTower;
-        }
+        get => lastClickedTower;
     }
 
     void Awake() 
     {
-        Instance = this;    
+        Instance = this;
     }
 
     void Update()

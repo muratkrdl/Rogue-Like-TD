@@ -10,18 +10,12 @@ public class GetInputs : MonoBehaviour
 
     public Vector2 GetLastMoveDir
     {
-        get
-        {
-            return lastMoveDir;
-        }
+        get => lastMoveDir;
     }
 
     public Vector2 GetMoveInput
     {
-        get
-        {
-            return moveInput.normalized;
-        }
+        get => moveInput.normalized;
     }
 
     void Update()

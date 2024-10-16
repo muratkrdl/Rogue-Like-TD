@@ -16,14 +16,14 @@ MonoBehaviour:
   towerImageIcon: {fileID: 21300000, guid: 076ec9a6bc41efb42850eacb56ef879a, type: 3}
   towerIcon: {fileID: 1357562056, guid: dc17590d5caacb644b94a5d2c7a6c0ec, type: 3}
   Name: CatapultIV
-  maxHealth: 100
+  maxHealth: 210
   damageType: 1
-  BaseDamageRange: {x: 5, y: 7}
+  BaseDamageRange: {x: 26, y: 30}
   TimeBetweenAttack: 2.1
   attackDelay: 3
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 6
-  towerCost: 44
-  sellPrice: 444
-  Range: 7
+  towerCost: 380
+  sellPrice: 635
+  Range: 5.75
   Description: Throws stones to the closest enemy

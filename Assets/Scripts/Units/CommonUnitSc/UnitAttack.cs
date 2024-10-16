@@ -23,30 +23,28 @@ public class UnitAttack : MonoBehaviour
 
     public void AnimEvent_CloseRangeAttack()
     {
-        if(unitValues.GetEnemySetTarget().GetCurrentTarget.TryGetComponent<IDamageable>(out var component))
+        Transform target = unitValues.GetIsEnemy switch
         {
-            component.TakeDamage(unitValues.UnitSO.AttackDamage);
+            true => unitValues.GetEnemySetTarget().GetCurrentTarget,
+            _ => unitValues.GetGuardSetTarget().GetCurrentTarget,
+        };
+
+        if(target.TryGetComponent<IDamageable>(out var component))
+        {
+            component.TakeDamage(unitValues.UnitSO.AttackDamage + (int)UnityEngine.Random.Range(unitValues.PlusDamageRange.x, unitValues.PlusDamageRange.y), unitValues.GetDamageType);
         }
     }
 
     public void AnimEvent_LongRangeAttack()
     {
         var projectile = ProjectileObjectPool.Instance.GetProjectile(projectileCode);
-        if(projectile != null) // CHECKPOOL
-        {
-            projectile.SetValues(unitValues.GetEnemySetTarget().GetCurrentTarget, 
-            unitValues.GetProjectileOutPos, 
-            unitValues.UnitSO.AttackDamage);
-        }
-        else // SPAWN
-        {
-            projectile = Instantiate(ProjectileObjectPool.Instance.GetProjectilePrefab(projectileCode), unitValues.GetProjectileOutPos.position, Quaternion.identity, 
-            ProjectileObjectPool.Instance.GetInstantiatedObjParent(projectileCode)).GetComponent<Projectile>();
-            projectile.SetValues(unitValues.GetEnemySetTarget().GetCurrentTarget, 
-            unitValues.GetProjectileOutPos, 
-            unitValues.UnitSO.AttackDamage);
 
-            ProjectileObjectPool.Instance.OnCreatedProjectileObj?.Invoke(this, new() { code = projectileCode, createdObj = projectile } );
-        }
+        Transform target = unitValues.GetIsEnemy switch
+        {
+            true => unitValues.GetEnemySetTarget().GetCurrentTarget,
+            _ => unitValues.GetGuardSetTarget().GetCurrentTarget,
+        };
+
+        projectile.SetValues(target, unitValues.GetProjectileOutPos, unitValues.UnitSO.AttackDamage, unitValues.GetDamageType);
     }
 }

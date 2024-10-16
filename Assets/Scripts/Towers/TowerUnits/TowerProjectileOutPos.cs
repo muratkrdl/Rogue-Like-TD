@@ -8,6 +8,6 @@ public class TowerProjectileOutPos : MonoBehaviour
 
     void Update()
     {
-        transform.localPosition = new Vector2(towerUnitValues.GetTowerUnitSetTarget().GetLastDir.x / 3f, towerUnitValues.GetTowerUnitSetTarget().GetLastDir.y / 5);
+        transform.localPosition = new Vector2(towerUnitValues.GetTowerUnitSetTarget().GetLastDir.x / -3f, towerUnitValues.GetTowerUnitSetTarget().GetLastDir.y / 5);
     }
 }

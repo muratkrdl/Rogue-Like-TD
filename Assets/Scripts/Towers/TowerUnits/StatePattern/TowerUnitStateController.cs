@@ -13,10 +13,7 @@ public class TowerUnitStateController : MonoBehaviour
 
     public CancellationTokenSource GetTokenSource
     {
-        get
-        {
-            return cts;
-        }
+        get => cts;
     }
 
     void Update() 

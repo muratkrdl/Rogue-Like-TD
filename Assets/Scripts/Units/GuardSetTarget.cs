@@ -4,38 +4,22 @@ using UnityEngine;
 
 public class GuardSetTarget : MonoBehaviour
 {
+    [SerializeField] TowerEnemyKeeper towerEnemyKeeper;
     Transform currentTarget;
-    Transform currentDestPos;
 
+    public TowerEnemyKeeper TowerEnemyKeeper
+    {
+        get => towerEnemyKeeper;
+        set => towerEnemyKeeper = value;
+    }
     public Transform GetCurrentTarget
     {
-        get
-        {
-            return currentTarget;
-        }
-    }
-    public Transform GetCurrentDestPos
-    {
-        get
-        {
-            return currentDestPos;
-        }
-    }
-
-    void Start() 
-    {
-        GetComponent<UnitStateController>().StartFunc(1);
-    }
-
-    public void SetNormalPos()
-    {
-        ChangeCurrentTarget(transform); // kuleden veri çekip oraya doğru yürüt
+        get => currentTarget;
     }
 
     public void ChangeCurrentTarget(Transform changeTransform)
     {
         currentTarget = changeTransform;
-        currentDestPos = changeTransform;
     }
 
 }

@@ -4,28 +4,24 @@ using UnityEngine;
 
 public class EnemySetTarget : MonoBehaviour
 {
+    [SerializeField] int startUnitStateCode;
+
     Transform currentTarget;
     Transform currentDestPos;
 
     public Transform GetCurrentTarget
     {
-        get
-        {
-            return currentTarget;
-        }
+        get => currentTarget;
     }
 
     public Transform GetCurrentDestPos
     {
-        get
-        {
-            return currentDestPos;
-        }
+        get => currentDestPos;
     }
 
     void Start() 
     {
-        GetComponent<UnitStateController>().StartFunc(0);
+        GetComponent<UnitStateController>().StartFunc(startUnitStateCode);
     }
 
     public void SetCurrentTargetToMainTower()

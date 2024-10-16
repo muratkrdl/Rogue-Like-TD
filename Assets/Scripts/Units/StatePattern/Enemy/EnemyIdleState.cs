@@ -14,11 +14,11 @@ public class EnemyIdleState : IUnitState
 
     public void ExitState(UnitValues unitValues)
     {
-        Debug.Log("Exiting Idle");
+
     }
 
     public void UpdateState(UnitValues unitValues)
     {
-        Debug.Log("Updating Idle");
+
     }
 }

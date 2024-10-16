@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Insec (close)
       objectReference: {fileID: 0}
+    - target: {fileID: 5059640932281186905, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: damageType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5512753383292458137, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -54,6 +58,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5512753383292458137, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757870025623372329, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: m_Speed
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757870025623372329, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: m_ObstacleAvoidanceType
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

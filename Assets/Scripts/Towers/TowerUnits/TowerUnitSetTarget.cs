@@ -17,18 +17,12 @@ public class TowerUnitSetTarget : MonoBehaviour
 
     public Vector2 GetLastDir
     {
-        get
-        {
-            return new Vector2(Mathf.Clamp(lastDir.x, -1, 1), Mathf.Clamp(lastDir.y, -1, 1f));
-        }
+        get => new (Mathf.Clamp(lastDir.x, -1, 1), Mathf.Clamp(lastDir.y, -1, 1f));
     }
 
     public Transform GetCurrentTarget
     {
-        get
-        {
-            return currentTarget;
-        }
+        get => currentTarget;
     }
 
     void Start() 
@@ -52,7 +46,12 @@ public class TowerUnitSetTarget : MonoBehaviour
 
     void Update() 
     {
-        lastDir = currentTarget.position - origin.position;
+        lastDir = (currentTarget.position - origin.position).normalized;
+        
+        if(MathF.Abs(lastDir.x) > Mathf.Abs(lastDir.y))
+            lastDir.y = 0;
+        else
+            lastDir.x = 0;
 
         if(Mathf.Abs(lastDir.x) > Mathf.Epsilon && towerUnitValues.GetTowerInfo.towercode <= 3)
         {

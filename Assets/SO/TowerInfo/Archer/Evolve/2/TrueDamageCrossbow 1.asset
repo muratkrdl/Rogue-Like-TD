@@ -16,14 +16,14 @@ MonoBehaviour:
   towerImageIcon: {fileID: 21300000, guid: b9a88c5dcd38f7d4995854e4f6abc963, type: 3}
   towerIcon: {fileID: 452283429, guid: 4beddef0544681449a954d4b82aec245, type: 3}
   Name: CrossbowI
-  maxHealth: 100
+  maxHealth: 220
   damageType: 1
-  BaseDamageRange: {x: 20, y: 25}
-  TimeBetweenAttack: 2
+  BaseDamageRange: {x: 16, y: 20}
+  TimeBetweenAttack: 1.6
   attackDelay: 2
   DamageTypeColor: {r: 1, g: 1, b: 1, a: 1}
   projectileCode: 10
-  towerCost: 11
-  sellPrice: 111
-  Range: 9
+  towerCost: 490
+  sellPrice: 999
+  Range: 7
   Description: Shoots arrow to the closest enemy

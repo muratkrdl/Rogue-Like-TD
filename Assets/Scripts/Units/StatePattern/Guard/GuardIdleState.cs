@@ -7,13 +7,19 @@ public class GuardIdleState : IUnitState
     public void EnterState(UnitValues unitValues)
     {
         unitValues.IsChasing = false;
-        
-        Debug.Log("Entering Idle");
+
+        if(unitValues.GetGuardSetTarget().GetCurrentTarget != unitValues.TowerBasePosition)
+        {
+            unitValues.GetGuardSetTarget().ChangeCurrentTarget(unitValues.TowerBasePosition);
+            unitValues.GetUnitStateController().ChangeState(new GuardWalkState());
+        }
+
+        unitValues.GetUnitMove().LastDir = -(unitValues.transform.position - unitValues.GetGuardSetTarget().GetCurrentTarget.position).normalized / 5;
     }
 
     public void ExitState(UnitValues unitValues)
     {
-        Debug.Log("Exiting Idle");
+
     }
 
     public void UpdateState(UnitValues unitValues)
@@ -21,7 +27,16 @@ public class GuardIdleState : IUnitState
         if(unitValues.IsDead) return;
 
         // kule menziline düşman girince hareket ettir chasing i true yap
+        if(unitValues.GetGuardSetTarget().TowerEnemyKeeper.GetEnemiesInRangeList.Count > 0)
+        {
+            unitValues.GetGuardSetTarget().ChangeCurrentTarget(unitValues.GetGuardSetTarget().TowerEnemyKeeper.GetClosestEnemy());
+            unitValues.IsChasing = true;
+            unitValues.GetUnitStateController().ChangeState(new GuardWalkState());
+        }
 
-        Debug.Log("Updating Idle");
+        if(Vector2.Distance(unitValues.GetGuardSetTarget().GetCurrentTarget.position, unitValues.transform.position) > unitValues.UnitSO.AttackRange + .15f)
+        {
+            unitValues.GetUnitStateController().ChangeState(new GuardWalkState());
+        }
     }
 }

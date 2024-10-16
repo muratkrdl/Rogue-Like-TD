@@ -16,14 +16,14 @@ MonoBehaviour:
   towerImageIcon: {fileID: 21300000, guid: 55c66595c294df940a43436fdb54ea75, type: 3}
   towerIcon: {fileID: -633435417, guid: a642be69d623065498af30defddd2af7, type: 3}
   Name: CrossbowIII
-  maxHealth: 100
+  maxHealth: 280
   damageType: 1
-  BaseDamageRange: {x: 20, y: 25}
-  TimeBetweenAttack: 2
+  BaseDamageRange: {x: 41, y: 46}
+  TimeBetweenAttack: 1
   attackDelay: 2
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 9
-  towerCost: 33
-  sellPrice: 333
-  Range: 9.5
+  towerCost: 899
+  sellPrice: 2199
+  Range: 8.2
   Description: Shoots arrow to the closest enemy

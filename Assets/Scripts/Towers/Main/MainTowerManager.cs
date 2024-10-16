@@ -11,7 +11,7 @@ public class MainTowerManager : MonoBehaviour
 
     [SerializeField] CinemachineVirtualCamera cinemachineVirtualCamera;
 
-    [SerializeField] GameObject mainChar;
+    [SerializeField] Transform mainChar;
 
     [SerializeField] float closeDistance;
 
@@ -19,10 +19,7 @@ public class MainTowerManager : MonoBehaviour
 
     public bool GetIsIn
     {
-        get
-        {
-            return isIn;
-        }
+        get => isIn;
     }
     
     void Awake() 
@@ -37,19 +34,21 @@ public class MainTowerManager : MonoBehaviour
 
     void MainTowerManager_OnInteractWithMainTower(object sender, EventArgs e)
     {
-        if(Mathf.Abs(Vector2.Distance(transform.position, mainChar.transform.position)) > closeDistance) return;
+        if(Mathf.Abs(Vector2.Distance(transform.position, mainChar.position)) > closeDistance && !mainChar.GetComponent<PlayerHealth>().GetIsDead) return;
 
         if(!isIn)
         {
             cinemachineVirtualCamera.GetComponent<Animator>().SetTrigger("In");
+            cinemachineVirtualCamera.Follow = mainChar;
         }
         else
         {
             cinemachineVirtualCamera.GetComponent<Animator>().SetTrigger("Out");
+            cinemachineVirtualCamera.Follow = transform;
         }
         LMouseClick.Instance.CloseEverything(false);
         isIn = !isIn;
-        mainChar.SetActive(isIn);
+        mainChar.gameObject.SetActive(isIn);
     }
 
     void OnDestroy() 

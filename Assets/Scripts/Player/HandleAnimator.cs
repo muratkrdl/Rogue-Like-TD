@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HandleAnimator : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] Animator animator;
 
     [SerializeField] GetInputs getInputs;

@@ -6,16 +6,21 @@ public class EnemyWalkState : IUnitState
 {
     public void EnterState(UnitValues unitValues)
     {
-        Debug.Log("Entering Walk");
+
     }
 
     public void ExitState(UnitValues unitValues)
     {
-        Debug.Log("Exiting Walk");
+
     }
 
     public void UpdateState(UnitValues unitValues)
     {
+        if(!unitValues.GetEnemySetTarget().GetCurrentTarget.gameObject.activeSelf)
+        {
+            unitValues.GetUnitStateController().ChangeState(new EnemyIdleState());
+        }
+
         unitValues.GetUnitMove().MoveUnit();
         GlobalUnitTargets.Instance.CheckClosePlayerandTower(unitValues, unitValues.transform);
 
@@ -29,12 +34,10 @@ public class EnemyWalkState : IUnitState
             }
         }
 
-        if(distanceBetweenTarget <= unitValues.UnitSO.AttackRange + .15f)
+        if(distanceBetweenTarget <= unitValues.UnitSO.AttackRange + .05f)
         {
             unitValues.GetUnitMove().StopUnit(false);
             unitValues.GetUnitStateController().ChangeState(new EnemyAttackState());
         }
-        
-        Debug.Log("Updating Walk");
     }
 }

@@ -16,14 +16,14 @@ MonoBehaviour:
   towerImageIcon: {fileID: 21300000, guid: 994b89a0a42f283479e35996b346e5a0, type: 3}
   towerIcon: {fileID: -127352541, guid: f60ab5e028f5f51408ef2877482585e1, type: 3}
   Name: ArcherIII
-  maxHealth: 100
+  maxHealth: 150
   damageType: 1
   BaseDamageRange: {x: 14, y: 18}
-  TimeBetweenAttack: 1.6
+  TimeBetweenAttack: 1.5
   attackDelay: 5
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 0
-  towerCost: 33
-  sellPrice: 333
-  Range: 8
+  towerCost: 230
+  sellPrice: 270
+  Range: 6.75
   Description: Shoots arrow to the closest enemy

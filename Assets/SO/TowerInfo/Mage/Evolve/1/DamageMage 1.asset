@@ -16,14 +16,14 @@ MonoBehaviour:
   towerImageIcon: {fileID: 21300000, guid: 05b7ac9e42e2b6d45ac20dc7aa6fec39, type: 3}
   towerIcon: {fileID: 304627694, guid: 53c4cb6efed33754dad63872a4b63745, type: 3}
   Name: DamageMageI
-  maxHealth: 100
+  maxHealth: 200
   damageType: 2
-  BaseDamageRange: {x: 6, y: 8}
-  TimeBetweenAttack: 2
+  BaseDamageRange: {x: 33, y: 38}
+  TimeBetweenAttack: 1.7
   attackDelay: 23
   DamageTypeColor: {r: 0.47058824, g: 0, b: 1, a: 1}
   projectileCode: 19
-  towerCost: 11
-  sellPrice: 111
-  Range: 5
+  towerCost: 540
+  sellPrice: 1120
+  Range: 6.25
   Description: Using mage to kill enemy

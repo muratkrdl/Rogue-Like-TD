@@ -16,14 +16,14 @@ MonoBehaviour:
   towerImageIcon: {fileID: 21300000, guid: 076ec9a6bc41efb42850eacb56ef879a, type: 3}
   towerIcon: {fileID: 21300000, guid: 61b45e40d8076664a879a9f8d1a5045f, type: 3}
   Name: CatapultII
-  maxHealth: 100
+  maxHealth: 150
   damageType: 1
-  BaseDamageRange: {x: 5, y: 7}
+  BaseDamageRange: {x: 14, y: 18}
   TimeBetweenAttack: 2.7
   attackDelay: 2
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 4
-  towerCost: 22
-  sellPrice: 222
-  Range: 7
+  towerCost: 135
+  sellPrice: 115
+  Range: 4.75
   Description: Throws stones to the closest enemy
