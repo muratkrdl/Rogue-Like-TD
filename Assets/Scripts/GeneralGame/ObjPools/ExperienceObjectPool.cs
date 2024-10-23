@@ -19,7 +19,7 @@ public class ExperienceObjectPool : MonoBehaviour
         Instance = this;    
     }
 
-    public List<Transform> GetExperienceObjList(int code)
+    List<Transform> GetExperienceObjList(int code)
     {
         return code switch
         {
@@ -29,7 +29,7 @@ public class ExperienceObjectPool : MonoBehaviour
         };
     }
 
-    public Transform GetInstantiatedObjParent(int code)
+    Transform GetInstantiatedObjParent(int code)
     {
         return listsParent[code];
     }
@@ -56,7 +56,7 @@ public class ExperienceObjectPool : MonoBehaviour
         return experienceObj;
     }
 
-    public GameObject GetExperienceObjPrefab(int code)
+    GameObject GetExperienceObjPrefab(int code)
     {
         return experienceObjPrefabs[code];
     }

@@ -14,6 +14,7 @@ public class ExperienceSystem : MonoBehaviour
         public string name;
     }
 
+    [SerializeField] LevelUpPanel levelUpPanel;
     [SerializeField] ExperiencePanel experiencePanel;
 
     [SerializeField] int[] gemEarnXPAmount;
@@ -51,8 +52,9 @@ public class ExperienceSystem : MonoBehaviour
         if(currentExperience >= needExperienceToLevelUp[currentLevel-1])
         {
             // Level Up, Stop Game
+            levelUpPanel.SetRandomUISkillButtons();
             currentLevel++;
-            currentExperience = 0;
+            currentExperience -= needExperienceToLevelUp[currentLevel-2];
         }
         experiencePanel.SetExperienceSlider(currentExperience, needExperienceToLevelUp[currentLevel-1], currentLevel);
     }

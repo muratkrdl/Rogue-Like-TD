@@ -15,12 +15,12 @@ public class AllUnitInfoKeeper : MonoBehaviour
         Instance = this;    
     }
 
-    public UnitSO GetEnemyInfo(int currentMinute, int code)
+    public UnitSO GetEnemySOByMinute(bool longRange)
     {
-        if(code == 0)
-            return enemyInfosClose[currentMinute];
+        if(longRange)
+            return enemyInfosLong[GameTimer.Instance.GetCurrentMinute];
         else
-            return enemyInfosLong[currentMinute];
+            return enemyInfosClose[GameTimer.Instance.GetCurrentMinute];
     }
 
     public UnitSO GetGuardInfo(int currentMinute)

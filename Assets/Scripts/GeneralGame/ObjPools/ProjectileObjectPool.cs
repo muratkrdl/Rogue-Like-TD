@@ -47,7 +47,7 @@ public class ProjectileObjectPool : MonoBehaviour
         Instance = this;
     }
 
-    public List<Projectile> GetProjectileList(int code)
+    List<Projectile> GetProjectileList(int code)
     {
         return code switch
         {
@@ -85,7 +85,7 @@ public class ProjectileObjectPool : MonoBehaviour
         };
     }
 
-    public Transform GetInstantiatedObjParent(int code)
+    Transform GetInstantiatedObjParent(int code)
     {
         return listsParent[code];
     }
@@ -111,7 +111,7 @@ public class ProjectileObjectPool : MonoBehaviour
         return projectile;
     }
 
-    public Projectile GetProjectilePrefab(int code)
+    Projectile GetProjectilePrefab(int code)
     {
         return projectilesPrefabs[code];
     }

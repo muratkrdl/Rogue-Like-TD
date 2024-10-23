@@ -14,8 +14,6 @@ public class GameTimer : MonoBehaviour
     int currentSecond = 0;
     int currentMinute = 0;
 
-    bool isGamePaused = false;
-
     public int GetCurrentMinute
     {
         get => currentMinute;
@@ -23,12 +21,6 @@ public class GameTimer : MonoBehaviour
     public int GetCurrentSecond
     {
         get => currentSecond;
-    }
-
-    public bool IsGamePaused
-    {
-        get => isGamePaused;
-        set => isGamePaused = value;
     }
 
     void Awake() 
@@ -47,7 +39,7 @@ public class GameTimer : MonoBehaviour
         while (true)
         {
             await UniTask.Delay(TimeSpan.FromSeconds(1));
-            if(isGamePaused) return;
+            if(GameStateManager.Instance.GetIsGamePaused) return;
             currentSecond++;
             if(currentSecond >= 60)
             {

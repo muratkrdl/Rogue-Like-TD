@@ -59,6 +59,13 @@ public class UnitHealth : MonoBehaviour, IDamageable
         }
     }
 
+    public void TakeDamageFromPlayer(int amount, DamageType damageType)
+    {
+        SetNewDamageFromPlayer(amount, damageType, InventorySystem.Instance.GetSkillSO(4).Value, InventorySystem.Instance.GetSkillSO(5).Value);
+        amount += amount * InventorySystem.Instance.GetSkillSO(4).Value / 100;
+        TakeDamage(amount, damageType);
+    }
+
     int SetNewDamage(int amount, DamageType damageType)
     {
         int returnInteger = amount;
@@ -70,6 +77,24 @@ public class UnitHealth : MonoBehaviour, IDamageable
         else if(damageType == DamageType.magic)
         {
             returnInteger *= (100-unitValues.UnitSO.MagicResistance*20) / 100;
+        }
+
+        return returnInteger;
+    }
+
+    int SetNewDamageFromPlayer(int amount, DamageType damageType, int lethality, int magicPenetration)
+    {
+        int returnInteger = amount;
+
+        if(damageType == DamageType.physical)
+        {
+            float calculateArmor = unitValues.UnitSO.Armor * (100 - lethality) / 100;
+            returnInteger *= (int)(100 - calculateArmor * 20) / 100;
+        }
+        else if(damageType == DamageType.magic)
+        {
+            float calculateMR = unitValues.UnitSO.MagicResistance * (100 - magicPenetration) / 100;
+            returnInteger *= (int)(100 - calculateMR * 20) / 100;
         }
 
         return returnInteger;

@@ -21,4 +21,7 @@ public static class ConstStrings
     public static string INFO_PANEL_ANIMATOR_OUT = "Out";
     public static string PROJECTILE_VFX_ANIMATE = "Animate";
     public static string PROJECTILE_VFX_RESET = "Reset";
+
+    public static string ACTIVE_SKILLS_ANIM = "Anim";
+    public static string ACTIVE_SKILLS_FULL = "Full";
 }

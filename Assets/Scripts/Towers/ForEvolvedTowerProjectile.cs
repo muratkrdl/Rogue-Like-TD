@@ -10,7 +10,7 @@ public class ForEvolvedTowerProjectile : MonoBehaviour
 
     void Update()
     {
-        if(projectile.GetTarget == null) return;
+        if(projectile.GetTarget == null || GameStateManager.Instance.GetIsGamePaused) return;
         
         offset = projectile.GetTarget.position - transform.position;
         offset.Normalize();

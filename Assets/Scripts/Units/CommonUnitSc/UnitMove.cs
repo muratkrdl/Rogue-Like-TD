@@ -23,6 +23,8 @@ public class UnitMove : MonoBehaviour
 
     void Update() 
     {
+        if(GameStateManager.Instance.GetIsGamePaused) return;
+
         if(unitValues.IsDead) return;
 
         if((unitValues.GetNavMeshAgent().velocity.x != 0 || unitValues.GetNavMeshAgent().velocity.y != 0) && !unitValues.IsAttacking)

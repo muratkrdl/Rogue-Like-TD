@@ -39,10 +39,10 @@ public class Projectile : MonoBehaviour
 
     void Update() 
     {
-        if(isAvailable) return;
+        if(isAvailable || GameStateManager.Instance.GetIsGamePaused) return;
 
         Quaternion rotation = Quaternion.LookRotation(target.transform.position - transform.localPosition ,transform.TransformDirection(Vector3.up));
-        transform.SetPositionAndRotation(Vector2.MoveTowards(transform.localPosition, target.position, 1 * GlobalValues.Instance.GetDeltaTime), new Quaternion( 0 , 0 , rotation.z , rotation.w ));
+        transform.SetPositionAndRotation(Vector2.MoveTowards(transform.localPosition, target.position, 1 * Time.deltaTime), new Quaternion( 0 , 0 , rotation.z , rotation.w ));
     
         if(Mathf.Abs(Vector2.Distance(transform.localPosition, target.position)) <= .01f && damageable)
         {

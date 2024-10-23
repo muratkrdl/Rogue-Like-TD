@@ -155,7 +155,7 @@ public class EnemySpawner : MonoBehaviour
             spawnPos = rightSpawnPos[UnityEngine.Random.Range(0, rightSpawnPos.Length)];
         }
 
-        enemy.SetValues(spawnPos, AllEnemyInfosKeeper.Instance.GetEnemySOByMinute(enemy.GetHasLongRange), 0);
+        enemy.SetValues(spawnPos, AllUnitInfoKeeper.Instance.GetEnemySOByMinute(enemy.GetHasLongRange), 0);
         enemy.IsGoingToRight = isGoingToRight;
     }
 

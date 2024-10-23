@@ -15,7 +15,7 @@ public class UnitAttack : MonoBehaviour
         while(true)
         {
             if(!unitValues.IsAttacking || unitValues.IsDead) break;
-            Debug.Log("Attacking");
+
             unitValues.GetUnitAnimator().SetTrigger(ConstStrings.UNIT_ANIMATOR_ATTACK);
             await UniTask.Delay(TimeSpan.FromSeconds(unitValues.UnitSO.TimeBetweenAttack), cancellationToken: unitValues.GetUnitStateController().GetTokenSource.Token);
         }
@@ -23,6 +23,8 @@ public class UnitAttack : MonoBehaviour
 
     public void AnimEvent_CloseRangeAttack()
     {
+        if(GameStateManager.Instance.GetIsGamePaused) return;
+
         Transform target = unitValues.GetIsEnemy switch
         {
             true => unitValues.GetEnemySetTarget().GetCurrentTarget,

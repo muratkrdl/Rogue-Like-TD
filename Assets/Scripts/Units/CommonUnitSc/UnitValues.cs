@@ -150,7 +150,26 @@ public class UnitValues : MonoBehaviour
 
     void Start() 
     {
-        initialMoveSpeed = navMeshAgent.speed;    
+        initialMoveSpeed = navMeshAgent.speed;  
+
+        GameStateManager.Instance.OnPause += GameStateManager_OnPause;
+        GameStateManager.Instance.OnResume += GameStateManager_OnResume;
+    }
+
+    void OnDestroy() 
+    {
+        GameStateManager.Instance.OnPause -= GameStateManager_OnPause;
+        GameStateManager.Instance.OnResume -= GameStateManager_OnResume;
+    }
+
+    void GameStateManager_OnPause(object sender, EventArgs e)
+    {
+        navMeshAgent.enabled = false;
+    }
+
+    void GameStateManager_OnResume(object sender, EventArgs e)
+    {
+        navMeshAgent.enabled = true;
     }
 
     public void SetValues(Transform spawnPos, UnitSO unitSO, int code)

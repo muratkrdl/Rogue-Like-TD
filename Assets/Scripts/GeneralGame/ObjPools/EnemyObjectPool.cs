@@ -31,7 +31,7 @@ public class EnemyObjectPool : MonoBehaviour
         Instance = this;    
     }
 
-    public List<UnitValues> GetEnemyList(int code)
+    List<UnitValues> GetEnemyList(int code)
     {
         return code switch
         {
@@ -53,7 +53,7 @@ public class EnemyObjectPool : MonoBehaviour
         };
     }
 
-    public Transform GetInstantiatedObjParent(int code)
+    Transform GetInstantiatedObjParent(int code)
     {
         return listsParent[code];
     }
@@ -80,7 +80,7 @@ public class EnemyObjectPool : MonoBehaviour
         return enemy;
     }
 
-    public UnitValues GetEnemyPrefab(int code)
+    UnitValues GetEnemyPrefab(int code)
     {
         return enemyPrefabs[code];
     }
