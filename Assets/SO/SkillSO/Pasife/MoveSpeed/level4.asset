@@ -16,5 +16,8 @@ MonoBehaviour:
   SkillIcon: {fileID: 21300000, guid: 5ee58f9a79d109049942fc06a13514cf, type: 3}
   SkillName: Magic Boots
   Level: 4
-  Value: 12
-  Description: Increases movement speed by 12
+  Value: 55
+  CooldDown: 0
+  ProjectileCount: 0
+  Size: 0
+  Description: Increases movement speed by 5.5

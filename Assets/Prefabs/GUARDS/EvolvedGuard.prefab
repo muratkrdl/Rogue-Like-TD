@@ -36,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 3361731814176997937}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.18, y: -1.15, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -274,13 +274,14 @@ MonoBehaviour:
   unitAttack: {fileID: 694840686896558128}
   unitStateController: {fileID: 7531189252182424765}
   unitHealth: {fileID: 3048575172349639802}
+  unitFlashFX: {fileID: 0}
   enemySetTarget: {fileID: 0}
   guardSetTarget: {fileID: 982816058849597626}
   isEnemy: 0
+  isSpecial: 0
+  hasLongRange: 0
   damageType: 1
   towerBasePosition: {fileID: 0}
-  isSpecial: 0
-  isGoingToRight: 0
 --- !u!1 &7058728961326369376
 GameObject:
   m_ObjectHideFlags: 0

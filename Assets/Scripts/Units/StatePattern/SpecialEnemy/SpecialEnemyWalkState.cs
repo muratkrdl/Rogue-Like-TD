@@ -38,7 +38,7 @@ public class SpecialEnemyWalkState : IUnitState
         if(distanceBetweenTarget <= .3f)
         {
             // special Anim and dead
-            unitValues.GetUnitHealth().TakeDamage(999, DamageType.truedamage);
+            unitValues.GetUnitHealth().SetHP(999, DamageType.truedamage);
         } 
     }
 }

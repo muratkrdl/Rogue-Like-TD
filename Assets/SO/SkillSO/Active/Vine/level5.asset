@@ -17,7 +17,9 @@ MonoBehaviour:
   SkillName: Vine
   Level: 5
   Value: 45
-  CooldDown: 0
-  ProjectileCount: 0
-  Size: 0
+  CooldDown: 10
+  ProjectileCount: 5
+  Size: 1
+  KnockbackAmount: 70
   Description: Spins vines around
+  damageType: 1

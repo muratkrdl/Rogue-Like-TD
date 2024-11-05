@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
 
     [SerializeField] Animator vfxAnimator;
 
+    [SerializeField] float moveSpeed = 1;
+
     Transform target;
     DamageType damageType;
 
@@ -42,14 +44,14 @@ public class Projectile : MonoBehaviour
         if(isAvailable || GameStateManager.Instance.GetIsGamePaused) return;
 
         Quaternion rotation = Quaternion.LookRotation(target.transform.position - transform.localPosition ,transform.TransformDirection(Vector3.up));
-        transform.SetPositionAndRotation(Vector2.MoveTowards(transform.localPosition, target.position, 1 * Time.deltaTime), new Quaternion( 0 , 0 , rotation.z , rotation.w ));
+        transform.SetPositionAndRotation(Vector2.MoveTowards(transform.localPosition, target.position, moveSpeed * Time.deltaTime), new Quaternion( 0 , 0 , rotation.z , rotation.w ));
     
         if(Mathf.Abs(Vector2.Distance(transform.localPosition, target.position)) <= .01f && damageable)
         {
             // Damage
             if(target.TryGetComponent<IDamageable>(out var component))
             {
-                component.TakeDamage((int) currentDamage, damageType);
+                component.SetHP((int) currentDamage, damageType);
             }
             damageable = false;
             VFX();

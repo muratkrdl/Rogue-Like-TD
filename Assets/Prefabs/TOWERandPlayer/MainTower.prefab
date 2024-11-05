@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 334721165043856853}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.05, y: -3.1, z: 0}
+  m_LocalPosition: {x: 1, y: -3.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0b77c910d5d464e8a2301fc565bacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackerCount: 0
 --- !u!1 &1307013258369539443
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0b77c910d5d464e8a2301fc565bacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackerCount: 0
 --- !u!1 &2589167914937431853
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0b77c910d5d464e8a2301fc565bacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackerCount: 0
 --- !u!1 &4768439505351956651
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0b77c910d5d464e8a2301fc565bacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackerCount: 0
 --- !u!1 &5391596494212367289
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +424,7 @@ Transform:
   m_GameObject: {fileID: 5391596494212367289}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.6, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -638,7 +634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0b77c910d5d464e8a2301fc565bacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackerCount: 0
 --- !u!1 &5551598980611131774
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +716,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0b77c910d5d464e8a2301fc565bacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackerCount: 0
 --- !u!1 &8757217915826057660
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +742,7 @@ Transform:
   m_GameObject: {fileID: 8757217915826057660}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.05, y: -3.1, z: 0}
+  m_LocalPosition: {x: -1, y: -3.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -766,4 +760,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa0b77c910d5d464e8a2301fc565bacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackerCount: 0

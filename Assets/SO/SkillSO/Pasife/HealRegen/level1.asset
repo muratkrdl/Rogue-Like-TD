@@ -17,4 +17,8 @@ MonoBehaviour:
   SkillName: PointHeart
   Level: 1
   Value: 1
+  CooldDown: 3
+  ProjectileCount: 0
+  Size: 0
   Description: Increases health by 1 every second
+  damageType: 0

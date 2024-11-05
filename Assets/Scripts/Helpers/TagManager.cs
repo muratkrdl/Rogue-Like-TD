@@ -1,9 +1,10 @@
-public static class TagManager
+public class TagManager
 {
-    public static string PLAYER = "Player";
-    public static string ENEMY = "Enemy";
-    public static string TOWER = "Tower";
-    public static string MAIN_TOWER = "MainTower";
-    public static string GUARD = "Guard";
-    public static string XPGEM = "xpGem";
+    public const string PLAYER = "Player";
+    public const string ENEMY = "Enemy";
+    public const string TOWER = "Tower";
+    public const string MAIN_TOWER = "MainTower";
+    public const string GUARD = "Guard";
+    public const string XPGEM = "xpGem";
+    public const string BARIER = "Barier";
 }

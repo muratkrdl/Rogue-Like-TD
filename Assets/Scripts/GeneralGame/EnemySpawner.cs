@@ -91,15 +91,15 @@ public class EnemySpawner : MonoBehaviour
             currentEnemySpecialIndex = specialIndexCanbe[0];
         
         currentBossIndex++;
-        if(currentBossIndex > bossIndexCanbe[bossIndexCanbe.Length])
+        if(currentBossIndex > bossIndexCanbe.Last())
             currentBossIndex = bossIndexCanbe[0];
     }
 
     async UniTaskVoid SpawnPhysicalEnemy()
     {
-        await UniTask.WaitUntil(() => canSpawnPhysical);
         while (true)
         {
+            await UniTask.WaitUntil(() => canSpawnPhysical);
             SpawnNewEnemy(currentEnemyPhysicalIndex[spawnPhysicalIndex]);
             spawnPhysicalIndex++;
             if(spawnPhysicalIndex > 2)
@@ -110,10 +110,10 @@ public class EnemySpawner : MonoBehaviour
 
     async UniTaskVoid SpawnMagicalEnemy()
     {
-        await UniTask.WaitUntil(() => canSpawnMagical);
         while (true)
         {
-            SpawnNewEnemy(currentEnemyMagicalIndex);            
+            await UniTask.WaitUntil(() => canSpawnMagical);
+            SpawnNewEnemy(currentEnemyMagicalIndex);
             await UniTask.Delay(TimeSpan.FromSeconds(magicalSpawnRate));
         }
     }

@@ -17,4 +17,8 @@ MonoBehaviour:
   SkillName: Fireball
   Level: 0
   Value: 0
+  CooldDown: 0
+  ProjectileCount: 0
+  Size: 0
   Description: Random shoots fireball
+  damageType: 2

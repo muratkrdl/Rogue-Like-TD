@@ -115,4 +115,9 @@ public class GlobalUnitTargets : MonoBehaviour
         }
     }
 
+    public bool CanPlayerUseSkill()
+    {
+        return !GameStateManager.Instance.GetIsGamePaused && !playerTarget.GetComponent<PlayerHealth>().GetIsDead;
+    }
+
 }

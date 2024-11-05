@@ -17,4 +17,8 @@ MonoBehaviour:
   SkillName: BrightShield
   Level: 0
   Value: 0
+  CooldDown: 0
+  ProjectileCount: 0
+  Size: 0
   Description: Reflects incoming damage to the sender
+  damageType: 3

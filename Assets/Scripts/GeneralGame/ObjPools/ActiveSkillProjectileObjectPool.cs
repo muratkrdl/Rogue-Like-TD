@@ -11,7 +11,11 @@ public class ActiveSkillProjectileObjectPool : MonoBehaviour
     [SerializeField] Transform[] listsParent;
 
     List<ActiveProjectile> bofList = new();
+    List<ActiveProjectile> bloodRainList = new();
     List<ActiveProjectile> daggerList = new();
+    List<ActiveProjectile> fireBallList = new();
+    List<ActiveProjectile> spikeList = new();
+    List<ActiveProjectile> tornadoList = new();
 
     void Awake() 
     {
@@ -23,7 +27,11 @@ public class ActiveSkillProjectileObjectPool : MonoBehaviour
         return code switch
         {
             0 => bofList,
-            1 => daggerList,
+            1 => bloodRainList,
+            2 => daggerList,
+            3 => fireBallList,
+            4 => spikeList,
+            5 => tornadoList,
             _ => throw new()
         };
     }

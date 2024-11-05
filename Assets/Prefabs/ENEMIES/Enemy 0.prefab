@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4257688091429116912}
   - component: {fileID: 797303181046531299}
   - component: {fileID: 6757870025623372329}
+  - component: {fileID: 8991453226980368516}
   - component: {fileID: 1536645320904230900}
   - component: {fileID: 4912728915979892433}
   - component: {fileID: 81491868166505899}
@@ -19,6 +20,7 @@ GameObject:
   - component: {fileID: 777554590277233064}
   - component: {fileID: 3781101182845093605}
   - component: {fileID: 242690796602039640}
+  - component: {fileID: 8337951613094123203}
   - component: {fileID: 5059640932281186905}
   m_Layer: 7
   m_Name: Enemy 0
@@ -36,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 938995263380344060}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -138,6 +140,33 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
+--- !u!50 &8991453226980368516
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938995263380344060}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 2
+  m_AngularDrag: 2
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!58 &1536645320904230900
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -254,6 +283,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   specialAnimator: {fileID: 0}
   unitValues: {fileID: 5059640932281186905}
+--- !u!114 &8337951613094123203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938995263380344060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 649567501fcdf7c4992c9aff7752a6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: a37a8e280150a1f4db464b3c87a05671, type: 2}
 --- !u!114 &5059640932281186905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +316,7 @@ MonoBehaviour:
   unitAttack: {fileID: 81491868166505899}
   unitStateController: {fileID: 3781101182845093605}
   unitHealth: {fileID: 242690796602039640}
+  unitFlashFX: {fileID: 8337951613094123203}
   enemySetTarget: {fileID: 777554590277233064}
   guardSetTarget: {fileID: 0}
   isEnemy: 1

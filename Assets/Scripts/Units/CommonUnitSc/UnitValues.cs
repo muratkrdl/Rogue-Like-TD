@@ -16,6 +16,7 @@ public class UnitValues : MonoBehaviour
     [SerializeField] UnitAttack unitAttack;
     [SerializeField] UnitStateController unitStateController;
     [SerializeField] UnitHealth unitHealth;
+    [SerializeField] UnitFlashFX unitFlashFX;
 
     [SerializeField] EnemySetTarget enemySetTarget;
     [SerializeField] GuardSetTarget guardSetTarget;
@@ -146,6 +147,10 @@ public class UnitValues : MonoBehaviour
     public UnitHealth GetUnitHealth()
     {
         return unitHealth;
+    }
+    public UnitFlashFX GetUnitFlashFX()
+    {
+        return unitFlashFX;
     }
 
     void Start() 

@@ -17,4 +17,9 @@ MonoBehaviour:
   SkillName: Fireball
   Level: 3
   Value: 3
+  CooldDown: 5
+  ProjectileCount: 2
+  Size: 0
+  KnockbackAmount: 25
   Description: Random shoots fireball
+  damageType: 2

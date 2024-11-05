@@ -21,3 +21,4 @@ MonoBehaviour:
   ProjectileCount: 0
   Size: 0
   Description: Spins vines around
+  damageType: 1

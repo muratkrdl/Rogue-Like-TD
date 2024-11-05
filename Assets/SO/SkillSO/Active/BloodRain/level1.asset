@@ -17,4 +17,9 @@ MonoBehaviour:
   SkillName: Raining Blood
   Level: 1
   Value: 10
+  CooldDown: 6
+  ProjectileCount: 1
+  Size: 1.25
+  KnockbackAmount: 0
   Description: Slayer-Raining Blood..
+  damageType: 2

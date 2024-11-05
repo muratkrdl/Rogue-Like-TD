@@ -33,7 +33,7 @@ public class UnitAttack : MonoBehaviour
 
         if(target.TryGetComponent<IDamageable>(out var component))
         {
-            component.TakeDamage(unitValues.UnitSO.AttackDamage + (int)UnityEngine.Random.Range(unitValues.PlusDamageRange.x, unitValues.PlusDamageRange.y), unitValues.GetDamageType);
+            component.SetHP(unitValues.UnitSO.AttackDamage + (int)UnityEngine.Random.Range(unitValues.PlusDamageRange.x, unitValues.PlusDamageRange.y), unitValues.GetDamageType);
         }
     }
 

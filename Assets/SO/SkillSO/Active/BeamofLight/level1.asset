@@ -18,5 +18,8 @@ MonoBehaviour:
   Level: 1
   Value: 11
   CooldDown: 2
-  projectileCount: 0
+  ProjectileCount: 0
+  Size: 0
+  KnockbackAmount: 0
   Description: Shoots a beam of light
+  damageType: 2

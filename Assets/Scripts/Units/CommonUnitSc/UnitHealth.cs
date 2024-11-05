@@ -7,15 +7,15 @@ public class UnitHealth : MonoBehaviour, IDamageable
 
     [SerializeField] UnitValues unitValues;
 
-    int currentHealth = 10;
+    float currentHealth = 10;
 
-    public int CurrenHealth
+    public float CurrenHealth
     {
         get => currentHealth;
         set => currentHealth = value;
     }
 
-    public void TakeDamage(int amount, DamageType damageType)
+    public void SetHP(float amount, DamageType damageType)
     {
         if(unitValues.IsDead) return;
 
@@ -59,16 +59,18 @@ public class UnitHealth : MonoBehaviour, IDamageable
         }
     }
 
-    public void TakeDamageFromPlayer(int amount, DamageType damageType)
+    public void TakeDamageFromPlayer(float amount, DamageType damageType)
     {
-        SetNewDamageFromPlayer(amount, damageType, InventorySystem.Instance.GetSkillSO(4).Value, InventorySystem.Instance.GetSkillSO(5).Value);
-        amount += amount * InventorySystem.Instance.GetSkillSO(4).Value / 100;
-        TakeDamage(amount, damageType);
+        amount = SetNewDamageFromPlayer(amount, damageType, InventorySystem.Instance.GetSkillSO(4).Value, InventorySystem.Instance.GetSkillSO(5).Value);
+        amount = amount * (100 + InventorySystem.Instance.GetSkillSO(7).Value) / 100;
+        SetHP(amount, damageType);
+        InventorySystem.Instance.OnDamageWithActiveSkills?.Invoke(this, new() { damage = amount } );
+        unitValues.GetUnitFlashFX().FlashFX(.125f).Forget();
     }
 
-    int SetNewDamage(int amount, DamageType damageType)
+    float SetNewDamage(float amount, DamageType damageType)
     {
-        int returnInteger = amount;
+        float returnInteger = amount;
 
         if(damageType == DamageType.physical)
         {
@@ -82,19 +84,19 @@ public class UnitHealth : MonoBehaviour, IDamageable
         return returnInteger;
     }
 
-    int SetNewDamageFromPlayer(int amount, DamageType damageType, int lethality, int magicPenetration)
+    float SetNewDamageFromPlayer(float amount, DamageType damageType, int lethality, int magicPenetration)
     {
-        int returnInteger = amount;
+        float returnInteger = amount;
 
         if(damageType == DamageType.physical)
         {
-            float calculateArmor = unitValues.UnitSO.Armor * (100 - lethality) / 100;
-            returnInteger *= (int)(100 - calculateArmor * 20) / 100;
+            float calculateArmor = (float)unitValues.UnitSO.Armor * 20 * ((100 - (float)lethality) / 100);
+            returnInteger *= (100 - calculateArmor * 20) / 100;
         }
         else if(damageType == DamageType.magic)
         {
-            float calculateMR = unitValues.UnitSO.MagicResistance * (100 - magicPenetration) / 100;
-            returnInteger *= (int)(100 - calculateMR * 20) / 100;
+            float calculateMR = (float)unitValues.UnitSO.MagicResistance * 20 * ((100 - (float)magicPenetration) / 100);
+            returnInteger *= (100 - calculateMR * 20) / 100;
         }
 
         return returnInteger;

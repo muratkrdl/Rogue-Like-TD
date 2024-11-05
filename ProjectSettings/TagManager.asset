@@ -9,6 +9,7 @@ TagManager:
   - MainTower
   - Guard
   - xpGem
+  - Barier
   layers:
   - Default
   - TransparentFX
@@ -21,9 +22,9 @@ TagManager:
   - UnitGuard
   - TowerEnemyKeeper
   - 
+  - PlayerProjectiles
   - 
-  - 
-  - 
+  - Player
   - 
   - 
   - 

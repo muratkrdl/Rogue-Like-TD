@@ -15,7 +15,7 @@ public class HandleMovement : GamePlayMonoBehaviour
     void Start() 
     {
         initialMoveSpeed = moveSpeed;
-        InventorySystem.Instance.OnPasifeUpdate += InventorySystem_OnPasifeUpdate;
+        InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnPasifeUpdate;
 
         if(!GetPauseable) return;
 
@@ -27,7 +27,7 @@ public class HandleMovement : GamePlayMonoBehaviour
     {
         if(e.Code == 6)
         {
-            moveSpeed = initialMoveSpeed + initialMoveSpeed /2 * InventorySystem.Instance.GetSkillSO(6).Value / 10;
+            moveSpeed = initialMoveSpeed + initialMoveSpeed /2 * InventorySystem.Instance.GetSkillSO(6).Value / 100;
         }
     }
 
@@ -38,7 +38,7 @@ public class HandleMovement : GamePlayMonoBehaviour
 
     void OnDestroy() 
     {
-        InventorySystem.Instance.OnPasifeUpdate += InventorySystem_OnPasifeUpdate;
+        InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnPasifeUpdate;
     }
 
 }

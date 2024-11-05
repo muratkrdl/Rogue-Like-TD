@@ -20,4 +20,6 @@ MonoBehaviour:
   CooldDown: 3
   ProjectileCount: 1
   Size: 0
+  KnockbackAmount: 30
   Description: Thors a dagger
+  damageType: 1

@@ -9,15 +9,18 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] Slider slider;
 
-    bool isDead = false;
+    [SerializeField] BrightShield brightShield;
 
-    int currenthealth;
+    bool isDead = false;
+    bool canTakeDamage = true;
+
+    float currenthealth;
 
     public bool GetIsDead
     {
         get => isDead;
     }
-    public int GetCurrentHealth
+    public float GetCurrentHealth
     {
         get => currenthealth;
     }
@@ -28,20 +31,19 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         currenthealth = (int)slider.maxValue;
         slider.value = currenthealth;
 
-        InventorySystem.Instance.OnPasifeUpdate += InventorySystem_OnPasifeUpdate;
+        InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnPasifeUpdate;
         InventorySystem.Instance.OnDamageWithActiveSkills += InventorySystem_OnDamageWithActiveSkills;
         HelathRegen().Forget();
     }
 
     void InventorySystem_OnDamageWithActiveSkills(object sender, InventorySystem.OnDamageWithActiveSkillsEventArgs e)
     {
+        if(InventorySystem.Instance.GetSkillSO(8).Value == 0) return;
+
         if(currenthealth < slider.maxValue)
         {
-            TakeDamage(-e.damage, DamageType.truedamage);
-            if(currenthealth >= slider.maxValue)
-                currenthealth = (int)slider.maxValue;
-            
-            slider.value = currenthealth;
+            _ = e.damage * (InventorySystem.Instance.GetSkillSO(8).Value / 100);
+            SetHP(-e.damage, DamageType.truedamage);
         }
     }
 
@@ -58,15 +60,19 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         await UniTask.WaitUntil(() => InventorySystem.Instance.GetSkillSO(3).Value != 0);
         while(true)
         {
-            if(GameStateManager.Instance.GetIsGamePaused || currenthealth >= slider.maxValue) return;
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused && currenthealth < slider.maxValue);
             await UniTask.Delay(TimeSpan.FromSeconds(InventorySystem.Instance.GetSkillSO(3).CooldDown - InventorySystem.Instance.GetSkillSO(3).CooldDown * InventorySystem.Instance.GetSkillSO(9).Value / 100));
-            TakeDamage(-InventorySystem.Instance.GetSkillSO(3).Value, DamageType.truedamage);
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused && currenthealth < slider.maxValue);
+            Debug.Log("Regen");
+            SetHP(-InventorySystem.Instance.GetSkillSO(3).Value, DamageType.truedamage);
         }
     }
 
-    public void TakeDamage(int amount, DamageType damageType)
+    public void SetHP(float amount, DamageType damageType)
     {
-        if(isDead) return;
+        brightShield.OnTakeDamage?.Invoke(this, new() { damage = amount } );
+
+        if(isDead || !canTakeDamage) return;
 
         amount = SetNewDamage(amount, damageType);
 
@@ -81,12 +87,17 @@ public class PlayerHealth : MonoBehaviour, IDamageable
             GetComponent<Animator>().SetTrigger(ConstStrings.UNIT_ANIMATOR_DEATH);
             Invoke(nameof(PlayerDead), 1);
         }
+        else if(currenthealth >= slider.maxValue)
+        {
+            currenthealth = (int)slider.maxValue;
+            slider.value = currenthealth;
+        }
     }
 
     void UpdateMaxHealth()
     {
-        slider.maxValue = 100 + InventorySystem.Instance.GetSkillSO(2).Value;
-        currenthealth += (int)slider.maxValue - InventorySystem.Instance.GetSkillSO(2).Value;
+        slider.maxValue += InventorySystem.Instance.GetSkillSO(2).Value;
+        currenthealth += InventorySystem.Instance.GetSkillSO(2).Value;
         slider.value = currenthealth;
     }
 
@@ -95,25 +106,30 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         MainTowerManager.Instance.OnInteractWithMainTower?.Invoke(this, EventArgs.Empty);
     }
 
-    int SetNewDamage(int amount, DamageType damageType)
+    float SetNewDamage(float amount, DamageType damageType)
     {
-        int returnInteger = amount;
+        float returnAmount = amount;
 
         if(damageType == DamageType.physical)
         {
-            returnInteger *= (100-InventorySystem.Instance.GetSkillSO(0).Value*10) / 100;
+            returnAmount *= (float)(100-InventorySystem.Instance.GetSkillSO(0).Value) / 100;
         }
         else if(damageType == DamageType.magic)
         {
-            returnInteger *= (100-InventorySystem.Instance.GetSkillSO(1).Value*11) / 100;
+            returnAmount *= (float)(100-InventorySystem.Instance.GetSkillSO(1).Value) / 100;
         }
 
-        return returnInteger;
+        return returnAmount;
+    }
+
+    public void SetCanTakeDamage(bool value)
+    {
+        canTakeDamage = value;
     }
 
     void OnDestroy() 
     {
-        InventorySystem.Instance.OnPasifeUpdate -= InventorySystem_OnPasifeUpdate;
+        InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnPasifeUpdate;
         InventorySystem.Instance.OnDamageWithActiveSkills -= InventorySystem_OnDamageWithActiveSkills;
     }
 

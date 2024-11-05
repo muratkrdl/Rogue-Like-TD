@@ -10,7 +10,7 @@ public class LevelUpTower : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI costText;
 
-    [SerializeField] Image evolveTowerCanvas;
+    [SerializeField] GameObject evolveTowerCanvas;
 
     [SerializeField] TowerInfo firstEvolveInfoPanel;
     [SerializeField] TowerInfo secondEvolveInfoPanel;

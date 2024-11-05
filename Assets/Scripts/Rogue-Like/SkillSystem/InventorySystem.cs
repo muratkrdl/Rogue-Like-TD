@@ -8,10 +8,10 @@ public class InventorySystem : MonoBehaviour
     public EventHandler<OnDamageWithActiveSkillsEventArgs> OnDamageWithActiveSkills;
     public class OnDamageWithActiveSkillsEventArgs : EventArgs
     {
-        public int damage;
+        public float damage;
     }
 
-    public EventHandler<OnSkillUpdateEventArgs> OnPasifeUpdate;
+    public EventHandler<OnSkillUpdateEventArgs> OnSkillUpdate;
     public EventHandler<OnSkillUpdateEventArgs> OnNewSkillGain;
     public class OnSkillUpdateEventArgs : EventArgs
     {
@@ -56,7 +56,7 @@ public class InventorySystem : MonoBehaviour
             }
         }
 
-        OnPasifeUpdate?.Invoke(this, new() { Code = code } );
+        OnSkillUpdate?.Invoke(this, new() { Code = code } );
     }
 
     public int GetHowManySkillHaveByCode(int code)

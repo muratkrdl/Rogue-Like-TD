@@ -17,16 +17,16 @@ public class SkillSOKeeper : MonoBehaviour
     [SerializeField] SkillSO[] lifeStealPercent;
     [SerializeField] SkillSO[] coolDownPercent; // 9
 
-    [SerializeField] SkillSO[] beamofLight; //
+    [SerializeField] SkillSO[] beamofLight;
     [SerializeField] SkillSO[] bloodRain;
-    [SerializeField] SkillSO[] brightShield;
-    [SerializeField] SkillSO[] dagger; //
-    [SerializeField] SkillSO[] darkSpear;
-    [SerializeField] SkillSO[] fireAura; //
+    [SerializeField] SkillSO[] brightShield; // work ??
+    [SerializeField] SkillSO[] dagger;
+    [SerializeField] SkillSO[] darkBlade;
+    [SerializeField] SkillSO[] darkAura;
     [SerializeField] SkillSO[] fireball;
-    [SerializeField] SkillSO[] spike;
+    [SerializeField] SkillSO[] spike; // work ?? 
     [SerializeField] SkillSO[] tornado;
-    [SerializeField] SkillSO[] vine;
+    [SerializeField] SkillSO[] vine; // 19
 
     void Awake() 
     {
@@ -52,8 +52,8 @@ public class SkillSOKeeper : MonoBehaviour
             11 => bloodRain[level],
             12 => brightShield[level],
             13 => dagger[level],
-            14 => darkSpear[level],
-            15 => fireAura[level],
+            14 => darkBlade[level],
+            15 => darkAura[level],
             16 => fireball[level],
             17 => spike[level],
             18 => tornado[level],

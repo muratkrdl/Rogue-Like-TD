@@ -17,4 +17,8 @@ MonoBehaviour:
   SkillName: Dagger
   Level: 0
   Value: 0
+  CooldDown: 0
+  ProjectileCount: 0
+  Size: 0
   Description: Thors a dagger
+  damageType: 1

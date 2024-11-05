@@ -17,4 +17,8 @@ MonoBehaviour:
   SkillName: Tornado
   Level: 0
   Value: 0
+  CooldDown: 0
+  ProjectileCount: 0
+  Size: 0
   Description: Sneds a tornado
+  damageType: 1

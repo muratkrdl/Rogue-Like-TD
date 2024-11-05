@@ -11,5 +11,8 @@ public class SkillSO : ScriptableObject
     public float CooldDown;
     public int ProjectileCount;
     public float Size;
+    public float KnockbackAmount;
     public string Description;
+
+    public DamageType damageType;
 }

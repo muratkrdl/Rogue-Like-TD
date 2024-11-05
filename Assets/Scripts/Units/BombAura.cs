@@ -10,7 +10,7 @@ public class BombAura : MonoBehaviour
     {
         if(other.TryGetComponent<IDamageable>(out var component) && !other.CompareTag(TagManager.ENEMY))
         {
-            component.TakeDamage(50, damageType);
+            component.SetHP(50, damageType);
         }
     }
 }

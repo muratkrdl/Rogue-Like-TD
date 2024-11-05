@@ -16,5 +16,5 @@ MonoBehaviour:
   <AttackDamage>k__BackingField: 2
   <TimeBetweenAttack>k__BackingField: 1.8
   <MaxHealth>k__BackingField: 50
-  <Armor>k__BackingField: 0
-  <MagicResistance>k__BackingField: 0
+  <Armor>k__BackingField: 4
+  <MagicResistance>k__BackingField: 4

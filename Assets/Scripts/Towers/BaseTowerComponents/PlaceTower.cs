@@ -8,8 +8,8 @@ public class PlaceTower : MonoBehaviour
     [SerializeField] PlaceTowerAnimation placeTowerAnimation;
     [SerializeField] LevelUpTower levelUpTower;
 
-    [SerializeField] Image placeTowerCanvas;
-    [SerializeField] Image levelUpTowerCanvas;
+    [SerializeField] GameObject placeTowerCanvas;
+    [SerializeField] GameObject levelUpTowerCanvas;
 
     [SerializeField] GameObject[] towers;
 

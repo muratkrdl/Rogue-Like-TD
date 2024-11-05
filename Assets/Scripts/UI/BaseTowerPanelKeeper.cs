@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class BaseTowerPanelKeeper : MonoBehaviour
 {
-    [SerializeField] Image[] baseTowerPanels;
+    [SerializeField] GameObject[] baseTowerPanels;
 
-    public void OpenCanvas(Image openCanvas)
+    public void OpenCanvas(GameObject openCanvas)
     {
         foreach (var item in baseTowerPanels)
         {
             if(item == openCanvas)
             {
-                item.gameObject.SetActive(true);
+                item.SetActive(true);
             }
             else
             {
-                item.gameObject.SetActive(false);
+                item.SetActive(false);
             }
         }
     }

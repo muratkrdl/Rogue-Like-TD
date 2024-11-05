@@ -17,4 +17,8 @@ MonoBehaviour:
   SkillName: Spike
   Level: 0
   Value: 0
+  CooldDown: 0
+  ProjectileCount: 0
+  Size: 0
   Description: Pulls spikes out of the ground
+  damageType: 1
