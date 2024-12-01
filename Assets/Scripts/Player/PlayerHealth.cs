@@ -44,8 +44,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
         if(currenthealth < slider.maxValue)
         {
-            float takenDamage = e.damage * (InventorySystem.Instance.GetSkillSO(8).Value / 100);
-            SetHP(takenDamage, DamageType.truedamage);
+            float takenDamage = e.damage * ((float)InventorySystem.Instance.GetSkillSO(8).Value / 100);
+            SetHP(-takenDamage, DamageType.truedamage);
         }
     }
 
@@ -113,6 +113,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     void PlayerDead()
     {
         MainTowerManager.Instance.OnInteractWithMainTower?.Invoke(this, EventArgs.Empty);
+        GetComponent<GetInputs>().ResetMoveInput();
         RespawnPlayer(respawnTimer).Forget();
     }
 

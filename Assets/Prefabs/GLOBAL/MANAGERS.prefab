@@ -264,7 +264,7 @@ MonoBehaviour:
   levelUpPanel: {fileID: 1828515024228374242}
   experiencePanel: {fileID: 0}
   gemEarnXPAmount: 01000000050000000f000000
-  needExperienceToLevelUp: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  needExperienceToLevelUp: 28000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
 --- !u!1 &1859516976997996414
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,7 +290,7 @@ Transform:
   m_GameObject: {fileID: 1859516976997996414}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14, y: 1.25, z: 0}
+  m_LocalPosition: {x: -14, y: 2.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -396,7 +396,7 @@ Transform:
   m_GameObject: {fileID: 2129104822830786121}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.5, y: 6.5, z: 0}
+  m_LocalPosition: {x: -14.5, y: 5.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -442,13 +442,13 @@ MonoBehaviour:
   - {fileID: 2089251373570925466}
   - {fileID: 8236931498041390510}
   - {fileID: 8864473751885210594}
-  physicalSpawnRate: 2
-  magicalSpawnRate: 11
-  specialSpawnRate: 30
+  physicalSpawnRate: 6
+  magicalSpawnRate: 12
+  specialSpawnRate: 25
   bossSpawnRate: 46
   magicalDamageIndexCanbe: 090000000a0000000b000000
   specialIndexCanbe: 0c0000000d000000
-  bossIndexCanbe: 0e0000000f00000010000000
+  bossIndexCanbe: 0e0000000f000000100000001100000012000000
 --- !u!1 &2184035800062431542
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +580,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4874148484888429929}
-  - {fileID: 1518887253272926190}
   m_Father: {fileID: 6895813813070241766}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2452427505434133727
@@ -647,7 +646,7 @@ MonoBehaviour:
   playerTarget: {fileID: 0}
   playerRespawnPos: {x: 0, y: 0.6, z: 0}
   enemyWaitPos: {fileID: 4874148484888429929}
-  guardWaitPos: {fileID: 1518887253272926190}
+  guardWaitPos: {fileID: 0}
 --- !u!114 &4306596335136800851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,6 +723,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff66986d0cae1374eaf3c01ea4bdf0e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossInfos:
+  - {fileID: 11400000, guid: c284eda183c6cad4d8496c090fa68ff2, type: 2}
+  - {fileID: 11400000, guid: c208e04f92217fb42a8a26ac40ad9054, type: 2}
+  - {fileID: 11400000, guid: 53a4f1ddc958c154d8d6826da6c52231, type: 2}
+  - {fileID: 11400000, guid: d63b443a816714f44b52bab9125f908a, type: 2}
+  - {fileID: 11400000, guid: 662b27f144468d84283379925f2db137, type: 2}
+  - {fileID: 11400000, guid: b87bba53403697d4f9f982c71215bbe7, type: 2}
+  - {fileID: 11400000, guid: b7837f9027e345f4cb38e28f27a0f117, type: 2}
+  - {fileID: 11400000, guid: e205846a70d42724185a5d8ed497a8c8, type: 2}
+  - {fileID: 11400000, guid: 2342e581b1e6a8845b3c276d29fae929, type: 2}
+  - {fileID: 11400000, guid: 9561a9263ecab1d45a94e9f50bf7ffb1, type: 2}
+  - {fileID: 11400000, guid: 647ef076917ed714298dd41d9df4c2f0, type: 2}
+  - {fileID: 11400000, guid: 05258f6cec266c0488145d651aa96cb9, type: 2}
+  - {fileID: 11400000, guid: c211edb1480a8c74b83c7790bb9f88b9, type: 2}
+  - {fileID: 11400000, guid: f7d7d3a11b6ddeb4d9dfcd6e2827f892, type: 2}
   enemyInfosClose:
   - {fileID: 11400000, guid: 981a8504c700a6441862a2805a836c5e, type: 2}
   - {fileID: 11400000, guid: 05aecac3fd6f3424a9c2ced908256b52, type: 2}
@@ -1227,7 +1241,7 @@ Transform:
   m_GameObject: {fileID: 4439154913789438472}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14, y: 6, z: 0}
+  m_LocalPosition: {x: -14.83, y: 5.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1289,7 +1303,7 @@ Transform:
   m_GameObject: {fileID: 4838168712546560651}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14, y: 1.25, z: 0}
+  m_LocalPosition: {x: 14, y: 2.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1512,37 +1526,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1741464986839874696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7343316333405248723
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1518887253272926190}
-  m_Layer: 0
-  m_Name: GuardWait
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1518887253272926190
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7343316333405248723}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14, y: 4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7879377958647314787}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8169859951344165292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,7 +1571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bankUI: {fileID: 0}
-  startMoney: 20000
+  startMoney: 200000
 --- !u!1 &8299684572269247219
 GameObject:
   m_ObjectHideFlags: 0

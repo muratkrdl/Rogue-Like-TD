@@ -25,6 +25,11 @@ public class EnemyObjectPool : MonoBehaviour
     List<UnitValues> wolfList = new();
     List<UnitValues> bombList = new();
     List<UnitValues> manWithFlagList = new();
+    List<UnitValues> BOSSCrocodile = new();
+    List<UnitValues> BOSSGiant = new();
+    List<UnitValues> BOSSGoblin = new();
+    List<UnitValues> BOSSInsec1 = new();
+    List<UnitValues> BOSSInsec2 = new();
 
     void Awake() 
     {
@@ -49,6 +54,11 @@ public class EnemyObjectPool : MonoBehaviour
             11 => swampWitchList,
             12 => bombList,
             13 => manWithFlagList,
+            14 => BOSSCrocodile,
+            15 => BOSSGiant,
+            16 => BOSSGoblin,
+            17 => BOSSInsec1,
+            18 => BOSSInsec2,
             _ => throw new()
         };
     }

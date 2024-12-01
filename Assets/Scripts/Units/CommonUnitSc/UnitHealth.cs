@@ -36,14 +36,22 @@ public class UnitHealth : MonoBehaviour, IDamageable
 
             if(unitValues.GetIsEnemy)
             {
+                int xpObjCode = 0;
                 if(unitValues.GetIsSpecial)
                     state = new SpecialEnemyIdleState();
                 else
                     state = new EnemyIdleState();
 
+                if(unitValues.GetIsBoss)
+                {
+                    TreasureObjectPool.Instance.GetTreasureObj(0).SetValues(transform.position);
+                    xpObjCode = 2;
+                }
+
                 GlobalUnitTargets.Instance.OnAnEnemyDead?.Invoke(this, new() { deadUnit = unitValues } );
 
-                var obj = ExperienceObjectPool.Instance.GetExperienceObj(0); // kontrol et
+                var obj = ExperienceObjectPool.Instance.GetExperienceObj(xpObjCode); // kontrol et
+                obj.gameObject.SetActive(true);
                 obj.transform.position = transform.position;
                 Bank.Instance.OnChangeMoneyAmount?.Invoke(this, new() { amount = 
                 Random.Range(1 + PermanentSkillSystem.Instance.GetPermanentSkillSO(3).Value, 5 + PermanentSkillSystem.Instance.GetPermanentSkillSO(3).Value) } );

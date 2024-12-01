@@ -37,8 +37,6 @@ public class UnitStateController : MonoBehaviour
 
     public void ChangeState(IUnitState newState)
     {
-        if(GameStateManager.Instance.GetIsGamePaused) return;
-
         currentState.ExitState(unitValues);
         currentState = newState;
         currentState.EnterState(unitValues);

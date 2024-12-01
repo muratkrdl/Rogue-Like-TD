@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 242690796602039640}
   - component: {fileID: 8337951613094123203}
   - component: {fileID: 5059640932281186905}
+  - component: {fileID: -4176736771921255790}
   m_Layer: 7
   m_Name: Enemy 0
   m_TagString: Enemy
@@ -86,12 +87,12 @@ SpriteRenderer:
   m_SortingLayerID: 1088397577
   m_SortingLayer: 6
   m_SortingOrder: -22
-  m_Sprite: {fileID: -1464160640, guid: 0e55fb8ef735984418218dd6c20e4cd8, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.12, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -127,7 +128,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 938995263380344060}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.0043
+  m_Radius: 0.01
   m_Speed: 1
   m_Acceleration: 16
   avoidancePriority: 0
@@ -136,8 +137,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.0043
-  m_BaseOffset: 0
+  m_Height: 0.01
+  m_BaseOffset: 0.15
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
 --- !u!50 &8991453226980368516
@@ -326,6 +327,19 @@ MonoBehaviour:
   hasLongRange: 0
   damageType: 1
   towerBasePosition: {fileID: 0}
+--- !u!114 &-4176736771921255790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938995263380344060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a4281cf5bcf84439ce66fe2bca14af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseable: 1
 --- !u!1 &8362051447031276470
 GameObject:
   m_ObjectHideFlags: 0

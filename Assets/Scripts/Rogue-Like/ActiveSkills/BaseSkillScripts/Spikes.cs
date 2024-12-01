@@ -25,8 +25,6 @@ public class Spikes : ActiveSkillBaseClass
             await UniTask.Delay(TimeSpan.FromSeconds(GetSkillCoolDown()));
             await UniTask.WaitUntil(() => playerEnemyKeeper.EnemiesInRange());
             
-            Debug.Log(playerEnemyKeeper.EnemiesInRange());
-
             Skill();
         }
     }

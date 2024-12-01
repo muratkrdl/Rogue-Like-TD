@@ -21,13 +21,12 @@ public class GetInputs : GamePlayMonoBehaviour
 
     void Start() 
     {
-        GameStateManager.Instance.OnPause += GameStateManager_OnPause;
-        GameStateManager.Instance.OnResume += GameStateManager_OnResume;
+        SubscribeToEvents();
     }
 
     void Update()
     {
-        if(TryGetComponent<PlayerHealth>(out var playerHealth) && playerHealth.GetIsDead) return;
+        if(GetComponent<PlayerHealth>().GetIsDead || GameStateManager.Instance.GetIsGamePaused) return;
 
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
@@ -42,6 +41,11 @@ public class GetInputs : GamePlayMonoBehaviour
     }
 
     protected override void PostPause()
+    {
+        ResetMoveInput();
+    }
+
+    public void ResetMoveInput()
     {
         moveInput = Vector2.zero;
     }

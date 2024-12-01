@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: level0
   m_EditorClassIdentifier: 
   code: 14
+  isEvolved: 0
   SkillIcon: {fileID: 21300000, guid: 87de21202e45cbb4caf4948555f1dca4, type: 3}
   SkillName: Dark Blade
   Level: 0

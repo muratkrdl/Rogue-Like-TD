@@ -23,7 +23,8 @@ public class OnTrigger : MonoBehaviour
         {
             GameStateManager.Instance.PauseGame();
             other.GetComponent<Animator>().SetTrigger(ConstStrings.ANIM);
-            Invoke(nameof(InvokeBossTreasure), 1.15f);
+            Invoke(nameof(InvokeBossTreasure), 0f);
+            // other.GetComponent<TreasureObject>().ResetTreasureObj();
         }
     }
 

@@ -23,6 +23,7 @@ public class UnitValues : MonoBehaviour
 
     [SerializeField] bool isEnemy;
     [SerializeField] bool isSpecial;
+    [SerializeField] bool isBoss;
     [SerializeField] bool hasLongRange;
     [SerializeField] DamageType damageType;
 
@@ -67,10 +68,6 @@ public class UnitValues : MonoBehaviour
     {
         get => projectileOutPos;
     }
-    public bool GetIsEnemy
-    {
-        get => isEnemy;
-    }
     public DamageType GetDamageType
     {
         get => damageType;
@@ -113,9 +110,17 @@ public class UnitValues : MonoBehaviour
         get => speedChanged;
         set => speedChanged = value;
     }
+    public bool GetIsEnemy
+    {
+        get => isEnemy;
+    }
     public bool GetIsSpecial
     {
         get => isSpecial;
+    }
+    public bool GetIsBoss
+    {
+        get => isBoss;
     }
     public bool GetHasLongRange
     {
