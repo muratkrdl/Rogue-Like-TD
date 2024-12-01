@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
   m_Name: level2
   m_EditorClassIdentifier: 
-  IsActive: 0
+  code: 17
+  isEvolved: 0
   SkillIcon: {fileID: 21300000, guid: b64dcdb1287dc3344a2d8ac1a0c7606d, type: 3}
   SkillName: Spike
   Level: 2
-  Value: 12
+  Value: 16
   CooldDown: 5
   ProjectileCount: 1
   Size: 1.5
   KnockbackAmount: 0
   Description: Pulls spikes out of the ground
-  damageType: 1
+  DamageType: 1
+  NeededPasifeSkillSO: {fileID: 11400000, guid: bcfe8ae6638ebf742a44727ad234ae24, type: 2}

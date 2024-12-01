@@ -12,9 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
   m_Name: level4
   m_EditorClassIdentifier: 
-  IsActive: 0
+  code: 9
+  isEvolved: 1
   SkillIcon: {fileID: 21300000, guid: 121c90cb2d722b942a87801858b8a52b, type: 3}
   SkillName: Clock
   Level: 4
   Value: 28
+  CooldDown: 0
+  ProjectileCount: 0
+  Size: 0
+  KnockbackAmount: 0
   Description: Cooldown reduced by 28%
+  DamageType: 0
+  NeededPasifeSkillSO: {fileID: 0}

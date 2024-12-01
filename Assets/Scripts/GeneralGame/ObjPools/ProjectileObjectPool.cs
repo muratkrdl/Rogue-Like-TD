@@ -11,6 +11,7 @@ public class ProjectileObjectPool : MonoBehaviour
 
     [SerializeField] Transform[] listsParent;
 
+
     #region ProjectilesLists
     List<Projectile> archer_Projectiles = new();
     List<Projectile> mage_1_Projectiles = new();
@@ -39,7 +40,6 @@ public class ProjectileObjectPool : MonoBehaviour
     List<Projectile> Mage_Evolved_2_level_3_Projectile = new();
     List<Projectile> man_With_Bow_Projectiles = new();
     List<Projectile> witch_Projectile = new();
-    List<Projectile> others = new();
     #endregion
 
     void Awake() 
@@ -79,8 +79,6 @@ public class ProjectileObjectPool : MonoBehaviour
 
             25 => man_With_Bow_Projectiles,
             26 => witch_Projectile,
-
-            27 => others,
             _ => throw new()
         };
     }

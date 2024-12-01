@@ -43,6 +43,8 @@ public class ExperienceSystem : MonoBehaviour
             _ => gemEarnXPAmount[2],
         };
 
+        increaseAmount += PermanentSkillSystem.Instance.GetPermanentSkillSO(2).Value;
+
         IncreaseExperience(increaseAmount);
     }
 
@@ -51,12 +53,16 @@ public class ExperienceSystem : MonoBehaviour
         currentExperience += increaseAmount;
         if(currentExperience >= needExperienceToLevelUp[currentLevel-1])
         {
-            // Level Up, Stop Game
-            levelUpPanel.SetRandomUISkillButtons();
+            SetRandomUISkillButtons(false);
             currentLevel++;
             currentExperience -= needExperienceToLevelUp[currentLevel-2];
         }
         experiencePanel.SetExperienceSlider(currentExperience, needExperienceToLevelUp[currentLevel-1], currentLevel);
+    }
+
+    public void SetRandomUISkillButtons(bool isBoss)
+    {
+        levelUpPanel.SetRandomUISkillButtons(isBoss);
     }
 
     void OnDestroy() 

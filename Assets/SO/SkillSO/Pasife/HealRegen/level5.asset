@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
   m_Name: level5
   m_EditorClassIdentifier: 
-  IsActive: 0
+  code: 3
+  isEvolved: 1
   SkillIcon: {fileID: 21300000, guid: a2ebc29d46f9fab40bee3c98bdaa33d6, type: 3}
   SkillName: PointHeart
   Level: 5
@@ -20,5 +21,7 @@ MonoBehaviour:
   CooldDown: 3
   ProjectileCount: 0
   Size: 0
+  KnockbackAmount: 0
   Description: Increases health by 5 every second
-  damageType: 0
+  DamageType: 0
+  NeededPasifeSkillSO: {fileID: 0}

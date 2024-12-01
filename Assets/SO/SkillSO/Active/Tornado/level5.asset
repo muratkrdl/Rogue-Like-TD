@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
   m_Name: level5
   m_EditorClassIdentifier: 
-  IsActive: 0
-  SkillIcon: {fileID: 21300000, guid: db60e542832716548b834d87f02e32c8, type: 3}
+  code: 18
+  isEvolved: 0
+  SkillIcon: {fileID: 21300000, guid: bd71c7b142e4b3642b3c42f5bdc15512, type: 3}
   SkillName: Tornado
   Level: 5
   Value: 25
-  CooldDown: 6
-  ProjectileCount: 1
+  CooldDown: 4
+  ProjectileCount: 3
   Size: 0
   KnockbackAmount: 225
   Description: Sends a tornado
-  damageType: 1
+  DamageType: 1
+  NeededPasifeSkillSO: {fileID: 11400000, guid: 56c606a8e054e4643ad7b331dc236c50, type: 2}

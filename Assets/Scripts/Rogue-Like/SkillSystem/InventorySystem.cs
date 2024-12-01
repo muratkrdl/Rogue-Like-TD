@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
@@ -13,6 +16,7 @@ public class InventorySystem : MonoBehaviour
 
     public EventHandler<OnSkillUpdateEventArgs> OnSkillUpdate;
     public EventHandler<OnSkillUpdateEventArgs> OnNewSkillGain;
+    public EventHandler<OnSkillUpdateEventArgs> OnSkillEvolved;
     public class OnSkillUpdateEventArgs : EventArgs
     {
         public int Code;
@@ -59,6 +63,11 @@ public class InventorySystem : MonoBehaviour
         OnSkillUpdate?.Invoke(this, new() { Code = code } );
     }
 
+    public void EvolveSkill(int code)
+    {
+        skillSOs[code-10] = SkillSOKeeper.Instance.GetSkillSOByCode(code, GetSkillSO(code-10).Level);
+    }
+
     public int GetHowManySkillHaveByCode(int code)
     {
         if(code < 10)
@@ -70,6 +79,58 @@ public class InventorySystem : MonoBehaviour
     public bool GetableSkillSOCode(int code)
     {
         if(GetSkillSO(code).Level == 0)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    public int HowManySlowAvailableByCode(int code)
+    {
+        int a = 0;
+
+        int maxRange = 20;
+
+        if(code < 10)
+        {
+            maxRange = 10;
+        }
+
+        for (int i = maxRange-10; i < maxRange; i++)
+        {
+            if(GetHowManySkillHaveByCode(code) < 5)
+            {
+                if(GetSkillSO(i).Level == 0)
+                {
+                    a++;
+                }
+            }
+            else
+            {
+                if(GetSkillSO(i).Level != 0 && GetSkillSO(i).Level != 5)
+                {
+                    a++;
+                }
+            }
+        }
+    
+        return a;
+    }
+
+    public bool IsSkillSOFullLevel(int code)
+    {
+        if(GetSkillSO(code).Level != 5)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    public bool EvolveableSkillSO(int code)
+    {
+        if(GetSkillSO(code).isEvolved)
         {
             return false;
         }

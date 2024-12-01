@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class InventoryUIPanel : MonoBehaviour
 {
     public static InventoryUIPanel Instance;
 
-    [SerializeField] Image[] pasifeIcons;
-    [SerializeField] Image[] activeIcons;
+    [SerializeField] Color evolvedPanelColor;
+
+    [SerializeField] SkillSlot[] pasifeIcons;
+    [SerializeField] SkillSlot[] activeIcons;
 
     void Awake() 
     {
@@ -17,12 +18,29 @@ public class InventoryUIPanel : MonoBehaviour
 
     public void SetNewPasifeSkillIcon(int code)
     {
-        pasifeIcons[InventorySystem.Instance.GetHowManyPasifeHave].sprite = SkillSOKeeper.Instance.GetSkillSOByCode(code, 0).SkillIcon;
+        pasifeIcons[InventorySystem.Instance.GetHowManyPasifeHave].ChangeSkillSprite(SkillSOKeeper.Instance.GetSkillSOByCode(code, 0).SkillIcon);
     }
 
     public void SetNewActiveSkillIcon(int code)
     {
-        activeIcons[InventorySystem.Instance.GetHowManyActiveHave].sprite = SkillSOKeeper.Instance.GetSkillSOByCode(code, 0).SkillIcon;
+        activeIcons[InventorySystem.Instance.GetHowManyActiveHave].ChangeSkillSprite(SkillSOKeeper.Instance.GetSkillSOByCode(code, 0).SkillIcon);
+    }
+
+    public void SetSkillEvolved(int code)
+    {
+        SkillSlot changeImage = null;
+
+        foreach(var item in activeIcons)
+        {
+            if(item.GetSkillSprite() == InventorySystem.Instance.GetSkillSO(code-10).SkillIcon)
+            {
+                changeImage = item;
+                break;
+            }
+        }
+        if(changeImage == null) return;
+
+        changeImage.EvolveSkill(SkillSOKeeper.Instance.GetEvolvedSkillSOByCode(code-20).SkillIcon, evolvedPanelColor);
     }
 
 }

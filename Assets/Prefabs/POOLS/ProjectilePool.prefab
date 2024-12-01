@@ -624,7 +624,8 @@ MonoBehaviour:
   - {fileID: 7982574345679275826}
   - {fileID: 456574608837502559}
   - {fileID: 148456396211316814}
-  guard_Unit: []
+  damageFromEvolvedTowerProjectilePrefab: {fileID: 1483788752861921217, guid: f9f786d2b2aed5946a17c589bda53fc8, type: 3}
+  damageFromEvolvedTowerProjectileParent: {fileID: 257054227265726545}
 --- !u!1 &4244782696687741282
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 257054227265726545}
   m_Layer: 0
-  m_Name: others
+  m_Name: DamageFromEvolvedTowerProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

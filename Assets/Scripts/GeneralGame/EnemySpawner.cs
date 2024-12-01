@@ -70,7 +70,7 @@ public class EnemySpawner : MonoBehaviour
         SpawnPhysicalEnemy().Forget();
         SpawnMagicalEnemy().Forget();
         SpawnSpecialEnemy().Forget();
-        SpawnBoss().Forget();
+        SpawnBossEnemy().Forget();
     }
 
     public void SetNewCharacters()
@@ -97,9 +97,10 @@ public class EnemySpawner : MonoBehaviour
 
     async UniTaskVoid SpawnPhysicalEnemy()
     {
+        await UniTask.WaitUntil(() => canSpawnPhysical);
         while (true)
         {
-            await UniTask.WaitUntil(() => canSpawnPhysical);
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
             SpawnNewEnemy(currentEnemyPhysicalIndex[spawnPhysicalIndex]);
             spawnPhysicalIndex++;
             if(spawnPhysicalIndex > 2)
@@ -110,9 +111,10 @@ public class EnemySpawner : MonoBehaviour
 
     async UniTaskVoid SpawnMagicalEnemy()
     {
+        await UniTask.WaitUntil(() => canSpawnMagical);
         while (true)
         {
-            await UniTask.WaitUntil(() => canSpawnMagical);
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
             SpawnNewEnemy(currentEnemyMagicalIndex);
             await UniTask.Delay(TimeSpan.FromSeconds(magicalSpawnRate));
         }
@@ -123,16 +125,18 @@ public class EnemySpawner : MonoBehaviour
         await UniTask.WaitUntil(() => canSpawnSpecial);
         while (true)
         {
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
             SpawnNewEnemy(currentEnemySpecialIndex);
             await UniTask.Delay(TimeSpan.FromSeconds(specialSpawnRate));
         }
     }
 
-    async UniTaskVoid SpawnBoss()
+    async UniTaskVoid SpawnBossEnemy()
     {
         await UniTask.WaitUntil(() => canSpawnBoss);
         while (true)
         {
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
             SpawnNewEnemy(currentBossIndex);
             await UniTask.Delay(TimeSpan.FromSeconds(bossSpawnRate));
         }

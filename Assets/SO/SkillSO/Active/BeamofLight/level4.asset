@@ -12,13 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
   m_Name: level4
   m_EditorClassIdentifier: 
-  IsActive: 0
-  SkillIcon: {fileID: 21300000, guid: 6f521ed06ac2de5459dee610ae2ae43c, type: 3}
+  code: 10
+  isEvolved: 0
+  SkillIcon: {fileID: 21300000, guid: bae7386e06eb02442b8ae52e6ba5162f, type: 3}
   SkillName: Beam Of Light
   Level: 4
   Value: 44
   CooldDown: 2
   ProjectileCount: 0
   Size: 0
+  KnockbackAmount: 0
   Description: Shoots a beam of light
-  damageType: 2
+  DamageType: 2
+  NeededPasifeSkillSO: {fileID: 11400000, guid: f29c059242af6db4cba52a8a7d0b8fe5, type: 2}

@@ -16,4 +16,9 @@ public class DarkBladeDamager : SkillProjectileDamagerBaseClass
         trailRenderer.Clear();
     }
 
+    protected override void EvolveFunc(Collider2D other)
+    {
+        GlobalUnitTargets.Instance.GetPlayerTarget().GetComponent<PlayerHealth>().SetHP(-1, DamageType.truedamage);
+    }
+
 }

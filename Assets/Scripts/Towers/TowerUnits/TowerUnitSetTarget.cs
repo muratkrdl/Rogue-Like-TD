@@ -89,4 +89,9 @@ public class TowerUnitSetTarget : MonoBehaviour
         towerUnitValues.GetTowerEnemyKeeper().OnEnemyListKeeperChanged -= TowerEnemyKeeper_OnEnemyListKeeperChanged;
     }
 
+    public bool CheckTargetToBase()
+    {
+        return currentTarget == baseTarget;
+    }
+
 }

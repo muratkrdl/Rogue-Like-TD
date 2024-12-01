@@ -105,7 +105,9 @@ public class InfoPanel : MonoBehaviour
 
     public void OnClick_InOut()
     {
+        if(GlobalUnitTargets.Instance.GetPlayerTarget().GetComponent<PlayerHealth>().GetIsDead) return;
         MainTowerManager.Instance.OnInteractWithMainTower?.Invoke(this, EventArgs.Empty);
+        GlobalUnitTargets.Instance.GetPlayerTarget().GetComponent<Animator>().SetTrigger(ConstStrings.UNIT_ANIMATOR_RESPAWN);
     }
 
     public void SetInfoPanelAnim(bool value)

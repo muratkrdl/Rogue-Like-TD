@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mage 2
   m_EditorClassIdentifier: 
   towercode: 1
-  towerImageIcon: {fileID: 21300000, guid: fa968a8da5b959d478cfee77bf43147e, type: 3}
+  towerImageIcon: {fileID: 21300000, guid: 6620f687595d861438bf8357d5c8b944, type: 3}
   towerIcon: {fileID: 21300000, guid: 5320b1248c6409a4da0c6c6e58eca415, type: 3}
   Name: MageII
   maxHealth: 100
@@ -22,7 +22,7 @@ MonoBehaviour:
   TimeBetweenAttack: 1.6
   attackDelay: 4
   DamageTypeColor: {r: 0.47058824, g: 0, b: 1, a: 1}
-  projectileCode: 3
+  projectileCode: 2
   towerCost: 115
   sellPrice: 110
   Range: 5.25

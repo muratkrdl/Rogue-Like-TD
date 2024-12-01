@@ -1,4 +1,5 @@
 using System.Collections;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class UnitHealth : MonoBehaviour, IDamageable
@@ -19,7 +20,10 @@ public class UnitHealth : MonoBehaviour, IDamageable
     {
         if(unitValues.IsDead) return;
 
-        amount = SetNewDamage(amount, damageType);
+        if(amount % 1 == 0)
+        {
+            amount = SetNewDamage(amount, damageType);
+        }
 
         currentHealth -= amount;
 
@@ -38,16 +42,17 @@ public class UnitHealth : MonoBehaviour, IDamageable
                     state = new EnemyIdleState();
 
                 GlobalUnitTargets.Instance.OnAnEnemyDead?.Invoke(this, new() { deadUnit = unitValues } );
+
+                var obj = ExperienceObjectPool.Instance.GetExperienceObj(0); // kontrol et
+                obj.transform.position = transform.position;
+                Bank.Instance.OnChangeMoneyAmount?.Invoke(this, new() { amount = 
+                Random.Range(1 + PermanentSkillSystem.Instance.GetPermanentSkillSO(3).Value, 5 + PermanentSkillSystem.Instance.GetPermanentSkillSO(3).Value) } );
             }
             else
             {
                 state = new GuardIdleState();
                 GlobalUnitTargets.Instance.OnAnGuardDead?.Invoke(this, new() { deadUnit = unitValues } );
             }
-
-            ExperienceObjectPool.Instance.GetExperienceObj(0).transform.position = transform.position;
-
-            Bank.Instance.OnChangeMoneyAmount?.Invoke(this, new() { amount = Random.Range(1,5) } );
 
             unitValues.GetUnitStateController().ChangeState(state);
             unitValues.ResetAllValues();
@@ -59,26 +64,35 @@ public class UnitHealth : MonoBehaviour, IDamageable
         }
     }
 
-    public void TakeDamageFromPlayer(float amount, DamageType damageType)
+    public void TakeDamageFromPlayer(float amount, DamageType damageType, int damageColorCode)
     {
         amount = SetNewDamageFromPlayer(amount, damageType, InventorySystem.Instance.GetSkillSO(4).Value, InventorySystem.Instance.GetSkillSO(5).Value);
-        amount = amount * (100 + InventorySystem.Instance.GetSkillSO(7).Value) / 100;
+        amount *= (100 + InventorySystem.Instance.GetSkillSO(7).Value + PermanentSkillSystem.Instance.GetPermanentSkillSO(1).Value) / 100 ;
         SetHP(amount, damageType);
         InventorySystem.Instance.OnDamageWithActiveSkills?.Invoke(this, new() { damage = amount } );
-        unitValues.GetUnitFlashFX().FlashFX(.125f).Forget();
+        unitValues.GetUnitFlashFX().FlashFX(.125f, damageColorCode).Forget();
     }
 
     float SetNewDamage(float amount, DamageType damageType)
     {
         float returnInteger = amount;
+        int towerCode = 0;
+        if(unitValues.TowerBasePosition != null)
+        {
+            towerCode = GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerCode;
+        }
 
         if(damageType == DamageType.physical)
         {
-            returnInteger *= (100-unitValues.UnitSO.Armor*20) / 100;
+            returnInteger *= (100-(float)unitValues.UnitSO.Armor*16) / 100;
+            if(towerCode == 9)
+                returnInteger = 0;
         }
         else if(damageType == DamageType.magic)
         {
-            returnInteger *= (100-unitValues.UnitSO.MagicResistance*20) / 100;
+            returnInteger *= (100-(float)unitValues.UnitSO.MagicResistance*16) / 100;
+            if(towerCode == 8)
+                returnInteger = 0;
         }
 
         return returnInteger;
@@ -90,16 +104,37 @@ public class UnitHealth : MonoBehaviour, IDamageable
 
         if(damageType == DamageType.physical)
         {
-            float calculateArmor = (float)unitValues.UnitSO.Armor * 20 * ((100 - (float)lethality) / 100);
-            returnInteger *= (100 - calculateArmor * 20) / 100;
+            float calculateArmor = (float)unitValues.UnitSO.Armor * 16 * ((100 - (float)lethality) / 100);
+            returnInteger *= (100 - calculateArmor) / 100;
         }
         else if(damageType == DamageType.magic)
         {
-            float calculateMR = (float)unitValues.UnitSO.MagicResistance * 20 * ((100 - (float)magicPenetration) / 100);
-            returnInteger *= (100 - calculateMR * 20) / 100;
+            float calculateMR = (float)unitValues.UnitSO.MagicResistance * 16 * ((100 - (float)magicPenetration) / 100);
+            returnInteger *= (100 - calculateMR) / 100;
+        }
+
+        if(returnInteger % 1 == 0)
+        {
+            returnInteger += 0.001f;
         }
 
         return returnInteger;
+    }
+
+    public void DamageWithPoison(float damage, int duration)
+    {
+        PoisonEnemy(damage, duration).Forget();
+    }
+
+    async UniTaskVoid PoisonEnemy(float damage, int duration)
+    {
+        for (int i = 0; i < duration; i++)
+        {
+            await UniTask.Delay(System.TimeSpan.FromSeconds(1));
+
+            unitValues.GetUnitFlashFX().FlashFX(.125f, 1).Forget();
+            SetHP(damage, DamageType.truedamage);
+        }
     }
 
 }

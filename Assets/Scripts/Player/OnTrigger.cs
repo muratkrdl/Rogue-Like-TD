@@ -19,6 +19,12 @@ public class OnTrigger : MonoBehaviour
             ExperienceSystem.Instance.OnGetExperience?.Invoke(this, new() { name = other.name } );
             other.gameObject.SetActive(false);
         }
+        else if(other.CompareTag(TagManager.BOSS_TREASURE))
+        {
+            GameStateManager.Instance.PauseGame();
+            other.GetComponent<Animator>().SetTrigger(ConstStrings.ANIM);
+            Invoke(nameof(InvokeBossTreasure), 1.15f);
+        }
     }
 
     void OnTriggerExit2D(Collider2D other) 
@@ -28,4 +34,10 @@ public class OnTrigger : MonoBehaviour
             other.GetComponent<SpriteRenderer>().color = normalColor;
         }
     }
+
+    void InvokeBossTreasure()
+    {
+        ExperienceSystem.Instance.SetRandomUISkillButtons(true);
+    }
+
 }

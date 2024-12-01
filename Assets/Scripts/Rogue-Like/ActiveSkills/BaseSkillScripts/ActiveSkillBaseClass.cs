@@ -11,6 +11,7 @@ public abstract class ActiveSkillBaseClass : MonoBehaviour
     public bool canUseSkill = false;
 
     Vector2 currentScale = Vector2.one;
+    float currentProjectileAmount = 1;
 
     public int GetSkillCode
     {
@@ -28,6 +29,10 @@ public abstract class ActiveSkillBaseClass : MonoBehaviour
     {
         get => currentScale;
     }
+    public float GetCurrentProjectileAmount
+    {
+        get => currentProjectileAmount;
+    }
 
     public void InventorySystem_OnNewSkillGain(object sender, InventorySystem.OnSkillUpdateEventArgs e)
     {
@@ -41,13 +46,29 @@ public abstract class ActiveSkillBaseClass : MonoBehaviour
     {
         if(e.Code == GetSkillCode)
         {
-            currentScale = new(InventorySystem.Instance.GetSkillSO(GetSkillCode).Size, InventorySystem.Instance.GetSkillSO(GetSkillCode).Size);
+            currentScale = Vector2.one * InventorySystem.Instance.GetSkillSO(GetSkillCode).Size;
+            currentProjectileAmount = InventorySystem.Instance.GetSkillSO(GetSkillCode).ProjectileCount + PermanentSkillSystem.Instance.GetPermanentSkillSO(7).Value;
+            OnSkillUpdateFunc();
         }
     }
 
+    protected virtual void OnSkillUpdateFunc() { /* */  }
+
+    public void InventorySystem_OnSkillEvolved(object sender, InventorySystem.OnSkillUpdateEventArgs e) 
+    { 
+        if(e.Code -10 == GetSkillCode)
+        {
+            // EVOLVE
+            EvolveSkill();
+        }
+    }
+
+    protected virtual void EvolveSkill() {  /* */ }
+
     public float GetSkillCoolDown()
     {
-        return InventorySystem.Instance.GetSkillSO(skillCode).CooldDown - InventorySystem.Instance.GetSkillSO(skillCode).CooldDown * InventorySystem.Instance.GetSkillSO(9).Value / 100;
+        return InventorySystem.Instance.GetSkillSO(skillCode).CooldDown - InventorySystem.Instance.GetSkillSO(skillCode).CooldDown * 
+        (InventorySystem.Instance.GetSkillSO(9).Value + PermanentSkillSystem.Instance.GetPermanentSkillSO(0).Value) / 100;
     }
 
 }

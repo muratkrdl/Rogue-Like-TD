@@ -12,9 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
   m_Name: level3
   m_EditorClassIdentifier: 
-  IsActive: 0
+  code: 2
+  isEvolved: 1
   SkillIcon: {fileID: 21300000, guid: e185566065ddf474195bcc44e2afd217, type: 3}
   SkillName: SecondHeart
   Level: 3
   Value: 42
+  CooldDown: 0
+  ProjectileCount: 0
+  Size: 0
+  KnockbackAmount: 0
   Description: Base health up by 42
+  DamageType: 0
+  NeededPasifeSkillSO: {fileID: 0}

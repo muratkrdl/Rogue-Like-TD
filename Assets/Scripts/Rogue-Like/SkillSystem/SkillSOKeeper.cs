@@ -6,6 +6,10 @@ public class SkillSOKeeper : MonoBehaviour
 {
     public static SkillSOKeeper Instance;
 
+    [SerializeField] SkillSO[] EvolvedActiveSkillSOs;
+
+    [Space(20)]
+
     [SerializeField] SkillSO[] armor;
     [SerializeField] SkillSO[] magicResistance;
     [SerializeField] SkillSO[] extraHP;
@@ -17,16 +21,37 @@ public class SkillSOKeeper : MonoBehaviour
     [SerializeField] SkillSO[] lifeStealPercent;
     [SerializeField] SkillSO[] coolDownPercent; // 9
 
+    [Space(10)]
+
     [SerializeField] SkillSO[] beamofLight;
     [SerializeField] SkillSO[] bloodRain;
-    [SerializeField] SkillSO[] brightShield; // work ??
+    [SerializeField] SkillSO[] brightShield;
     [SerializeField] SkillSO[] dagger;
     [SerializeField] SkillSO[] darkBlade;
     [SerializeField] SkillSO[] darkAura;
     [SerializeField] SkillSO[] fireball;
-    [SerializeField] SkillSO[] spike; // work ?? 
+    [SerializeField] SkillSO[] spike;
     [SerializeField] SkillSO[] tornado;
     [SerializeField] SkillSO[] vine; // 19
+
+    [Space(20)]
+
+    [SerializeField] PermanentSkillSO[] permanentExtraCooldown;
+    [SerializeField] PermanentSkillSO[] permanentextraDamage;
+    [SerializeField] PermanentSkillSO[] permanentExtraExperience;
+    [SerializeField] PermanentSkillSO[] permanentExtraGold;
+    [SerializeField] PermanentSkillSO[] permanentextraHP;
+    [SerializeField] PermanentSkillSO[] permanentextraHPRegen;
+    [SerializeField] PermanentSkillSO[] permanentextraMoveSpeed;
+    [SerializeField] PermanentSkillSO[] permanentExtraProjectile;
+    [SerializeField] PermanentSkillSO[] PermanentReduceRespawnTimerAmount;
+    [SerializeField] PermanentSkillSO[] ExtraTowerAttackSpeed;
+    [SerializeField] PermanentSkillSO[] ExtraTowerDamage;
+    [SerializeField] PermanentSkillSO[] ExtraTowerHP;
+
+    [Space(20)]
+
+    [SerializeField] SkillSO[] skillFulledSO;
 
     void Awake() 
     {
@@ -59,8 +84,38 @@ public class SkillSOKeeper : MonoBehaviour
             18 => tornado[level],
             19 => vine[level],
 
+            _ => EvolvedActiveSkillSOs[code-20],
+        };
+    }
+
+    public SkillSO GetEvolvedSkillSOByCode(int code)
+    {
+        return EvolvedActiveSkillSOs[code];
+    }
+
+    public PermanentSkillSO GetPermanentSkillSOByCode(int code, int level)
+    {
+        return code switch
+        {
+            0 => permanentExtraCooldown[level],
+            1 => permanentextraDamage[level],
+            2 => permanentExtraExperience[level],
+            3 => permanentExtraGold[level],
+            4 => permanentextraHP[level],
+            5 => permanentextraHPRegen[level],
+            6 => permanentextraMoveSpeed[level],
+            7 => permanentExtraProjectile[level],
+            8 => PermanentReduceRespawnTimerAmount[level],
+            9 => ExtraTowerAttackSpeed[level],
+            10 => ExtraTowerDamage[level],
+            11 => ExtraTowerHP[level],
             _ => throw new System.NotImplementedException()
         };
+    }
+
+    public SkillSO GetSkillFulledSO(int code)
+    {
+        return skillFulledSO[code];
     }
 
 }

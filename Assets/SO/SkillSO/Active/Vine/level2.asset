@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
   m_Name: level2
   m_EditorClassIdentifier: 
-  IsActive: 0
+  code: 19
+  isEvolved: 0
   SkillIcon: {fileID: 21300000, guid: 0f09f392f29f9f94eb5709763aff9680, type: 3}
   SkillName: Vine
   Level: 2
   Value: 18
-  CooldDown: 10
+  CooldDown: 8
   ProjectileCount: 2
   Size: 1
   KnockbackAmount: 70
   Description: Spins vines around
-  damageType: 1
+  DamageType: 1
+  NeededPasifeSkillSO: {fileID: 11400000, guid: b509014001e5ae449a761cd36f59bedc, type: 2}

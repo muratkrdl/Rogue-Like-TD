@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class FireBall : ActiveSkillBaseClass
 {
+    int projectileCode = 3;
+
+    Vector2 randomRangeRange = new(-.15f, .15f);
+
     void Start() 
     {
         UseSkill().Forget();
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
+        InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
+        InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
     }
 
     async UniTaskVoid UseSkill()
@@ -26,13 +32,13 @@ public class FireBall : ActiveSkillBaseClass
     {
         if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
 
-        for(int i = 0; i < InventorySystem.Instance.GetSkillSO(GetSkillCode).ProjectileCount; i++)
+        for(int i = 0; i < GetCurrentProjectileAmount; i++)
         {
             await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
             await UniTask.Delay(TimeSpan.FromSeconds(.2f));
             await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
 
-            var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(3);
+            var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(projectileCode);
             
             Vector2 extraForce = Vector2.zero;
             Vector2 newLookPos;
@@ -47,22 +53,29 @@ public class FireBall : ActiveSkillBaseClass
 
             if(Mathf.Abs(newLookPos.x) > Mathf.Abs(newLookPos.y))
             {
-                extraForce.y = UnityEngine.Random.Range(-.15f, .15f);
+                extraForce.y = UnityEngine.Random.Range(randomRangeRange.x, randomRangeRange.y);
             }
             else
             {
-                extraForce.x = UnityEngine.Random.Range(-.15f, .15f);
+                extraForce.x = UnityEngine.Random.Range(randomRangeRange.x, randomRangeRange.y);
             }
 
             projectile.GetComponent<FireballDamager>().ClearList();
             projectile.SetMoveableProjectile(newLookPos + extraForce, transform.position, true);
-            projectile.SetBaseClassValues(InventorySystem.Instance.GetSkillSO(GetSkillCode).Value, GetIsEvolved);
         }
+    }
+
+    protected override void EvolveSkill()
+    {
+        randomRangeRange = new(-.75f, .75f);
+        projectileCode = 7;
     }
 
     void OnDestroy() 
     {
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
+        InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
+        InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
     }
 
 }

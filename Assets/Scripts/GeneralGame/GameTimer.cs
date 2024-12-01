@@ -38,8 +38,9 @@ public class GameTimer : MonoBehaviour
     {
         while (true)
         {
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
             await UniTask.Delay(TimeSpan.FromSeconds(1));
-            if(GameStateManager.Instance.GetIsGamePaused) return;
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
             currentSecond++;
             if(currentSecond >= 60)
             {

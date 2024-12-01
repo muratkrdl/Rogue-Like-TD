@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class GuardTowerSkill : MonoBehaviour
 {
-    [SerializeField] TowerEnemyKeeper towerEnemyKeeper;
-
     [SerializeField] int reSpawnCoolDown;
 
     [SerializeField] Transform spawnPos;
@@ -37,9 +35,10 @@ public class GuardTowerSkill : MonoBehaviour
 
     public void UpdateUnitCode()
     {
+        currentUnit.IsWaiting = true;
         currentUnit.SetValues(spawnPos, AllUnitInfoKeeper.Instance.GetGuardInfo(0), 1);
         currentUnit.UnitSO = AllUnitInfoKeeper.Instance.GetGuardInfo(0); // current dakikadan çek
-        currentUnit.PlusDamageRange = GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerInfo.BaseDamageRange;
+        currentUnit.PlusDamageRange = GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerInfo.BaseDamageRange * GetComponentInParent<TowerInfoKeeper>().GetExtraDamageFromDarkAura;
         currentUnit.GetUnitStateController().StartFunc(1);
     }
 

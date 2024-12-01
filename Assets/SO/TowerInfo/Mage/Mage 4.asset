@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mage 4
   m_EditorClassIdentifier: 
   towercode: 1
-  towerImageIcon: {fileID: 21300000, guid: fa968a8da5b959d478cfee77bf43147e, type: 3}
+  towerImageIcon: {fileID: 21300000, guid: 6620f687595d861438bf8357d5c8b944, type: 3}
   towerIcon: {fileID: -1811695327, guid: f666183d6a93bbe4691675fdceef22e9, type: 3}
   Name: MageIV
   maxHealth: 170

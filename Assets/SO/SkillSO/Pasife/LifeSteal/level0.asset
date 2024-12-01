@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
   m_Name: level0
   m_EditorClassIdentifier: 
-  IsActive: 0
+  code: 8
   SkillIcon: {fileID: 21300000, guid: e1e9e41912043894a955c01151c5cb94, type: 3}
   SkillName: Tooth
   Level: 0
   Value: 0
+  CooldDown: 0
+  ProjectileCount: 0
+  Size: 0
+  KnockbackAmount: 0
   Description: Steals 2% of damage dealt
+  DamageType: 0
+  NeededPasifeSkillSO: {fileID: 0}

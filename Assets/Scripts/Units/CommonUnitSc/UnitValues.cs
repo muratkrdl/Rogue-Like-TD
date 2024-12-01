@@ -81,6 +81,7 @@ public class UnitValues : MonoBehaviour
     bool isDead = false;
     bool isGoingToRight;
     bool isWaiting;
+    bool speedChanged = false;
 
     public bool IsChasing
     {
@@ -106,6 +107,11 @@ public class UnitValues : MonoBehaviour
     {
         get => isWaiting;
         set => isWaiting = value;
+    }
+    public bool IsSpeedChanged
+    {
+        get => speedChanged;
+        set => speedChanged = value;
     }
     public bool GetIsSpecial
     {
@@ -196,20 +202,13 @@ public class UnitValues : MonoBehaviour
     public void ResetAllValues()
     {
         GetComponent<CircleCollider2D>().enabled = false;
-        // if(isSpecial) return;
-        // isWaiting = true;
-        // await UniTask.DelayFrame(6);
-        // if(isEnemy)
-        // {
-        //     navMeshAgent.Warp(GlobalUnitTargets.Instance.enemyWaitPos.position);
-        // }
     }
 
     public void ForSpecialEnemies()
     {
         isWaiting = true;
         if(isEnemy)
-            navMeshAgent.Warp(GlobalUnitTargets.Instance.enemyWaitPos.position);
+            navMeshAgent.Warp(GlobalUnitTargets.Instance.GetEnemyWaitPos.position);
     }
 
     public void SetUnitSpeed(float amount)
@@ -224,12 +223,12 @@ public class UnitValues : MonoBehaviour
         GetComponent<Animator>().speed = 1;
     }
 
-    public async UniTaskVoid StunUnit(float stunTime)
+    public async UniTaskVoid StunSlowUnit(float value, float stunTime)
     {
-        // created stunned variable
-
-        SetUnitSpeed(0);
+        speedChanged = true;
+        SetUnitSpeed(value);
         await UniTask.Delay(TimeSpan.FromSeconds(stunTime));
+        speedChanged = false;
         SetUnitSpeedBaseValue();
     }
 

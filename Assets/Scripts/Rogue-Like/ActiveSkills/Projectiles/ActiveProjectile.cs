@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActiveProjectile : ActiveProjectileBaseClass
+public class ActiveProjectile : MonoBehaviour
 {
-    [SerializeField] DamageType damageType;
     [SerializeField] float extraRot;
 
     Vector2 lookPos;
@@ -27,6 +26,10 @@ public class ActiveProjectile : ActiveProjectileBaseClass
         GetComponent<SpriteRenderer>().enabled = true;
         isWaiting = false;
         transform.position = pos;
+        if(GetComponentInChildren<TrailRenderer>() != null)
+        {
+            GetComponentInChildren<TrailRenderer>().Clear();
+        }
 
         lookPos = direction;
 

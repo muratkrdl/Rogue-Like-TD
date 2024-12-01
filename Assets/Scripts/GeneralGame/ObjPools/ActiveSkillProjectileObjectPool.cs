@@ -16,6 +16,10 @@ public class ActiveSkillProjectileObjectPool : MonoBehaviour
     List<ActiveProjectile> fireBallList = new();
     List<ActiveProjectile> spikeList = new();
     List<ActiveProjectile> tornadoList = new();
+    List<ActiveProjectile> axeList = new();
+    List<ActiveProjectile> fireballEvolved = new();
+    List<ActiveProjectile> bofEvolved = new();
+    List<ActiveProjectile> tornadoEvolved = new();
 
     void Awake() 
     {
@@ -32,6 +36,10 @@ public class ActiveSkillProjectileObjectPool : MonoBehaviour
             3 => fireBallList,
             4 => spikeList,
             5 => tornadoList,
+            6 => axeList,
+            7 => fireballEvolved,
+            8 => bofEvolved,
+            9 => tornadoEvolved,
             _ => throw new()
         };
     }

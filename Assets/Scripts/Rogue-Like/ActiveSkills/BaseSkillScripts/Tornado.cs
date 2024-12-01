@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Tornado : ActiveSkillBaseClass
 {
+    int projectileCode = 5;
+
     void Start() 
     {
         UseSkill().Forget();
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
+        InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
+        InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
     }
 
     async UniTaskVoid UseSkill()
@@ -26,31 +30,37 @@ public class Tornado : ActiveSkillBaseClass
     {
         if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
 
-        for(int i = 0; i < InventorySystem.Instance.GetSkillSO(GetSkillCode).ProjectileCount; i++)
+        for(int i = 0; i < GetCurrentProjectileAmount; i++)
         {
             await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
             await UniTask.Delay(TimeSpan.FromSeconds(.17f));
             await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
 
-            var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(5);
+            var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(projectileCode);
             projectile.GetComponent<TornadoDamager>().ClearList();
             projectile.GetComponent<Animator>().SetTrigger(ConstStrings.ANIM);
             
             Vector2 newDirection = new(UnityEngine.Random.Range(UnityEngine.Random.Range(-1, -.1f), UnityEngine.Random.Range(.1f, 1)), UnityEngine.Random.Range(UnityEngine.Random.Range(-1, -.1f), UnityEngine.Random.Range(.1f, 1)));
 
             if(newDirection.x > 0)
-                projectile.GetComponent<SpriteRenderer>().flipX = false;
+                projectile.transform.localScale = Vector2.one;
             else
-                projectile.GetComponent<SpriteRenderer>().flipX = true;
+                projectile.transform.localScale = new(-1,1);
 
             projectile.SetMoveableProjectile(newDirection, transform.position, false);
-            projectile.SetBaseClassValues(InventorySystem.Instance.GetSkillSO(GetSkillCode).Value, GetIsEvolved);
         }
+    }
+
+    protected override void EvolveSkill()
+    {
+        projectileCode = 9;
     }
 
     void OnDestroy() 
     {
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
+        InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
+        InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
     }
     
 }

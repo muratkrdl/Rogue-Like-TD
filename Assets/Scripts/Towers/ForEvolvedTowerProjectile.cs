@@ -6,6 +6,8 @@ public class ForEvolvedTowerProjectile : MonoBehaviour
 {
     [SerializeField] Projectile projectile;
 
+    [SerializeField] int code;
+
     Vector2 offset;
 
     void Update()
@@ -17,4 +19,10 @@ public class ForEvolvedTowerProjectile : MonoBehaviour
         float rot_z = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
     }
+
+    public void SpawnDamage()
+    {
+        DamagerObjPool.Instance.GetDamagerObj(code).SetValues(projectile.GetCurrentDamage, projectile.GetDamageType, transform.position);
+    }
+
 }

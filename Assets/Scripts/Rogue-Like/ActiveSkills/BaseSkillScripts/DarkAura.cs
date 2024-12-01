@@ -11,9 +11,8 @@ public class DarkAura : ActiveSkillBaseClass
         UseSkill().Forget();
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
+        InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
     }
-
-    
 
     async UniTaskVoid UseSkill()
     {
@@ -35,9 +34,15 @@ public class DarkAura : ActiveSkillBaseClass
         myAnimator.SetTrigger(ConstStrings.ANIM);
     }
 
+    protected override void EvolveSkill()
+    {
+        myAnimator.GetComponent<SpriteRenderer>().color = new(0, 1, 1, 0.6F);
+    }
+
     void OnDestroy() 
     {
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
+        InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
     }
 }

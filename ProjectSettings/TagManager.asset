@@ -10,6 +10,7 @@ TagManager:
   - Guard
   - xpGem
   - Barier
+  - BossTreasure
   layers:
   - Default
   - TransparentFX

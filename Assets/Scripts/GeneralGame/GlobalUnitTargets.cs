@@ -1,4 +1,5 @@
 using System;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class GlobalUnitTargets : MonoBehaviour
@@ -17,8 +18,24 @@ public class GlobalUnitTargets : MonoBehaviour
     [SerializeField] Transform mainTower;
     [SerializeField] Transform playerTarget;
 
-    public Transform enemyWaitPos;
-    public Transform guardWaitPos;
+    [SerializeField] Vector3 playerRespawnPos;
+
+    [SerializeField] Transform enemyWaitPos;
+    [SerializeField] Transform guardWaitPos;
+
+    public Vector3 GetPlayerRespawnPos
+    {
+        get => playerRespawnPos;
+    }
+
+    public Transform GetEnemyWaitPos
+    {
+        get => enemyWaitPos;
+    }
+    public Transform GetGuardWaitPos
+    {
+        get => guardWaitPos;
+    }
 
     void Awake() 
     {
@@ -86,25 +103,20 @@ public class GlobalUnitTargets : MonoBehaviour
                     else
                     {
                         setTarget = item;
-
-                        // if(item.GetComponent<TowerInfoKeeper>().GetCurrentTowerCode == 2 || 
-                        // item.GetComponent<TowerInfoKeeper>().GetCurrentTowerCode == 8 || 
-                        // item.GetComponent<TowerInfoKeeper>().GetCurrentTowerCode == 9)
-                        // {
-                        //     if(item.GetComponent<TowerInfoKeeper>().GetCurrentTowerCode == 2)
-                        //     {
-                        //         UnitValues unitTower = item.GetChild(5).GetChild(0).GetComponentInChildren<UnitValues>();
-                        //         if(!unitTower.IsWaiting)
-                        //             setTarget = unitTower.transform;
-                        //     }
-                        //     else
-                        //     {
-                        //         UnitValues unitTower = item.GetChild(5).GetChild(1).GetComponentInChildren<UnitValues>();
-                        //         if(!unitTower.IsWaiting)
-                        //             setTarget = unitTower.transform;
-                        //     }
-                        //     isTower = false;
-                        // }
+                        if(setTarget.TryGetComponent<TowerInfoKeeper>(out var infoKeeper))
+                        {
+                            if(infoKeeper.GetCurrentTowerCode == 2|| 
+                            infoKeeper.GetCurrentTowerCode == 8|| 
+                            infoKeeper.GetCurrentTowerCode == 9)
+                            {
+                                if(setTarget.GetComponent<LevelUpTower>().GetChoosenUnitAnimator.gameObject.activeInHierarchy &&
+                                !setTarget.GetComponent<LevelUpTower>().GetChoosenUnitAnimator.GetComponent<UnitValues>().IsDead)
+                                {
+                                    setTarget = setTarget.GetComponent<LevelUpTower>().GetChoosenUnitAnimator.gameObject.transform;
+                                    isTower = false;
+                                }
+                            }
+                        }
                     }
 
                     unitValues.GetEnemySetTarget().ChangeCurrentTarget(setTarget, isTower);
@@ -117,7 +129,7 @@ public class GlobalUnitTargets : MonoBehaviour
 
     public bool CanPlayerUseSkill()
     {
-        return !GameStateManager.Instance.GetIsGamePaused && !playerTarget.GetComponent<PlayerHealth>().GetIsDead;
+        return !GameStateManager.Instance.GetIsGamePaused && !playerTarget.GetComponent<PlayerHealth>().GetIsDead && playerTarget.gameObject.activeSelf;
     }
 
 }

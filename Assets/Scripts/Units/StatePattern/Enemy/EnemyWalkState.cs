@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class EnemyWalkState : IUnitState
 {
@@ -16,7 +17,8 @@ public class EnemyWalkState : IUnitState
 
     public void UpdateState(UnitValues unitValues)
     {
-        if(!unitValues.GetEnemySetTarget().GetCurrentTarget.gameObject.activeSelf)
+        if(!unitValues.GetEnemySetTarget().GetCurrentTarget.gameObject.activeSelf || 
+        (unitValues.GetEnemySetTarget().GetCurrentTarget.TryGetComponent<UnitValues>(out var guard) && guard.IsDead))
         {
             unitValues.GetUnitStateController().ChangeState(new EnemyIdleState());
         }

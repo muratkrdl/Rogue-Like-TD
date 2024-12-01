@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class Dagger : ActiveSkillBaseClass
 {
+    int projectileCode = 2;
+
     void Start() 
     {
         UseSkill().Forget();
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
+        InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
+        InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
     }
 
     async UniTaskVoid UseSkill()
@@ -26,13 +30,13 @@ public class Dagger : ActiveSkillBaseClass
     {
         if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
 
-        for(int i = 0; i < InventorySystem.Instance.GetSkillSO(GetSkillCode).ProjectileCount; i++)
+        for(int i = 0; i < GetCurrentProjectileAmount; i++)
         {
             await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
             await UniTask.Delay(TimeSpan.FromSeconds(.1f));
             await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
 
-            var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(2);
+            var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(projectileCode);
             
             Vector2 newLookPos;
             if(GetComponentInParent<GetInputs>().GetMoveInput == Vector2.zero)
@@ -46,13 +50,19 @@ public class Dagger : ActiveSkillBaseClass
             
             projectile.GetComponent<DaggerDamager>().ClearList();
             projectile.SetMoveableProjectile(newLookPos, transform.position, true);
-            projectile.SetBaseClassValues(InventorySystem.Instance.GetSkillSO(GetSkillCode).Value, GetIsEvolved);
         }
+    }
+
+    protected override void EvolveSkill()
+    {
+        projectileCode = 6;
     }
 
     void OnDestroy() 
     {
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
+        InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
+        InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
     }
 
 }

@@ -18,6 +18,10 @@ public class TowerChange : MonoBehaviour
             component.ClearTokenSource();
         
         openTower.SetActive(true);
+        if(openTower.TryGetComponent<GuardTowerSkill>(out var component1))
+        {
+            component1.UpdateUnitCode();
+        }
         gameObject.SetActive(false);
     }
 

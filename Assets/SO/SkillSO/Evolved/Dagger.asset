@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
+  m_Name: Dagger
+  m_EditorClassIdentifier: 
+  code: 23
+  isEvolved: 1
+  SkillIcon: {fileID: 21300000, guid: 4027aaab0a86ac7419a289cbbcbd2d54, type: 3}
+  SkillName: Dagger
+  Level: 5
+  Value: 45
+  CooldDown: 2
+  ProjectileCount: 5
+  Size: 0
+  KnockbackAmount: 40
+  Description: Thors a dagger
+  DamageType: 1
+  NeededPasifeSkillSO: {fileID: 11400000, guid: 99e00ee7e76eb9e4f9edf5a2e0b72d73, type: 2}

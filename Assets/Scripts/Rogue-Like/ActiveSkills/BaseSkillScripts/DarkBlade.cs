@@ -6,11 +6,16 @@ public class DarkBlade : ActiveSkillBaseClass
 {
     [SerializeField] Animator darkBladeAnimator;
 
+    [SerializeField] SpriteRenderer darkBladeSpriteRenderer;
+
+    [SerializeField] Sprite evolvedSprite;
+
     void Start() 
     {
         UseSkill().Forget();
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
+        InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
     }
 
     async UniTaskVoid UseSkill()
@@ -29,13 +34,20 @@ public class DarkBlade : ActiveSkillBaseClass
     {
         if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
 
+        darkBladeAnimator.transform.localScale = GetCurrentScale;
         darkBladeAnimator.SetTrigger(ConstStrings.ANIM);
+    }
+
+    protected override void EvolveSkill()
+    {
+        darkBladeSpriteRenderer.sprite = evolvedSprite;
     }
 
     void OnDestroy() 
     {
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
+        InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
     }
 
 }

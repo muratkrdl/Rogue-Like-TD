@@ -296,6 +296,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: a37a8e280150a1f4db464b3c87a05671, type: 2}
+  poisonMaterial: {fileID: 2100000, guid: 60622bc07d339dd43816a6de4d8a8eac, type: 2}
+  bloodMaterial: {fileID: 2100000, guid: c9e0a0b4611927c4a9b1832bb901ce64, type: 2}
 --- !u!114 &5059640932281186905
 MonoBehaviour:
   m_ObjectHideFlags: 0

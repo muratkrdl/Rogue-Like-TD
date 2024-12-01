@@ -46,11 +46,11 @@ public class PlaceTower : MonoBehaviour
             closeTowerChange.ChangeTower();
             if(towerInfoKeeper.ClickedTowerCode % 2 == 0)
             {
-                choosenAnimName = ConstStrings.TOWER_LEVEL_UP_EVOLVE1;
+                choosenAnimName = ConstStrings.ANIM1;
             }
             else
             {
-                choosenAnimName = ConstStrings.TOWER_LEVEL_UP_EVOLVE2;
+                choosenAnimName = ConstStrings.ANIM2;
             }
 
             GetComponentInChildren<EvolvedBuildAnim>().PlayBuildAnim();

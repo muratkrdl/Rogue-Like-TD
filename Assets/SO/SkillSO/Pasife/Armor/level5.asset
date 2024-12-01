@@ -12,9 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
   m_Name: level5
   m_EditorClassIdentifier: 
-  IsActive: 0
+  code: 0
+  isEvolved: 1
   SkillIcon: {fileID: 21300000, guid: 58c5de21449f9f040ac5f161cb3d6bb4, type: 3}
   SkillName: Armor
   Level: 5
   Value: 50
+  CooldDown: 0
+  ProjectileCount: 0
+  Size: 0
+  KnockbackAmount: 0
   Description: Reduces physical damage taken 50%
+  DamageType: 0
+  NeededPasifeSkillSO: {fileID: 0}

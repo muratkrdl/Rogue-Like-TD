@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 5783282882756773805}
   m_Layer: 13
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -256,6 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a88446ba92b2740879297f30b65a31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseable: 1
 --- !u!114 &6365502634035779601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2bfb6edb1b6fd84fbd41347c32301c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseable: 1
   getInputs: {fileID: 6763084552997438942}
   myRigidbody: {fileID: 2933250028722917797}
   moveSpeed: 2
@@ -286,6 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 3496043465962892490}
   brightShield: {fileID: 3320732366099721543}
+  respawnTimer: 5
 --- !u!114 &8157255417228814744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +344,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5044566042467608448}
@@ -390,7 +391,7 @@ SpriteRenderer:
   m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.6}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -497,6 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originTransform: {fileID: 3407591287363614397}
   skillCode: 15
+  damageColorCode: 0
 --- !u!1 &2460812670887836204
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,6 +672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originTransform: {fileID: 5044566042467608448}
   skillCode: 19
+  damageColorCode: 0
 --- !u!1 &2841720765798913584
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,6 +816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originTransform: {fileID: 5044566042467608448}
   skillCode: 14
+  damageColorCode: 0
 --- !u!1 &3564388548772135766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,6 +1192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originTransform: {fileID: 1435902761154886335}
   skillCode: 12
+  damageColorCode: 0
 --- !u!1 &4978854747663629904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originTransform: {fileID: 5044566042467608448}
   skillCode: 19
+  damageColorCode: 0
 --- !u!1 &5263065881706039376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,7 +1422,7 @@ GameObject:
   - component: {fileID: 5864135365648077032}
   - component: {fileID: 3496043465962892490}
   m_Layer: 0
-  m_Name: Slider
+  m_Name: HPSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1667,6 +1673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originTransform: {fileID: 5044566042467608448}
   skillCode: 19
+  damageColorCode: 0
 --- !u!1 &5994674805581517354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,6 +1923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originTransform: {fileID: 5044566042467608448}
   skillCode: 19
+  damageColorCode: 0
 --- !u!1 &6226785805484994010
 GameObject:
   m_ObjectHideFlags: 0
@@ -2343,6 +2351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originTransform: {fileID: 5044566042467608448}
   skillCode: 19
+  damageColorCode: 0
 --- !u!1 &7620422869893372207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2471,6 +2480,8 @@ MonoBehaviour:
   skillCode: 14
   canUseSkill: 0
   darkBladeAnimator: {fileID: 6565370238610052663}
+  darkBladeSpriteRenderer: {fileID: 1360760426317813150}
+  evolvedSprite: {fileID: 1383686236, guid: cc1688686896f8a4886ef1e8729065ff, type: 3}
 --- !u!114 &4631471021976832718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2530,6 +2541,16 @@ MonoBehaviour:
   canUseSkill: 0
   vineRotateAnimator: {fileID: 2113464823655723597}
   vinePosAnimator: {fileID: 8233048931411005485}
+  vineSprites:
+  - {fileID: 5033674492913351950}
+  - {fileID: 8088134784068582520}
+  - {fileID: 1162537827686998500}
+  - {fileID: 1213631132730849233}
+  - {fileID: 816530224372949170}
+  - {fileID: 1566304104837788681}
+  - {fileID: 339959959820407306}
+  - {fileID: 5750844753084379403}
+  evolvedSprite: {fileID: 21300000, guid: 71e01e7c44cac3148bd4063624d06dbb, type: 3}
 --- !u!1 &7902166772210592079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2703,6 +2724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originTransform: {fileID: 5044566042467608448}
   skillCode: 19
+  damageColorCode: 0
 --- !u!1 &8458496589416920833
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,7 +2865,7 @@ TrailRenderer:
     textureScale: {x: 1, y: 1}
     shadowBias: 0
     generateLightingData: 0
-  m_MinVertexDistance: 0.1
+  m_MinVertexDistance: 0
   m_MaskInteraction: 0
   m_Autodestruct: 0
   m_Emitting: 0
@@ -3096,6 +3118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originTransform: {fileID: 5044566042467608448}
   skillCode: 19
+  damageColorCode: 0
 --- !u!1 &8580800408324209468
 GameObject:
   m_ObjectHideFlags: 0
@@ -3269,3 +3292,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originTransform: {fileID: 5044566042467608448}
   skillCode: 19
+  damageColorCode: 0

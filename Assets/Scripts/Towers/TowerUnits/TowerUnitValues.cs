@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class TowerUnitValues : MonoBehaviour
 {
-    [SerializeField] GameObject parent;
-
     [SerializeField] Transform projectileOutPos;
 
     [SerializeField] TowerUnitAnimator towerUnitAnimator;

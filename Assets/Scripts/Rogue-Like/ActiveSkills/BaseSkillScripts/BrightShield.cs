@@ -20,8 +20,9 @@ public class BrightShield : ActiveSkillBaseClass
 
     void Start() 
     {
-        InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         OnTakeDamage += BrightShield_OnTakeDamage;
+        InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
+        InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
     }
 
     void BrightShield_OnTakeDamage(object sender, OnTakeDamageEventArgs e)
@@ -36,7 +37,7 @@ public class BrightShield : ActiveSkillBaseClass
             {
                 if(myAnimator.GetComponent<SpriteRenderer>().sprite == null)
                 {
-                    myAnimator.SetTrigger(ConstStrings.ACTIVE_SKILLS_ANIM);
+                    myAnimator.SetTrigger(ConstStrings.ANIM);
                     GetComponentInParent<PlayerHealth>().SetCanTakeDamage(false);
                 }
                 else
@@ -45,16 +46,18 @@ public class BrightShield : ActiveSkillBaseClass
                     currentDamageCounter = 0;
                 }
             }
-            //  else if(currentDamageCounter > InventorySystem.Instance.GetSkillSO(GetSkillCode).Value *2)
-            //  {
-            //      
-            //  }
         }
+    }
+
+    protected override void EvolveSkill()
+    {
+        myAnimator.GetComponent<SpriteRenderer>().color = Color.green;
     }
 
     void OnDestroy() 
     {
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
+        InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
         OnTakeDamage -= BrightShield_OnTakeDamage;
     }
 

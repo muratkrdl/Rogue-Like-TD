@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
-public class GetInputs : MonoBehaviour
+public class GetInputs : GamePlayMonoBehaviour
 {
     Vector2 moveInput;
 
@@ -18,8 +19,16 @@ public class GetInputs : MonoBehaviour
         get => moveInput.normalized;
     }
 
+    void Start() 
+    {
+        GameStateManager.Instance.OnPause += GameStateManager_OnPause;
+        GameStateManager.Instance.OnResume += GameStateManager_OnResume;
+    }
+
     void Update()
     {
+        if(TryGetComponent<PlayerHealth>(out var playerHealth) && playerHealth.GetIsDead) return;
+
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
@@ -30,6 +39,11 @@ public class GetInputs : MonoBehaviour
 
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
+    }
+
+    protected override void PostPause()
+    {
+        moveInput = Vector2.zero;
     }
 
 }

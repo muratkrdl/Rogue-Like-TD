@@ -41,6 +41,14 @@ public class LevelUpTower : MonoBehaviour
         set => animator = value;
     }
 
+    public Animator GetChoosenUnitAnimator
+    {
+        get
+        {
+            return choosenUnitAnimator;
+        }
+    }
+
     void Start() 
     {
         initialNormalTowerIconX = levelUpTowerIcon.rectTransform.sizeDelta.x;

@@ -8,4 +8,9 @@ public class BrightShieldDamager : SkillProjectileDamagerBaseClass
     {
         GetComponentInParent<PlayerHealth>().SetCanTakeDamage(true);
     }
+
+    protected override void EvolveFunc(Collider2D other)
+    {
+        GlobalUnitTargets.Instance.GetPlayerTarget().GetComponent<PlayerHealth>().SetHP(-2, DamageType.truedamage);
+    }
 }

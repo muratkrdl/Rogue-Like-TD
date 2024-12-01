@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
   m_Name: level4
   m_EditorClassIdentifier: 
-  IsActive: 0
+  code: 6
+  isEvolved: 1
   SkillIcon: {fileID: 21300000, guid: 5ee58f9a79d109049942fc06a13514cf, type: 3}
   SkillName: Magic Boots
   Level: 4
@@ -20,4 +21,7 @@ MonoBehaviour:
   CooldDown: 0
   ProjectileCount: 0
   Size: 0
+  KnockbackAmount: 0
   Description: Increases movement speed by 5.5
+  DamageType: 0
+  NeededPasifeSkillSO: {fileID: 0}

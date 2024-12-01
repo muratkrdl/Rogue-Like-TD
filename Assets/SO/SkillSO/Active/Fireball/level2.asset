@@ -12,14 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
   m_Name: level2
   m_EditorClassIdentifier: 
-  IsActive: 0
+  code: 16
+  isEvolved: 0
   SkillIcon: {fileID: 21300000, guid: 642e036d377287941ac4e75dc2e3b5bb, type: 3}
   SkillName: Fireball
   Level: 2
-  Value: 2
+  Value: 20
   CooldDown: 5
   ProjectileCount: 2
   Size: 0
   KnockbackAmount: 25
   Description: Random shoots fireball
-  damageType: 2
+  DamageType: 2
+  NeededPasifeSkillSO: {fileID: 11400000, guid: c87f60ea77541654c9433ecd4c489280, type: 2}

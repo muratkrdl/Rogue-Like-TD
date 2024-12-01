@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
   m_Name: level0
   m_EditorClassIdentifier: 
-  IsActive: 0
+  code: 15
   SkillIcon: {fileID: 21300000, guid: 5fbb6b33637b69246a5227e6c8ee05ea, type: 3}
   SkillName: DarkAura
   Level: 0
@@ -20,5 +20,7 @@ MonoBehaviour:
   CooldDown: 0
   ProjectileCount: 0
   Size: 0
+  KnockbackAmount: 0
   Description: Damage to area
-  damageType: 2
+  DamageType: 0
+  NeededPasifeSkillSO: {fileID: 0}

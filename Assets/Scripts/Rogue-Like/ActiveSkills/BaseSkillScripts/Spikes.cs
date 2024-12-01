@@ -6,13 +6,14 @@ public class Spikes : ActiveSkillBaseClass
 {
     [SerializeField] PlayerEnemyKeeper playerEnemyKeeper;
 
-    Vector2 currentScale = Vector2.one;
+    string animName = ConstStrings.ANIM;
 
     void Start() 
     {
         UseSkill().Forget();
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
+        InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
     }
 
     async UniTaskVoid UseSkill()
@@ -35,16 +36,21 @@ public class Spikes : ActiveSkillBaseClass
         if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
 
         var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(4);
-        projectile.GetComponent<Animator>().SetTrigger(ConstStrings.ANIM);
-        projectile.SetBaseClassValues(InventorySystem.Instance.GetSkillSO(GetSkillCode).Value, GetIsEvolved);
+        projectile.GetComponent<Animator>().SetTrigger(animName);
         projectile.transform.position = playerEnemyKeeper.GetClosestEnemy().position;
         projectile.transform.localScale = GetCurrentScale;
+    }
+
+    protected override void EvolveSkill()
+    {
+        animName = ConstStrings.ANIM1;
     }
 
     void OnDestroy() 
     {
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
+        InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
     }
     
 }

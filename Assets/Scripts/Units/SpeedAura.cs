@@ -16,7 +16,7 @@ public class SpeedAura : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other) 
     {
-        if(other.CompareTag(TagManager.ENEMY)) // stunned return
+        if(other.CompareTag(TagManager.ENEMY) && !other.GetComponent<UnitValues>().IsSpeedChanged) // stunned return
         {
             other.GetComponent<UnitValues>().SetUnitSpeed(other.GetComponent<UnitValues>().GetInitialMoveSpeed * increaseSpeed);
         }

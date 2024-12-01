@@ -7,6 +7,8 @@ using UnityEngine;
 public class UnitFlashFX : MonoBehaviour
 {
     [SerializeField] Material flashMaterial;
+    [SerializeField] Material poisonMaterial;
+    [SerializeField] Material bloodMaterial;
 
     SpriteRenderer spriteRenderer;
     Material initialMaterial;
@@ -17,9 +19,15 @@ public class UnitFlashFX : MonoBehaviour
         initialMaterial = spriteRenderer.material;
     }
 
-    public async UniTaskVoid FlashFX(float duration)
+    public async UniTaskVoid FlashFX(float duration, int code)
     {
-        spriteRenderer.material = flashMaterial;
+        spriteRenderer.material = code switch
+        {
+            0 => flashMaterial,
+            1 => poisonMaterial,
+            2 => bloodMaterial,
+            _ => throw new NotImplementedException(),
+        };
         await UniTask.Delay(TimeSpan.FromSeconds(duration));
         spriteRenderer.material = initialMaterial;
     }

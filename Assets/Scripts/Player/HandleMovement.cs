@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HandleMovement : GamePlayMonoBehaviour
+public class HandleMovement : MonoBehaviour
 {
     [SerializeField] GetInputs getInputs;
 
@@ -16,19 +16,19 @@ public class HandleMovement : GamePlayMonoBehaviour
     {
         initialMoveSpeed = moveSpeed;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnPasifeUpdate;
-
-        if(!GetPauseable) return;
-
-        GameStateManager.Instance.OnPause += GameStateManager_OnPause;
-        GameStateManager.Instance.OnResume += GameStateManager_OnResume;
     }
 
     void InventorySystem_OnPasifeUpdate(object sender, InventorySystem.OnSkillUpdateEventArgs e)
     {
         if(e.Code == 6)
         {
-            moveSpeed = initialMoveSpeed + initialMoveSpeed /2 * InventorySystem.Instance.GetSkillSO(6).Value / 100;
+            UpdateMoveSpeed();
         }
+    }
+
+    public void UpdateMoveSpeed()
+    {
+        moveSpeed = initialMoveSpeed + 1 * (InventorySystem.Instance.GetSkillSO(6).Value + PermanentSkillSystem.Instance.GetPermanentSkillSO(6).Value) / 100;
     }
 
     void FixedUpdate()

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c94e09424aa0084da39c5c760993d7f, type: 3}
+  m_Name: Gold
+  m_EditorClassIdentifier: 
+  code: 30
+  isEvolved: 0
+  SkillIcon: {fileID: 21300000, guid: 068c0c9c8c0a5e149a84e0e5183f2431, type: 3}
+  SkillName: Gold
+  Level: 0
+  Value: 200
+  CooldDown: 0
+  ProjectileCount: 0
+  Size: 0
+  KnockbackAmount: 0
+  Description: Gain 200 gold
+  DamageType: 0
+  NeededPasifeSkillSO: {fileID: 0}
