@@ -36,7 +36,7 @@ public class UnitAttack : MonoBehaviour
             _ => unitValues.GetGuardSetTarget().GetCurrentTarget,
         };
 
-        float calculatedDamage = unitValues.UnitSO.AttackDamage + (int)UnityEngine.Random.Range(unitValues.PlusDamageRange.x, unitValues.PlusDamageRange.y);
+        float calculatedDamage = unitValues.UnitSO.AttackDamage + UnityEngine.Random.Range(unitValues.PlusDamageRange.x, unitValues.PlusDamageRange.y);
         
         if(!unitValues.GetIsEnemy)
             calculatedDamage += calculatedDamage * (GetComponentInParent<TowerInfoKeeper>().GetExtraDamageFromDarkAura + (float)PermanentSkillSystem.Instance.GetPermanentSkillSO(10).Value/100);

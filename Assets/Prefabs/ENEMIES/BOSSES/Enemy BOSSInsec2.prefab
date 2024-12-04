@@ -69,12 +69,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6757870025623372329, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: m_Speed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757870025623372329, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: m_Height
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757870025623372329, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: m_Radius
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6757870025623372329, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
       propertyPath: m_BaseOffset
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6757870025623372329, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
       propertyPath: avoidancePriority
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8991453226980368516, guid: 9f782d4b650dae241ba4f4cb932407c3, type: 3}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

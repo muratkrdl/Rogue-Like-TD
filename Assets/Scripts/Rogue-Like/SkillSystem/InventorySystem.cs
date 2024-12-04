@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
+
 
 public class InventorySystem : MonoBehaviour
 {
@@ -39,6 +39,17 @@ public class InventorySystem : MonoBehaviour
     void Awake() 
     {
         Instance = this;
+    }
+
+    void Start() 
+    {
+        if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0) return;
+        Invoke(nameof(Invokestart), .1f);
+    }
+
+    void Invokestart()
+    {
+        LevelUpSkill(16);
     }
 
     public void LevelUpSkill(int code)
@@ -86,7 +97,7 @@ public class InventorySystem : MonoBehaviour
         return true;
     }
 
-    public int HowManySlowAvailableByCode(int code)
+    public int HowManySlotAvailableByCode(int code)
     {
         int a = 0;
 
@@ -99,6 +110,8 @@ public class InventorySystem : MonoBehaviour
 
         for (int i = maxRange-10; i < maxRange; i++)
         {
+            if(GetSkillSO(i).isEvolved) continue;
+
             if(GetHowManySkillHaveByCode(code) < 5)
             {
                 if(GetSkillSO(i).Level == 0)
@@ -108,7 +121,7 @@ public class InventorySystem : MonoBehaviour
             }
             else
             {
-                if(GetSkillSO(i).Level != 0 && GetSkillSO(i).Level != 5)
+                if((GetSkillSO(i).Level != 0 && GetSkillSO(i).Level != 5) || (i >= 10 && EvolveableSkillSO(code)))
                 {
                     a++;
                 }
@@ -118,8 +131,9 @@ public class InventorySystem : MonoBehaviour
         return a;
     }
 
-    public bool IsSkillSOFullLevel(int code)
+    public bool IsSkillSOFullLevel(int code, bool isBoss)
     {
+        if(code >= 20) return true;
         if(GetSkillSO(code).Level != 5)
         {
             return false;
@@ -128,14 +142,22 @@ public class InventorySystem : MonoBehaviour
         return true;
     }
 
-    public bool EvolveableSkillSO(int code)
+    bool EvolveableSkillSO(int code)
     {
-        if(GetSkillSO(code).isEvolved)
+        if(!GetSkillSO(code).isEvolved && GetSkillSO(code).Level == 5 && ContainNeededPasifeSkillSO(code))
         {
-            return false;
+            return true;
         }
 
-        return true;
+        return false;
+    }
+
+    bool ContainNeededPasifeSkillSO(int code)
+    {
+        if(skillSOs.Contains(GetSkillSO(code).NeededPasifeSkillSO))
+            return true;
+        else
+            return false;
     }
 
     public SkillSO GetSkillSO(int code)

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Long 6
   m_EditorClassIdentifier: 
   <AttackRange>k__BackingField: 1.5
-  <AttackDamage>k__BackingField: 11
+  <AttackDamage>k__BackingField: 5
   <TimeBetweenAttack>k__BackingField: 2.2
-  <MaxHealth>k__BackingField: 100
+  <MaxHealth>k__BackingField: 50
   <Armor>k__BackingField: 0
   <MagicResistance>k__BackingField: 1

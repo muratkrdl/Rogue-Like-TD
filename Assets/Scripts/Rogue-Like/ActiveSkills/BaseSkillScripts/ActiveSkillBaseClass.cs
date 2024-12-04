@@ -1,48 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public abstract class ActiveSkillBaseClass : MonoBehaviour
 {
     [SerializeField] int skillCode;
 
-    bool isEvolved = false;
+    CancellationTokenSource cts = new();
 
     public bool canUseSkill = false;
-
     Vector2 currentScale = Vector2.one;
     float currentProjectileAmount = 1;
 
-    public int GetSkillCode
+    protected CancellationTokenSource GetCTS
+    {
+        get => cts;
+    }
+
+    protected int GetSkillCode
     {
         get => skillCode;
     }
-    public bool GetIsEvolved
-    {
-        get => isEvolved;
-    }
-    public bool GetCanUseSkill
+    protected bool GetCanUseSkill
     {
         get => canUseSkill;
     }
-    public Vector2 GetCurrentScale
+    protected Vector2 GetCurrentScale
     {
         get => currentScale;
     }
-    public float GetCurrentProjectileAmount
+    protected float GetCurrentProjectileAmount
     {
         get => currentProjectileAmount;
     }
 
-    public void InventorySystem_OnNewSkillGain(object sender, InventorySystem.OnSkillUpdateEventArgs e)
+    protected void OnDestroy_CancelCTS()
+    {
+        cts.Cancel();
+    }
+    protected void InventorySystem_OnNewSkillGain(object sender, InventorySystem.OnSkillUpdateEventArgs e)
     {
         if(e.Code == skillCode)
         {
             canUseSkill = true;
         }
     }
-
-    public void InventorySystem_OnSkillUpdate(object sender, InventorySystem.OnSkillUpdateEventArgs e)
+    protected void InventorySystem_OnSkillUpdate(object sender, InventorySystem.OnSkillUpdateEventArgs e)
     {
         if(e.Code == GetSkillCode)
         {
@@ -51,10 +55,7 @@ public abstract class ActiveSkillBaseClass : MonoBehaviour
             OnSkillUpdateFunc();
         }
     }
-
-    protected virtual void OnSkillUpdateFunc() { /* */  }
-
-    public void InventorySystem_OnSkillEvolved(object sender, InventorySystem.OnSkillUpdateEventArgs e) 
+    protected void InventorySystem_OnSkillEvolved(object sender, InventorySystem.OnSkillUpdateEventArgs e) 
     { 
         if(e.Code -10 == GetSkillCode)
         {
@@ -63,9 +64,10 @@ public abstract class ActiveSkillBaseClass : MonoBehaviour
         }
     }
 
+    protected virtual void OnSkillUpdateFunc() { /* */  }
     protected virtual void EvolveSkill() {  /* */ }
 
-    public float GetSkillCoolDown()
+    protected float GetSkillCoolDown()
     {
         return InventorySystem.Instance.GetSkillSO(skillCode).CooldDown - InventorySystem.Instance.GetSkillSO(skillCode).CooldDown * 
         (InventorySystem.Instance.GetSkillSO(9).Value + PermanentSkillSystem.Instance.GetPermanentSkillSO(0).Value) / 100;

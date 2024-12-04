@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: level4
   m_EditorClassIdentifier: 
   code: 8
-  isEvolved: 1
+  isEvolved: 0
   SkillIcon: {fileID: 21300000, guid: e1e9e41912043894a955c01151c5cb94, type: 3}
   SkillName: Tooth
   Level: 4

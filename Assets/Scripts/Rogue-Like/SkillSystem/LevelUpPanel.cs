@@ -15,24 +15,25 @@ public class LevelUpPanel : MonoBehaviour
 
     public void SetRandomUISkillButtons(bool isBoss)
     {
-        Vector2 randomRange = new(0,10);
+        Vector2 randomRange = new(0, 9.1f);
 
-        //  if(Random.Range(0,2) % 2 == 0 || isBoss)
-        //  {
-        //      randomRange = new(10,20);
-        //  }
+        // if(Random.Range(0,2) % 2 == 0 || isBoss)
+        // {
+        //     randomRange = new(10,20);
+        // }
 
         if(isBoss)
         {
-            randomRange = new(10,20);
+            randomRange = new(10, 19.1f);
         }
 
         for(int i = 0; i < UISkillButtons.Length; i++)
         {
-            if(i >= InventorySystem.Instance.HowManySlowAvailableByCode((int)Random.Range(randomRange.x, randomRange.y)))
+            UISkillButtons[i].ResetUIButton();
+            
+            if(i+1 > InventorySystem.Instance.HowManySlotAvailableByCode((int)Random.Range(randomRange.x, randomRange.y)))
             {
-                UISkillButtons[i].ResetUIButton();
-                if(InventorySystem.Instance.HowManySlowAvailableByCode((int)Random.Range(randomRange.x, randomRange.y)) == 0)
+                if(InventorySystem.Instance.HowManySlotAvailableByCode((int)Random.Range(randomRange.x, randomRange.y)) == 0)
                 {
                     UISkillButtons[i].SetValues(SkillSOKeeper.Instance.GetSkillFulledSO(i), normalColor);
                 }
@@ -55,7 +56,7 @@ public class LevelUpPanel : MonoBehaviour
                     while(true)
                     {
                         int code = (int)Random.Range(randomRange.x, randomRange.y);
-                        if(!InventorySystem.Instance.IsSkillSOFullLevel(code))
+                        if(!InventorySystem.Instance.IsSkillSOFullLevel(code, isBoss))
                         {
                             choosedSkillSO = SkillSOKeeper.Instance.GetSkillSOByCode(code, InventorySystem.Instance.GetSkillSO(code).Level);
                             useColor = normalColor;

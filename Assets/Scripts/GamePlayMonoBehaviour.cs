@@ -32,7 +32,7 @@ public abstract class GamePlayMonoBehaviour : MonoBehaviour
     protected virtual void PostPause() { /* */ }
     protected virtual void PostResume() { /* */ }
 
-    void OnDestroy() 
+    protected void UnSubscribeToEvents() 
     {
         GameStateManager.Instance.OnPause -= GameStateManager_OnPause;
         GameStateManager.Instance.OnResume -= GameStateManager_OnResume;

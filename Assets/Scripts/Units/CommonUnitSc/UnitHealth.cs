@@ -54,7 +54,7 @@ public class UnitHealth : MonoBehaviour, IDamageable
                 obj.gameObject.SetActive(true);
                 obj.transform.position = transform.position;
                 Bank.Instance.OnChangeMoneyAmount?.Invoke(this, new() { amount = 
-                Random.Range(1 + PermanentSkillSystem.Instance.GetPermanentSkillSO(3).Value, 5 + PermanentSkillSystem.Instance.GetPermanentSkillSO(3).Value) } );
+                Random.Range(3 + PermanentSkillSystem.Instance.GetPermanentSkillSO(3).Value, 8 + PermanentSkillSystem.Instance.GetPermanentSkillSO(3).Value) } );
             }
             else
             {

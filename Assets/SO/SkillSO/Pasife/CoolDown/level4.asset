@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: level4
   m_EditorClassIdentifier: 
   code: 9
-  isEvolved: 1
+  isEvolved: 0
   SkillIcon: {fileID: 21300000, guid: 121c90cb2d722b942a87801858b8a52b, type: 3}
   SkillName: Clock
   Level: 4

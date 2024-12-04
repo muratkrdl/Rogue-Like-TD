@@ -1,6 +1,8 @@
 using System;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalUnitTargets : MonoBehaviour
 {
@@ -21,20 +23,16 @@ public class GlobalUnitTargets : MonoBehaviour
     [SerializeField] Vector3 playerRespawnPos;
 
     [SerializeField] Transform enemyWaitPos;
-    [SerializeField] Transform guardWaitPos;
+
+    [SerializeField] bool canEnemyAttackTower;
 
     public Vector3 GetPlayerRespawnPos
     {
         get => playerRespawnPos;
     }
-
     public Transform GetEnemyWaitPos
     {
         get => enemyWaitPos;
-    }
-    public Transform GetGuardWaitPos
-    {
-        get => guardWaitPos;
     }
 
     void Awake() 
@@ -46,12 +44,10 @@ public class GlobalUnitTargets : MonoBehaviour
     {
         return towersPos;
     }
-
     public Transform GetMainTower()
     {
         return mainTower;
     }
-
     public Transform GetPlayerTarget()
     {
         return playerTarget;
@@ -82,7 +78,7 @@ public class GlobalUnitTargets : MonoBehaviour
                 }
             }
 
-            if(unitValues.IsChasing) return;
+            if(unitValues.IsChasing ||!canEnemyAttackTower) return;
             
             foreach(var item in GetTowersPos())
             {

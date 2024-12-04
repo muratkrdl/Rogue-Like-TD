@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afe36ed8a15496b4ea5cef695fbf7057, type: 3}
   m_Name: Close 15
   m_EditorClassIdentifier: 
-  <AttackRange>k__BackingField: 0.25
-  <AttackDamage>k__BackingField: 23
+  <AttackRange>k__BackingField: 0.65
+  <AttackDamage>k__BackingField: 17
   <TimeBetweenAttack>k__BackingField: 1.5
-  <MaxHealth>k__BackingField: 220
-  <Armor>k__BackingField: 4
-  <MagicResistance>k__BackingField: 5
+  <MaxHealth>k__BackingField: 750
+  <Armor>k__BackingField: 3
+  <MagicResistance>k__BackingField: 4

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class GameTimer : MonoBehaviour
     public static GameTimer Instance;
 
     [SerializeField] TextMeshProUGUI timerText;
+
+    CancellationTokenSource cts = new();
 
     int currentSecond = 0;
     int currentMinute = 0;
@@ -33,12 +36,16 @@ public class GameTimer : MonoBehaviour
     {
         StartGameTimer().Forget();
     }
+    public void OnClick_StopTimer()
+    {
+        cts.Cancel();
+    }
 
     async UniTaskVoid StartGameTimer()
     {
         while (true)
         {
-            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
             await UniTask.Delay(TimeSpan.FromSeconds(1));
             await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
             currentSecond++;

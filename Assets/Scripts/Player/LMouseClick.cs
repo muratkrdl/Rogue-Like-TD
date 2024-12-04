@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LMouseClick : MonoBehaviour
+public class LMouseClick : GamePlayMonoBehaviour
 {
     public static LMouseClick Instance;
 
@@ -26,8 +26,17 @@ public class LMouseClick : MonoBehaviour
         Instance = this;
     }
 
+    void Start() 
+    {
+        if(GetPauseable)
+            SubscribeToEvents();
+         
+    }
+
     void Update()
     {
+        if(GameStateManager.Instance.GetIsGamePaused) return;
+
         if(Input.GetMouseButtonUp(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -58,7 +67,7 @@ public class LMouseClick : MonoBehaviour
 
     public void CloseEverything(bool boolean)
     {
-        foreach (var item in placeTowersAnimation)
+        foreach(var item in placeTowersAnimation)
         {
             item.CloseAnimation();
         }
@@ -66,6 +75,18 @@ public class LMouseClick : MonoBehaviour
         {
             InfoPanel.SetInfoPanelAnim(false);
         }
+    }
+
+    protected override void PostPause()
+    {
+        CloseEverything(false);
+        lastClickedTower = null;
+    }
+
+    void OnDestroy() 
+    {
+        if(GetPauseable)
+            UnSubscribeToEvents();
     }
 
 }

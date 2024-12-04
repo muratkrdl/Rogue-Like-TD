@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class GetInputs : GamePlayMonoBehaviour
@@ -21,12 +20,13 @@ public class GetInputs : GamePlayMonoBehaviour
 
     void Start() 
     {
-        SubscribeToEvents();
+        if(GetPauseable)
+            SubscribeToEvents();
     }
 
     void Update()
     {
-        if(GetComponent<PlayerHealth>().GetIsDead || GameStateManager.Instance.GetIsGamePaused) return;
+        if((TryGetComponent<PlayerHealth>(out var health) && health.GetIsDead) || GameStateManager.Instance.GetIsGamePaused) return;
 
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
@@ -48,6 +48,12 @@ public class GetInputs : GamePlayMonoBehaviour
     public void ResetMoveInput()
     {
         moveInput = Vector2.zero;
+    }
+
+    void OnDestroy() 
+    {
+        if(GetPauseable)
+            UnSubscribeToEvents();    
     }
 
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: level1
   m_EditorClassIdentifier: 
   code: 7
-  isEvolved: 1
+  isEvolved: 0
   SkillIcon: {fileID: 21300000, guid: a4629e6c05febbd49b3d4600deae18a7, type: 3}
   SkillName: Gold Dagger
   Level: 1

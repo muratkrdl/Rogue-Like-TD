@@ -22,7 +22,7 @@ public class BloodRain : ActiveSkillBaseClass
         await UniTask.WaitUntil(() => GetCanUseSkill);
         while (true)
         {
-            await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
+            await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill(), cancellationToken: GetCTS.Token);
             await UniTask.Delay(TimeSpan.FromSeconds(GetSkillCoolDown()));
 
             Skill();
@@ -51,6 +51,7 @@ public class BloodRain : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
+        OnDestroy_CancelCTS();
     }
     
 }

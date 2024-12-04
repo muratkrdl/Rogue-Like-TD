@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
@@ -12,6 +15,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     [SerializeField] BrightShield brightShield;
 
     [SerializeField] int respawnTimer;
+
+    CancellationTokenSource cts = new();
 
     bool isDead = false;
     bool canTakeDamage = true;
@@ -36,6 +41,12 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnPasifeUpdate;
         InventorySystem.Instance.OnDamageWithActiveSkills += InventorySystem_OnDamageWithActiveSkills;
         HelathRegen().Forget();
+        SceneManager.activeSceneChanged += CTSCancel;
+    }
+
+    void CTSCancel(Scene arg0, Scene arg1)
+    {
+        cts.Cancel();
     }
 
     void InventorySystem_OnDamageWithActiveSkills(object sender, InventorySystem.OnDamageWithActiveSkillsEventArgs e)
@@ -62,8 +73,10 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         await UniTask.WaitUntil(() => InventorySystem.Instance.GetSkillSO(3).Value != 0);
         while(true)
         {
-            await UniTask.WaitUntil(() => !GlobalUnitTargets.Instance.CanPlayerUseSkill() && currenthealth < slider.maxValue);
-            await UniTask.Delay(TimeSpan.FromSeconds(InventorySystem.Instance.GetSkillSO(3).CooldDown - InventorySystem.Instance.GetSkillSO(3).CooldDown * InventorySystem.Instance.GetSkillSO(9).Value / 100));
+            await UniTask.WaitUntil(() => !GlobalUnitTargets.Instance.CanPlayerUseSkill() && currenthealth < slider.maxValue, 
+            cancellationToken: cts.Token);
+            await UniTask.Delay(TimeSpan.FromSeconds(InventorySystem.Instance.GetSkillSO(3).CooldDown - 
+            InventorySystem.Instance.GetSkillSO(3).CooldDown * InventorySystem.Instance.GetSkillSO(9).Value / 100));
             await UniTask.WaitUntil(() => !GlobalUnitTargets.Instance.CanPlayerUseSkill() && currenthealth < slider.maxValue);
             GainHP(-InventorySystem.Instance.GetSkillSO(3).Value + PermanentSkillSystem.Instance.GetPermanentSkillSO(5).Value);
         }
@@ -94,6 +107,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
             currenthealth = 0;
             isDead = true;
             GetComponent<Animator>().SetTrigger(ConstStrings.UNIT_ANIMATOR_DEATH);
+            GetComponent<GetInputs>().ResetMoveInput();
             Invoke(nameof(PlayerDead), 1);
         }
         else if(currenthealth >= slider.maxValue)
@@ -113,7 +127,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     void PlayerDead()
     {
         MainTowerManager.Instance.OnInteractWithMainTower?.Invoke(this, EventArgs.Empty);
-        GetComponent<GetInputs>().ResetMoveInput();
         RespawnPlayer(respawnTimer).Forget();
     }
 

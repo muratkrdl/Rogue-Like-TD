@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using Cysharp.Threading.Tasks;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -32,6 +34,8 @@ public class EnemySpawner : MonoBehaviour
     bool canSpawnMagical = false;
     bool canSpawnSpecial = false;
     bool canSpawnBoss = false;
+
+    CancellationTokenSource cts = new();
 
     public bool SetCanSpawnPhysical
     {
@@ -100,19 +104,20 @@ public class EnemySpawner : MonoBehaviour
         await UniTask.WaitUntil(() => canSpawnPhysical);
         while (true)
         {
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
             int spawnedPhysicalEnemy = 0;
             int spawnSide = UnityEngine.Random.Range(0, 2);
-            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
-            await UniTask.Delay(TimeSpan.FromSeconds(physicalSpawnRate));
-            while(spawnedPhysicalEnemy < 4)
+            while(spawnedPhysicalEnemy < GameTimer.Instance.GetCurrentMinute + 1)
             {
                 spawnedPhysicalEnemy++;
                 await UniTask.Delay(TimeSpan.FromSeconds(.1f));
-                SpawnNewEnemy(currentEnemyPhysicalIndex[spawnPhysicalIndex], spawnSide, false);
+                await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
+                SpawnNewEnemy(currentEnemyPhysicalIndex[spawnPhysicalIndex], spawnSide, false, 0);
                 spawnPhysicalIndex++;
                 if(spawnPhysicalIndex > 2)
                     spawnPhysicalIndex = 0;
             }
+            await UniTask.Delay(TimeSpan.FromSeconds(physicalSpawnRate), cancellationToken: cts.Token);
         }
     }
 
@@ -123,13 +128,13 @@ public class EnemySpawner : MonoBehaviour
         {
             int spawnedMagicalEnemy = 0;
             int spawnSide = UnityEngine.Random.Range(0, 2);
-            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
-            await UniTask.Delay(TimeSpan.FromSeconds(magicalSpawnRate));
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
+            await UniTask.Delay(TimeSpan.FromSeconds(magicalSpawnRate), cancellationToken: cts.Token);
             while(spawnedMagicalEnemy < 2)
             {
                 spawnedMagicalEnemy++;
                 await UniTask.Delay(TimeSpan.FromSeconds(.1f));
-                SpawnNewEnemy(currentEnemyMagicalIndex, spawnSide, false);
+                SpawnNewEnemy(currentEnemyMagicalIndex, spawnSide, false, 0);
             }
         }
     }
@@ -141,13 +146,13 @@ public class EnemySpawner : MonoBehaviour
         {
             int spawnedSpecialEnemy = 0;
             int spawnSide = UnityEngine.Random.Range(0, 2);
-            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
-            await UniTask.Delay(TimeSpan.FromSeconds(specialSpawnRate));
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
+            await UniTask.Delay(TimeSpan.FromSeconds(specialSpawnRate), cancellationToken: cts.Token);
             while(spawnedSpecialEnemy < 2)
             {
                 spawnedSpecialEnemy++;
                 await UniTask.Delay(TimeSpan.FromSeconds(.1f));
-                SpawnNewEnemy(currentEnemySpecialIndex, spawnSide, false);
+                SpawnNewEnemy(currentEnemySpecialIndex, spawnSide, false, 2);
             }
         }
     }
@@ -158,16 +163,16 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             int spawnSide = UnityEngine.Random.Range(0, 2);
-            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
-            SpawnNewEnemy(currentBossIndex, spawnSide, true);
-            await UniTask.Delay(TimeSpan.FromSeconds(bossSpawnRate));
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
+            SpawnNewEnemy(currentBossIndex, spawnSide, true, 0);
+            await UniTask.Delay(TimeSpan.FromSeconds(bossSpawnRate), cancellationToken: cts.Token);
             currentBossIndex++;
             if(currentBossIndex > 18)
                     currentBossIndex = 14;
         }
     }
 
-    void SpawnNewEnemy(int code, int spawnSideCode, bool isBoss)
+    void SpawnNewEnemy(int code, int spawnSideCode, bool isBoss, int enemyCode)
     {
         var enemy = EnemyObjectPool.Instance.GetEnemy(code);
 
@@ -191,8 +196,18 @@ public class EnemySpawner : MonoBehaviour
             unitSO = AllUnitInfoKeeper.Instance.GetBossSOByMinute();
         }
 
-        enemy.SetValues(spawnPos, unitSO, 0);
+        enemy.SetValues(spawnPos, unitSO, enemyCode);
         enemy.IsGoingToRight = isGoingToRight;
+    }
+
+    public void StopSpawn()
+    {
+        cts.Cancel();
+    }
+
+    void OnDestroy() 
+    {
+        StopSpawn();
     }
 
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: level1
   m_EditorClassIdentifier: 
   code: 4
-  isEvolved: 1
+  isEvolved: 0
   SkillIcon: {fileID: 21300000, guid: a63baf9677d70b242945f1ecd0370c24, type: 3}
   SkillName: Lethality
   Level: 1

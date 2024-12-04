@@ -1,6 +1,7 @@
 using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FireBall : ActiveSkillBaseClass
 {
@@ -21,7 +22,7 @@ public class FireBall : ActiveSkillBaseClass
         await UniTask.WaitUntil(() => GetCanUseSkill);
         while (true)
         {
-            await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
+            await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill(), cancellationToken: GetCTS.Token);
             await UniTask.Delay(TimeSpan.FromSeconds(GetSkillCoolDown()));
 
             Skill().Forget();
@@ -30,7 +31,7 @@ public class FireBall : ActiveSkillBaseClass
 
     async UniTaskVoid Skill()
     {
-        if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
+        if(SceneManager.GetActiveScene().buildIndex != 1 || !GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
 
         for(int i = 0; i < GetCurrentProjectileAmount; i++)
         {
@@ -42,23 +43,16 @@ public class FireBall : ActiveSkillBaseClass
             
             Vector2 extraForce = Vector2.zero;
             Vector2 newLookPos;
+            
             if(GetComponentInParent<GetInputs>().GetMoveInput == Vector2.zero)
-            {
                 newLookPos = GetComponentInParent<GetInputs>().GetLastMoveDir;
-            }
             else
-            {
                 newLookPos = GetComponentInParent<GetInputs>().GetMoveInput;
-            }
 
             if(Mathf.Abs(newLookPos.x) > Mathf.Abs(newLookPos.y))
-            {
                 extraForce.y = UnityEngine.Random.Range(randomRangeRange.x, randomRangeRange.y);
-            }
             else
-            {
                 extraForce.x = UnityEngine.Random.Range(randomRangeRange.x, randomRangeRange.y);
-            }
 
             projectile.GetComponent<FireballDamager>().ClearList();
             projectile.SetMoveableProjectile(newLookPos + extraForce, transform.position, true);
@@ -76,6 +70,7 @@ public class FireBall : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
+        OnDestroy_CancelCTS();
     }
 
 }

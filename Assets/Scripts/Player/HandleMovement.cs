@@ -16,6 +16,7 @@ public class HandleMovement : MonoBehaviour
     {
         initialMoveSpeed = moveSpeed;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnPasifeUpdate;
+        
     }
 
     void InventorySystem_OnPasifeUpdate(object sender, InventorySystem.OnSkillUpdateEventArgs e)
@@ -38,7 +39,7 @@ public class HandleMovement : MonoBehaviour
 
     void OnDestroy() 
     {
-        InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnPasifeUpdate;
+        InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnPasifeUpdate;
     }
 
 }

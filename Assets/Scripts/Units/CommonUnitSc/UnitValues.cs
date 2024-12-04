@@ -33,6 +33,13 @@ public class UnitValues : MonoBehaviour
 
     float initialMoveSpeed;
 
+    bool isChasing = false;
+    bool isAttacking = false;
+    bool isDead = false;
+    bool isGoingToRight;
+    bool isWaiting;
+    bool speedChanged = false;
+
     public float GetInitialMoveSpeed
     {
         get => initialMoveSpeed;
@@ -72,13 +79,6 @@ public class UnitValues : MonoBehaviour
     {
         get => damageType;
     }
-
-    bool isChasing = false;
-    bool isAttacking = false;
-    bool isDead = false;
-    bool isGoingToRight;
-    bool isWaiting;
-    bool speedChanged = false;
 
     public bool IsChasing
     {
