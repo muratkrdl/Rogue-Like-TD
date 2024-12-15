@@ -2442,7 +2442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6620f687595d861438bf8357d5c8b944, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62b05d10e60cae545aa795d48619bd3a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19786,7 +19786,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 1.5}
+  m_Size: {x: 1.5, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &7507854482381805702
 MonoBehaviour:
@@ -19815,7 +19815,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reSpawnCoolDown: 15
   spawnPos: {fileID: 873768640943121369}
-  baseTowerPos: {fileID: 2294169316386677297}
   currentUnit: {fileID: 6227188178063692179}
 --- !u!1 &7276246085214565696
 GameObject:
@@ -20107,7 +20106,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   reSpawnCoolDown: 15
   spawnPos: {fileID: 6694811793760651528}
-  baseTowerPos: {fileID: 6272312065272943159}
   currentUnit: {fileID: 2165591387863235340}
 --- !u!1 &7499690124259436847
 GameObject:
@@ -21676,7 +21674,7 @@ GameObject:
   - component: {fileID: 255059509360074089}
   - component: {fileID: 719217210487986450}
   - component: {fileID: 5370003848714116148}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FireAnimator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23215,10 +23213,6 @@ PrefabInstance:
       propertyPath: towerBasePosition
       value: 
       objectReference: {fileID: 2294169316386677297}
-    - target: {fileID: 7477364637174220273, guid: d4c51bd3aec22b94792fede2e1ad692b, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: aa7232a5b732aaf4996dd2243e478562, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

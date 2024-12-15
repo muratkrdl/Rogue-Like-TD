@@ -19,11 +19,11 @@ MonoBehaviour:
   maxHealth: 280
   damageType: 1
   BaseDamageRange: {x: 41, y: 46}
-  TimeBetweenAttack: 1
+  TimeBetweenAttack: 0.8
   attackDelay: 2
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 9
   towerCost: 899
   sellPrice: 2199
   Range: 8.2
-  Description: Shoots arrow to the closest enemy
+  Description: faster and more damage

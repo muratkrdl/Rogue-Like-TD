@@ -6,6 +6,12 @@ using UnityEngine.UI;
 public class SkillSlot : MonoBehaviour
 {
     [SerializeField] Image skillImage;
+    [SerializeField] Image slider;
+
+    public Image GetSlider
+    {
+        get => slider;
+    }
 
     public void ChangeSkillSprite(Sprite newSprite)
     {

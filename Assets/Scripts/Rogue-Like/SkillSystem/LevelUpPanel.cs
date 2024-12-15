@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class LevelUpPanel : MonoBehaviour
 {
+    public static LevelUpPanel Instance;
+
     [SerializeField] Color evolveColor;
     [SerializeField] Color normalColor;
 
@@ -13,18 +15,18 @@ public class LevelUpPanel : MonoBehaviour
 
     [SerializeField] UISkillButton[] UISkillButtons;
 
+    void Awake() 
+    {
+        Instance = this;    
+    }
+
     public void SetRandomUISkillButtons(bool isBoss)
     {
         Vector2 randomRange = new(0, 9.1f);
 
-        // if(Random.Range(0,2) % 2 == 0 || isBoss)
-        // {
-        //     randomRange = new(10,20);
-        // }
-
-        if(isBoss)
+        if((Random.Range(0,2) % 2) == 0 || isBoss)
         {
-            randomRange = new(10, 19.1f);
+            randomRange = new(10,20);
         }
 
         for(int i = 0; i < UISkillButtons.Length; i++)

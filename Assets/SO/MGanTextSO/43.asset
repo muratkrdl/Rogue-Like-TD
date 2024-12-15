@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d45beee29ac3424459d56b6c721fb400, type: 3}
+  m_Name: 43
+  m_EditorClassIdentifier: 
+  loop: 0
+  play: 1
+  canInteract: 0
+  text: the left panel shows how you can combine active and passive abilities and
+    evolve your abilities
+  buttonName: Okey
+  nextText: {fileID: 11400000, guid: 65d9a89ed0208fc44b82fd5d27097db0, type: 2}
+  playTimeLine: {fileID: 11400000, guid: baef2d4fe98a8e54ea4eda3a5898f60d, type: 2}

@@ -22,13 +22,11 @@ public class ESCMenu : MonoBehaviour
     public void SetValues()
     {
         SetESCMenu(true);
-
-
     }
 
     public void OnClick_PauseButton()
     {
-        if(GameStateManager.Instance.GetIsGamePaused) return;
+        if(GameStateManager.Instance.GetIsGamePaused || GameOverMenu.Instance.IsGameOver) return;
         GameStateManager.Instance.PauseGame();
         SetESCMenu(true);
     }
@@ -65,7 +63,6 @@ public class ESCMenu : MonoBehaviour
 
     void InvokeForSceneChange()
     {
-        EnemySpawner.Instance.StopSpawn();
         SceneManager.LoadScene(0);
     }
 

@@ -27,7 +27,7 @@ public class AllUnitInfoKeeper : MonoBehaviour
 
     public UnitSO GetBossSOByMinute()
     {
-        return bossInfos[GameTimer.Instance.GetCurrentMinute]; // -6
+        return bossInfos[GameTimer.Instance.GetCurrentMinute -6];
     }
 
     public UnitSO GetGuardInfo(int currentMinute)

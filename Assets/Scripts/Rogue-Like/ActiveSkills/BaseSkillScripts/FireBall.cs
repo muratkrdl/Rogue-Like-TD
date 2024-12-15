@@ -15,6 +15,7 @@ public class FireBall : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
+        SubInventoryCDEvent();
     }
 
     async UniTaskVoid UseSkill()
@@ -24,20 +25,24 @@ public class FireBall : ActiveSkillBaseClass
         {
             await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill(), cancellationToken: GetCTS.Token);
             await UniTask.Delay(TimeSpan.FromSeconds(GetSkillCoolDown()));
-
+            await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill(), cancellationToken: GetCTS.Token);
+            
             Skill().Forget();
         }
     }
 
     async UniTaskVoid Skill()
     {
-        if(SceneManager.GetActiveScene().buildIndex != 1 || !GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
+        if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
+
+        StopAllCoroutines();
+        StartCoroutine(nameof(SkillCDSlider));
 
         for(int i = 0; i < GetCurrentProjectileAmount; i++)
         {
-            await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
+            await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill(), cancellationToken: GetCTS.Token);
             await UniTask.Delay(TimeSpan.FromSeconds(.2f));
-            await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
+            await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill(), cancellationToken: GetCTS.Token);
 
             var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(projectileCode);
             
@@ -55,6 +60,7 @@ public class FireBall : ActiveSkillBaseClass
                 extraForce.x = UnityEngine.Random.Range(randomRangeRange.x, randomRangeRange.y);
 
             projectile.GetComponent<FireballDamager>().ClearList();
+            projectile.GetComponent<FireballDamager>().SetDamageOnSpawn();
             projectile.SetMoveableProjectile(newLookPos + extraForce, transform.position, true);
         }
     }
@@ -70,6 +76,7 @@ public class FireBall : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
+        UnSubInventoryCDEvent();
         OnDestroy_CancelCTS();
     }
 

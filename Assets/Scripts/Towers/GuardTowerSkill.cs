@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
@@ -9,9 +10,10 @@ public class GuardTowerSkill : MonoBehaviour
     [SerializeField] int reSpawnCoolDown;
 
     [SerializeField] Transform spawnPos;
-    [SerializeField] Transform baseTowerPos;
 
     [SerializeField] UnitValues currentUnit;
+
+    CancellationTokenSource cts = new();
 
     void Start() 
     {
@@ -22,24 +24,45 @@ public class GuardTowerSkill : MonoBehaviour
     {
         if(e.deadUnit == currentUnit)
         {
-            RespawnUnit().Forget();
+            StartCoroutine(nameof(RespawnUnit));
         }
     }
 
-    async UniTaskVoid RespawnUnit()
+    IEnumerator RespawnUnit()
     {
-        await UniTask.Delay(TimeSpan.FromSeconds(reSpawnCoolDown));
-        if(GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerCode == -1) return;
-        UpdateUnitCode();
+        float a = reSpawnCoolDown;
+        while(a > 0)
+        {
+            Debug.Log(a);
+            yield return new WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
+            yield return new WaitForSeconds(1);
+            a--;
+        }
+
+        if(GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerCode != -1)
+        {
+            UpdateUnitCode();
+        }
     }
 
     public void UpdateUnitCode()
     {
+        CancelRespawnTimer();
+        string animString = GetComponentInParent<TowerInfoKeeper>().CurrentTowerLevel.ToString();
+
+        if(GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerCode == 8)
+        {
+            animString = ConstStrings.ANIM1;
+        }
+        else if(GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerCode == 9)
+        {
+            animString = ConstStrings.ANIM2;
+        }
+
         currentUnit.IsWaiting = true;
-        currentUnit.SetValues(spawnPos, AllUnitInfoKeeper.Instance.GetGuardInfo(0), 1);
-        currentUnit.UnitSO = AllUnitInfoKeeper.Instance.GetGuardInfo(0); // current dakikadan çek
+        currentUnit.SetValues(spawnPos, AllUnitInfoKeeper.Instance.GetGuardInfo(GameTimer.Instance.GetCurrentMinute), 1);
+        currentUnit.GetUnitAnimator().SetTrigger(animString);
         currentUnit.PlusDamageRange = GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerInfo.BaseDamageRange * GetComponentInParent<TowerInfoKeeper>().GetExtraDamageFromDarkAura;
-        currentUnit.GetUnitStateController().StartFunc(1);
     }
 
     public void SetSpawnPos()
@@ -47,9 +70,16 @@ public class GuardTowerSkill : MonoBehaviour
         currentUnit.GetNavMeshAgent().Warp(spawnPos.position);
     }
 
+    public void CancelRespawnTimer()
+    {
+        cts.Cancel();
+    }
+
     void OnDestroy() 
     {
         GlobalUnitTargets.Instance.OnAnGuardDead -= GlobalUnitTargets_OnAnGuardDead;
+        StopAllCoroutines();
+        CancelRespawnTimer();
     }
 
 }

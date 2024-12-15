@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class TowerUnitAttack : MonoBehaviour
     [SerializeField] TowerUnitValues towerUnitValues;
 
     TowerInfoKeeper towerInfoKeeper;
+
+    CancellationTokenSource cts = new();
 
     void Start() 
     {
@@ -19,11 +22,11 @@ public class TowerUnitAttack : MonoBehaviour
     {
         while(true)
         {
-            await UniTask.WaitUntil(() => !towerInfoKeeper.GetEvolvedBuildAnim().GetIsBusy);
+            await UniTask.WaitUntil(() => !towerInfoKeeper.GetEvolvedBuildAnim().GetIsBusy, cancellationToken: cts.Token);
             if(!towerUnitValues.IsAttacking || towerInfoKeeper.GetCurrentTowerCode == -1) break;
             towerUnitValues.GetTowerUnitAnimator().SetTrigger(ConstStrings.UNIT_ANIMATOR_ATTACK);
-            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
-            await UniTask.Delay(TimeSpan.FromSeconds(towerInfoKeeper.GetCurrentTowerInfo.attackDelay * .0833f));
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
+            await UniTask.Delay(TimeSpan.FromSeconds(towerInfoKeeper.GetCurrentTowerInfo.attackDelay * .0833f), cancellationToken: cts.Token);
             AttackFunc();
 
             if(!towerUnitValues.IsAttacking || towerInfoKeeper.GetCurrentTowerCode == -1) break;
@@ -45,7 +48,12 @@ public class TowerUnitAttack : MonoBehaviour
         projectile.SetValues(towerUnitValues.GetTowerUnitSetTarget().GetCurrentTarget, 
         towerUnitValues.GetProjectileOutPos, 
         calculatedDamage + (calculatedDamage * (towerInfoKeeper.GetExtraDamageFromDarkAura + (float)PermanentSkillSystem.Instance.GetPermanentSkillSO(10).Value/100)),
-        towerInfoKeeper.GetCurrentTowerInfo.damageType);
+        towerInfoKeeper.GetCurrentTowerInfo.damageType, true);
+    }
+
+    void OnDestroy() 
+    {
+        cts.Cancel();    
     }
 
 }

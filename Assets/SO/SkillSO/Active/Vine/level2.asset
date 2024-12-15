@@ -22,6 +22,6 @@ MonoBehaviour:
   ProjectileCount: 2
   Size: 1
   KnockbackAmount: 70
-  Description: Spins vines around
+  Description: increases damage to 18 and 1 more vine
   DamageType: 1
   NeededPasifeSkillSO: {fileID: 11400000, guid: b509014001e5ae449a761cd36f59bedc, type: 2}

@@ -26,7 +26,7 @@ public class GetInputs : GamePlayMonoBehaviour
 
     void Update()
     {
-        if((TryGetComponent<PlayerHealth>(out var health) && health.GetIsDead) || GameStateManager.Instance.GetIsGamePaused) return;
+        if((TryGetComponent<PlayerHealth>(out var health) && health.IsDead) || GameStateManager.Instance.GetIsGamePaused) return;
 
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");

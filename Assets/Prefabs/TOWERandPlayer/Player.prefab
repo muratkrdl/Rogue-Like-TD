@@ -2435,6 +2435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillCode: 12
   canUseSkill: 0
+  brightShieldDamager: {fileID: 4421123168146322875}
   myAnimator: {fileID: 2535110847997175511}
 --- !u!114 &3149773175965643488
 MonoBehaviour:
@@ -2464,6 +2465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillCode: 15
   canUseSkill: 0
+  darkAuraDamager: {fileID: 6038340193137029155}
   myAnimator: {fileID: 1650973190489637088}
 --- !u!114 &7928857063301841902
 MonoBehaviour:

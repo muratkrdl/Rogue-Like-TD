@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Full: 0
   SkillIcon: {fileID: 21300000, guid: 4d97c9a63e9d8444981c022d70216d1b, type: 3}
-  SkillName: ExtraTowerDamage
+  SkillName: ShinyBlade
   Level: 1
   MaxLevel: 3
   Value: 5
   Cost: 40
-  Description: ExtraTowerDamage
+  Description: Increases tower damage 5

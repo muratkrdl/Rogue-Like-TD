@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Full: 0
   SkillIcon: {fileID: 21300000, guid: b17cea81b7a9bfc4d997070478e95edc, type: 3}
-  SkillName: RespawnReduceAmount
+  SkillName: Kervace
   Level: 1
   MaxLevel: 2
   Value: 5
   Cost: 100
-  Description: RespawnReduceAmount
+  Description: Reduces main characters respawn time by 5 seconds

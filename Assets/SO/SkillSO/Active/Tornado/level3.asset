@@ -22,6 +22,6 @@ MonoBehaviour:
   ProjectileCount: 2
   Size: 0
   KnockbackAmount: 225
-  Description: Sends a tornado
+  Description: increases damage to 15
   DamageType: 1
   NeededPasifeSkillSO: {fileID: 11400000, guid: 56c606a8e054e4643ad7b331dc236c50, type: 2}

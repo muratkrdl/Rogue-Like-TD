@@ -55,12 +55,15 @@ public class GameTimer : MonoBehaviour
                 currentSecond = 0;
 
                 EnemySpawner.Instance.SetNewCharacters();
-                if(currentMinute == 2)
-                    EnemySpawner.Instance.SetCanSpawnMagical = true;
-                else if(currentMinute == 4)
-                    EnemySpawner.Instance.SetCanSpawnSpecial = true;
-                else if(currentMinute == 6)
-                    EnemySpawner.Instance.SetCanSpawnBoss = true;
+                if(currentMinute <= 6)
+                {
+                    if(currentMinute == 2)
+                        EnemySpawner.Instance.SetCanSpawnMagical = true;
+                    else if(currentMinute == 4)
+                        EnemySpawner.Instance.SetCanSpawnSpecial = true;
+                    else if(currentMinute == 6)
+                        EnemySpawner.Instance.SetCanSpawnBoss = true;
+                }
             }
 
             UpdateTimerUI();

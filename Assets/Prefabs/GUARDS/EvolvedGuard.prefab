@@ -236,17 +236,17 @@ NavMeshAgent:
   m_GameObject: {fileID: 3361731814176997937}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.0043
-  m_Speed: 1
+  m_Radius: 0.1
+  m_Speed: 0.8
   m_Acceleration: 8
   avoidancePriority: 0
-  m_AngularSpeed: 120
+  m_AngularSpeed: 0
   m_StoppingDistance: 0.25
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 0.0043
-  m_BaseOffset: 0
+  m_Height: 0.1
+  m_BaseOffset: 0.15
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
 --- !u!58 &1557236581399174004
@@ -390,6 +390,7 @@ MonoBehaviour:
   guardSetTarget: {fileID: 982816058849597626}
   isEnemy: 0
   isSpecial: 0
+  isBoss: 0
   hasLongRange: 0
   damageType: 1
   towerBasePosition: {fileID: 0}

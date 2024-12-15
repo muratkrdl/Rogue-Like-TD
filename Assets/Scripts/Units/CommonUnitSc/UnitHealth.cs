@@ -44,15 +44,16 @@ public class UnitHealth : MonoBehaviour, IDamageable
 
                 if(unitValues.GetIsBoss)
                 {
-                    TreasureObjectPool.Instance.GetTreasureObj(0).SetValues(transform.position);
+                    TreasureObjectPool.Instance.GetTreasureObj().SetValues(transform.position);
                     xpObjCode = 2;
                 }
 
                 GlobalUnitTargets.Instance.OnAnEnemyDead?.Invoke(this, new() { deadUnit = unitValues } );
 
-                var obj = ExperienceObjectPool.Instance.GetExperienceObj(xpObjCode); // kontrol et
+                var obj = ExperienceObjectPool.Instance.GetExperienceObj(xpObjCode);
                 obj.gameObject.SetActive(true);
                 obj.transform.position = transform.position;
+                
                 Bank.Instance.OnChangeMoneyAmount?.Invoke(this, new() { amount = 
                 Random.Range(3 + PermanentSkillSystem.Instance.GetPermanentSkillSO(3).Value, 8 + PermanentSkillSystem.Instance.GetPermanentSkillSO(3).Value) } );
             }
@@ -62,6 +63,13 @@ public class UnitHealth : MonoBehaviour, IDamageable
                 GlobalUnitTargets.Instance.OnAnGuardDead?.Invoke(this, new() { deadUnit = unitValues } );
             }
 
+            if(Random.Range(0, 36) == 24)
+            {
+                Bank.Instance.OnPermanentMoneyGained?.Invoke(this, new() { amount = 1 } );
+                var obj = FoodObjectPool.Instance.GetFoodObj();
+                obj.transform.position = unitValues.transform.position;
+                obj.SetActive(true);
+            }
             unitValues.GetUnitStateController().ChangeState(state);
             unitValues.ResetAllValues();
 

@@ -19,4 +19,4 @@ MonoBehaviour:
   MaxLevel: 4
   Value: 9
   Cost: 150
-  Description: Reduces Cooldown 9%
+  Description: Extra cooldown for active skills 9%

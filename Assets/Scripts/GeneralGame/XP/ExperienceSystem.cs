@@ -13,7 +13,6 @@ public class ExperienceSystem : MonoBehaviour
         public string name;
     }
 
-    [SerializeField] LevelUpPanel levelUpPanel;
     [SerializeField] ExperiencePanel experiencePanel;
 
     [SerializeField] int[] gemEarnXPAmount;
@@ -61,7 +60,7 @@ public class ExperienceSystem : MonoBehaviour
 
     public void SetRandomUISkillButtons(bool isBoss)
     {
-        levelUpPanel.SetRandomUISkillButtons(isBoss);
+        LevelUpPanel.Instance.SetRandomUISkillButtons(isBoss);
     }
 
     void OnDestroy() 

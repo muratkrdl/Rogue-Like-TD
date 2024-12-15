@@ -14,19 +14,21 @@ public class Projectile : MonoBehaviour
     Transform target;
     DamageType damageType;
 
+    Vector3 direction;
+
+    bool isAvailable = false;
+    bool damageable = true;
+    bool followable = false;
+
+    float damage;
+
     public Transform GetTarget
     {
         get => target;
     }
-
-    bool isAvailable = false;
-    bool damageable = true;
-
-    float currentDamage;
-
-    public float GetCurrentDamage
+    public float GetDamage
     {
-        get => currentDamage;
+        get => damage;
     }
     public DamageType GetDamageType
     {
@@ -38,19 +40,33 @@ public class Projectile : MonoBehaviour
         get => isAvailable;
     }
 
-    public void SetValues(Transform target, Transform projectileOutPos, float Damage, DamageType damageType)
+    public void SetValues(Transform target, Transform projectileOutPos, float damage, DamageType damageType, bool followable)
     {
-        damageable = true;
-        transform.position = projectileOutPos.position;
-        this.target = target;
-        this.damageType = damageType;
-        currentDamage = Damage;
+        vfxAnimator.SetTrigger(ConstStrings.RESET);
+
         isAvailable = false;
+        damageable = true;
+
+        this.damageType = damageType;
+        this.followable = followable;
+        this.target = target;
+        this.damage = damage;
+
+        transform.position = projectileOutPos.position;
+        direction = target.position - transform.position;
+        direction.Normalize();
+
+        float rot_z = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
+
         GetComponent<SpriteRenderer>().enabled = true;
+
         if(trailRenderer != null)
         {
             ResetTrialRenderer();
         }
+
+        Invoke(nameof(DeactiveProjectile), 15);
     }
 
     void Update() 
@@ -64,20 +80,33 @@ public class Projectile : MonoBehaviour
 
         if(target != null)
         {
-            Quaternion rotation = Quaternion.LookRotation(target.transform.position - transform.localPosition, transform.TransformDirection(Vector3.up));
-            transform.SetPositionAndRotation(Vector2.MoveTowards(transform.localPosition, target.position, moveSpeed * Time.deltaTime), new Quaternion( 0 , 0 , rotation.z , rotation.w ));
-            if(Mathf.Abs(Vector2.Distance(transform.localPosition, target.position)) <= .01f && damageable)
+            if(followable)
+            {
+                Quaternion rotation = Quaternion.LookRotation(target.transform.position - transform.localPosition, transform.TransformDirection(Vector3.up));
+                transform.SetPositionAndRotation(Vector2.MoveTowards(transform.localPosition, target.position, moveSpeed * Time.deltaTime), new Quaternion( 0 , 0 , rotation.z , rotation.w ));
+            }
+            else
+            {
+                transform.position = Vector2.MoveTowards(transform.localPosition, transform.position + direction, moveSpeed * Time.deltaTime);
+            }
+
+            if(Mathf.Abs(Vector2.Distance(transform.localPosition, target.position)) <= .25f && damageable)
             {
                 // Damage
+                damageable = false;
                 if(target.TryGetComponent<IDamageable>(out var component))
                 {
-                    component.SetHP((int) currentDamage, damageType);
+                    component.SetHP((int) damage, damageType);
                 }
-                damageable = false;
                 VFX();
             }
         }
+    }
 
+    void DeactiveProjectile()
+    {
+        if(!isAvailable) return;
+        VFX();
     }
 
     void VFX()

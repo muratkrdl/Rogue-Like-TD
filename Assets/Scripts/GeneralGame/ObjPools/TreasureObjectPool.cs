@@ -11,29 +11,25 @@ public class TreasureObjectPool : MonoBehaviour
         Instance = this;    
     }
 
-    [SerializeField] TreasureObject[] treasureObjectPrefabs;
+    [SerializeField] TreasureObject treasureObjectPrefabs;
 
-    [SerializeField] Transform[] listsParent;
+    [SerializeField] Transform listsParent;
 
     List<TreasureObject> treasure1 = new();
 
-    List<TreasureObject> GetTreasureObjList(int code)
+    List<TreasureObject> GetTreasureObjList()
     {
-        return code switch
-        {
-            0 => treasure1,
-            _ => throw new System.NotImplementedException(),
-        };
+        return treasure1;
     }
 
-    Transform GetInstantiatedObjParent(int code)
+    Transform GetInstantiatedObjParent()
     {
-        return listsParent[code];
+        return listsParent;
     }
 
-    public TreasureObject GetTreasureObj(int code)
+    public TreasureObject GetTreasureObj()
     {
-        foreach(var item in GetTreasureObjList(code))
+        foreach(var item in GetTreasureObjList())
         {
             if(!item.GetIsAvaliable)
             {
@@ -41,17 +37,17 @@ public class TreasureObjectPool : MonoBehaviour
             }
         }
 
-        TreasureObject damagerObj = Instantiate(GetTreasureObjPrefab(code), transform.position, Quaternion.identity, 
-        GetInstantiatedObjParent(code)).GetComponent<TreasureObject>();
+        TreasureObject treasureObj = Instantiate(GetTreasureObjPrefab(), transform.position, Quaternion.identity, 
+        GetInstantiatedObjParent()).GetComponent<TreasureObject>();
 
-        GetTreasureObjList(code).Add(damagerObj);
+        GetTreasureObjList().Add(treasureObj);
 
-        return damagerObj;
+        return treasureObj;
     }
 
-    TreasureObject GetTreasureObjPrefab(int code)
+    TreasureObject GetTreasureObjPrefab()
     {
-        return treasureObjectPrefabs[code];
+        return treasureObjectPrefabs;
     }
 
 }

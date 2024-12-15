@@ -19,11 +19,11 @@ MonoBehaviour:
   maxHealth: 220
   damageType: 1
   BaseDamageRange: {x: 27, y: 32}
-  TimeBetweenAttack: 1.2
+  TimeBetweenAttack: 1
   attackDelay: 2
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 7
   towerCost: 490
   sellPrice: 999
   Range: 7.5
-  Description: Shoots arrow to the closest enemy
+  Description: faster and more damage

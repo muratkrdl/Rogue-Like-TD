@@ -1,13 +1,17 @@
 using System.Collections;
-using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class ActiveSkillBaseClass : MonoBehaviour
 {
     [SerializeField] int skillCode;
 
     CancellationTokenSource cts = new();
+
+    CancellationTokenSource skillCDSliderCTS = new();
+
+    Image slider;
 
     public bool canUseSkill = false;
     Vector2 currentScale = Vector2.one;
@@ -18,6 +22,10 @@ public abstract class ActiveSkillBaseClass : MonoBehaviour
         get => cts;
     }
 
+    protected Image GetSlider
+    {
+        get => slider;
+    }
     protected int GetSkillCode
     {
         get => skillCode;
@@ -38,12 +46,22 @@ public abstract class ActiveSkillBaseClass : MonoBehaviour
     protected void OnDestroy_CancelCTS()
     {
         cts.Cancel();
+        skillCDSliderCTS.Cancel();
+    }
+    protected void SubInventoryCDEvent()
+    {
+        InventoryUIPanel.Instance.OnSetNewActiveSkillIcon += InventoryUIPanel_OnSetNewActiveSkillIcon;
+    }
+    protected void UnSubInventoryCDEvent()
+    {
+        InventoryUIPanel.Instance.OnSetNewActiveSkillIcon -= InventoryUIPanel_OnSetNewActiveSkillIcon;
     }
     protected void InventorySystem_OnNewSkillGain(object sender, InventorySystem.OnSkillUpdateEventArgs e)
     {
         if(e.Code == skillCode)
         {
             canUseSkill = true;
+            OnSkillGainedFunc();
         }
     }
     protected void InventorySystem_OnSkillUpdate(object sender, InventorySystem.OnSkillUpdateEventArgs e)
@@ -64,8 +82,54 @@ public abstract class ActiveSkillBaseClass : MonoBehaviour
         }
     }
 
+    void InventoryUIPanel_OnSetNewActiveSkillIcon(object sender, InventoryUIPanel.OnSetNewActiveSkillIconEventArgs e)
+    {
+        if(e._code == GetSkillCode)
+        {
+            slider = e._slider;
+        }
+    }
+
     protected virtual void OnSkillUpdateFunc() { /* */  }
+    protected virtual void OnSkillGainedFunc() { /* */  }
     protected virtual void EvolveSkill() {  /* */ }
+
+    protected IEnumerator SkillCDSlider()
+    {
+        float time = GetSkillCoolDown() / 20;
+        slider.fillAmount = 1;
+        while(true)
+        {
+            yield return new WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
+            yield return new WaitForSeconds(time);
+            yield return new WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
+            slider.fillAmount -= .058f;
+            if(slider.fillAmount < .01f)
+            {
+                slider.fillAmount = 0;
+                break;
+            }
+        }
+    }
+
+    /* protected async UniTaskVoid SkillCDSlider()
+    {
+        float time = GetSkillCoolDown() / 20;
+        slider.fillAmount = 1;
+        while(true)
+        {
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: skillCDSliderCTS.Token);
+            await UniTask.Delay(TimeSpan.FromSeconds(time));
+            await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
+            slider.fillAmount -= .058f;
+            if(slider.fillAmount < .06f)
+            {
+                slider.fillAmount = 0;
+                Debug.Log("break amq");
+                break;
+            }
+        }
+    } */
 
     protected float GetSkillCoolDown()
     {

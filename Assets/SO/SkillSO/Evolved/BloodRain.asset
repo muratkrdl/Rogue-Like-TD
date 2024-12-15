@@ -22,6 +22,6 @@ MonoBehaviour:
   ProjectileCount: 1
   Size: 5
   KnockbackAmount: 0
-  Description: Slayer-Raining Blood..
+  Description: Towers it touches gain extra attack speed
   DamageType: 2
   NeededPasifeSkillSO: {fileID: 11400000, guid: ebfbd4e7ad979ba419a00ad70d9546ae, type: 2}

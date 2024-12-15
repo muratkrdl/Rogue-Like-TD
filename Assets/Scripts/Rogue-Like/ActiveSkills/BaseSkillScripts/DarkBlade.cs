@@ -16,6 +16,7 @@ public class DarkBlade : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
+        SubInventoryCDEvent();
     }
 
     async UniTaskVoid UseSkill()
@@ -30,9 +31,22 @@ public class DarkBlade : ActiveSkillBaseClass
         }
     }
 
+    protected override void OnSkillGainedFunc()
+    {
+        darkBladeAnimator.GetComponent<DarkBladeDamager>().SetDamageOnSpawn();
+    }
+
+    protected override void OnSkillUpdateFunc()
+    {
+        darkBladeAnimator.GetComponent<DarkBladeDamager>().SetDamageOnSpawn();
+    }
+
     void Skill()
     {
         if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
+
+        StopAllCoroutines();
+        StartCoroutine(nameof(SkillCDSlider));
 
         darkBladeAnimator.transform.localScale = GetCurrentScale;
         darkBladeAnimator.SetTrigger(ConstStrings.ANIM);
@@ -48,6 +62,7 @@ public class DarkBlade : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
+        UnSubInventoryCDEvent();
         OnDestroy_CancelCTS();
     }
 

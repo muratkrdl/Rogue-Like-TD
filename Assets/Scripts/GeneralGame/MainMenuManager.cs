@@ -18,20 +18,19 @@ public class MainMenuManager : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetInt(ConstStrings.PERMANENT_MONEY, 2340);
         SetPermanentMoneyText();
     }
 
     public void SetPermanentMoneyText()
     {
-        permanentMoneyText.text = PlayerPrefs.GetInt(ConstStrings.PERMANENT_MONEY).ToString();
+        permanentMoneyText.text = PlayerPrefs.GetInt(ConstStrings.PERMANENT_MONEY_KEY).ToString();
     }
 
     public void OpenMenu(string str)
     {
         foreach(Menu menu in menus)
         {
-            if(str.Equals(menu.GetMenuName))
+            if(str == menu.GetMenuName)
                 menu.Open();
             else
                 menu.Close();

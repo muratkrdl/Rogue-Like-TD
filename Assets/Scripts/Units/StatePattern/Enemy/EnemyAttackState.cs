@@ -25,8 +25,8 @@ public class EnemyAttackState : IUnitState
         if(Mathf.Abs(Vector2.Distance(unitValues.GetEnemySetTarget().GetCurrentDestPos.position, unitValues.transform.position)) >= unitValues.UnitSO.AttackRange + .5f ||
         !unitValues.GetEnemySetTarget().GetCurrentTarget.gameObject.activeInHierarchy || 
         (unitValues.GetEnemySetTarget().GetCurrentTarget.TryGetComponent<TowerInfoKeeper>(out var component1) && component1.GetCurrentTowerCode == -1) ||
-        (unitValues.GetEnemySetTarget().GetCurrentTarget.TryGetComponent<UnitValues>(out var component2) && component2.IsWaiting) ||
-        (unitValues.GetEnemySetTarget().GetCurrentTarget.TryGetComponent<PlayerHealth>(out var component3) && component3.GetIsDead))
+        (unitValues.GetEnemySetTarget().GetCurrentTarget.TryGetComponent<UnitValues>(out var component2) && (component2.IsWaiting || component2.IsDead)) ||
+        (unitValues.GetEnemySetTarget().GetCurrentTarget.TryGetComponent<PlayerHealth>(out var component3) && component3.IsDead))
         {
             unitValues.GetUnitStateController().ChangeState(new EnemyIdleState());
         }

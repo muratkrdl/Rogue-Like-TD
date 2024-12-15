@@ -27,6 +27,7 @@ public class BeamofLight : ActiveSkillBaseClass
         UseSkill().Forget();
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
+        SubInventoryCDEvent();
     }
 
     async UniTaskVoid UseSkill()
@@ -45,11 +46,16 @@ public class BeamofLight : ActiveSkillBaseClass
     {
         if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
 
+        StopAllCoroutines();
+        StartCoroutine(nameof(SkillCDSlider));
+
         var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(projectileCode);
 
         projectile.SetMoveableProjectile(currentGoPoses[posCounter], transform.position, true);
         projectile.GetComponent<Animator>().SetTrigger(ConstStrings.ANIM);
+        projectile.GetComponent<SkillProjectileDamagerBaseClass>().SetDamageOnSpawn();
         posCounter++;
+        
         if(posCounter > 7)
             posCounter = 0;
     }
@@ -63,6 +69,7 @@ public class BeamofLight : ActiveSkillBaseClass
     {
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
+        UnSubInventoryCDEvent();
         OnDestroy_CancelCTS();
     }
 

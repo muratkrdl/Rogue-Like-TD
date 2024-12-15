@@ -39,7 +39,7 @@ public class UnitMove : MonoBehaviour
 
     public void MoveUnit() 
     {
-        if(!unitValues.GetNavMeshAgent().isStopped)
+        if(!unitValues.GetNavMeshAgent().isStopped && !unitValues.IsDead)
         {
             if(unitValues.GetIsEnemy)
                 unitValues.GetNavMeshAgent().SetDestination(unitValues.GetEnemySetTarget().GetCurrentDestPos.position);
@@ -50,10 +50,12 @@ public class UnitMove : MonoBehaviour
 
     public void StopUnit(bool isDying) 
     {
+        if(!unitValues.GetNavMeshAgent().isActiveAndEnabled) return;
         if(!unitValues.GetNavMeshAgent().isStopped)
         {
             if(isDying && unitValues.GetIsEnemy)
             {
+                if(!unitValues.GetNavMeshAgent().isActiveAndEnabled) return;
                 unitValues.GetEnemySetTarget().ChangeCurrentTarget(transform, false);
             }
             unitValues.GetNavMeshAgent().SetDestination(transform.position);

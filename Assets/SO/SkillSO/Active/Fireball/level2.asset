@@ -22,6 +22,6 @@ MonoBehaviour:
   ProjectileCount: 2
   Size: 0
   KnockbackAmount: 25
-  Description: Random shoots fireball
+  Description: increases damage to 20 extra throwable
   DamageType: 2
   NeededPasifeSkillSO: {fileID: 11400000, guid: c87f60ea77541654c9433ecd4c489280, type: 2}

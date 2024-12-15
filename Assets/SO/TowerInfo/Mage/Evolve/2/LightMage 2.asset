@@ -26,4 +26,4 @@ MonoBehaviour:
   towerCost: 850
   sellPrice: 1600
   Range: 6.5
-  Description: Using mage to kill enemy
+  Description: area damage and lightning

@@ -22,6 +22,6 @@ MonoBehaviour:
   ProjectileCount: 5
   Size: 0
   KnockbackAmount: 40
-  Description: Thors a dagger
+  Description: daggers turn into axes
   DamageType: 1
   NeededPasifeSkillSO: {fileID: 11400000, guid: 99e00ee7e76eb9e4f9edf5a2e0b72d73, type: 2}

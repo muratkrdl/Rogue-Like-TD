@@ -12,6 +12,7 @@ public class Dagger : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
+        SubInventoryCDEvent();
     }
 
     async UniTaskVoid UseSkill()
@@ -30,11 +31,14 @@ public class Dagger : ActiveSkillBaseClass
     {
         if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
 
+        StopAllCoroutines();
+        StartCoroutine(nameof(SkillCDSlider));
+
         for(int i = 0; i < GetCurrentProjectileAmount; i++)
         {
-            await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
+            await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill(), cancellationToken: GetCTS.Token);
             await UniTask.Delay(TimeSpan.FromSeconds(.1f));
-            await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
+            await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill(), cancellationToken: GetCTS.Token);
 
             var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(projectileCode);
             
@@ -49,6 +53,7 @@ public class Dagger : ActiveSkillBaseClass
             }
             
             projectile.GetComponent<DaggerDamager>().ClearList();
+            projectile.GetComponent<SkillProjectileDamagerBaseClass>().SetDamageOnSpawn();
             projectile.SetMoveableProjectile(newLookPos, transform.position, true);
         }
     }
@@ -63,6 +68,7 @@ public class Dagger : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
+        UnSubInventoryCDEvent();
         OnDestroy_CancelCTS();
     }
 

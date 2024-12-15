@@ -22,6 +22,6 @@ MonoBehaviour:
   ProjectileCount: 0
   Size: 3.4
   KnockbackAmount: 200
-  Description: Spins a blade around
+  Description: increases damage to 48 and size
   DamageType: 1
   NeededPasifeSkillSO: {fileID: 11400000, guid: 2ba591d5dd142214697fb773d7ffd007, type: 2}

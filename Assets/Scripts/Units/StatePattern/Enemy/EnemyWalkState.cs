@@ -7,12 +7,10 @@ public class EnemyWalkState : IUnitState
 {
     public void EnterState(UnitValues unitValues)
     {
-
     }
 
     public void ExitState(UnitValues unitValues)
     {
-
     }
 
     public void UpdateState(UnitValues unitValues)

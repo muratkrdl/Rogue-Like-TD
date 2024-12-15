@@ -43,7 +43,7 @@ public class LookObj : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other) 
     {
-        if(other.TryGetComponent<MainMenuButton>(out var mainMenuButtonComponent) && currentlyMainMenuButton.Equals(mainMenuButtonComponent))
+        if(other.TryGetComponent<MainMenuButton>(out var mainMenuButtonComponent) && currentlyMainMenuButton == mainMenuButtonComponent)
         {
             currentlyMainMenuButton = null;
             mainMenuButtonComponent.OnObjHitted(false);

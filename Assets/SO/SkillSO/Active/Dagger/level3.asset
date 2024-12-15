@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: level3
   m_EditorClassIdentifier: 
   code: 13
+  isEvolved: 0
   SkillIcon: {fileID: 21300000, guid: db0715c9acde03a4782c704c1318ddb5, type: 3}
   SkillName: Dagger
   Level: 3
@@ -21,6 +22,6 @@ MonoBehaviour:
   ProjectileCount: 2
   Size: 0
   KnockbackAmount: 30
-  Description: Thors a dagger
+  Description: increases damage to 21
   DamageType: 1
   NeededPasifeSkillSO: {fileID: 11400000, guid: 99e00ee7e76eb9e4f9edf5a2e0b72d73, type: 2}

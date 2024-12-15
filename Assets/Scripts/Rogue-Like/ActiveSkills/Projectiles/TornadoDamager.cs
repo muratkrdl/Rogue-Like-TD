@@ -8,4 +8,9 @@ public class TornadoDamager : SkillProjectileDamagerBaseClass
     {
         other.GetComponent<UnitHealth>().DamageWithPoison(InventorySystem.Instance.GetSkillSO(GetSkillCode).Value / 10, (int)InventorySystem.Instance.GetSkillSO(GetSkillCode).Size);
     }
+
+    protected override void OnDamageFunc()
+    {
+        Damage = Damage/100*90;
+    }
 }

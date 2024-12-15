@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 0. 2
   m_EditorClassIdentifier: 
   Full: 1
-  SkillIcon: {fileID: 21300000, guid: 4447c5df41ffa4c4ea0bc00b0d3bad8f, type: 3}
-  SkillName: ExtraGold
+  SkillIcon: {fileID: 21300000, guid: 226f8d44cb88ed14faf4e4b4fd82380f, type: 3}
+  SkillName: Midas
   Level: 3
   MaxLevel: 3
   Value: 9
   Cost: 120
-  Description: ExtraGold
+  Description: Gain 9 extra Gold from enemies

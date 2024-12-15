@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 0. 2
   m_EditorClassIdentifier: 
   Full: 0
-  SkillIcon: {fileID: 21300000, guid: 9cc5d50bf210412448751686ddce7ad6, type: 3}
-  SkillName: ExtraCooldown
+  SkillIcon: {fileID: 21300000, guid: 6889ca8ed9e1b7846adb9365167f2056, type: 3}
+  SkillName: WiseBook
   Level: 3
   MaxLevel: 4
   Value: 3
   Cost: 150
-  Description: ExtraCooldown
+  Description: Gain 3 extra experience from xp gem

@@ -13,7 +13,12 @@ public class MainTower : MonoBehaviour
 
     void Start() 
     {
-        GetComponent<TowerHealth>().SetTowerHealth(towerInfoSo.maxHealth);
+        Invoke(nameof(InvokeMainTowerSetHP), .1f);
+    }
+
+    void InvokeMainTowerSetHP()
+    {
+        GetComponent<TowerHealth>().SetTowerHealth(towerInfoSo.maxHealth + PermanentSkillSystem.Instance.GetPermanentSkillSO(11).Value);
     }
 
     public void OnMouseDownEvent()

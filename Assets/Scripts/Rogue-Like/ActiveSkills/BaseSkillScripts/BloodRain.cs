@@ -15,6 +15,7 @@ public class BloodRain : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
+        SubInventoryCDEvent();
     }
 
     async UniTaskVoid UseSkill()
@@ -24,7 +25,7 @@ public class BloodRain : ActiveSkillBaseClass
         {
             await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill(), cancellationToken: GetCTS.Token);
             await UniTask.Delay(TimeSpan.FromSeconds(GetSkillCoolDown()));
-
+            
             Skill();
         }
     }
@@ -33,9 +34,13 @@ public class BloodRain : ActiveSkillBaseClass
     {
         if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
 
+        StopAllCoroutines();
+        StartCoroutine(nameof(SkillCDSlider));
+
         var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(1);
         projectile.GetComponent<Animator>().SetTrigger(ConstStrings.RESET);
         projectile.GetComponent<SpriteRenderer>().color = spriteColor;
+        projectile.GetComponent<SkillProjectileDamagerBaseClass>().SetDamageOnSpawn();
         projectile.transform.position = transform.position;
         projectile.transform.localScale = GetCurrentScale;
     }
@@ -51,6 +56,7 @@ public class BloodRain : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
+        UnSubInventoryCDEvent();
         OnDestroy_CancelCTS();
     }
     

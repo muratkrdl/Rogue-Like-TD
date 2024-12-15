@@ -27,28 +27,40 @@ public class TowerHealth : MonoBehaviour, IDamageable
         if(currenthealth <= 0) return;
 
         currenthealth -= amount;
-        fireAnimator.HealthChanged(currenthealth, maxHealth);
+        if(currenthealth > maxHealth)
+            currenthealth = maxHealth;
 
-        bool value;
+        float returnHealth = (int)currenthealth;
+
+        bool isMainTower;
         TowerInfoSo so;
         if(TryGetComponent<TowerInfoKeeper>(out var keeper))
         {
             so = keeper.GetCurrentTowerInfo;
-            value = false;
+            isMainTower = false;
+            returnHealth--;
         }
         else
         {
             so = GetComponent<MainTower>().GetTowerInfoSo;
-            value = true;
+            isMainTower = true;
+            returnHealth++;
         }
+
+        fireAnimator.HealthChanged(returnHealth, maxHealth);
 
         if(currenthealth <= 0)
         {
             currenthealth = 0;
 
-            if(value)
+            if(isMainTower)
             {
                 // gameOver 
+                GameStateManager.Instance.PauseGame();
+                GlobalUnitTargets.Instance.GetPlayerTarget().GetComponent<PlayerHealth>().IsDead = true;
+                MainTowerManager.Instance.OnInteractWithMainTower?.Invoke(this, new() { state = MainTowerInOutStates.inTower } );
+                GameOverMenu.Instance.GameOver();
+                Invoke(nameof(InvokeExploAnim), 1);
             }
             else
             {
@@ -63,7 +75,18 @@ public class TowerHealth : MonoBehaviour, IDamageable
         
         if(InfoPanel.Instance.GetCurrentTowerInfoSO != so) return;
 
-        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { isMainTower = value, towerInfoSo1 = so, tower = transform, underAttack = true } );
+        InfoPanel.Instance.OnClickedTowerInfo?.Invoke(this, new() { isMainTower = isMainTower, towerInfoSo1 = so, tower = transform, underAttack = true } );
+    }
+
+    public void SetFullTowerHP()
+    {
+        SetHP(-999, DamageType.truedamage);
+        transform.GetChild(3).GetComponent<ParticleSystem>().Play();
+    }
+
+    void InvokeExploAnim()
+    {
+        transform.GetChild(2).GetComponent<Animator>().SetTrigger(ConstStrings.ANIM);
     }
 
     public void ResetHealthPoints()

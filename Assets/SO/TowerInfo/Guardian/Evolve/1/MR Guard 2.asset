@@ -17,7 +17,7 @@ MonoBehaviour:
   towerIcon: {fileID: -1918783711, guid: 80f0598c69a0200458c20028675d1989, type: 3}
   Name: MRGuardII
   maxHealth: 230
-  damageType: 1
+  damageType: 2
   BaseDamageRange: {x: 35, y: 38}
   TimeBetweenAttack: 0
   attackDelay: 0
@@ -26,4 +26,4 @@ MonoBehaviour:
   towerCost: 750
   sellPrice: 1700
   Range: 6.5
-  Description: Guard to Towers, each third strike will be blocked
+  Description: Guard do not take magic damage

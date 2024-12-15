@@ -19,22 +19,19 @@ public class GuardIdleState : IUnitState
 
     public void ExitState(UnitValues unitValues)
     {
-
     }
 
     public void UpdateState(UnitValues unitValues)
     {
         if(unitValues.IsDead) return;
 
-        // kule menziline düşman girince hareket ettir chasing i true yap
         if(unitValues.GetGuardSetTarget().TowerEnemyKeeper.GetEnemiesInRangeList.Count > 0)
         {
-            unitValues.GetGuardSetTarget().ChangeCurrentTarget(unitValues.GetGuardSetTarget().TowerEnemyKeeper.GetClosestEnemy());
             unitValues.IsChasing = true;
-            unitValues.GetUnitStateController().ChangeState(new GuardWalkState());
+            unitValues.GetGuardSetTarget().ChangeCurrentTarget(unitValues.GetGuardSetTarget().TowerEnemyKeeper.GetClosestEnemy());
         }
 
-        if(Vector2.Distance(unitValues.GetGuardSetTarget().GetCurrentTarget.position, unitValues.transform.position) > unitValues.UnitSO.AttackRange + .15f)
+        if(Vector2.Distance(unitValues.GetGuardSetTarget().GetCurrentTarget.position, unitValues.transform.position) > unitValues.UnitSO.AttackRange + .06f)
         {
             unitValues.GetUnitStateController().ChangeState(new GuardWalkState());
         }

@@ -1,13 +1,23 @@
 using System;
 using Cinemachine;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
+
+public enum MainTowerInOutStates
+{
+    none,
+    inTower,
+    outTower
+}
 
 public class MainTowerManager : MonoBehaviour
 {
     public static MainTowerManager Instance;
 
-    public EventHandler OnInteractWithMainTower;
+    public EventHandler<OnInteractWithMainTowerEventArgs> OnInteractWithMainTower;
+    public class OnInteractWithMainTowerEventArgs : EventArgs
+    {
+        public MainTowerInOutStates state;
+    }
 
     [SerializeField] CinemachineVirtualCamera cinemachineVirtualCamera;
 
@@ -32,22 +42,31 @@ public class MainTowerManager : MonoBehaviour
         OnInteractWithMainTower += MainTowerManager_OnInteractWithMainTower;
     }
 
-    void MainTowerManager_OnInteractWithMainTower(object sender, EventArgs e)
+    void MainTowerManager_OnInteractWithMainTower(object sender, OnInteractWithMainTowerEventArgs e)
     {
-        if(Mathf.Abs(Vector2.Distance(transform.position, mainChar.position)) > closeDistance && !mainChar.GetComponent<PlayerHealth>().GetIsDead) return;
+        if(Mathf.Abs(Vector2.Distance(transform.position, mainChar.position)) > closeDistance && !mainChar.GetComponent<PlayerHealth>().IsDead) return;
 
-        if(!isIn)
+        bool gettingIn = e.state switch
+        {
+            MainTowerInOutStates.outTower => true,
+            MainTowerInOutStates.inTower => false,
+            _ => !isIn
+        };
+
+        if(gettingIn)
         {
             cinemachineVirtualCamera.GetComponent<Animator>().SetTrigger("In");
             cinemachineVirtualCamera.Follow = mainChar;
+            isIn = true;
         }
         else
         {
             cinemachineVirtualCamera.GetComponent<Animator>().SetTrigger("Out");
             cinemachineVirtualCamera.Follow = transform;
+            isIn = false;
         }
         LMouseClick.Instance.CloseEverything(false);
-        isIn = !isIn;
+        isIn = gettingIn;
         mainChar.gameObject.SetActive(isIn);
     }
 

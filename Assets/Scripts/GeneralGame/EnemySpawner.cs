@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -106,13 +103,12 @@ public class EnemySpawner : MonoBehaviour
         {
             await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
             int spawnedPhysicalEnemy = 0;
-            int spawnSide = UnityEngine.Random.Range(0, 2);
             while(spawnedPhysicalEnemy < GameTimer.Instance.GetCurrentMinute + 1)
             {
                 spawnedPhysicalEnemy++;
                 await UniTask.Delay(TimeSpan.FromSeconds(.1f));
                 await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
-                SpawnNewEnemy(currentEnemyPhysicalIndex[spawnPhysicalIndex], spawnSide, false, 0);
+                SpawnNewEnemy(currentEnemyPhysicalIndex[spawnPhysicalIndex], false, 0);
                 spawnPhysicalIndex++;
                 if(spawnPhysicalIndex > 2)
                     spawnPhysicalIndex = 0;
@@ -127,14 +123,14 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             int spawnedMagicalEnemy = 0;
-            int spawnSide = UnityEngine.Random.Range(0, 2);
             await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
             await UniTask.Delay(TimeSpan.FromSeconds(magicalSpawnRate), cancellationToken: cts.Token);
             while(spawnedMagicalEnemy < 2)
             {
                 spawnedMagicalEnemy++;
+                await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
                 await UniTask.Delay(TimeSpan.FromSeconds(.1f));
-                SpawnNewEnemy(currentEnemyMagicalIndex, spawnSide, false, 0);
+                SpawnNewEnemy(currentEnemyMagicalIndex, false, 0);
             }
         }
     }
@@ -145,14 +141,13 @@ public class EnemySpawner : MonoBehaviour
         while (true)
         {
             int spawnedSpecialEnemy = 0;
-            int spawnSide = UnityEngine.Random.Range(0, 2);
             await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
             await UniTask.Delay(TimeSpan.FromSeconds(specialSpawnRate), cancellationToken: cts.Token);
             while(spawnedSpecialEnemy < 2)
             {
                 spawnedSpecialEnemy++;
                 await UniTask.Delay(TimeSpan.FromSeconds(.1f));
-                SpawnNewEnemy(currentEnemySpecialIndex, spawnSide, false, 2);
+                SpawnNewEnemy(currentEnemySpecialIndex, false, 2);
             }
         }
     }
@@ -162,26 +157,25 @@ public class EnemySpawner : MonoBehaviour
         await UniTask.WaitUntil(() => canSpawnBoss);
         while (true)
         {
-            int spawnSide = UnityEngine.Random.Range(0, 2);
             await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
-            SpawnNewEnemy(currentBossIndex, spawnSide, true, 0);
+            SpawnNewEnemy(currentBossIndex, true, 0);
             await UniTask.Delay(TimeSpan.FromSeconds(bossSpawnRate), cancellationToken: cts.Token);
             currentBossIndex++;
             if(currentBossIndex > 18)
-                    currentBossIndex = 14;
+                currentBossIndex = 14;
         }
     }
 
-    void SpawnNewEnemy(int code, int spawnSideCode, bool isBoss, int enemyCode)
+    void SpawnNewEnemy(int code, bool isBoss, int enemyCode)
     {
-        var enemy = EnemyObjectPool.Instance.GetEnemy(code);
+        UnitValues enemy = EnemyObjectPool.Instance.GetEnemy(code);
 
         UnitSO unitSO = AllUnitInfoKeeper.Instance.GetEnemySOByMinute(enemy.GetHasLongRange);
 
         Transform spawnPos;
         bool isGoingToRight = false;
 
-        if(spawnSideCode == 0)
+        if(UnityEngine.Random.Range(0, 2) == 0)
         {
             spawnPos = leftSpawnPos[UnityEngine.Random.Range(0, leftSpawnPos.Length)];
             isGoingToRight = true;
@@ -200,14 +194,9 @@ public class EnemySpawner : MonoBehaviour
         enemy.IsGoingToRight = isGoingToRight;
     }
 
-    public void StopSpawn()
-    {
-        cts.Cancel();
-    }
-
     void OnDestroy() 
     {
-        StopSpawn();
+        cts.Cancel();
     }
 
 }

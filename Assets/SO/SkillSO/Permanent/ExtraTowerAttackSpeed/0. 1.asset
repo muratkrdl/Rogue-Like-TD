@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Full: 0
   SkillIcon: {fileID: 21300000, guid: 8f351fb01abf5714aa7b78c2974a718e, type: 3}
-  SkillName: ExtraTowerAttackSpeed
+  SkillName: BlueKnife
   Level: 2
   MaxLevel: 3
   Value: 2
   Cost: 80
-  Description: ExtraTowerAttackSpeed
+  Description: Increases tower attack speed 20ms

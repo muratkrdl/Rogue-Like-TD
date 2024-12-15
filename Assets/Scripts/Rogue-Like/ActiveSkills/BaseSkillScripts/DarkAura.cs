@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DarkAura : ActiveSkillBaseClass
 {
+    [SerializeField] DarkAuraDamager darkAuraDamager;
+
     [SerializeField] Animator myAnimator;
 
     void Start() 
@@ -12,6 +14,7 @@ public class DarkAura : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
+        SubInventoryCDEvent();
     }
 
     async UniTaskVoid UseSkill()
@@ -30,8 +33,21 @@ public class DarkAura : ActiveSkillBaseClass
     {
         if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
         
+        StopAllCoroutines();
+        StartCoroutine(nameof(SkillCDSlider));
+
         myAnimator.transform.localScale = GetCurrentScale;
         myAnimator.SetTrigger(ConstStrings.ANIM);
+    }
+
+    protected override void OnSkillGainedFunc()
+    {
+        darkAuraDamager.SetDamageOnSpawn();
+    }
+
+    protected override void OnSkillUpdateFunc()
+    {
+        darkAuraDamager.SetDamageOnSpawn();
     }
 
     protected override void EvolveSkill()
@@ -44,6 +60,7 @@ public class DarkAura : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
+        UnSubInventoryCDEvent();
         OnDestroy_CancelCTS();
     }
 }

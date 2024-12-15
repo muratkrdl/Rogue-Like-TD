@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ public class UnitFlashFX : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
     Material initialMaterial;
+
+    CancellationTokenSource cts = new();
 
     void Start() 
     {
@@ -28,8 +31,13 @@ public class UnitFlashFX : MonoBehaviour
             2 => bloodMaterial,
             _ => throw new NotImplementedException(),
         };
-        await UniTask.Delay(TimeSpan.FromSeconds(duration));
+        await UniTask.Delay(TimeSpan.FromSeconds(duration), cancellationToken: cts.Token);
         spriteRenderer.material = initialMaterial;
+    }
+
+    void OnDestroy() 
+    {
+        cts.Cancel();
     }
 
 }

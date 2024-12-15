@@ -58,11 +58,11 @@ public class PowerUPSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         if(permanentSkillSO.Full) return;
 
-        if(PlayerPrefs.GetInt(ConstStrings.PERMANENT_MONEY) >= 
+        if(PlayerPrefs.GetInt(ConstStrings.PERMANENT_MONEY_KEY) >= 
         SkillSOKeeper.Instance.GetPermanentSkillSOByCode(code, PlayerPrefs.GetInt(playerPrefLevelCode) + 1).Cost)
         {
             permanentSkillSO = SkillSOKeeper.Instance.GetPermanentSkillSOByCode(code, PlayerPrefs.GetInt(playerPrefLevelCode) + 1);
-            PlayerPrefs.SetInt(ConstStrings.PERMANENT_MONEY, PlayerPrefs.GetInt(ConstStrings.PERMANENT_MONEY) - permanentSkillSO.Cost);
+            PlayerPrefs.SetInt(ConstStrings.PERMANENT_MONEY_KEY, PlayerPrefs.GetInt(ConstStrings.PERMANENT_MONEY_KEY) - permanentSkillSO.Cost);
             PlayerPrefs.SetInt(playerPrefLevelCode, permanentSkillSO.Level);
             MainMenuManager.Instance.SetPermanentMoneyText();
         }

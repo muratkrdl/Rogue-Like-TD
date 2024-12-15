@@ -22,6 +22,6 @@ MonoBehaviour:
   ProjectileCount: 0
   Size: 4.2
   KnockbackAmount: 0
-  Description: Damage to area
+  Description: increases damage to 30 and size
   DamageType: 2
   NeededPasifeSkillSO: {fileID: 11400000, guid: c14ff5a38edb8b54f8577f58e1b0ea70, type: 2}

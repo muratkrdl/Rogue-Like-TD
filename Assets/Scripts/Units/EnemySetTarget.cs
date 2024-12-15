@@ -19,11 +19,6 @@ public class EnemySetTarget : MonoBehaviour
         get => currentDestPos;
     }
 
-    void Start() 
-    {
-        GetComponent<UnitStateController>().StartFunc(startUnitStateCode);
-    }
-
     public void SetCurrentTargetToMainTower()
     {
         ChangeCurrentTarget(GlobalUnitTargets.Instance.GetMainTower(), true);

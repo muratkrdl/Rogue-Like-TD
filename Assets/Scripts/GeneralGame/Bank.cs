@@ -8,6 +8,7 @@ public class Bank : MonoBehaviour
     public static Bank Instance;
 
     public EventHandler<BankEventArgs> OnChangeMoneyAmount;
+    public EventHandler<BankEventArgs> OnPermanentMoneyGained;
     public class BankEventArgs : EventArgs
     {
         public int amount;
@@ -19,6 +20,13 @@ public class Bank : MonoBehaviour
 
     int currentMoney;
 
+    int gainedPermanentMoney = 0;
+
+    public int GetGainedPermanentMoney
+    {
+        get => gainedPermanentMoney;
+    }
+
     void Awake()
     {
         Instance = this;
@@ -29,6 +37,12 @@ public class Bank : MonoBehaviour
         currentMoney = startMoney;
         bankUI.SetMoneyText(currentMoney);
         OnChangeMoneyAmount += Bank_OnChangeMoneyAmount;
+        OnPermanentMoneyGained += Bank_OnPermanentMoneyGained;
+    }
+
+    void Bank_OnPermanentMoneyGained(object sender, BankEventArgs e)
+    {
+        gainedPermanentMoney += e.amount;
     }
 
     void Bank_OnChangeMoneyAmount(object sender, BankEventArgs e)
@@ -49,6 +63,7 @@ public class Bank : MonoBehaviour
     void OnDestroy() 
     {
         OnChangeMoneyAmount -= Bank_OnChangeMoneyAmount;
+        OnPermanentMoneyGained -= Bank_OnPermanentMoneyGained;
     }
 
 }

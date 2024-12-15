@@ -10,21 +10,26 @@ public class OnTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.CompareTag(TagManager.TOWER))
-        {
-            other.GetComponent<SpriteRenderer>().color = transparentColor;
-        }
-        else if(other.CompareTag(TagManager.XPGEM))
+        if(other.CompareTag(TagManager.XPGEM))
         {
             ExperienceSystem.Instance.OnGetExperience?.Invoke(this, new() { name = other.name } );
             other.gameObject.SetActive(false);
+        }
+        else if(other.CompareTag(TagManager.TOWER))
+        {
+            other.GetComponent<SpriteRenderer>().color = transparentColor;
         }
         else if(other.CompareTag(TagManager.BOSS_TREASURE))
         {
             GameStateManager.Instance.PauseGame();
             other.GetComponent<Animator>().SetTrigger(ConstStrings.ANIM);
-            Invoke(nameof(InvokeBossTreasure), 0f);
-            // other.GetComponent<TreasureObject>().ResetTreasureObj();
+            Invoke(nameof(InvokeBossTreasure), 1.25f);
+            other.GetComponent<TreasureObject>().ResetTreasureObj();
+        }
+        else if(other.CompareTag(TagManager.FOOD))
+        {
+            GetComponent<PlayerHealth>().GainHP(25);
+            other.gameObject.SetActive(false);
         }
     }
 

@@ -11,6 +11,7 @@ TagManager:
   - xpGem
   - Barier
   - BossTreasure
+  - Food
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BrightShield : ActiveSkillBaseClass
 {
+    [SerializeField] BrightShieldDamager brightShieldDamager;
+
     public EventHandler<OnTakeDamageEventArgs> OnTakeDamage;
     public class OnTakeDamageEventArgs : EventArgs
     {
@@ -23,6 +25,17 @@ public class BrightShield : ActiveSkillBaseClass
         OnTakeDamage += BrightShield_OnTakeDamage;
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
+        SubInventoryCDEvent();
+    }
+
+    protected override void OnSkillUpdateFunc()
+    {
+        brightShieldDamager.SetDamageOnSpawn();
+    }
+
+    protected override void OnSkillGainedFunc()
+    {
+        brightShieldDamager.SetDamageOnSpawn();
     }
 
     void BrightShield_OnTakeDamage(object sender, OnTakeDamageEventArgs e)
@@ -58,6 +71,7 @@ public class BrightShield : ActiveSkillBaseClass
     {
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
+        UnSubInventoryCDEvent();
         OnTakeDamage -= BrightShield_OnTakeDamage;
     }
 

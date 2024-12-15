@@ -14,11 +14,9 @@ public class EnemyIdleState : IUnitState
 
     public void ExitState(UnitValues unitValues)
     {
-        
     }
 
     public void UpdateState(UnitValues unitValues)
     {
-
     }
 }

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Full: 1
   SkillIcon: {fileID: 21300000, guid: a14f6ec4cd0b891429fb55357b7c7f3d, type: 3}
-  SkillName: ExtraTowerHP
+  SkillName: FakeHeart
   Level: 3
   MaxLevel: 3
   Value: 45
   Cost: 120
-  Description: ExtraTowerHP
+  Description: Extra 45 HP for all tower

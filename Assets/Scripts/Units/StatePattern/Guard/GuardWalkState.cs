@@ -7,12 +7,10 @@ public class GuardWalkState : IUnitState
 {
     public void EnterState(UnitValues unitValues)
     {
-
     }
 
     public void ExitState(UnitValues unitValues)
     {
-    
     }
 
     public void UpdateState(UnitValues unitValues)
@@ -30,7 +28,7 @@ public class GuardWalkState : IUnitState
                 unitValues.GetGuardSetTarget().ChangeCurrentTarget(unitValues.TowerBasePosition);
                 unitValues.IsChasing = false;
             }
-            else if(distanceBetweenTarget <= unitValues.UnitSO.AttackRange + .15f)
+            else if(distanceBetweenTarget <= unitValues.UnitSO.AttackRange + .05f)
             {
                 unitValues.GetUnitMove().StopUnit(false);
                 unitValues.GetUnitStateController().ChangeState(new GuardAttackState());

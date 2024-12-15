@@ -22,7 +22,7 @@ public class ForEvolvedTowerProjectile : MonoBehaviour
 
     public void SpawnDamage()
     {
-        DamagerObjPool.Instance.GetDamagerObj(code).SetValues(projectile.GetCurrentDamage, projectile.GetDamageType, transform.position);
+        DamagerObjPool.Instance.GetDamagerObj(code).SetValues(projectile.GetDamage, projectile.GetDamageType, transform.position);
     }
 
 }

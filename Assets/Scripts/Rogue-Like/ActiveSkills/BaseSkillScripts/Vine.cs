@@ -19,6 +19,7 @@ public class Vine : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
+        SubInventoryCDEvent();
     }
 
     async UniTaskVoid UseSkill()
@@ -33,14 +34,29 @@ public class Vine : ActiveSkillBaseClass
         }
     }
 
+    protected override void OnSkillGainedFunc()
+    {
+        foreach(var item in vineSprites)
+        {
+            item.GetComponent<VineDamager>().SetDamageOnSpawn();
+        }
+    }
+
     protected override void OnSkillUpdateFunc()
     {
+        foreach(var item in vineSprites)
+        {
+            item.GetComponent<VineDamager>().SetDamageOnSpawn();
+        }
         vinePosAnimator.SetTrigger(GetCurrentProjectileAmount.ToString());
     }
 
     void Skill()
     {
         if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
+
+        StopAllCoroutines();
+        StartCoroutine(nameof(SkillCDSlider));
 
         vineRotateAnimator.SetTrigger(ConstStrings.ANIM);
     }
@@ -61,6 +77,7 @@ public class Vine : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
+        UnSubInventoryCDEvent();
         OnDestroy_CancelCTS();
     }
     

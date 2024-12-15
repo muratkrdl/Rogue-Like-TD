@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Full: 1
   SkillIcon: {fileID: 21300000, guid: e185566065ddf474195bcc44e2afd217, type: 3}
-  SkillName: ExtraHP
+  SkillName: RedHeart
   Level: 3
   MaxLevel: 3
   Value: 45
   Cost: 150
-  Description: ExtraHP
+  Description: Extra 45 HP for your main char

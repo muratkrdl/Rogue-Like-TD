@@ -65,13 +65,13 @@ public class UISkillButton : MonoBehaviour
                     InventorySystem.Instance.OnSkillEvolved?.Invoke(this, new() { Code = code } );
                     break;
                 case 30:
-                    Bank.Instance.OnChangeMoneyAmount?.Invoke(this, new () { amount = 200 } );
+                    Bank.Instance.OnChangeMoneyAmount?.Invoke(this, new () { amount = SkillSOKeeper.Instance.GetSkillFulledSO(0).Value } );
                     break;
                 case 31:
-                    GlobalUnitTargets.Instance.GetPlayerTarget().GetComponent<PlayerHealth>().GainHP(35);
+                    GlobalUnitTargets.Instance.GetPlayerTarget().GetComponent<PlayerHealth>().GainHP(SkillSOKeeper.Instance.GetSkillFulledSO(1).Value);
                     break;
                 case 32:
-                
+                    Bank.Instance.OnPermanentMoneyGained?.Invoke(this, new () { amount = SkillSOKeeper.Instance.GetSkillFulledSO(2).Value } );
                     break;
                 default:
                     break;

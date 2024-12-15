@@ -22,6 +22,6 @@ MonoBehaviour:
   ProjectileCount: 0
   Size: 0
   KnockbackAmount: 0
-  Description: Shoots a beam of light
+  Description: the light beam is always on
   DamageType: 2
   NeededPasifeSkillSO: {fileID: 11400000, guid: f29c059242af6db4cba52a8a7d0b8fe5, type: 2}

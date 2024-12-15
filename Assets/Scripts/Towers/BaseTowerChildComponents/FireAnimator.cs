@@ -20,13 +20,13 @@ public class FireAnimator : MonoBehaviour
             audioSource.Stop();
         }
 
-        GetComponent<Animator>().SetInteger(ConstStrings.TOWER_FIRE_ANIMATOR_HEALTH_PERCENT, (int)(percent * 100));
+        GetComponent<Animator>().SetFloat(ConstStrings.TOWER_FIRE_ANIMATOR_HEALTH_PERCENT, (percent * 100));
     }
 
     public void ResetFireAnimator()
     {
         SetOnFireFalse();
-        GetComponent<Animator>().SetInteger(ConstStrings.TOWER_FIRE_ANIMATOR_HEALTH_PERCENT, 100);
+        GetComponent<Animator>().SetFloat(ConstStrings.TOWER_FIRE_ANIMATOR_HEALTH_PERCENT, 100);
     }
 
     public void SetOnFireFalse()

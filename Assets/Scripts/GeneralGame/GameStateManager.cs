@@ -29,12 +29,14 @@ public class GameStateManager : MonoBehaviour
 
     public void PauseGame()
     {
+        if(GameOverMenu.Instance.IsGameOver) return;
         isGamePaused = true;
         OnPause?.Invoke(this, EventArgs.Empty);
     }
 
     public void ResumeGame()
     {
+        if(GameOverMenu.Instance.IsGameOver) return;
         isGamePaused = false;
         OnResume?.Invoke(this, EventArgs.Empty);
     }

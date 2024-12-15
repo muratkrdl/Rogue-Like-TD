@@ -1,10 +1,18 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryUIPanel : MonoBehaviour
 {
     public static InventoryUIPanel Instance;
+
+    public EventHandler<OnSetNewActiveSkillIconEventArgs> OnSetNewActiveSkillIcon;
+    public class OnSetNewActiveSkillIconEventArgs : EventArgs
+    {
+        public int _code;
+        public Image _slider;
+    }
 
     [SerializeField] Color evolvedPanelColor;
 
@@ -13,7 +21,7 @@ public class InventoryUIPanel : MonoBehaviour
 
     void Awake() 
     {
-        Instance = this;    
+        Instance = this;
     }
 
     public void SetNewPasifeSkillIcon(int code)
@@ -24,6 +32,7 @@ public class InventoryUIPanel : MonoBehaviour
     public void SetNewActiveSkillIcon(int code)
     {
         activeIcons[InventorySystem.Instance.GetHowManyActiveHave].ChangeSkillSprite(SkillSOKeeper.Instance.GetSkillSOByCode(code, 0).SkillIcon);
+        OnSetNewActiveSkillIcon?.Invoke(this, new() { _code = code, _slider = activeIcons[InventorySystem.Instance.GetHowManyActiveHave].GetSlider } );
     }
 
     public void SetSkillEvolved(int code)

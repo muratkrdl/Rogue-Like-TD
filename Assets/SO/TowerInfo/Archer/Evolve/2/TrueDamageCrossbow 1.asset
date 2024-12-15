@@ -26,4 +26,4 @@ MonoBehaviour:
   towerCost: 490
   sellPrice: 999
   Range: 7
-  Description: Shoots arrow to the closest enemy
+  Description: slower but real damage

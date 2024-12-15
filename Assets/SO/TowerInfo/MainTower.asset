@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b9f301155fbd344912f33d706ff910, type: 3}
   m_Name: MainTower
   m_EditorClassIdentifier: 
+  towercode: 0
   towerImageIcon: {fileID: 21300000, guid: a1f41c9231d53614b8d8cc9d10502b48, type: 3}
   towerIcon: {fileID: 21300000, guid: a1f41c9231d53614b8d8cc9d10502b48, type: 3}
   Name: Main Tower
   maxHealth: 250
   damageType: 0
   BaseDamageRange: {x: 0, y: 0}
+  TimeBetweenAttack: 0
+  attackDelay: 0
   DamageTypeColor: {r: 1, g: 1, b: 1, a: 1}
+  projectileCode: 0
   towerCost: 0
   sellPrice: 0
   Range: 0

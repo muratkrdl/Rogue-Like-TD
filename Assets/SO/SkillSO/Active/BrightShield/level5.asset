@@ -22,6 +22,6 @@ MonoBehaviour:
   ProjectileCount: 0
   Size: 0
   KnockbackAmount: 0
-  Description: Reflects incoming damage to the sender
+  Description: 2 hits
   DamageType: 3
   NeededPasifeSkillSO: {fileID: 11400000, guid: 9f437add030400446a2bdf1b5ccbb411, type: 2}

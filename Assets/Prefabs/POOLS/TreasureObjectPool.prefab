@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5539191125254774351
 Transform:
@@ -46,7 +46,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3420620883316688800
 Transform:
@@ -76,7 +76,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2519c8040de965e47b91536bb530627f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treasureObjectPrefabs:
-  - {fileID: 3199726144958379061, guid: bdeb72d537ffd244aa62f6c59af8c461, type: 3}
-  listsParent:
-  - {fileID: 5539191125254774351}
+  treasureObjectPrefabs: {fileID: 3199726144958379061, guid: bdeb72d537ffd244aa62f6c59af8c461, type: 3}
+  listsParent: {fileID: 5539191125254774351}

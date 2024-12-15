@@ -49,6 +49,7 @@ public class InventorySystem : MonoBehaviour
 
     void Invokestart()
     {
+        if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex != 1 ) return;
         LevelUpSkill(16);
     }
 
@@ -144,7 +145,7 @@ public class InventorySystem : MonoBehaviour
 
     bool EvolveableSkillSO(int code)
     {
-        if(!GetSkillSO(code).isEvolved && GetSkillSO(code).Level == 5 && ContainNeededPasifeSkillSO(code))
+        if(GetSkillSO(code).isEvolved && GetSkillSO(code).Level != 5 && ContainNeededPasifeSkillSO(code))
         {
             return true;
         }

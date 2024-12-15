@@ -1,4 +1,5 @@
 using System;
+using Cysharp.Threading.Tasks;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -24,9 +25,11 @@ public class InfoPanel : MonoBehaviour
     [SerializeField] TextMeshProUGUI heartText;
     [SerializeField] TextMeshProUGUI damageText;
 
-    [SerializeField] Image sellButton;
     [SerializeField] TextMeshProUGUI sellPriceText;
-    [SerializeField] Image getInOutButton;
+
+    [SerializeField] GameObject sellButton;
+    [SerializeField] GameObject getInOutButton;
+    [SerializeField] GameObject hpMainTowerButton;
 
     TowerInfoSo currentTowerInfoSO;
     TowerHealth currentTowerHealth;
@@ -85,8 +88,9 @@ public class InfoPanel : MonoBehaviour
         damageText.text = currentTowerInfoSO.BaseDamageRange.x.ToString() + "-" + currentTowerInfoSO.BaseDamageRange.y.ToString();
         damageText.color = currentTowerInfoSO.DamageTypeColor;
 
-        sellButton.gameObject.SetActive(!e.isMainTower);
-        getInOutButton.gameObject.SetActive(e.isMainTower);
+        sellButton.SetActive(!e.isMainTower);
+        getInOutButton.SetActive(e.isMainTower);
+        hpMainTowerButton.SetActive(e.isMainTower);
         sellPriceText.text = currentTowerInfoSO.sellPrice.ToString();
     }
 
@@ -105,8 +109,8 @@ public class InfoPanel : MonoBehaviour
 
     public void OnClick_InOut()
     {
-        if(GlobalUnitTargets.Instance.GetPlayerTarget().GetComponent<PlayerHealth>().GetIsDead) return;
-        MainTowerManager.Instance.OnInteractWithMainTower?.Invoke(this, EventArgs.Empty);
+        if(GlobalUnitTargets.Instance.GetPlayerTarget().GetComponent<PlayerHealth>().IsDead) return;
+        MainTowerManager.Instance.OnInteractWithMainTower?.Invoke(this, new() { state = MainTowerInOutStates.none } );
         GlobalUnitTargets.Instance.GetPlayerTarget().GetComponent<Animator>().SetTrigger(ConstStrings.UNIT_ANIMATOR_RESPAWN);
     }
 

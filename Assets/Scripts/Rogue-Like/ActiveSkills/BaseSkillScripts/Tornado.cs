@@ -12,6 +12,7 @@ public class Tornado : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
+        SubInventoryCDEvent();
     }
 
     async UniTaskVoid UseSkill()
@@ -21,7 +22,7 @@ public class Tornado : ActiveSkillBaseClass
         {
             await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill(), cancellationToken: GetCTS.Token);
             await UniTask.Delay(TimeSpan.FromSeconds(GetSkillCoolDown()));
-
+            
             Skill().Forget();
         }
     }
@@ -30,6 +31,9 @@ public class Tornado : ActiveSkillBaseClass
     {
         if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
 
+        StopAllCoroutines();
+        StartCoroutine(nameof(SkillCDSlider));
+
         for(int i = 0; i < GetCurrentProjectileAmount; i++)
         {
             await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
@@ -37,6 +41,7 @@ public class Tornado : ActiveSkillBaseClass
             await UniTask.WaitUntil(() => GlobalUnitTargets.Instance.CanPlayerUseSkill());
 
             var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(projectileCode);
+            projectile.GetComponent<TornadoDamager>().SetDamageOnSpawn();
             projectile.GetComponent<TornadoDamager>().ClearList();
             projectile.GetComponent<Animator>().SetTrigger(ConstStrings.ANIM);
             
@@ -61,6 +66,7 @@ public class Tornado : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain -= InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate -= InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
+        UnSubInventoryCDEvent();
         OnDestroy_CancelCTS();
     }
     

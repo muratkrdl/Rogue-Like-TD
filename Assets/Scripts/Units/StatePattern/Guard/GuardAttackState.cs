@@ -23,8 +23,8 @@ public class GuardAttackState : IUnitState
         if(!unitValues.GetGuardSetTarget().TowerEnemyKeeper.ItemInList(unitValues.GetGuardSetTarget().GetCurrentTarget) || 
         (unitValues.GetGuardSetTarget().GetCurrentTarget.TryGetComponent<UnitValues>(out var component) && component.IsDead))
         {
-            unitValues.GetGuardSetTarget().ChangeCurrentTarget(unitValues.TowerBasePosition);
             unitValues.IsChasing = false;
+            unitValues.GetGuardSetTarget().ChangeCurrentTarget(unitValues.TowerBasePosition);
             unitValues.GetUnitStateController().ChangeState(new GuardWalkState());
         }
     }

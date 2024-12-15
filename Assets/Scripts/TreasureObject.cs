@@ -21,6 +21,11 @@ public class TreasureObject : MonoBehaviour
 
     public void ResetTreasureObj()
     {
+        Invoke(nameof(InvokeResetTreasureObj), 1.24f);
+    }
+
+    void InvokeResetTreasureObj()
+    {
         myAnimator.SetTrigger(ConstStrings.RESET);
         transform.position = new(111,111);
         isAwailable = true;

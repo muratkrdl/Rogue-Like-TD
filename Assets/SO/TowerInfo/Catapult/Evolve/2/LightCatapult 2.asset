@@ -26,4 +26,4 @@ MonoBehaviour:
   towerCost: 840
   sellPrice: 1600
   Range: 6.35
-  Description: Throws stones to the closest enemy
+  Description: area damage and stuns enemy

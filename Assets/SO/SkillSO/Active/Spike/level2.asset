@@ -22,6 +22,6 @@ MonoBehaviour:
   ProjectileCount: 1
   Size: 1.5
   KnockbackAmount: 0
-  Description: Pulls spikes out of the ground
+  Description: increases damage to 16
   DamageType: 1
   NeededPasifeSkillSO: {fileID: 11400000, guid: bcfe8ae6638ebf742a44727ad234ae24, type: 2}

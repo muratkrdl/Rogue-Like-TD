@@ -26,4 +26,4 @@ MonoBehaviour:
   towerCost: 1150
   sellPrice: 2450
   Range: 6.75
-  Description: Guard to Towers, each third strike will be blocked
+  Description: Guard do not take physical damage

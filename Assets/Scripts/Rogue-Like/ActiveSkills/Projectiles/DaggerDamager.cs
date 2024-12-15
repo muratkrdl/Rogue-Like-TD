@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class DaggerDamager : SkillProjectileDamagerBaseClass
 {
-
+    protected override void OnDamageFunc()
+    {
+        Damage = Damage/100*90;
+    }
 }

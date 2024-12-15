@@ -14,6 +14,7 @@ public class Spikes : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved += InventorySystem_OnSkillEvolved;
+        SubInventoryCDEvent();
     }
 
     async UniTaskVoid UseSkill()
@@ -33,8 +34,12 @@ public class Spikes : ActiveSkillBaseClass
     {
         if(!GlobalUnitTargets.Instance.CanPlayerUseSkill()) return;
 
+        StopAllCoroutines();
+        StartCoroutine(nameof(SkillCDSlider));
+
         var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(4);
         projectile.GetComponent<Animator>().SetTrigger(animName);
+        projectile.GetComponent<SpikeDamager>().SetDamageOnSpawn();
         projectile.transform.position = playerEnemyKeeper.GetClosestEnemy().position;
         projectile.transform.localScale = GetCurrentScale;
     }
@@ -49,6 +54,7 @@ public class Spikes : ActiveSkillBaseClass
         InventorySystem.Instance.OnNewSkillGain += InventorySystem_OnNewSkillGain;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnSkillUpdate;
         InventorySystem.Instance.OnSkillEvolved -= InventorySystem_OnSkillEvolved;
+        UnSubInventoryCDEvent();
         OnDestroy_CancelCTS();
     }
     
