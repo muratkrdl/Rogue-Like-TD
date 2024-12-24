@@ -122,7 +122,7 @@ public class InventorySystem : MonoBehaviour
             }
             else
             {
-                if((GetSkillSO(i).Level != 0 && GetSkillSO(i).Level != 5) || (i >= 10 && EvolveableSkillSO(code)))
+                if(GetSkillSO(i).Level != 0 && GetSkillSO(i).Level != 5) //  || (i >= 10 && EvolveableSkillSO(code))
                 {
                     a++;
                 }
@@ -132,7 +132,7 @@ public class InventorySystem : MonoBehaviour
         return a;
     }
 
-    public bool IsSkillSOFullLevel(int code, bool isBoss)
+    public bool IsSkillSOFullLevel(int code)
     {
         if(code >= 20) return true;
         if(GetSkillSO(code).Level != 5)
@@ -143,17 +143,17 @@ public class InventorySystem : MonoBehaviour
         return true;
     }
 
-    bool EvolveableSkillSO(int code)
-    {
-        if(GetSkillSO(code).isEvolved && GetSkillSO(code).Level != 5 && ContainNeededPasifeSkillSO(code))
-        {
-            return true;
-        }
+    // bool EvolveableSkillSO(int code)
+    // {
+    //     if(!GetSkillSO(code).isEvolved && GetSkillSO(code).Level == 5 && ContainNeededPasifeSkillSO(code))
+    //     {
+    //         return true;
+    //     }
+// 
+    //     return false;
+    // }
 
-        return false;
-    }
-
-    bool ContainNeededPasifeSkillSO(int code)
+    public bool ContainNeededPasifeSkillSO(int code)
     {
         if(skillSOs.Contains(GetSkillSO(code).NeededPasifeSkillSO))
             return true;

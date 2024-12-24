@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class TowerUnitAttack : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSource;
+
     [SerializeField] TowerUnitValues towerUnitValues;
 
     TowerInfoKeeper towerInfoKeeper;
@@ -28,6 +30,7 @@ public class TowerUnitAttack : MonoBehaviour
             await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
             await UniTask.Delay(TimeSpan.FromSeconds(towerInfoKeeper.GetCurrentTowerInfo.attackDelay * .0833f), cancellationToken: cts.Token);
             AttackFunc();
+            audioSource.Play();
 
             if(!towerUnitValues.IsAttacking || towerInfoKeeper.GetCurrentTowerCode == -1) break;
             

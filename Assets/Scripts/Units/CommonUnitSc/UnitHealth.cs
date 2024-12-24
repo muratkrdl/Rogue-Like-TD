@@ -80,13 +80,15 @@ public class UnitHealth : MonoBehaviour, IDamageable
         }
     }
 
-    public void TakeDamageFromPlayer(float amount, DamageType damageType, int damageColorCode)
+    public void TakeDamageFromPlayer(float amount, DamageType damageType, int damageColorCode, Vector2 direction, float force)
     {
+        unitValues.GetRigidbody2D().AddForce(direction * force);
         amount = SetNewDamageFromPlayer(amount, damageType, InventorySystem.Instance.GetSkillSO(4).Value, InventorySystem.Instance.GetSkillSO(5).Value);
         amount *= (100 + InventorySystem.Instance.GetSkillSO(7).Value + PermanentSkillSystem.Instance.GetPermanentSkillSO(1).Value) / 100 ;
         SetHP(amount, damageType);
         InventorySystem.Instance.OnDamageWithActiveSkills?.Invoke(this, new() { damage = amount } );
         unitValues.GetUnitFlashFX().FlashFX(.125f, damageColorCode).Forget();
+        SoundManager.Instance.PlaySound2DVolume(ConstStrings.HIT, .35f);
     }
 
     float SetNewDamage(float amount, DamageType damageType)

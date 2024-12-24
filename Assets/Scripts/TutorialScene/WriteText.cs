@@ -70,9 +70,12 @@ public class WriteText : MonoBehaviour
 			{
 				mGanText.text = mGanText.text.Substring(0, mGanText.text.Length - leadingChar.Length);
 			}
-            // SFX
+
 			mGanText.text += c;
 			mGanText.text += leadingChar;
+
+            if(mGanText.text.Length %3 == 1)
+                SoundManager.Instance.PlaySound2D(ConstStrings.TEXTWRITE);
 			await UniTask.Delay(TimeSpan.FromSeconds(timeBetweenChars));
         }
 

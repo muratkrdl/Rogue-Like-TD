@@ -56,6 +56,8 @@ public class PlaceTower : MonoBehaviour
             GetComponentInChildren<EvolvedBuildAnim>().PlayBuildAnim();
         }
 
+        SoundManager.Instance.PlaySound2DVolume(ConstStrings.TOWERLEVELUP, .7f);
+
         clickedTowersAnimator.ResetTrigger(ConstStrings.RESET);
 
         clickedTowersAnimator.SetTrigger(choosenAnimName);

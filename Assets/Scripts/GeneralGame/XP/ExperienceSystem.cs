@@ -61,6 +61,7 @@ public class ExperienceSystem : MonoBehaviour
     public void SetRandomUISkillButtons(bool isBoss)
     {
         LevelUpPanel.Instance.SetRandomUISkillButtons(isBoss);
+        SoundManager.Instance.PlaySound2D(ConstStrings.LEVELUP);
     }
 
     void OnDestroy() 

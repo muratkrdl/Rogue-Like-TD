@@ -24,11 +24,13 @@ public class EvolvedBuildAnim : MonoBehaviour
     public void PlayBuildAnim()
     {
         GetComponent<Animator>().SetTrigger(ConstStrings.ANIM);
+        SoundManager.Instance.PlaySound2D(ConstStrings.TOWERLEVELUPEVOLVE);
     }
 
     public void PlayDestroyAnim()
     {
         GetComponent<Animator>().SetTrigger(ConstStrings.BUILD_TOWER_ANIM_DESTROY);
+        SoundManager.Instance.PlaySound2DVolume(ConstStrings.TOWERDESTROY, .55f);
     }
 
 }

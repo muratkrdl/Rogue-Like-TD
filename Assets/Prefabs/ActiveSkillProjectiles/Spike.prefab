@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98fd93eb8fafadb49ad4dc8ecc8a9d39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageType: 1
   extraRot: 0
+  spriteRenderer: {fileID: 353245570673702008}
 --- !u!114 &239483954962756299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,3 +210,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   originTransform: {fileID: 666677501744383429}
   skillCode: 17
+  damageColorCode: 0

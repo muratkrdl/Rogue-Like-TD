@@ -7,15 +7,15 @@ public class TowerHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] FireAnimator fireAnimator;
 
-    float maxHealth = 0;
-    float currenthealth = 0;
+    int maxHealth = 0;
+    int currenthealth = 0;
 
     public float GetCurrentHealth
     {
         get => currenthealth;
     }
 
-    public void SetTowerHealth(float amount)
+    public void SetTowerHealth(int amount)
     {
         currenthealth += amount - maxHealth;
         maxHealth = amount;
@@ -26,11 +26,11 @@ public class TowerHealth : MonoBehaviour, IDamageable
     {
         if(currenthealth <= 0) return;
 
-        currenthealth -= amount;
+        currenthealth -= (int)amount;
         if(currenthealth > maxHealth)
             currenthealth = maxHealth;
 
-        float returnHealth = (int)currenthealth;
+        float returnHealth = currenthealth;
 
         bool isMainTower;
         TowerInfoSo so;

@@ -13,4 +13,10 @@ public class BrightShieldDamager : SkillProjectileDamagerBaseClass
     {
         GlobalUnitTargets.Instance.GetPlayerTarget().GetComponent<PlayerHealth>().SetHP(-2, DamageType.truedamage);
     }
+
+    public void ExplosionSFX()
+    {
+        SoundManager.Instance.PlaySound2D(ConstStrings.BRIGHTSHIELDEXPLOSION);
+    }
+
 }

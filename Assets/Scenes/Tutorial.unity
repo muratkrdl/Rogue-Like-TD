@@ -17020,7 +17020,7 @@ MonoBehaviour:
   mganAnimator: {fileID: 1472068953}
   mGanText: {fileID: 133326495}
   buttonText: {fileID: 1361980162}
-  writeMGanTextSO: {fileID: 11400000, guid: de6e45794c593994880db93926c741da, type: 2}
+  writeMGanTextSO: {fileID: 11400000, guid: d1cbb81f6b787dc40b4c347d540c3d8d, type: 2}
   delayBeforeStart: 0.4
   timeBetweenChars: 0.02
   leadingChar: 

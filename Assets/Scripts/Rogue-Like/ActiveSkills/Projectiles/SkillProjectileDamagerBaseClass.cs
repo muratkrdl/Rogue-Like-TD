@@ -30,8 +30,8 @@ public abstract class SkillProjectileDamagerBaseClass : MonoBehaviour
     {
         if(other.transform.CompareTag(TagManager.ENEMY) && !IsContain(other) && !GameStateManager.Instance.GetIsGamePaused)
         {
-            other.transform.GetComponent<UnitHealth>().TakeDamageFromPlayer(damage, InventorySystem.Instance.GetSkillSO(skillCode).DamageType, damageColorCode);
-            other.transform.GetComponent<Rigidbody2D>().AddForce((other.transform.position - originTransform.position).normalized * InventorySystem.Instance.GetSkillSO(skillCode).KnockbackAmount);
+            other.transform.GetComponent<UnitHealth>().TakeDamageFromPlayer(damage, InventorySystem.Instance.GetSkillSO(skillCode).DamageType, damageColorCode,
+            (other.transform.position - originTransform.position).normalized, InventorySystem.Instance.GetSkillSO(skillCode).KnockbackAmount);
             unitHealths.Add(other);
             OnDamageFunc();
 

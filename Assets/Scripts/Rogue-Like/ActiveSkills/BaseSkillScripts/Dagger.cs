@@ -42,6 +42,8 @@ public class Dagger : ActiveSkillBaseClass
 
             var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(projectileCode);
             
+            SoundManager.Instance.PlaySound2D(ConstStrings.DAGGER);
+
             Vector2 newLookPos;
             if(GetComponentInParent<GetInputs>().GetMoveInput == Vector2.zero)
             {

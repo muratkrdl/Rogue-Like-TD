@@ -68,6 +68,11 @@ public class LevelUpTower : MonoBehaviour
         if(towerInfoKeeper.GetCurrentTowerCode > 3)
         {
             evolvedBuildAnim.PlayBuildAnim();
+            SoundManager.Instance.PlaySound2DVolume(ConstStrings.TOWERLEVELUPEVOLVE, .75f);
+        }
+        else
+        {
+            SoundManager.Instance.PlaySound2DVolume(ConstStrings.TOWERLEVELUP, .7f);
         }
 
         animator.SetTrigger(ConstStrings.ANIM);

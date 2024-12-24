@@ -14,6 +14,7 @@ public class OnTrigger : MonoBehaviour
         {
             ExperienceSystem.Instance.OnGetExperience?.Invoke(this, new() { name = other.name } );
             other.gameObject.SetActive(false);
+            SoundManager.Instance.PlaySound2DVolume(ConstStrings.EXPERIENCE, .65f);
         }
         else if(other.CompareTag(TagManager.TOWER))
         {
@@ -23,6 +24,7 @@ public class OnTrigger : MonoBehaviour
         {
             GameStateManager.Instance.PauseGame();
             other.GetComponent<Animator>().SetTrigger(ConstStrings.ANIM);
+            SoundManager.Instance.PlaySound2D(ConstStrings.TREASUREOPEN);
             Invoke(nameof(InvokeBossTreasure), 1.25f);
             other.GetComponent<TreasureObject>().ResetTreasureObj();
         }
@@ -30,6 +32,7 @@ public class OnTrigger : MonoBehaviour
         {
             GetComponent<PlayerHealth>().GainHP(25);
             other.gameObject.SetActive(false);
+            SoundManager.Instance.PlaySound2D(ConstStrings.FOOD);
         }
     }
 

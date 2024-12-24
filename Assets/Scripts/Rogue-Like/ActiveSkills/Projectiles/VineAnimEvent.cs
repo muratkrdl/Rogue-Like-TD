@@ -13,4 +13,9 @@ public class VineAnimEvent : MonoBehaviour
             item.ClearList();
         }
     }
+
+    public void PlaySFX()
+    {
+        SoundManager.Instance.PlaySound2D(ConstStrings.VINE);
+    }
 }

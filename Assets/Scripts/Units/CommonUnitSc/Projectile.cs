@@ -96,7 +96,7 @@ public class Projectile : MonoBehaviour
                 damageable = false;
                 if(target.TryGetComponent<IDamageable>(out var component))
                 {
-                    component.SetHP((int) damage, damageType);
+                    component.SetHP(damage, damageType);
                 }
                 VFX();
             }

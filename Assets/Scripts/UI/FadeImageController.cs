@@ -21,9 +21,14 @@ public class FadeImageController : MonoBehaviour
             myAnimator.SetTrigger(ConstStrings.RESET);
     }
 
-    public void AnimEvent_PlaySFX(AnimationEvent animationEvent)
+    public void AnimEvent_CloseSFX()
     {
-        // soundmanager.play(animationevent.stringparameter);
+        SoundManager.Instance.PlaySound2DVolume(ConstStrings.FADEPANELCLOSE, .5f);
+    }
+
+    public void AnimEvent_OpenSFX()
+    {
+        SoundManager.Instance.PlaySound2DVolume(ConstStrings.FADEPANELOPEN, .85f);
     }
 
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class HandleMovement : MonoBehaviour
@@ -16,7 +17,6 @@ public class HandleMovement : MonoBehaviour
     {
         initialMoveSpeed = moveSpeed;
         InventorySystem.Instance.OnSkillUpdate += InventorySystem_OnPasifeUpdate;
-        
     }
 
     void InventorySystem_OnPasifeUpdate(object sender, InventorySystem.OnSkillUpdateEventArgs e)
@@ -35,6 +35,11 @@ public class HandleMovement : MonoBehaviour
     void FixedUpdate()
     {
         myRigidbody.MovePosition(myRigidbody.position + Time.fixedDeltaTime * moveSpeed * getInputs.GetMoveInput);
+    }
+
+    public void PlayStepSFX()
+    {
+        SoundManager.Instance.PlaySound2DVolume(ConstStrings.STEPS, .225f);
     }
 
     void OnDestroy() 

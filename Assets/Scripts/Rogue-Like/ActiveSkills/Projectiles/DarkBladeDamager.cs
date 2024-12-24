@@ -21,4 +21,8 @@ public class DarkBladeDamager : SkillProjectileDamagerBaseClass
         GlobalUnitTargets.Instance.GetPlayerTarget().GetComponent<PlayerHealth>().SetHP(-1, DamageType.truedamage);
     }
 
+    public void PlaySFX()
+    {
+        SoundManager.Instance.PlaySound2D(ConstStrings.DARKBLADE);
+    }
 }

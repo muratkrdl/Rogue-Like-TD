@@ -7,6 +7,8 @@ using UnityEngine.AI;
 
 public class UnitValues : MonoBehaviour
 {
+    [SerializeField] Rigidbody2D unitRigidBody;
+
     [SerializeField] UnitSO unitSO;
     [SerializeField] Transform projectileOutPos;
 
@@ -44,19 +46,16 @@ public class UnitValues : MonoBehaviour
     {
         get => initialMoveSpeed;
     }
-
     public Vector2 PlusDamageRange
     {
         get => plusDamageRange;
         set => plusDamageRange = value;
     }
-
     public Transform TowerBasePosition
     {
         get => towerBasePosition;
         set => towerBasePosition = value;
     }
-
     public UnitSO UnitSO
     {
         get => unitSO;
@@ -127,6 +126,11 @@ public class UnitValues : MonoBehaviour
         get => hasLongRange;
     }
 
+    public Rigidbody2D GetRigidbody2D()
+    {
+        unitRigidBody.velocity = Vector2.zero;
+        return unitRigidBody;
+    }
     public NavMeshAgent GetNavMeshAgent()
     {
         return navMeshAgent;
@@ -170,12 +174,6 @@ public class UnitValues : MonoBehaviour
 
         GameStateManager.Instance.OnPause += GameStateManager_OnPause;
         GameStateManager.Instance.OnResume += GameStateManager_OnResume;
-    }
-
-    void OnDestroy() 
-    {
-        GameStateManager.Instance.OnPause -= GameStateManager_OnPause;
-        GameStateManager.Instance.OnResume -= GameStateManager_OnResume;
     }
 
     void GameStateManager_OnPause(object sender, EventArgs e)
@@ -235,6 +233,17 @@ public class UnitValues : MonoBehaviour
         await UniTask.Delay(TimeSpan.FromSeconds(stunTime));
         speedChanged = false;
         SetUnitSpeedBaseValue();
+    }
+
+    public void PlaySFX()
+    {
+        GetComponent<AudioSource>().Play();
+    }
+
+    void OnDestroy() 
+    {
+        GameStateManager.Instance.OnPause -= GameStateManager_OnPause;
+        GameStateManager.Instance.OnResume -= GameStateManager_OnResume;
     }
 
 }

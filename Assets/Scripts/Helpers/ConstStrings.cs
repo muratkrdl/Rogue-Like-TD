@@ -8,7 +8,6 @@ public class ConstStrings
     public const string UNIT_ANIMATOR_DEATH = "Death";
     public const string UNIT_ANIMATOR_RESPAWN = "Respawn";
     public const string UNIT_ANIMATOR_ATTACK = "Attack";
-    public const string UNIT_ANIMATOR_SPECIAL = "Special";
     public const string PLACE_TOWER_ANIMATOR_ISIN = "IsIn";
     public const string ANIM = "Anim";
     public const string ANIM1 = "Anim1";
@@ -41,4 +40,28 @@ public class ConstStrings
     public const string PERMANENT_EXTRA_TOWER_HP_LEVEL_KEY = "PermanentExtraTowerHPLevel";
     
     public const string HAS_GOT_PD_KEY = "HasGotPD";
+
+    public const string BOF = "BOF";
+    public const string BRIGHTSHIELDEXPLOSION = "BrightShieldExplosion";
+    public const string DAGGER = "Dagger";
+    public const string DARKAURA = "DarkAura";
+    public const string DARKBLADE = "DarkBlade";
+    public const string FIREBALL = "FireBall";
+    public const string SPIKE = "Spike";
+    public const string VINE = "Vine";
+    public const string FADEPANELCLOSE = "FadePanelClose";
+    public const string FADEPANELOPEN = "FadePanelOpen";
+    public const string HIT = "Hit";
+    public const string TEXTWRITE = "TextWrite";
+    public const string TREASUREOPEN = "TreasureOpen";
+    public const string LEVELUP = "LevelUp";
+    public const string FOOD = "Food";
+    public const string EXPERIENCE = "Experience";
+    public const string LIGHTNING = "Lightning";
+    public const string TOWERLEVELUP = "TowerLevelUp";
+    public const string TOWERLEVELUPEVOLVE = "TowerLevelUpEvolve";
+    public const string TOWERDESTROY = "TowerDestroy";
+    public const string BUTTONCLICK = "ButtonClick";
+    public const string BUTTONSHOW = "ButtonShow";
+    public const string STEPS = "Steps";
 }

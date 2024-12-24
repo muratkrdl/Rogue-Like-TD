@@ -46,7 +46,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -189,5 +189,86 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundEffects:
-  - groupID: 
-    clips: []
+  - groupID: BOF
+    clips:
+    - {fileID: 8300000, guid: c6a8718b10660c8438fb045788dbd7d3, type: 3}
+  - groupID: BrightShieldExplosion
+    clips:
+    - {fileID: 8300000, guid: d67e925a07e36564198bf70471c4b2ce, type: 3}
+  - groupID: Dagger
+    clips:
+    - {fileID: 8300000, guid: 7b13f3fa214e59142a394ab8308823d9, type: 3}
+    - {fileID: 8300000, guid: 5ec69f6e9faca8948808be7611297c8f, type: 3}
+    - {fileID: 8300000, guid: 0e7a77a0990baee46be82870f9e49ecb, type: 3}
+    - {fileID: 8300000, guid: bd644f66841b74743ba234e09ea948cf, type: 3}
+  - groupID: DarkAura
+    clips:
+    - {fileID: 8300000, guid: b4d3b376b141a084083e063ee66b3ccb, type: 3}
+    - {fileID: 8300000, guid: f53cdb84aaa4a3b4b91721e42941c3b4, type: 3}
+  - groupID: DarkBlade
+    clips:
+    - {fileID: 8300000, guid: f39c9962167b61145989864bf9b1600a, type: 3}
+  - groupID: FireBall
+    clips:
+    - {fileID: 8300000, guid: 3fc46410a0c8c17439320545d2a0c345, type: 3}
+    - {fileID: 8300000, guid: ca0cb1830b3cf924fa918fa9c2a33a68, type: 3}
+    - {fileID: 8300000, guid: d976d8e6f61e2404aa9de10b41c1b793, type: 3}
+  - groupID: Spike
+    clips:
+    - {fileID: 8300000, guid: 50c9650be90490b4686b80a8823c748d, type: 3}
+    - {fileID: 8300000, guid: 914217cc81a0efe48a3d920fc09c4cb1, type: 3}
+    - {fileID: 8300000, guid: db4bfb5cf4c4c3d449864eb9ad06a029, type: 3}
+  - groupID: Vine
+    clips:
+    - {fileID: 8300000, guid: fcf59127592d5c94ca2fb3d2a553eb4c, type: 3}
+  - groupID: FadePanelClose
+    clips:
+    - {fileID: 8300000, guid: 7991a44ab3023d043866a55fdca22c83, type: 3}
+    - {fileID: 8300000, guid: fcec9e716470e054ba6195ae0cab7377, type: 3}
+  - groupID: FadePanelOpen
+    clips:
+    - {fileID: 8300000, guid: f9052701eea23f74eaba824f97593694, type: 3}
+  - groupID: Hit
+    clips:
+    - {fileID: 8300000, guid: af7a04f6c6116554db540320a90564e5, type: 3}
+  - groupID: TextWrite
+    clips:
+    - {fileID: 8300000, guid: 8fece058be6ee8847b0448fb0bb6e698, type: 3}
+    - {fileID: 8300000, guid: c2e38df3b4bee664aa6bf22973d8df87, type: 3}
+  - groupID: TreasureOpen
+    clips:
+    - {fileID: 8300000, guid: 03476833d35691f4ca0b877c7986409e, type: 3}
+  - groupID: LevelUp
+    clips:
+    - {fileID: 8300000, guid: 4c1acaa413aed1442bced68a64e5f94a, type: 3}
+  - groupID: Food
+    clips:
+    - {fileID: 8300000, guid: e8c4e5edb6242aa42ad76b4557342224, type: 3}
+  - groupID: Experience
+    clips:
+    - {fileID: 8300000, guid: 093406046bd04cb43bedfaf199e17c90, type: 3}
+  - groupID: Lightning
+    clips:
+    - {fileID: 8300000, guid: cd7c2c49c0035094d8d3a1a7d1b9e77a, type: 3}
+  - groupID: ButtonClick
+    clips:
+    - {fileID: 8300000, guid: debb0c7731d4e2e4ea9d4952a0432fa9, type: 3}
+  - groupID: TowerLevelUp
+    clips:
+    - {fileID: 8300000, guid: 249b6461d56700a4aacb06eb9359149a, type: 3}
+    - {fileID: 8300000, guid: 107c74f2fdf28ed4bb971a7f1dff5b80, type: 3}
+  - groupID: ButtonShow
+    clips:
+    - {fileID: 8300000, guid: cdde62ee90d863f4a94ab76468623901, type: 3}
+  - groupID: TowerLevelUpEvolve
+    clips:
+    - {fileID: 8300000, guid: 46124175ae7a92b47b9a26e3e760ea92, type: 3}
+  - groupID: TowerDestroy
+    clips:
+    - {fileID: 8300000, guid: 80aed8fa78820954384ceec44167005c, type: 3}
+  - groupID: Steps
+    clips:
+    - {fileID: 8300000, guid: d8f9b419dc4cfdc47a410e54331e22bc, type: 3}
+    - {fileID: 8300000, guid: d94a994b8766f894d9db12c460d626c6, type: 3}
+    - {fileID: 8300000, guid: 88a6e31fdc4466f44a62f2c0635c86fc, type: 3}
+    - {fileID: 8300000, guid: 7e45b4124d1031c479b8f537e78b9e25, type: 3}

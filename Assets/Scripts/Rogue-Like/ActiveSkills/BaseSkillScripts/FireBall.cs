@@ -46,6 +46,8 @@ public class FireBall : ActiveSkillBaseClass
 
             var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(projectileCode);
             
+            SoundManager.Instance.PlaySound2D(ConstStrings.FIREBALL);
+
             Vector2 extraForce = Vector2.zero;
             Vector2 newLookPos;
             

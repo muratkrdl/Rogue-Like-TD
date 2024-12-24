@@ -6,6 +6,8 @@ public class ActiveProjectile : MonoBehaviour
 {
     [SerializeField] float extraRot;
 
+    [SerializeField] SpriteRenderer spriteRenderer;
+
     Vector2 lookPos;
 
     bool isWaiting = false;
@@ -23,7 +25,8 @@ public class ActiveProjectile : MonoBehaviour
 
     public void SetMoveableProjectile(Vector2 direction, Vector3 pos, bool hasLookAt)
     {
-        GetComponent<SpriteRenderer>().enabled = true;
+        spriteRenderer.enabled = true;
+        GetComponent<BoxCollider2D>().enabled = true;
         isWaiting = false;
         transform.position = pos;
         if(GetComponentInChildren<TrailRenderer>() != null)
@@ -62,13 +65,14 @@ public class ActiveProjectile : MonoBehaviour
 
     public void SetFalseIsWaiting()
     {
-        GetComponent<SpriteRenderer>().enabled = true;
+        spriteRenderer.enabled = true;
         isWaiting = false;
     }
 
     public void AnimEvent_SetTrueIsWaiting()
     {
-        GetComponent<SpriteRenderer>().enabled = false;
+        spriteRenderer.enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
         isWaiting = true;
     }
 

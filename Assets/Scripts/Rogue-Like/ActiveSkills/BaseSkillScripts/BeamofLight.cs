@@ -51,6 +51,8 @@ public class BeamofLight : ActiveSkillBaseClass
 
         var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(projectileCode);
 
+        SoundManager.Instance.PlaySound2D(ConstStrings.BOF);
+
         projectile.SetMoveableProjectile(currentGoPoses[posCounter], transform.position, true);
         projectile.GetComponent<Animator>().SetTrigger(ConstStrings.ANIM);
         projectile.GetComponent<SkillProjectileDamagerBaseClass>().SetDamageOnSpawn();

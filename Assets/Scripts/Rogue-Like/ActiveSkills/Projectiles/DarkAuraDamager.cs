@@ -12,4 +12,9 @@ public class DarkAuraDamager : SkillProjectileDamagerBaseClass
             towerInfoKeeper.SetExtraDamageFromDarkAura(1.25f);
         }
     }
+
+    public void PlaySFX()
+    {
+        SoundManager.Instance.PlaySound2D(ConstStrings.DARKAURA);
+    }
 }

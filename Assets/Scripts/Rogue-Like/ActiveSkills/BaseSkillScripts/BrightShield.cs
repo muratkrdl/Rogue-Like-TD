@@ -6,6 +6,8 @@ public class BrightShield : ActiveSkillBaseClass
 {
     [SerializeField] BrightShieldDamager brightShieldDamager;
 
+    [SerializeField] AudioSource loopSFX;
+
     public EventHandler<OnTakeDamageEventArgs> OnTakeDamage;
     public class OnTakeDamageEventArgs : EventArgs
     {
@@ -46,15 +48,17 @@ public class BrightShield : ActiveSkillBaseClass
         {
             currentDamageCounter++;
 
-            if(currentDamageCounter >= InventorySystem.Instance.GetSkillSO(GetSkillCode).Value *2)
+            if(currentDamageCounter >= InventorySystem.Instance.GetSkillSO(GetSkillCode).Value)
             {
                 if(myAnimator.GetComponent<SpriteRenderer>().sprite == null)
                 {
                     myAnimator.SetTrigger(ConstStrings.ANIM);
                     GetComponentInParent<PlayerHealth>().SetCanTakeDamage(false);
+                    loopSFX.Play();
                 }
                 else
                 {
+                    loopSFX.Stop();
                     myAnimator.SetTrigger(ConstStrings.ACTIVE_SKILLS_FINISH);
                     currentDamageCounter = 0;
                 }

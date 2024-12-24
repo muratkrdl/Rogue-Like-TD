@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1306264243341417751, guid: ff1c7e1d8e2bae245932d006b94f3400, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306264243341417751, guid: ff1c7e1d8e2bae245932d006b94f3400, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306264243341417751, guid: ff1c7e1d8e2bae245932d006b94f3400, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306264243341417751, guid: ff1c7e1d8e2bae245932d006b94f3400, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -48,9 +60,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1306264243341417751, guid: ff1c7e1d8e2bae245932d006b94f3400, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2448353002223360759, guid: ff1c7e1d8e2bae245932d006b94f3400, type: 3}
       propertyPath: m_Name
       value: Archer_Evolved_1_level_1_Projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226885183185095682, guid: ff1c7e1d8e2bae245932d006b94f3400, type: 3}
+      propertyPath: moveSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5571349680065491530, guid: ff1c7e1d8e2bae245932d006b94f3400, type: 3}
       propertyPath: m_Controller
@@ -97,3 +117,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 3642067875040211983}
+  code: 0

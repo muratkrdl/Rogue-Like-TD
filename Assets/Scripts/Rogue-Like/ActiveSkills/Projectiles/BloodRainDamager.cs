@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BloodRainDamager : SkillProjectileDamagerBaseClass
 {
+    [SerializeField] AudioSource audioSource;
+
     protected override void OnTriggerEnter2D(Collider2D other)
     {
         base.OnTriggerEnter2D(other);
@@ -11,5 +13,15 @@ public class BloodRainDamager : SkillProjectileDamagerBaseClass
         {
             towerInfoKeeper.SetExtraAttackSpeedFromBloodRain(.2f);
         }
+    }
+
+    public void PlaySFX()
+    {
+        audioSource.Play();
+    }
+
+    public void StopSFX()
+    {
+        audioSource.Stop();
     }
 }

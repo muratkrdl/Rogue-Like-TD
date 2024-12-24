@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   extraRot: -45
+  spriteRenderer: {fileID: 7559655200858343255}
 --- !u!114 &8294179122439461001
 MonoBehaviour:
   m_ObjectHideFlags: 0

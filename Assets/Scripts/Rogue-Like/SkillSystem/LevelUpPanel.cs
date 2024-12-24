@@ -22,61 +22,65 @@ public class LevelUpPanel : MonoBehaviour
 
     public void SetRandomUISkillButtons(bool isBoss)
     {
-        Vector2 randomRange = new(0, 9.1f);
+        Vector2Int randomRange = new(0, 9);
 
         if((Random.Range(0,2) % 2) == 0 || isBoss)
         {
             randomRange = new(10,20);
         }
 
+        int hmsa = InventorySystem.Instance.HowManySlotAvailableByCode(Random.Range(randomRange.x, randomRange.y));
+
         for(int i = 0; i < UISkillButtons.Length; i++)
         {
             UISkillButtons[i].ResetUIButton();
             
-            if(i+1 > InventorySystem.Instance.HowManySlotAvailableByCode((int)Random.Range(randomRange.x, randomRange.y)))
+            if(i+1 > hmsa)
             {
-                if(InventorySystem.Instance.HowManySlotAvailableByCode((int)Random.Range(randomRange.x, randomRange.y)) == 0)
+                if(hmsa == 0)
                 {
                     UISkillButtons[i].SetValues(SkillSOKeeper.Instance.GetSkillFulledSO(i), normalColor);
                 }
                 continue;
             }
 
+            SkillSO choosedSkillSO;
+            Color useColor;
+
+            Debug.Log(hmsa);
+
             while(true)
             {
-                SkillSO choosedSkillSO;
                 SkillSO evolveableSkillSO = EvolveableSkillSO();
-                Color useColor;
 
-                if(evolveableSkillSO != null && isBoss && HasDifferent(UISkillButtons[i], evolveableSkillSO.code))
+                if(isBoss && evolveableSkillSO != null && HasDifferent(UISkillButtons[i], evolveableSkillSO.code))
                 {
                     choosedSkillSO = evolveableSkillSO;
                     useColor = evolveColor;
+                    UISkillButtons[i].SetValues(choosedSkillSO, useColor);
+                    break;
                 }
                 else
                 {
                     while(true)
                     {
-                        int code = (int)Random.Range(randomRange.x, randomRange.y);
-                        if(!InventorySystem.Instance.IsSkillSOFullLevel(code, isBoss))
+                        int code = Random.Range(randomRange.x, randomRange.y +1);
+                        if(!InventorySystem.Instance.IsSkillSOFullLevel(code))
                         {
                             choosedSkillSO = SkillSOKeeper.Instance.GetSkillSOByCode(code, InventorySystem.Instance.GetSkillSO(code).Level);
                             useColor = normalColor;
-                            break;
+                            if(HasDifferent(UISkillButtons[i], choosedSkillSO.code))
+                            {
+                                UISkillButtons[i].SetValues(choosedSkillSO, useColor);
+                                break;
+                            }
                         }
                     }
                 }
 
-                UISkillButtons[i].SetValues(choosedSkillSO, useColor);
-
-                if(HasDifferent(UISkillButtons[i], choosedSkillSO.code))
-                {
-                    if(isBoss && choosedSkillSO.code >= 20)
-                        break;
-                    else if((InventorySystem.Instance.GetHowManySkillHaveByCode(choosedSkillSO.code) == 5 && InventorySystem.Instance.GetableSkillSOCode(choosedSkillSO.code)) || 
-                    ((InventorySystem.Instance.GetHowManySkillHaveByCode(choosedSkillSO.code) < 5) && !InventorySystem.Instance.GetableSkillSOCode(choosedSkillSO.code)))
-                        break;
-                }
+                if((hmsa <= 5 && InventorySystem.Instance.GetableSkillSOCode(choosedSkillSO.code)) ||
+                ((hmsa > 5) && !InventorySystem.Instance.GetableSkillSOCode(choosedSkillSO.code)))
+                    break;
             }
         }
 
@@ -86,13 +90,13 @@ public class LevelUpPanel : MonoBehaviour
     SkillSO EvolveableSkillSO()
     {
         List<SkillSO> canEvolveSkills = new();
-        for (int i = 10; i < 20; i++)
+        for(int i = 10; i < 20; i++)
         {
             if(InventorySystem.Instance.GetSkillSO(i).isEvolved) continue;
 
-            if(HaveEvolveSkill(InventorySystem.Instance.GetSkillSO(i).NeededPasifeSkillSO) && InventorySystem.Instance.GetSkillSO(i).Level == 5)
+            if(InventorySystem.Instance.ContainNeededPasifeSkillSO(i) && InventorySystem.Instance.GetSkillSO(i).Level == 5)
             {
-                canEvolveSkills.Add(SkillSOKeeper.Instance.GetEvolvedSkillSOByCode(i-10)); 
+                canEvolveSkills.Add(SkillSOKeeper.Instance.GetEvolvedSkillSOByCode(i-10));
             }
         }
 

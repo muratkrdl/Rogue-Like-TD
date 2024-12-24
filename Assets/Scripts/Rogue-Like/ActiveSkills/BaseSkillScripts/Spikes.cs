@@ -38,6 +38,9 @@ public class Spikes : ActiveSkillBaseClass
         StartCoroutine(nameof(SkillCDSlider));
 
         var projectile = ActiveSkillProjectileObjectPool.Instance.GetProjectile(4);
+
+        SoundManager.Instance.PlaySound2D(ConstStrings.SPIKE);
+
         projectile.GetComponent<Animator>().SetTrigger(animName);
         projectile.GetComponent<SpikeDamager>().SetDamageOnSpawn();
         projectile.transform.position = playerEnemyKeeper.GetClosestEnemy().position;
