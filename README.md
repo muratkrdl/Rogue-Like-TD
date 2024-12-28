@@ -28,7 +28,17 @@
 
 ### To enter the main tower, your character must be close to the main tower and you must click this button
 
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20buttonn.png" width="auto">
+
 ### After entering the main tower, you can manage all towerplacements
+
+## Outside Tower
+
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20out.png" width="auto">
+
+## Inside Tower
+
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20inside.png" width="auto">
 
 
 ## Placetower mechanics
