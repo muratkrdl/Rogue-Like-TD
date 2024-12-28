@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,10 +37,8 @@ public class DamagerObjPool : MonoBehaviour
     {
         foreach(var item in GetDamagerObjList(code))
         {
-            if(!item.IsAvailable)
-            {
+            if(item.IsAvailable)
                 return item;
-            }
         }
 
         DamageForEvolvedTowerProjectile damagerObj = Instantiate(GetDamagerObjPrefab(code), transform.position, Quaternion.identity, 

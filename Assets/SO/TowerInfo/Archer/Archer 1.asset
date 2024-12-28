@@ -23,7 +23,7 @@ MonoBehaviour:
   attackDelay: 5
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 0
-  towerCost: 65
+  towerCost: 75
   sellPrice: 40
   Range: 5.25
   Description: Shoots arrow to the closest enemy

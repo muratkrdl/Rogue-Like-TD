@@ -23,7 +23,7 @@ MonoBehaviour:
   attackDelay: 0
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 0
-  towerCost: 1150
-  sellPrice: 2450
+  towerCost: 1250
+  sellPrice: 2550
   Range: 6.75
   Description: Guard do not take magic damage

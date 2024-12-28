@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FirstEnemyDied : MonoBehaviour
 {
+    [SerializeField] GameObject xpPanel;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class FirstEnemyDied : MonoBehaviour
     {
         if(WriteText.Instance.GetMGanTextSO.name == 36.ToString())
         {
+            xpPanel.SetActive(true);
             PlayableDirectorManager.Instance.PlayNextTimeLine();
         }
     }

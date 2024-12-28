@@ -37,22 +37,15 @@ public abstract class DamageForEvolvedTowerProjectile : MonoBehaviour
         isAvailable = false;
         transform.position = _pos;
         GetComponent<Animator>().SetTrigger(ConstStrings.ANIM);
-    }
-
-    void InvokeFunc()
-    {
-        isAvailable = true;
         Invoke(nameof(InkFunc), 1);
+        OnSpawn();
     }
 
     void InkFunc()
     {
+        isAvailable = true;
         transform.position = new(99,99);
-    }
-
-    void Update() 
-    {
-        Debug.DrawLine(transform.position, GetComponent<BoxCollider2D>().size, Color.red);    
+        GetComponent<AudioSource>().Stop();
     }
 
     void OnTriggerEnter2D(Collider2D other) 
@@ -61,11 +54,11 @@ public abstract class DamageForEvolvedTowerProjectile : MonoBehaviour
         {
             gameObjects.Add(other.gameObject);
             other.GetComponent<UnitHealth>().SetHP(damage, damageType);
-            InvokeFunc();
             OnTriggerFunc(other);
         }
     }
 
+    protected virtual void OnSpawn() { /* */ }
     protected virtual void OnTriggerFunc(Collider2D collider2D) { /* */ }
 
 }

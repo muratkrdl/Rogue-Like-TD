@@ -17,6 +17,6 @@ MonoBehaviour:
   canInteract: 0
   text: every time an enemy dies, there is a small chance that it will give you a
     PD
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 4379ed182d082cb4f839dd707410dea9, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

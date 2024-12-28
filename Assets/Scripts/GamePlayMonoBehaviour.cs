@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public abstract class GamePlayMonoBehaviour : MonoBehaviour
 {
@@ -19,12 +16,12 @@ public abstract class GamePlayMonoBehaviour : MonoBehaviour
         GameStateManager.Instance.OnResume += GameStateManager_OnResume;
     }
 
-    public void GameStateManager_OnPause(object sender, EventArgs e)
+    void GameStateManager_OnPause(object sender, EventArgs e)
     {
         PostPause();
     }
 
-    public void GameStateManager_OnResume(object sender, EventArgs e)
+    void GameStateManager_OnResume(object sender, EventArgs e)
     {
         PostResume();
     }

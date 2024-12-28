@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -54,13 +53,7 @@ public class ActiveSkillProjectileObjectPool : MonoBehaviour
         foreach (var item in GetProjectileList(code))
         {
             if(item.IsWaiting)
-            {
                 return item;
-            }
-            else
-            {
-                continue;
-            }
         }
 
         ActiveProjectile projectile = Instantiate(GetProjectilePrefab(code), transform.position, Quaternion.identity, 

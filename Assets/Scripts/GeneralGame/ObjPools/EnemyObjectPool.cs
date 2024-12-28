@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -73,13 +71,7 @@ public class EnemyObjectPool : MonoBehaviour
         foreach (var item in GetEnemyList(code))
         {
             if(item.IsWaiting)
-            {
                 return item;
-            }
-            else
-            {
-                continue;
-            }
         }
 
         UnitValues enemy = Instantiate(GetEnemyPrefab(code), transform.position, Quaternion.identity, 

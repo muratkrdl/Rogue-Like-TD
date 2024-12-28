@@ -22,4 +22,9 @@ public class GuardSetTarget : MonoBehaviour
         currentTarget = changeTransform;
     }
 
+    public void PlaySFX()
+    {
+        GetComponent<AudioSource>().Play();
+    }
+
 }

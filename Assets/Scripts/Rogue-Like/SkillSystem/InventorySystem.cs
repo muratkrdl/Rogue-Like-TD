@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -122,7 +121,7 @@ public class InventorySystem : MonoBehaviour
             }
             else
             {
-                if(GetSkillSO(i).Level != 0 && GetSkillSO(i).Level != 5) //  || (i >= 10 && EvolveableSkillSO(code))
+                if(GetSkillSO(i).Level != 0 && GetSkillSO(i).Level != 5)
                 {
                     a++;
                 }
@@ -142,16 +141,6 @@ public class InventorySystem : MonoBehaviour
 
         return true;
     }
-
-    // bool EvolveableSkillSO(int code)
-    // {
-    //     if(!GetSkillSO(code).isEvolved && GetSkillSO(code).Level == 5 && ContainNeededPasifeSkillSO(code))
-    //     {
-    //         return true;
-    //     }
-// 
-    //     return false;
-    // }
 
     public bool ContainNeededPasifeSkillSO(int code)
     {

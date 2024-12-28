@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loop: 1
   play: 0
-  text: this is your main tower
-  buttonName: Okey
+  canInteract: 0
+  text: this is y-y-your main tower
+  buttonName: okey
   nextText: {fileID: 11400000, guid: ca2fee48f74c44c42a3d3677a85cff4c, type: 2}
   playTimeLine: {fileID: 11400000, guid: 559305c2a445919498399053771803f6, type: 2}

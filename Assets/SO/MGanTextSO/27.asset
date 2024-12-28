@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 0
   play: 1
   canInteract: 0
-  text: my employer wants you to discover these features yourself
-  buttonName: Okey
+  text: my e-e-employer wants you to discover these features yourself
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 41446f2dd9ede4d4b96a2befae37fa40, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

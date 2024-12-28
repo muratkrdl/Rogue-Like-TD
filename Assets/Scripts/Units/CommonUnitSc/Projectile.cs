@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Transactions;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
@@ -119,7 +120,13 @@ public class Projectile : MonoBehaviour
         target = null;
         vfxAnimator.SetTrigger(ConstStrings.RESET);
         GetComponent<SpriteRenderer>().enabled = false;
+        Invoke(nameof(InvokeForPos), 1.25f);
+    }
+
+    void InvokeForPos()
+    {
         isAvailable = true;
+        transform.position = new(111,11);
     }
 
     public void ResetTrialRenderer()

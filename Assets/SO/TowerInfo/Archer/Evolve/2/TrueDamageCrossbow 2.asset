@@ -23,7 +23,7 @@ MonoBehaviour:
   attackDelay: 2
   DamageTypeColor: {r: 1, g: 1, b: 1, a: 1}
   projectileCode: 11
-  towerCost: 630
-  sellPrice: 1475
+  towerCost: 780
+  sellPrice: 1500
   Range: 7.35
   Description: slower but real damage

@@ -39,7 +39,7 @@ public class UnitValues : MonoBehaviour
     bool isAttacking = false;
     bool isDead = false;
     bool isGoingToRight;
-    bool isWaiting;
+    bool isWaiting = true;
     bool speedChanged = false;
 
     public float GetInitialMoveSpeed

@@ -1,7 +1,5 @@
 using System;
-using System.Threading;
 using Cysharp.Threading.Tasks;
-using UnityEditor.U2D.Animation;
 using UnityEngine;
 
 public class BeamofLight : ActiveSkillBaseClass

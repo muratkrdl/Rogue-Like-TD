@@ -272,3 +272,12 @@ MonoBehaviour:
     - {fileID: 8300000, guid: d94a994b8766f894d9db12c460d626c6, type: 3}
     - {fileID: 8300000, guid: 88a6e31fdc4466f44a62f2c0635c86fc, type: 3}
     - {fileID: 8300000, guid: 7e45b4124d1031c479b8f537e78b9e25, type: 3}
+  - groupID: MainTowerHP
+    clips:
+    - {fileID: 8300000, guid: db12be43cb30b8440886801824df5113, type: 3}
+  - groupID: MainCharHit
+    clips:
+    - {fileID: 8300000, guid: e8ac9fd746489d142bee023e162d953c, type: 3}
+  - groupID: MainCharDie
+    clips:
+    - {fileID: 8300000, guid: 9d38e0a3ebba01b4fb6c95598543628a, type: 3}

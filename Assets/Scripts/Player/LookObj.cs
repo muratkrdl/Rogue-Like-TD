@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LookObj : MonoBehaviour
@@ -9,8 +7,6 @@ public class LookObj : MonoBehaviour
     [SerializeField] float Range;
 
     MainMenuButton currentlyMainMenuButton;
-
-    bool canInteract = true;
 
     void Update() 
     {
@@ -26,7 +22,7 @@ public class LookObj : MonoBehaviour
         
         transform.localPosition = Vector2.zero + direciton * Range;
 
-        if(Input.GetKeyDown(KeyCode.E) && canInteract && currentlyMainMenuButton != null)
+        if(Input.GetKeyDown(KeyCode.E) && currentlyMainMenuButton != null)
         {
             currentlyMainMenuButton.InteractWithButton();
         }

@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 1
   play: 0
   canInteract: 1
-  text: now click this tower placement
-  buttonName: Okey
+  text: now c-c-click this tower placement
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 3cee8a38fc0c4a146b80b48c53e1f5cc, type: 2}
   playTimeLine: {fileID: 11400000, guid: 9edf8be0d40d22b488666687108c4561, type: 2}

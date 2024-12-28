@@ -286,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 3496043465962892490}
   brightShield: {fileID: 3320732366099721543}
-  respawnTimer: 5
+  respawnTimer: 10
 --- !u!114 &8157255417228814744
 MonoBehaviour:
   m_ObjectHideFlags: 0

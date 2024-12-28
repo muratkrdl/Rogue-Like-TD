@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loop: 0
   play: 1
-  text: my e-e-e-employer assigned me to teach you t-t-the game.
-  buttonName: Okey
+  canInteract: 0
+  text: my e-e-e-employer assigned me to teach you t-t-the game
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 9e490eb40d72bc341adae1eccb021158, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

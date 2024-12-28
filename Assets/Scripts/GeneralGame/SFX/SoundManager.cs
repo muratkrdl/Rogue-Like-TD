@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -32,17 +30,4 @@ public class SoundManager : MonoBehaviour
         sfx2DSource.PlayOneShot(sfxLibrary.GetClipFromName(clipName), volumeScale);
     }
 
-    public void PlaySound3D(string clipName, Vector3 pos)
-    {
-        PlaySound3D(sfxLibrary.GetClipFromName(clipName), pos);
-    }
-
-    void PlaySound3D(AudioClip clip, Vector3 pos)
-    {
-        if (clip != null)
-        {
-            AudioSource.PlayClipAtPoint(clip, pos);
-        }
-    }
-    
 }

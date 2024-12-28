@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 0
   play: 1
   canInteract: 0
-  text: oh I almost forgot, even if you dont see it in the interface
-  buttonName: Okey
+  text: oh I almost forgot, even if you dont see it in the i-i-interface
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 94d63745106b3944997febbb03a91d00, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

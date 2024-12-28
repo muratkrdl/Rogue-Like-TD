@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loop: 0
   play: 1
-  text: you can move your main character using the wasd key
-  buttonName: Okey
+  canInteract: 0
+  text: you can move your main character using the wasd k-k-keys
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 06d5286f09b9aa643a9e5ebb3bb64b48, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

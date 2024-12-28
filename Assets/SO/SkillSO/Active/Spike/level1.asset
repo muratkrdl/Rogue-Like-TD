@@ -18,7 +18,7 @@ MonoBehaviour:
   SkillName: Spike
   Level: 1
   Value: 8
-  CooldDown: 5
+  CooldDown: 5.25
   ProjectileCount: 1
   Size: 1.5
   KnockbackAmount: 0

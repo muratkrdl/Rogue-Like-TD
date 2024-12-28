@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 1
   canInteract: 0
   text: this is description of tower
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: decc0573681154d4ca087247615ae103, type: 2}
   playTimeLine: {fileID: 11400000, guid: e960385150cf0d7479ae50a0e98f07c4, type: 2}

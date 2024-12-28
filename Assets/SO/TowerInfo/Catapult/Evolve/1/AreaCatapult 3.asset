@@ -23,7 +23,7 @@ MonoBehaviour:
   attackDelay: 5
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 15
-  towerCost: 1300
-  sellPrice: 2450
+  towerCost: 1400
+  sellPrice: 2500
   Range: 6.7
   Description: Deals area damage and more damage

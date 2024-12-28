@@ -17,6 +17,6 @@ MonoBehaviour:
   canInteract: 0
   text: the left panel shows how you can combine active and passive abilities and
     evolve your abilities
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 65d9a89ed0208fc44b82fd5d27097db0, type: 2}
   playTimeLine: {fileID: 11400000, guid: baef2d4fe98a8e54ea4eda3a5898f60d, type: 2}

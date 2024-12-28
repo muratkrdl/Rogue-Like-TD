@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 1
   play: 1
   canInteract: 1
-  text: click this button
-  buttonName: Okey
+  text: click this b-b-button
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 41fb0f2e3c75677489905a0ca62f93b3, type: 2}
   playTimeLine: {fileID: 11400000, guid: d435e7ffdc2b9b34aac7c73c7d38af49, type: 2}

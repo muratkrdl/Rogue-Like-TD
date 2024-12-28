@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 0
   canInteract: 1
   text: now click one more time tower and get level up for your tower
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 16544d192b4a878408885371a404488d, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

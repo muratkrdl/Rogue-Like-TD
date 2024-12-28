@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 1
   play: 1
   canInteract: 0
-  text: and this number are towers damage
-  buttonName: Okey
+  text: and this number a-a-are towers damage
+  buttonName: okey
   nextText: {fileID: 11400000, guid: de6e45794c593994880db93926c741da, type: 2}
   playTimeLine: {fileID: 11400000, guid: 982a2e54f24c72049bb36e90a6ba1a9b, type: 2}

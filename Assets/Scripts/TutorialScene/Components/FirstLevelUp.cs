@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class FirstLevelUp : MonoBehaviour
 {
+    [SerializeField] GameObject itemsPanel;
+
     void Start()
     {
         WriteText.Instance.OnClickOkey += OnClickOkey;
@@ -15,6 +17,7 @@ public class FirstLevelUp : MonoBehaviour
     {
         if(WriteText.Instance.GetMGanTextSO.name == 40.ToString())
         {
+            itemsPanel.SetActive(true);
             PlayableDirectorManager.Instance.PlayNextTimeLine();
             Invoke(nameof(Delay), .01f);
         }

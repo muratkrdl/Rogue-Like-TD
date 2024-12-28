@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 0
   play: 1
   canInteract: 1
-  text: now click the button and build your first tower
-  buttonName: Okey
+  text: now click the button and build your f-f-first tower
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 0042956df45e858469a760ceccda6c8a, type: 2}
   playTimeLine: {fileID: 11400000, guid: 982a2e54f24c72049bb36e90a6ba1a9b, type: 2}

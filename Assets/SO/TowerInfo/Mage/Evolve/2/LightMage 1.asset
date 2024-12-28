@@ -23,7 +23,7 @@ MonoBehaviour:
   attackDelay: 23
   DamageTypeColor: {r: 0.47058824, g: 0, b: 1, a: 1}
   projectileCode: 22
-  towerCost: 635
-  sellPrice: 1120
+  towerCost: 700
+  sellPrice: 1200
   Range: 6.25
   Description: area damage and lightning

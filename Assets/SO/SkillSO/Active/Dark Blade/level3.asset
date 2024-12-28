@@ -21,7 +21,7 @@ MonoBehaviour:
   CooldDown: 7
   ProjectileCount: 0
   Size: 2.8
-  KnockbackAmount: 200
+  KnockbackAmount: 130
   Description: increases damage to 36 and size
   DamageType: 1
   NeededPasifeSkillSO: {fileID: 11400000, guid: 2ba591d5dd142214697fb773d7ffd007, type: 2}

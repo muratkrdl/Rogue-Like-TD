@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,9 +31,7 @@ public class TreasureObjectPool : MonoBehaviour
         foreach(var item in GetTreasureObjList())
         {
             if(!item.GetIsAvaliable)
-            {
                 return item;
-            }
         }
 
         TreasureObject treasureObj = Instantiate(GetTreasureObjPrefab(), transform.position, Quaternion.identity, 

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loop: 0
   play: 1
-  text: you can build tower to protect main tower
-  buttonName: Okey
+  canInteract: 0
+  text: you c-c-can build tower to protect m-m-main tower
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 617e3ece0dc22444eb5a429d9f05b98f, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

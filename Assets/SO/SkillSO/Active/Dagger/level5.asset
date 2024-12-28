@@ -17,11 +17,11 @@ MonoBehaviour:
   SkillIcon: {fileID: 21300000, guid: db0715c9acde03a4782c704c1318ddb5, type: 3}
   SkillName: Dagger
   Level: 5
-  Value: 35
-  CooldDown: 3
+  Value: 30
+  CooldDown: 4
   ProjectileCount: 3
   Size: 0
-  KnockbackAmount: 30
+  KnockbackAmount: 23
   Description: increases damage to 35
   DamageType: 1
   NeededPasifeSkillSO: {fileID: 11400000, guid: 99e00ee7e76eb9e4f9edf5a2e0b72d73, type: 2}

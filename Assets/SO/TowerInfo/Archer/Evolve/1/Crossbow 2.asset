@@ -23,7 +23,7 @@ MonoBehaviour:
   attackDelay: 2
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 8
-  towerCost: 630
-  sellPrice: 1475
+  towerCost: 780
+  sellPrice: 1500
   Range: 7.85
   Description: faster and more damage

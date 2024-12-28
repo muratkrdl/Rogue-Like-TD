@@ -57,11 +57,13 @@ public class ConstStrings
     public const string LEVELUP = "LevelUp";
     public const string FOOD = "Food";
     public const string EXPERIENCE = "Experience";
-    public const string LIGHTNING = "Lightning";
     public const string TOWERLEVELUP = "TowerLevelUp";
     public const string TOWERLEVELUPEVOLVE = "TowerLevelUpEvolve";
     public const string TOWERDESTROY = "TowerDestroy";
     public const string BUTTONCLICK = "ButtonClick";
     public const string BUTTONSHOW = "ButtonShow";
     public const string STEPS = "Steps";
+    public const string MAINTOWERHP = "MainTowerHP";
+    public const string MAINCHARHIT = "MainCharHit";
+    public const string MAINCHARDIE = "MainCharDie";
 }

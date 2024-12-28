@@ -23,7 +23,7 @@ MonoBehaviour:
   attackDelay: 2
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 4
-  towerCost: 135
-  sellPrice: 115
+  towerCost: 150
+  sellPrice: 125
   Range: 4.75
   Description: Throws stones to the closest enemy

@@ -15,8 +15,8 @@ MonoBehaviour:
   loop: 0
   play: 1
   canInteract: 0
-  text: my employer wants me to give you the final tips and let you discover the
-    rest
-  buttonName: Okey
+  text: my employer wants me to give you the final tips and let you d-d-discover
+    the rest
+  buttonName: okey
   nextText: {fileID: 11400000, guid: b4bb291bcc21c0241ba5bba3faacd8e0, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

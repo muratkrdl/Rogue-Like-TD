@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 0
   canInteract: 0
   text: there is an enemy
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: ce101823850cbd94a80cb94f106dc2b2, type: 2}
   playTimeLine: {fileID: 11400000, guid: 32a48b6b660657644bb2a3df339e98fa, type: 2}

@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using TMPro;
@@ -36,10 +34,6 @@ public class GameTimer : MonoBehaviour
     {
         StartGameTimer().Forget();
     }
-    public void OnClick_StopTimer()
-    {
-        cts.Cancel();
-    }
 
     async UniTaskVoid StartGameTimer()
     {
@@ -73,6 +67,11 @@ public class GameTimer : MonoBehaviour
     void UpdateTimerUI()
     {
         timerText.text = currentMinute.ToString() + ":" + currentSecond.ToString("00");
+    }
+
+    void OnDestroy() 
+    {
+        cts.Cancel();
     }
 
 }

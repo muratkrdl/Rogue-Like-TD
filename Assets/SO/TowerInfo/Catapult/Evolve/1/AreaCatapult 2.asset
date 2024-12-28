@@ -23,7 +23,7 @@ MonoBehaviour:
   attackDelay: 5
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 14
-  towerCost: 840
-  sellPrice: 1600
+  towerCost: 1125
+  sellPrice: 1700
   Range: 6.35
   Description: Deals area damage and more damage

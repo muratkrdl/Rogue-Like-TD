@@ -7,6 +7,8 @@ public class FinishTutorial : MonoBehaviour
 
     [SerializeField] GameObject startButton;
 
+    [SerializeField] GameObject[] closeThisObj;
+
     void Awake() 
     {
         Instance = this;    
@@ -25,6 +27,13 @@ public class FinishTutorial : MonoBehaviour
             int returnMoney = 0;
             if(PlayerPrefs.GetInt(ConstStrings.HAS_GOT_PD_KEY) == 0) returnMoney = 50;
             GameOverMenu.Instance.EndTutorial(returnMoney);
+        }
+        else if(WriteText.Instance.GetMGanTextSO.name == 48.ToString())
+        {
+            foreach(var item in closeThisObj)
+            {
+                item.SetActive(false);
+            }
         }
 
         if(WriteText.Instance.GetMGanTextSO.name == 31.ToString())

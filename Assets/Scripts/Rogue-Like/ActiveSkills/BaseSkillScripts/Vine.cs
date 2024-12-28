@@ -58,6 +58,7 @@ public class Vine : ActiveSkillBaseClass
         StopAllCoroutines();
         StartCoroutine(nameof(SkillCDSlider));
 
+        vinePosAnimator.SetTrigger(GetCurrentProjectileAmount.ToString());
         vineRotateAnimator.SetTrigger(ConstStrings.ANIM);
     }
 

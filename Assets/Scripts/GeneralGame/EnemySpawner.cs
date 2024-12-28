@@ -106,8 +106,8 @@ public class EnemySpawner : MonoBehaviour
             while(spawnedPhysicalEnemy < GameTimer.Instance.GetCurrentMinute + 1)
             {
                 spawnedPhysicalEnemy++;
-                await UniTask.Delay(TimeSpan.FromSeconds(.1f));
-                await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
+                await UniTask.Delay(TimeSpan.FromSeconds(.1f), cancellationToken: cts.Token);
+                await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
                 SpawnNewEnemy(currentEnemyPhysicalIndex[spawnPhysicalIndex], false, 0);
                 spawnPhysicalIndex++;
                 if(spawnPhysicalIndex > 2)

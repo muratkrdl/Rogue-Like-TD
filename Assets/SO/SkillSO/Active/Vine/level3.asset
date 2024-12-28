@@ -21,7 +21,7 @@ MonoBehaviour:
   CooldDown: 7
   ProjectileCount: 3
   Size: 1
-  KnockbackAmount: 70
+  KnockbackAmount: 50
   Description: increases damage to 27 and 1 more vine
   DamageType: 1
   NeededPasifeSkillSO: {fileID: 11400000, guid: b509014001e5ae449a761cd36f59bedc, type: 2}

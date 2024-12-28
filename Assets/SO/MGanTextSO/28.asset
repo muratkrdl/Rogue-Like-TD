@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 0
   play: 1
   canInteract: 0
-  text: so Im not responsible for showing you these features
-  buttonName: Okey
+  text: so Im not r-r-responsible for showing you these features
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 0d28a670263d49542907e81281a3c0d7, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

@@ -15,8 +15,8 @@ MonoBehaviour:
   loop: 0
   play: 1
   canInteract: 0
-  text: you can use the PDs you earn to buy permanent powerups using the powerups
+  text: you can u-u-use the PDs you earn to buy permanent powerups using the powerups
     panel from the main menu
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 7bcb7d2ec8098044387cb33f456acab9, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

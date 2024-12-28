@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loop: 0
   play: 1
-  text: your mission is protect this tower
-  buttonName: Okey
+  canInteract: 0
+  text: your mission is protect t-t-this tower
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 17b937d5917690746b5c4d866e2a36ac, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

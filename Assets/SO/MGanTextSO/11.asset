@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 1
   play: 0
   canInteract: 0
-  text: press this button to enter the castle
-  buttonName: Okey
+  text: c-c-click this button to enter the castle
+  buttonName: okey
   nextText: {fileID: 11400000, guid: c89c3bd69badd0543b3713011fb6d95b, type: 2}
   playTimeLine: {fileID: 11400000, guid: f9b1f304aab3ca44fb4bb214bd205f68, type: 2}

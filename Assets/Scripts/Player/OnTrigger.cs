@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OnTrigger : MonoBehaviour
@@ -22,9 +19,10 @@ public class OnTrigger : MonoBehaviour
         }
         else if(other.CompareTag(TagManager.BOSS_TREASURE))
         {
+            if(GameStateManager.Instance.GetIsGamePaused) return;
             GameStateManager.Instance.PauseGame();
             other.GetComponent<Animator>().SetTrigger(ConstStrings.ANIM);
-            SoundManager.Instance.PlaySound2D(ConstStrings.TREASUREOPEN);
+            SoundManager.Instance.PlaySound2DVolume(ConstStrings.TREASUREOPEN, 1.25f);
             Invoke(nameof(InvokeBossTreasure), 1.25f);
             other.GetComponent<TreasureObject>().ResetTreasureObj();
         }

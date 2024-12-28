@@ -23,7 +23,7 @@ MonoBehaviour:
   attackDelay: 0
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 0
-  towerCost: 750
-  sellPrice: 1700
+  towerCost: 880
+  sellPrice: 1800
   Range: 6.5
   Description: Guard do not take physical damage

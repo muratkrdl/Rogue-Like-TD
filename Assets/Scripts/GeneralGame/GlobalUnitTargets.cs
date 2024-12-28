@@ -1,8 +1,5 @@
 using System;
-using System.Threading;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GlobalUnitTargets : MonoBehaviour
 {
@@ -80,48 +77,48 @@ public class GlobalUnitTargets : MonoBehaviour
                 }
             }
 
-            if(unitValues.IsChasing ||!canEnemyAttackTower) return;
-            
-            foreach(var item in GetTowersPos())
-            {
-                if(item.GetComponent<TowerInfoKeeper>().GetCurrentTowerCode == -1) continue;
+            //if(unitValues.IsChasing ||!canEnemyAttackTower) return;
+            //
+            //foreach(var item in GetTowersPos())
+            //{
+            //    if(item.GetComponent<TowerInfoKeeper>().GetCurrentTowerCode == -1) continue;
 
-                if(unitValues.IsGoingToRight && (unit.position.x - item.position.x > 0 || item.position.x > 0)) continue;
-                else if(!unitValues.IsGoingToRight && (unit.position.x - item.position.x < 0 || item.position.x < 0)) continue;
+            //    if(unitValues.IsGoingToRight && (unit.position.x - item.position.x > 0 || item.position.x > 0)) continue;
+            //    else if(!unitValues.IsGoingToRight && (unit.position.x - item.position.x < 0 || item.position.x < 0)) continue;
 
-                if(Mathf.Abs(Vector2.Distance(unit.position, item.position)) <= unitValues.UnitSO.AttackRange + 3.5f)
-                {
-                    Transform setTarget;
-                    bool isTower = true;
+            //    if(Mathf.Abs(Vector2.Distance(unit.position, item.position)) <= unitValues.UnitSO.AttackRange + 3.5f)
+            //    {
+            //        Transform setTarget;
+            //        bool isTower = true;
 
-                    if(Mathf.Abs(Vector2.Distance(unit.position, mainTower.position)) < Mathf.Abs(Vector2.Distance(unit.position, item.position)))
-                    {
-                        setTarget = mainTower;
-                    }
-                    else
-                    {
-                        setTarget = item;
-                        if(setTarget.TryGetComponent<TowerInfoKeeper>(out var infoKeeper))
-                        {
-                            if(infoKeeper.GetCurrentTowerCode == 2 || 
-                            infoKeeper.GetCurrentTowerCode == 8 || 
-                            infoKeeper.GetCurrentTowerCode == 9)
-                            {
-                                if(setTarget.GetComponent<LevelUpTower>().GetChoosenUnitAnimator.gameObject.activeInHierarchy &&
-                                !setTarget.GetComponent<LevelUpTower>().GetChoosenUnitAnimator.GetComponent<UnitValues>().IsDead)
-                                {
-                                    setTarget = setTarget.GetComponent<LevelUpTower>().GetChoosenUnitAnimator.gameObject.transform;
-                                    isTower = false;
-                                }
-                            }
-                        }
-                    }
+            //        if(Mathf.Abs(Vector2.Distance(unit.position, mainTower.position)) < Mathf.Abs(Vector2.Distance(unit.position, item.position)))
+            //        {
+            //            setTarget = mainTower;
+            //        }
+            //        else
+            //        {
+            //            setTarget = item;
+            //            if(setTarget.TryGetComponent<TowerInfoKeeper>(out var infoKeeper))
+            //            {
+            //                if(infoKeeper.GetCurrentTowerCode == 2 || 
+            //                infoKeeper.GetCurrentTowerCode == 8 || 
+            //                infoKeeper.GetCurrentTowerCode == 9)
+            //                {
+            //                    if(setTarget.GetComponent<LevelUpTower>().GetChoosenUnitAnimator.gameObject.activeInHierarchy &&
+            //                    !setTarget.GetComponent<LevelUpTower>().GetChoosenUnitAnimator.GetComponent<UnitValues>().IsDead)
+            //                    {
+            //                        setTarget = setTarget.GetComponent<LevelUpTower>().GetChoosenUnitAnimator.gameObject.transform;
+            //                        isTower = false;
+            //                    }
+            //                }
+            //            }
+            //        }
 
-                    unitValues.GetEnemySetTarget().ChangeCurrentTarget(setTarget, isTower);
-                    unitValues.IsChasing = true;
-                    break;
-                }
-            }
+            //        unitValues.GetEnemySetTarget().ChangeCurrentTarget(setTarget, isTower);
+            //        unitValues.IsChasing = true;
+            //        break;
+            //    }
+            //}
         }
     }
 

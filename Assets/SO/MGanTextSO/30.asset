@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 1
   canInteract: 0
   text: lets start the game
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 03d6cda0be51db54ca8979c5e9df5186, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

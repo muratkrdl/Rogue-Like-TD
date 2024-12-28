@@ -1571,7 +1571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bankUI: {fileID: 0}
-  startMoney: 250
+  startMoney: 180
 --- !u!1 &8299684572269247219
 GameObject:
   m_ObjectHideFlags: 0

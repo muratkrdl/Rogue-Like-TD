@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 1
   canInteract: 0
   text: now for the final tips
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: a9c85e861e294ec4290de919ba831990, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

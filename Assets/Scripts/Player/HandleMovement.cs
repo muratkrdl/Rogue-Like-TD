@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class HandleMovement : MonoBehaviour
@@ -39,7 +35,7 @@ public class HandleMovement : MonoBehaviour
 
     public void PlayStepSFX()
     {
-        SoundManager.Instance.PlaySound2DVolume(ConstStrings.STEPS, .225f);
+        SoundManager.Instance.PlaySound2DVolume(ConstStrings.STEPS, .27f);
     }
 
     void OnDestroy() 

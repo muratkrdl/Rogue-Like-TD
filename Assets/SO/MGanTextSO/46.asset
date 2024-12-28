@@ -15,8 +15,8 @@ MonoBehaviour:
   loop: 0
   play: 1
   canInteract: 1
-  text: now read skills description then choose a skill and help your towers to kill
-    the enemie
-  buttonName: Okey
+  text: now read skills description then choose a skill and help your towers to k-k-kill
+    the enemies
+  buttonName: okey
   nextText: {fileID: 11400000, guid: d7835a190cef76940836b784ae5825c4, type: 2}
   playTimeLine: {fileID: 11400000, guid: baef2d4fe98a8e54ea4eda3a5898f60d, type: 2}

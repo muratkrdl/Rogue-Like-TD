@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
 using UnityEngine;
 
 public class LevelUpPanel : MonoBehaviour
@@ -24,12 +22,16 @@ public class LevelUpPanel : MonoBehaviour
     {
         Vector2Int randomRange = new(0, 9);
 
-        if((Random.Range(0,2) % 2) == 0 || isBoss)
+        if(((Random.Range(1,8) % 2) == 0 && InventorySystem.Instance.HowManySlotAvailableByCode(14) != 0) || isBoss || InventorySystem.Instance.HowManySlotAvailableByCode(5) == 0)
         {
             randomRange = new(10,20);
         }
 
         int hmsa = InventorySystem.Instance.HowManySlotAvailableByCode(Random.Range(randomRange.x, randomRange.y));
+        if(EvolveableSkillSO() != null && isBoss)
+        {
+            hmsa++;
+        }
 
         for(int i = 0; i < UISkillButtons.Length; i++)
         {
@@ -46,8 +48,6 @@ public class LevelUpPanel : MonoBehaviour
 
             SkillSO choosedSkillSO;
             Color useColor;
-
-            Debug.Log(hmsa);
 
             while(true)
             {

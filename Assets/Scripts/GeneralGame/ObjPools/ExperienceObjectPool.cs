@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -39,13 +38,7 @@ public class ExperienceObjectPool : MonoBehaviour
         foreach (var item in GetExperienceObjList(code))
         {
             if(!item.gameObject.activeSelf)
-            {
                 return item;
-            }
-            else
-            {
-                continue;
-            }
         }
 
         Transform experienceObj = Instantiate(GetExperienceObjPrefab(code), transform.position, Quaternion.identity, 

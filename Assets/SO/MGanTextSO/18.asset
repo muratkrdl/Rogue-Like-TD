@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 1
   play: 1
   canInteract: 0
-  text: this is your gold amount btw
-  buttonName: Okey
+  text: also this is numbers represents the amount of your gold
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 3f5db0e19295bd247bba8998831fdee5, type: 2}
   playTimeLine: {fileID: 11400000, guid: 3f143b0d0028af64c952cb5016e0de4b, type: 2}

@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 1
   canInteract: 1
   text: click main tower
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 9ab5d3052940038438f13729ed820698, type: 2}
   playTimeLine: {fileID: 11400000, guid: 559305c2a445919498399053771803f6, type: 2}

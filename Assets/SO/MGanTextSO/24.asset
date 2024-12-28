@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 0
   play: 0
   canInteract: 0
-  text: then last tip for towers normal tower can be up to level 4
-  buttonName: Okey
+  text: then l-l-last tip for towers normal tower can be up to level 4
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 9d52fb0d1dd4f3f4b92e48b2f1b81550, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

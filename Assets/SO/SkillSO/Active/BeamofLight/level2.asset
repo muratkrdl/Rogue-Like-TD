@@ -18,7 +18,7 @@ MonoBehaviour:
   SkillName: Beam Of Light
   Level: 2
   Value: 22
-  CooldDown: 2
+  CooldDown: 3
   ProjectileCount: 0
   Size: 0
   KnockbackAmount: 0

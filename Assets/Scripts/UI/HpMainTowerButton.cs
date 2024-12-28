@@ -28,6 +28,7 @@ public class HpMainTowerButton : MonoBehaviour
     {
         if(!canUseSkill) return;
         GlobalUnitTargets.Instance.GetMainTower().GetComponent<TowerHealth>().SetFullTowerHP();
+        SoundManager.Instance.PlaySound2DVolume(ConstStrings.MAINTOWERHP, .5f);
         CDPlayerButton().Forget();
     }
 

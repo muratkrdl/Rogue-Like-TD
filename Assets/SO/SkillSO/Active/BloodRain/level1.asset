@@ -18,7 +18,7 @@ MonoBehaviour:
   SkillName: Raining Blood
   Level: 1
   Value: 10
-  CooldDown: 6
+  CooldDown: 5.6
   ProjectileCount: 1
   Size: 3
   KnockbackAmount: 0

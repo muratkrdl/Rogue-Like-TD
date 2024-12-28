@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ClickedTower : MonoBehaviour
 {
+    [SerializeField] GameObject goldObj;
     bool canPlayNextTimeLine = false;
 
     void Start() 
@@ -15,6 +16,7 @@ public class ClickedTower : MonoBehaviour
     {
         if(!e.isMainTower && WriteText.Instance.GetMGanTextSO.name == 14.ToString() && !canPlayNextTimeLine)
         {
+            goldObj.SetActive(true);
             canPlayNextTimeLine = true;
             PlayableDirectorManager.Instance.PlayNextTimeLine();
         }

@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 1
   canInteract: 0
   text: if this numbers orange tower has physical damage
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 1e6835e71ea6a1d46b75c3209a2e33c2, type: 2}
   playTimeLine: {fileID: 11400000, guid: 982a2e54f24c72049bb36e90a6ba1a9b, type: 2}

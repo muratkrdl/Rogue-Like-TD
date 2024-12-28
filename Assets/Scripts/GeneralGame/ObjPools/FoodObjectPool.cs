@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,9 +31,7 @@ public class FoodObjectPool : MonoBehaviour
         foreach(var item in GetFoodObjList())
         {
             if(!item.activeSelf)
-            {
                 return item;
-            }
         }
 
         GameObject obj = Instantiate(GetFoodObjPrefab(), transform.position, Quaternion.identity, GetInstantiatedObjParent());

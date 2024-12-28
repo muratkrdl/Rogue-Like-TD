@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ExperienceSystem : MonoBehaviour
@@ -51,9 +49,9 @@ public class ExperienceSystem : MonoBehaviour
         currentExperience += increaseAmount;
         if(currentExperience >= needExperienceToLevelUp[currentLevel-1])
         {
-            SetRandomUISkillButtons(false);
             currentLevel++;
             currentExperience -= needExperienceToLevelUp[currentLevel-2];
+            SetRandomUISkillButtons(false);
         }
         experiencePanel.SetExperienceSlider(currentExperience, needExperienceToLevelUp[currentLevel-1], currentLevel);
     }

@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 1
   play: 1
   canInteract: 0
-  text: 'yellow number is cost of tower '
-  buttonName: Okey
+  text: 'yellow n-n-number is cost of tower '
+  buttonName: okey
   nextText: {fileID: 11400000, guid: d0bcd89fc35e6784d9a1fc228abfb5e1, type: 2}
   playTimeLine: {fileID: 11400000, guid: 694075c4202eb1b41b568c7f600605d7, type: 2}

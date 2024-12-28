@@ -17,7 +17,7 @@ MonoBehaviour:
   SkillIcon: {fileID: 21300000, guid: 121c90cb2d722b942a87801858b8a52b, type: 3}
   SkillName: Clock
   Level: 2
-  Value: 14
+  Value: 12
   CooldDown: 0
   ProjectileCount: 0
   Size: 0

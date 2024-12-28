@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 1
   canInteract: 0
   text: you must in main tower for build tower
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: e78ebafebf8d2af46a10d8334c38daa9, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

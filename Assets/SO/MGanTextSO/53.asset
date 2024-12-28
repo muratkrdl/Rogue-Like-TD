@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 1
   canInteract: 0
   text: these were my last tips
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 464ce29f6188d064390f6a68a9158e47, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loop: 1
   play: 1
-  text: this is your main character
-  buttonName: Okey
+  canInteract: 0
+  text: this is your m-m-main character
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 9bf74fe7bd00dc646bc09a4177001a24, type: 2}
   playTimeLine: {fileID: 11400000, guid: 725111e83ed66e547b6667c703269206, type: 2}

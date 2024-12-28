@@ -54,8 +54,11 @@ public class TowerEnemyKeeper : MonoBehaviour
     {
         if(other.CompareTag(TagManager.ENEMY))
         {
-            enemiesInRange.Add(other.transform);
-            OnEnemyListKeeperChanged?.Invoke(this, new() { isIn = true, enemyTransform = other.transform } );
+            if(!enemiesInRange.Contains(other.transform))
+            {
+                enemiesInRange.Add(other.transform);
+                OnEnemyListKeeperChanged?.Invoke(this, new() { isIn = true, enemyTransform = other.transform } );
+            }
         }
     }
 
@@ -63,8 +66,11 @@ public class TowerEnemyKeeper : MonoBehaviour
     {
         if(other.CompareTag(TagManager.ENEMY))
         {
-            enemiesInRange.Remove(other.transform);
-            OnEnemyListKeeperChanged?.Invoke(this, new() { isIn = false, enemyTransform = other.transform } );
+            if(enemiesInRange.Contains(other.transform))
+            {
+                enemiesInRange.Remove(other.transform);
+                OnEnemyListKeeperChanged?.Invoke(this, new() { isIn = false, enemyTransform = other.transform } );
+            }
         }
     }
 

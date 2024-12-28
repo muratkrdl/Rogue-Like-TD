@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 0
   play: 1
   canInteract: 0
-  text: you can see the amount of experience and level you have in the top panel
-  buttonName: Okey
+  text: you can see the amount of e-e-experience and level you have in the top panel
+  buttonName: okey
   nextText: {fileID: 11400000, guid: dcea87508486c724cabe2b6d2e9d5e6f, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

@@ -33,13 +33,12 @@ public class GuardTowerSkill : MonoBehaviour
         float a = reSpawnCoolDown;
         while(a > 0)
         {
-            Debug.Log(a);
             yield return new WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused);
             yield return new WaitForSeconds(1);
             a--;
         }
 
-        if(GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerCode != -1)
+        if(GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerCode != -1 && currentUnit.IsWaiting)
         {
             UpdateUnitCode();
         }
@@ -52,11 +51,11 @@ public class GuardTowerSkill : MonoBehaviour
 
         if(GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerCode == 8)
         {
-            animString = ConstStrings.ANIM1;
+            animString = ConstStrings.ANIM2;
         }
         else if(GetComponentInParent<TowerInfoKeeper>().GetCurrentTowerCode == 9)
         {
-            animString = ConstStrings.ANIM2;
+            animString = ConstStrings.ANIM1;
         }
 
         currentUnit.IsWaiting = true;

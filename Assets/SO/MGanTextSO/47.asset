@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 0
   play: 0
   canInteract: 0
-  text: The tutorial ends here
-  buttonName: Okey
+  text: the tutorial ends here
+  buttonName: okey
   nextText: {fileID: 11400000, guid: c0e4a77db5bc1164eb793447744b4406, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

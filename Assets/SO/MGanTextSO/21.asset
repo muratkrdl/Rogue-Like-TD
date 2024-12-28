@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 1
   play: 1
   canInteract: 0
-  text: 'if this numbers purple tower has magic damage '
-  buttonName: Okey
+  text: 'i-i-if this numbers purple tower has magic damage '
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 51865a115f86e9c4197b48b6ae2e0e5f, type: 2}
   playTimeLine: {fileID: 11400000, guid: 982a2e54f24c72049bb36e90a6ba1a9b, type: 2}

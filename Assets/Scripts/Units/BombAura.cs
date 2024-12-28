@@ -8,7 +8,7 @@ public class BombAura : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.TryGetComponent<IDamageable>(out var component) && !other.CompareTag(TagManager.ENEMY))
+        if(other.TryGetComponent<IDamageable>(out var component) && !other.CompareTag(TagManager.ENEMY) && !other.CompareTag(TagManager.TOWER))
         {
             component.SetHP(50, damageType);
         }

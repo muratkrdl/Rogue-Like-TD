@@ -1,10 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ESCMenu : MonoBehaviour
 {
@@ -57,6 +56,7 @@ public class ESCMenu : MonoBehaviour
 
     public void OnClick_Quit()
     {
+        myAnimator.SetTrigger(ConstStrings.ANIM2);
         FadeImageController.Instance.SetFadeImage(true);
         Invoke(nameof(InvokeForSceneChange), 1.25f);
     }

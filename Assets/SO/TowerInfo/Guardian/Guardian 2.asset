@@ -23,7 +23,7 @@ MonoBehaviour:
   attackDelay: 0
   DamageTypeColor: {r: 1, g: 0.47058824, b: 0, a: 1}
   projectileCode: 0
-  towerCost: 115
+  towerCost: 130
   sellPrice: 120
   Range: 5
   Description: guards the towers

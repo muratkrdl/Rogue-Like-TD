@@ -59,4 +59,9 @@ public class TowerUnitAttack : MonoBehaviour
         cts.Cancel();    
     }
 
+    void OnDisable() 
+    {
+        cts.Cancel();
+    }
+
 }

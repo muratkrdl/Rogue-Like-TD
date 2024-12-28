@@ -17,6 +17,6 @@ MonoBehaviour:
   canInteract: 0
   text: after you have both skills leveled up to level five, you should get a treasure
     from a boss
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 5bb1042aeea5916429f84bbc3af4e2df, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

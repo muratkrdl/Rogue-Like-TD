@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using TMPro;
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +22,8 @@ public class WriteText : MonoBehaviour
 	[SerializeField] float timeBetweenChars = .1f;
 	[SerializeField] string leadingChar = "";
 	[SerializeField] bool leadingCharBeforeDelay = false;
+
+    bool willInteract = false;
 
     public MGanTextSO GetMGanTextSO
     {
@@ -50,6 +49,7 @@ public class WriteText : MonoBehaviour
 
     public void StartTypewriter()
 	{
+        SetRaycastBlock(true);
         mganAnimator.SetTrigger(ConstStrings.INFO_PANEL_ANIMATOR_IN);
 		mGanText.text = "";
         TypeWriterTMP().Forget();
@@ -57,14 +57,13 @@ public class WriteText : MonoBehaviour
 
     async UniTaskVoid TypeWriterTMP()
     {
-        SetRaycastBlock(true);
         buttonText.gameObject.SetActive(false);
         mGanText.text = leadingCharBeforeDelay ? leadingChar : "";
         buttonText.text = writeMGanTextSO.buttonName;
 
         await UniTask.Delay(TimeSpan.FromSeconds(delayBeforeStart));
 
-		foreach (char c in writeMGanTextSO.text)
+		foreach(char c in writeMGanTextSO.text)
 		{
 			if (mGanText.text.Length > 0)
 			{
@@ -79,7 +78,7 @@ public class WriteText : MonoBehaviour
 			await UniTask.Delay(TimeSpan.FromSeconds(timeBetweenChars));
         }
 
-        SetRaycastBlock(!writeMGanTextSO.canInteract);
+        willInteract = !writeMGanTextSO.canInteract;
 
         mGanText.text = writeMGanTextSO.text;
         buttonText.gameObject.SetActive(true);
@@ -98,12 +97,14 @@ public class WriteText : MonoBehaviour
         else
         {
             mganAnimator.SetTrigger(ConstStrings.INFO_PANEL_ANIMATOR_OUT);
-            GameStateManager.Instance.ResumeGame();
+            if(writeMGanTextSO.name != "47" && writeMGanTextSO.name != "60")
+                GameStateManager.Instance.ResumeGame();
         }
     }
 
     public void OnClick_OkeyButton()
     {
+        SetRaycastBlock(willInteract);
         OnClickOkey?.Invoke(this, EventArgs.Empty);
     }
 

@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -93,13 +91,7 @@ public class ProjectileObjectPool : MonoBehaviour
         foreach (var item in GetProjectileList(code))
         {
             if(item.GetIsAvailable)
-            {
                 return item;
-            }
-            else
-            {
-                continue;
-            }
         }
 
         Projectile projectile = Instantiate(GetProjectilePrefab(code), transform.position, Quaternion.identity, 

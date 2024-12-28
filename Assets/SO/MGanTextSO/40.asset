@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 0
   canInteract: 0
   text: you got level up
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 577b88d87a8837f44a64e7573e20d001, type: 2}
   playTimeLine: {fileID: 11400000, guid: baef2d4fe98a8e54ea4eda3a5898f60d, type: 2}

@@ -23,7 +23,7 @@ MonoBehaviour:
   attackDelay: 4
   DamageTypeColor: {r: 0.47058824, g: 0, b: 1, a: 1}
   projectileCode: 1
-  towerCost: 75
+  towerCost: 90
   sellPrice: 50
   Range: 4.5
   Description: Using mage to kill enemy

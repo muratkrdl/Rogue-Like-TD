@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 0
   play: 1
   canInteract: 0
-  text: the boxes at the bottom left show the skills you have
-  buttonName: Okey
+  text: the boxes at the bottom left show the s-s-skills you have
+  buttonName: okey
   nextText: {fileID: 11400000, guid: ce76abef595ffe441aacba007af8c7ae, type: 2}
   playTimeLine: {fileID: 11400000, guid: baef2d4fe98a8e54ea4eda3a5898f60d, type: 2}

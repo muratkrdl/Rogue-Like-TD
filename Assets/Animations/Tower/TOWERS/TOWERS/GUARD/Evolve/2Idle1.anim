@@ -230,7 +230,7 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 2.3333333
+  - time: 0.083333336
     functionName: UpdateUnitCode
     data: 
     objectReferenceParameter: {fileID: 0}

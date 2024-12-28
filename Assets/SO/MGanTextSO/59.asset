@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 0
   play: 1
   canInteract: 1
-  text: by,by
-  buttonName: Okey
+  text: take c-c-care
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 5a1fe2f2745fb734b8df1e52b28df37b, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

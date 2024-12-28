@@ -1,11 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Threading;
-using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
@@ -97,10 +93,13 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         
         slider.value = currenthealth;
 
+        SoundManager.Instance.PlaySound2DVolume(ConstStrings.MAINCHARHIT, .35f);
+
         if(currenthealth <= 0)
         {
             currenthealth = 0;
             isDead = true;
+            SoundManager.Instance.PlaySound2D(ConstStrings.MAINCHARDIE);
             GetComponent<Animator>().SetTrigger(ConstStrings.UNIT_ANIMATOR_DEATH);
             GetComponent<GetInputs>().ResetMoveInput();
             Invoke(nameof(PlayerDead), 1);

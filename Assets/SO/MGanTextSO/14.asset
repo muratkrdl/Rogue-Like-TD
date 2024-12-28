@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 0
   canInteract: 1
   text: place the cursor over this button
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: a71f901efaeb13f4ebbdbd488f26f4d3, type: 2}
   playTimeLine: {fileID: 11400000, guid: 703b1e87d9ed7b145bb6aaf43fe85eca, type: 2}

@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 1
   canInteract: 0
   text: to evolve a skill, you need to reach the fifth level of the two skills required
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: a792d1f8722736d4a81e1c55d00a4356, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

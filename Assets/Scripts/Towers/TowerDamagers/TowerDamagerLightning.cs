@@ -7,17 +7,23 @@ public class TowerDamagerLightning : DamageForEvolvedTowerProjectile
 {
     [SerializeField] Animator animatorr;
 
-    int counter = 0;
+    int counter;
 
     public int SetCounter
     {
         set => counter = value;
     }
 
+    protected override void OnSpawn()
+    {
+        animatorr.SetTrigger(ConstStrings.ANIM);
+        GetComponent<AudioSource>().Play();
+    }
+
     protected override void OnTriggerFunc(Collider2D other)
     {
         counter++;
-        animatorr.SetTrigger(ConstStrings.ANIM);
+        
         if(counter <= (int)(GetDamage/5))
         {
             var obj = DamagerObjPool.Instance.GetDamagerObj(1);

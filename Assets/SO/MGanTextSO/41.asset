@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 1
   canInteract: 0
   text: this is level up panel
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: f342282d1cb2c2e41ab007b234a2ee17, type: 2}
   playTimeLine: {fileID: 11400000, guid: 7c62c101f55c7664394818fa5072ea50, type: 2}

@@ -17,11 +17,11 @@ MonoBehaviour:
   SkillIcon: {fileID: 21300000, guid: 642e036d377287941ac4e75dc2e3b5bb, type: 3}
   SkillName: Fireball
   Level: 3
-  Value: 30
-  CooldDown: 5
+  Value: 24
+  CooldDown: 4.9
   ProjectileCount: 2
   Size: 0
-  KnockbackAmount: 25
+  KnockbackAmount: 20
   Description: increases damage to 30
   DamageType: 2
   NeededPasifeSkillSO: {fileID: 11400000, guid: c87f60ea77541654c9433ecd4c489280, type: 2}

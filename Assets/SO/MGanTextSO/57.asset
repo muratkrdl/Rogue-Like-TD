@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 0
   play: 1
   canInteract: 0
-  text: my employer wanted me to give 50 PD to everyone who completed the tutorial
-  buttonName: Okey
+  text: my employer w-w-wanted me to give 50 PD to everyone who completed the tutorial
+  buttonName: okey
   nextText: {fileID: 11400000, guid: f850663ed22a89c41ab886975447377f, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

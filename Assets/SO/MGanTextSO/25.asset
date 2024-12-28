@@ -15,7 +15,7 @@ MonoBehaviour:
   loop: 0
   play: 1
   canInteract: 0
-  text: after reaching the fourth level, castles offer 2 options
-  buttonName: Okey
+  text: after reaching the fourth level, castles o-o-offer 2 options
+  buttonName: okey
   nextText: {fileID: 11400000, guid: e872baa0826c25344aa3a558beb6a8dc, type: 2}
   playTimeLine: {fileID: 11400000, guid: 6b7bbfac347c04f40bb7f20c9ab60ed7, type: 2}

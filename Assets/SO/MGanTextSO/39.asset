@@ -16,6 +16,6 @@ MonoBehaviour:
   play: 1
   canInteract: 1
   text: now go outside the tower and collect this gem
-  buttonName: Okey
+  buttonName: okey
   nextText: {fileID: 11400000, guid: 60191cbb27a38114f804c2941f8342f3, type: 2}
   playTimeLine: {fileID: 11400000, guid: baef2d4fe98a8e54ea4eda3a5898f60d, type: 2}
