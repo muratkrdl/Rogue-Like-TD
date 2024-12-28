@@ -181,172 +181,172 @@
 
 
 
-## Skills mechanic
+# Skills mechanic
 
 
-### PASIFE SKILLS
+# PASIFE SKILLS
 
 
-#### Armor 
+## Armor 
 #### Reduces physical damage taken
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Armor.png" width="48px">
 
 
 
 
-#### Clock
+## Clock
 #### Cooldown reduced active skills
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Cooldown.png" width="48px">
 
 
 
 
-#### Gold Dagger
+## Gold Dagger
 #### Increases active skills damage 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Damage.png" width="48px">
 
 
 
 
-#### PointHeart
-
+## PointHeart
 #### Increases health every second
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/HealRegen.png" width="48px">
 
 
-#### SecondHeart
 
+
+## SecondHeart
 #### Base health up
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Health.png" width="48px">
 
 
-#### Lethality
 
+
+## Lethality
 #### Ignores enemy's armor
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Lethality.png" width="48px">
 
 
-#### Tooths
 
+
+## Tooths
 #### Steals hp damage of skill dealt
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Life%20Steal.png" width="48px">
 
 
-#### Magic Penetration
 
+
+## Magic Penetration
 #### Ignores enemy's magic resistance
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Magic%20Penetration.png" width="48px">
 
 
-#### Purple Shield
 
+
+## Purple Shield
 #### Reduces magic damage taken
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Magic%20Resistance.png" width="48px">
 
 
-#### Magic Boots
 
+
+## Magic Boots
 #### Increases movement speed
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/MoveSpeed.png" width="48px">
 
 
-#### ACTIVE SKILLS
 
-#### Beam Of Light
 
+# ACTIVE SKILLS
+
+## Beam Of Light
 #### Shoots a beam of light
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BOF.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Raining Blood
 
+
+## Raining Blood
 #### Spawn a rain
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BloodRain.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### BrightShield
 
+
+## BrightShield
 #### Reflects incoming damage to the sender
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BrightShield.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Dagger
 
+
+## Dagger
 #### Throws a dagger
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Dagger.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Dark Blade
 
+
+## Dark Blade
 #### Spins a blade around
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkBlade.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### DarkAura
 
+
+## DarkAura
 #### Damage to area
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkAura.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Fireball
 
+
+## Fireball
 #### Random shoots fireball
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Fireball.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Spike
 
+
+## Spike
 #### Pulls spikes out of the ground
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Spikes.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Tornado
 
+
+## Tornado
 #### Sends a tornado
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/tornado.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Vine
 
+
+## Vine
 #### Spins vines around
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Vine.png" width="48px">
 
 <img src="--" width="auto">
+
+
 
 
 ## Evolve skill mechanic
@@ -368,94 +368,94 @@
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/EvolvePanel.png" width="auto">
 
 
-#### Beam Of Light Evolved
-
+## Beam Of Light Evolved
 #### The light beam is always on
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BOF%2B%2B.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Raining Blood Evolved 
 
+
+## Raining Blood Evolved 
 #### Towers it touches gain extra attack speed
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BloodRain%2B%2B.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### BrightShield Evolved
 
+
+## BrightShield Evolved
 #### Gains HP from every enemy it hits
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BrightShield%2B%2B.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Dagger Evolved (Axe)
 
+
+## Dagger Evolved (Axe)
 #### Daggers turn into axes
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Dagger%2B%2B%20v2.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Dark Blade Evolved 
 
+
+## Dark Blade Evolved 
 #### Gains HP from every enemy it hits
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkBlade%2B%2B.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### DarkAura Evolved 
 
+
+## DarkAura Evolved 
 #### Towers it touches gain extra damage
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkAura%2B%2B.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Fireball Evolved
 
+
+## Fireball Evolved
 #### Attack area increases
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Fireball%2B%2B.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Spike Evolved 
 
+
+## Spike Evolved 
 #### Slows enemy it touchs
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Spikes%2B%2B.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Tornado Evolved
 
+
+## Tornado Evolved
 #### Poisons enemies and deals damage over time
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Tornado%2B%2B.png" width="48px">
 
 <img src="--" width="auto">
 
 
-#### Vine Evolved
 
+
+## Vine Evolved
 #### Vine size increases
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Vine%2B%2B.png" width="48px">
 
 <img src="--" width="auto">
+
+
 
 
 ### If your skills are level five
@@ -464,17 +464,17 @@
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SkillFulled.png" width="auto">
 
-#### Gold
+### Gold
 
 #### Gain 200 gold
 
 
-#### HP
+### HP
 
 #### Gain 35 hp
 
 
-#### PD
+### PD
 
 ### Gain 25 PD
 
@@ -490,88 +490,86 @@
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/Power-up.png" width="auto">
 
-### Koleks
-
+## Koleks
 #### Extra cooldown for active skills
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/Koleks.png" width="48px">
 
 
-### RedDagger
 
+
+## RedDagger
 #### Extra Damage for active skills
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/RedDagger.png" width="48px">
 
 
-### WiseBook
 
+
+## WiseBook
 #### Gain extra experience from xp gem
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/WiseBook.png" width="48px">
 
 
-### Midas
 
+
+## Midas
 #### Gain extra Gold from enemies
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/Midas.png" width="48px">
 
 
-### RedHeart
 
+
+## RedHeart
 #### Extra HP for your main char
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/RedHeart.png" width="48px">
 
 
-### Pluses
-
+## Pluses
 #### Extra HP regen for your main char
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/Pluses.png" width="48px">
 
 
-### Nixe
 
+
+## Nixe
 #### Extra movespeed for your main char
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/Nixe.png" width="48px">
 
 
-### FastHand
 
+
+## FastHand
 #### Throwable abilities have more throwable
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/FastHand.png" width="48px">
 
 
-### BlueKnife
 
+
+## BlueKnife
 #### Increases tower attack speed
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/BlueKnife.png" width="48px">
 
 
-### ShinyBlade
 
+
+## ShinyBlade
 #### Increases tower damage
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/ShinyBlade.png" width="48px">
 
 
-### FakeHeart
 
+
+## FakeHeart
 #### Extra HP for all tower
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/FakeHeart.png" width="48px">
 
 
-### Kervace
 
+
+## Kervace
 #### Reduces main character's respawn time
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/Kervace.png" width="48px"> 
+
+
 
 
 # Some gameplay gifs
