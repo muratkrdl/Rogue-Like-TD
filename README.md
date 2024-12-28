@@ -563,7 +563,7 @@
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/FakeHeart.png" width="auto">
 
 
-### Kervace <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/Kervace.png" width="auto">
+ <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/Kervace.png" width="auto"> ### Kervace
 
 #### Reduces main character's respawn time
 
