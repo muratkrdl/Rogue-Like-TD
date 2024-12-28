@@ -186,25 +186,26 @@
 
 ### PASIFE SKILLS
 
+
 #### Armor 
 
 #### Reduces physical damage taken
-
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Armor.png" width="48px">
 
 
-#### Clock
 
+#### Clock
 #### Cooldown reduced active skills
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Cooldown.png" width="48px">
 
 
-#### Gold Dagger
 
+#### Gold Dagger
 #### Increases active skills damage 
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Damage.png" width="48px">
+
 
 
 #### PointHeart
