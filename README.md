@@ -322,6 +322,73 @@
 
 ### Every enemy that dies has a low chance of giving you PD
 
+### You can earn permanent features with the PD you earn from the level-up screen in the main menu
+
+
+## PD Level up panel in the main menu
+
+### Koleks
+
+#### Extra cooldown for active skills
+
+
+### RedDagger
+
+#### Extra Damage for active skills
+
+
+### WiseBook
+
+#### Gain extra experience from xp gem
+
+
+### Midas
+
+#### Gain extra Gold from enemies
+
+
+### RedHeart
+
+#### Extra HP for your main char
+
+
+### Pluses
+
+#### Extra HP regen for your main char
+
+
+### Nixe
+
+#### Extra movespeed for your main char
+
+
+### FastHand
+
+#### Throwable abilities have more throwable
+
+
+### BlueKnife
+
+#### Increases tower attack speed
+
+
+### ShinyBlade
+
+#### Increases tower damage
+
+
+### FakeHeart
+
+#### Extra HP for all tower
+
+
+### Kervace
+
+#### Reduces main character's respawn time
+
+
+
+
 
 
 
