@@ -26,15 +26,15 @@
 
 ### To build and manage towers, your character must be inside the tower
 
+## Outside Tower
+
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20out.png" width="auto">
+
 ### To enter the main tower, your character must be close to the main tower and you must click this button
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20buttonn.png" width="auto">
 
 ### After entering the main tower, you can manage all towerplacements
-
-## Outside Tower
-
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20out.png" width="auto">
 
 ## Inside Tower
 
@@ -163,6 +163,12 @@
 
 ### Your character helps your towers to kill enemies
 
+### When the character dies, it goes into a cooldown and when the time is up, she respawns from the main tower
+
+### The main character can manage towers during cooldown
+
+<img src="--" width="auto">
+
 ### You have 5 active and 5 passive skills to hit the enemies
 
 ### To get these skills, you need to level up and fill the experience bar at the top to level up
@@ -173,11 +179,6 @@
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/Gem.png" width="auto">
 
-### When the character dies, it goes into a cooldown and when the time is up, she respawns from the main tower
-
-### The main character can manage towers during cooldown
-
-<img src="--" width="auto">
 
 
 ## Skills mechanic
