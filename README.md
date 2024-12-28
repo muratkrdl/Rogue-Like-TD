@@ -299,8 +299,28 @@
 #### Vine size increases
 
 
+### If your skills are level five
+
+### When you level up you choose one of the following three options
+
+#### Gold
+
+#### Gain 200 gold
 
 
+#### HP
+
+#### Gain 35 hp
+
+
+#### PD
+
+### Gain 25 PD
+
+
+## Rogue-lite mechanics
+
+### Every enemy that dies has a low chance of giving you PD
 
 
 
