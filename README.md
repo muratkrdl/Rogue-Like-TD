@@ -127,6 +127,10 @@
 
 ### To gain experience, you must collect the gems dropped by enemies
 
+### When the character dies, it goes into a cooldown and when the time is up, she respawns from the main tower
+
+### The main character can manage towers during cooldown
+
 
 ## Skills mechanic
 
