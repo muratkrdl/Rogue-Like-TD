@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/5e82f9f5-b550-43a7-a85d-3eed5fefcc62)# Rogu-Like-TD
+# Rogu-Like-TD
 
 
 ## Used design patterns in this project
