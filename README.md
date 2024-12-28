@@ -192,59 +192,113 @@
 
 #### Raining Blood
 
-#### 
+#### Spawn a rain
 
-#### 
 
-#### 
+#### BrightShield
 
-#### 
+#### Reflects incoming damage to the sender
 
-#### 
 
-#### 
+#### Dagger
 
-#### 
+#### Throws a dagger
 
-#### 
 
-#### 
+#### Dark Blade
 
-#### 
+#### Spins a blade around
 
-#### 
 
-#### 
+#### DarkAura
 
-#### 
+#### Damage to area
 
-#### 
 
-#### 
+#### Fireball
 
-#### 
+#### Random shoots fireball
 
-#### 
 
-#### 
+#### Spike
 
-#### 
+#### Pulls spikes out of the ground
 
-#### 
 
-#### 
+#### Tornado
 
-#### 
+#### Sends a tornado
 
-#### 
 
-#### 
+#### Vine
 
-#### 
+#### Spins vines around
 
-#### 
 
-#### 
+## Evolve skill mechanic
+
+### You can evolve every active skill
+
+### To evolve an active skill, you must have the passive skill that the active skill requires
+
+#### But having this skill is not enough, then you must reach both of these skills to level five
+
+#### After you have leveled both skills to level five, you must unlock the treasure dropped by a boss
+
+
+#### Evolution list
+
+
+#### Beam Of Light Evolved
+
+#### The light beam is always on
+
+
+#### Raining Blood Evolved 
+
+#### Towers it touches gain extra attack speed
+
+
+#### BrightShield Evolved
+
+#### Gains HP from every enemy it hits
+
+
+#### Dagger Evolved (Axe)
+
+#### Daggers turn into axes
+
+
+#### Dark Blade Evolved 
+
+#### Gains HP from every enemy it hits
+
+
+#### DarkAura Evolved 
+
+#### Towers it touches gain extra damage
+
+
+#### Fireball Evolved
+
+#### Attack area increases
+
+
+#### Spike Evolved 
+
+#### Slows enemy it touchs
+
+
+#### Tornado Evolved
+
+#### Poisons enemies and deals damage over time
+
+
+#### Vine Evolved
+
+#### Vine size increases
+
+
 
 
 
