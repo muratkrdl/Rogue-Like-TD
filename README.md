@@ -271,7 +271,7 @@
 
 #### Spawn a rain
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BloodRain.png" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BloodRain.png" width="48px">
 
 <img src="--" width="auto">
 
