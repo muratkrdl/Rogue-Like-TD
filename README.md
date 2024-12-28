@@ -150,11 +150,11 @@
 
 ### Enemies come at certain periods
 
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/Enemy1.png" width="auto">
+
 ### Some enemies attack from close range, some from far away
 
 ### You can avoid ranged enemies' shots
-
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/Enemy1.png" width="auto">
 
 ### Every enemy that dies drops a gem on the ground (The function of the gems will be explained in the player section)
 
