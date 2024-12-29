@@ -78,32 +78,32 @@
 
 #### Attack speed and damage increases
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Archer/ArcherEvolved1.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Archer/ArcherEvolved1.gif" width="640px">
 
 ### Archer tower evolve 2
 
 #### Hits slower but deals true damage, not physical damage
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Archer/ArcherEvolved2.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Archer/ArcherEvolved2.gif" width="640px">
 
 
 ## Magic tower
 
 ### Casts a spell to the closest enemy
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Mage/Mage1.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Mage/Mage1.gif" width="640px">
 
 ### Magic tower evolve 1
 
 #### Attack speed and damage increases
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Mage/MageEvolved1.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Mage/MageEvolved1.gif" width="640px">
 
 ### Magic tower evolve 2
 
 #### It throws lightning and the lightning it throws bounces off other enemies
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Mage/MageEvolved2.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Mage/MageEvolved2.gif" width="640px">
 
 
 ## Guard tower
@@ -112,38 +112,38 @@
 
 ### If the soldier dies, it spawns another soldier after a certain period of time.
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Guard/Guard1.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Guard/Guard1.gif" width="640px">
 
 ### Guard tower evolve 1
 
 #### The soldier does not take physical damage
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Guard/GuardEvolved2.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Guard/GuardEvolved2.gif" width="640px">
 
 ### Guard tower evolve 2
 
 #### The soldier does not take magic damage
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Guard/GuardEvolved1.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Guard/GuardEvolved1.gif" width="640px">
 
 
 ## Catapult tower
 
 ### throws a stone to the closest enemy
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Catapult/Catapult1.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Catapult/Catapult1.gif" width="640px">
 
 ### Catapult evolve 1
 
 #### Attack speed and damage increases
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Catapult/CatapultEvolved1.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Catapult/CatapultEvolved1.gif" width="640px">
 
 ### Catapult evolve 2
 
 #### Shoots a ball of lightning that briefly stuns all enemies it hits
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Catapult/CatapultEvolved2.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Catapult/CatapultEvolved2.gif" width="640px">
 
 
 ## Enemy mechanics
