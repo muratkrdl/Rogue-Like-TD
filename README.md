@@ -72,7 +72,7 @@
 
 ### Shoots arrows at the closest enemy
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Archer/Archer1.gif" width="720px">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Archer/Archer1.gif" width="640px">
 
 ### Archer tower evolve 1
 
