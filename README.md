@@ -259,9 +259,8 @@
 
 # ACTIVE SKILLS
 
-## Beam Of Light
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BOF.png" width="48px">  Beam Of Light
 #### Shoots a beam of light
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BOF.png" width="48px">
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/BOF.gif" width="640px">
 
@@ -272,7 +271,7 @@
 #### Spawn a rain
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BloodRain.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Bloodrain.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Bloodrain.gif" width="640px">
 
 
 
@@ -281,7 +280,7 @@
 #### Reflects incoming damage to the sender
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BrightShield.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/BrightShield.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/BrightShield.gif" width="640px">
 
 
 
@@ -290,7 +289,7 @@
 #### Throws a dagger
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Dagger.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Dagger.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Dagger.gif" width="640px">
 
 
 
@@ -299,7 +298,7 @@
 #### Spins a blade around
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkBlade.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/DarkBlade.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/DarkBlade.gif" width="640px">
 
 
 
@@ -308,7 +307,7 @@
 #### Damage to area
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkAura.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/DarkAura.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/DarkAura.gif" width="640px">
 
 
 
@@ -317,7 +316,7 @@
 #### Random shoots fireball
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Fireball.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Fireball.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Fireball.gif" width="640px">
 
 
 
@@ -326,7 +325,7 @@
 #### Pulls spikes out of the ground
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Spikes.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Spike.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Spike.gif" width="640px">
 
 
 
@@ -335,7 +334,7 @@
 #### Sends a tornado
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/tornado.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Tornado.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Tornado.gif" width="640px">
 
 
 
@@ -344,7 +343,7 @@
 #### Spins vines around
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Vine.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Vine.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Vine.gif" width="640px">
 
 
 
@@ -372,7 +371,7 @@
 #### The light beam is always on
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BOF%2B%2B.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Bof.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Bof.gif" width="640px">
 
 
 
@@ -381,7 +380,7 @@
 #### Towers it touches gain extra attack speed
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BloodRain%2B%2B.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/BloodRain.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/BloodRain.gif" width="640px">
 
 
 
@@ -390,7 +389,7 @@
 #### Gains HP from every enemy it hits
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BrightShield%2B%2B.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/BrightShield.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/BrightShield.gif" width="640px">
 
 
 
@@ -399,7 +398,7 @@
 #### Daggers turn into axes
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Dagger%2B%2B%20v2.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Dagger.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Dagger.gif" width="640px">
 
 
 
@@ -408,7 +407,7 @@
 #### Gains HP from every enemy it hits
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkBlade%2B%2B.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/DarkBlade.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/DarkBlade.gif" width="640px">
 
 
 
@@ -417,7 +416,7 @@
 #### Towers it touches gain extra damage
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkAura%2B%2B.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/DarkAura.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/DarkAura.gif" width="640px">
 
 
 
@@ -426,7 +425,7 @@
 #### Attack area increases
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Fireball%2B%2B.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/FireBall.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/FireBall.gif" width="640px">
 
 
 
@@ -435,7 +434,7 @@
 #### Slows enemy it touchs
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Spikes%2B%2B.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Spike.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Spike.gif" width="640px">
 
 
 
@@ -444,7 +443,7 @@
 #### Poisons enemies and deals damage over time
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Tornado%2B%2B.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Tornado.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Tornado.gif" width="640px">
 
 
 
@@ -453,7 +452,7 @@
 #### Vine size increases
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Vine%2B%2B.png" width="48px">
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Vine.gif" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Vine.gif" width="640px">
 
 
 
