@@ -167,7 +167,7 @@
 
 ### The main character can manage towers during cooldown
 
-<img src="--" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/PlayerDead.gif" width="auto">
 
 ### You have 5 active and 5 passive skills to hit the enemies
 
@@ -574,11 +574,11 @@
 
 # Some gameplay gifs
 
-<img src="--" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Gameplay1.gif" width="auto">
 
-<img src="--" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Gameplay2.gif" width="auto">
 
-<img src="--" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Gameplay3.gif" width="auto">
 
 
 
