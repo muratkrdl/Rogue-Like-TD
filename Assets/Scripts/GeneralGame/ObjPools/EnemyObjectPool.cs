@@ -87,4 +87,15 @@ public class EnemyObjectPool : MonoBehaviour
         return enemyPrefabs[code];
     }
 
+    public bool CheckAllEnemyDied(int code)
+    {
+        foreach(var item in GetEnemyList(code))
+        {
+            if(!item.IsDead)
+                return false;
+        }
+
+        return true;
+    }
+
 }

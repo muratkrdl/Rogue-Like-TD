@@ -20917,6 +20917,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4105557791696134143, guid: 13a4b25fdf73bf54abac8981c54c3185, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6163576951860957518, guid: 13a4b25fdf73bf54abac8981c54c3185, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -40744,6 +40748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainTower
       objectReference: {fileID: 0}
+    - target: {fileID: 5391596494212367289, guid: 91028b9e61af7a340804eb822f56c8cd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5518098795874963005, guid: 91028b9e61af7a340804eb822f56c8cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -40809,6 +40817,10 @@ PrefabInstance:
     - target: {fileID: 3192511322795889789, guid: 232f95897546fd54aab414670249c356, type: 3}
       propertyPath: m_Name
       value: NAVMESH
+      objectReference: {fileID: 0}
+    - target: {fileID: 3192511322795889789, guid: 232f95897546fd54aab414670249c356, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3699731393997609816, guid: 232f95897546fd54aab414670249c356, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41564,6 +41576,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 870328271173209585, guid: 24d4aa3556eb36b4caf81b27711ac2f3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1856718195712137304, guid: 24d4aa3556eb36b4caf81b27711ac2f3, type: 3}
       propertyPath: m_Camera
       value: 
@@ -41684,6 +41700,10 @@ PrefabInstance:
     - target: {fileID: 5300236563099163269, guid: e69fc1e3dfe5ae24d833c0a96d384227, type: 3}
       propertyPath: m_Name
       value: MANAGERS
+      objectReference: {fileID: 0}
+    - target: {fileID: 5300236563099163269, guid: e69fc1e3dfe5ae24d833c0a96d384227, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6297757791460437271, guid: e69fc1e3dfe5ae24d833c0a96d384227, type: 3}
       propertyPath: mainTower
@@ -41899,6 +41919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI-Cam
       objectReference: {fileID: 0}
+    - target: {fileID: 7729877244122099842, guid: d440b722053c12d4e9ac86d1e6bf70e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -42020,10 +42044,6 @@ PrefabInstance:
     - target: {fileID: 2313856944769724472, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 2423418432251202139, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2456725492102244862, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
       propertyPath: m_AnchorMax.y
@@ -42210,14 +42230,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2055426324}
     - target: {fileID: 7058486190420779222, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7058486190420779222, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7058486190420779222, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1892240228}
@@ -42225,30 +42237,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 498636002}
-    - target: {fileID: 7058486190420779222, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
-      value: 
-      objectReference: {fileID: 1858842120}
-    - target: {fileID: 7058486190420779222, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7058486190420779222, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: set_enabled
-      objectReference: {fileID: 0}
-    - target: {fileID: 7058486190420779222, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
-      value: UnityEngine.Behaviour, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7058486190420779222, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7058486190420779222, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7079871219895599210, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -42263,10 +42251,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7079871219895599210, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7762138525030511988, guid: 0285ecfc145127546bf3d016613dee50, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8462407428066914418, guid: 0285ecfc145127546bf3d016613dee50, type: 3}

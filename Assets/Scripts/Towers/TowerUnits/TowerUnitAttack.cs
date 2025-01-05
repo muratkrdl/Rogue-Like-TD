@@ -24,7 +24,9 @@ public class TowerUnitAttack : MonoBehaviour
     {
         while(true)
         {
+            Debug.Log("inAttack");
             await UniTask.WaitUntil(() => !towerInfoKeeper.GetEvolvedBuildAnim().GetIsBusy, cancellationToken: cts.Token);
+            Debug.Log("secondAttack");
             if(!towerUnitValues.IsAttacking || towerInfoKeeper.GetCurrentTowerCode == -1) break;
             towerUnitValues.GetTowerUnitAnimator().SetTrigger(ConstStrings.UNIT_ANIMATOR_ATTACK);
             await UniTask.WaitUntil(() => !GameStateManager.Instance.GetIsGamePaused, cancellationToken: cts.Token);
@@ -38,6 +40,7 @@ public class TowerUnitAttack : MonoBehaviour
             await UniTask.Delay(TimeSpan.FromSeconds(towerUnitValues.GetTowerInfo.TimeBetweenAttack - (towerUnitValues.GetTowerInfo.TimeBetweenAttack * a)), 
             cancellationToken: towerUnitValues.GetTowerUnitStateController().GetTokenSource.Token);
         }
+        Debug.Log("breaked");
     }
 
     void AttackFunc()
@@ -62,6 +65,7 @@ public class TowerUnitAttack : MonoBehaviour
     void OnDisable() 
     {
         cts.Cancel();
+        cts = new();
     }
 
 }

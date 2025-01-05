@@ -22,6 +22,6 @@ MonoBehaviour:
   ProjectileCount: 0
   Size: 0
   KnockbackAmount: 0
-  Description: Sneds a tornado
+  Description: Sends a tornado
   DamageType: 0
   NeededPasifeSkillSO: {fileID: 0}

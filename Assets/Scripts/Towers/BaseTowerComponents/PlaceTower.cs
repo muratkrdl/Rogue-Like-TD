@@ -64,8 +64,12 @@ public class PlaceTower : MonoBehaviour
         towerInfoKeeper.CurrentTowerLevel = 1;
         towerInfoKeeper.SetCurrentTowerInfo(towerInfoKeeper.ClickedTowerCode, towerInfoKeeper.CurrentTowerLevel);
         levelUpTower.UpdateTowerCostText();
-        levelUpTower.SetAnimator = clickedTowersAnimator;
+        levelUpTower.Animator = clickedTowersAnimator;
         levelUpTower.SetChoosenUnitAnimator(towerInfoKeeper.GetCurrentTowerCode , choosenAnimName);
+        if(levelUpTower.Animator.TryGetComponent<TowerUnitSetTarget>(out var component))
+        {
+            component.ClosestTarget();
+        }
     }
 
     void OnClick_ChangeLevelUpCanvas()
@@ -92,10 +96,10 @@ public class PlaceTower : MonoBehaviour
         
         foreach (var item in towers)
         {
-            if(!item.activeSelf) continue;
-            item.SetActive(false);
+            if(!item.activeInHierarchy) continue;
             item.GetComponent<Animator>().SetTrigger(ConstStrings.RESET);
             item.GetComponent<TowerChange>().Reset();
+            item.SetActive(false);
         }
 
         levelUpTower.ResetAllValues();

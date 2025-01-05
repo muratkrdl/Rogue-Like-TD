@@ -28,10 +28,10 @@ public class TowerChange : MonoBehaviour
 
     public void Reset()
     {
-        if(!openTower.activeSelf) return;
+        if(!openTower.activeInHierarchy) return;
         
-        openTower.SetActive(false);
         openTower.GetComponent<Animator>().SetTrigger(ConstStrings.RESET);
+        openTower.SetActive(false);
     }
 
 }

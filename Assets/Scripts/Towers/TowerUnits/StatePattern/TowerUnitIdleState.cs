@@ -20,7 +20,7 @@ public class TowerUnitIdleState : ITowerUnitState
         {
             unitValues.GetTowerUnitSetTarget().ClosestTarget();
             return;
-        }            
+        }
 
         unitValues.GetTowerUnitStateController().ChangeState(new TowerUnitAttackState());
 

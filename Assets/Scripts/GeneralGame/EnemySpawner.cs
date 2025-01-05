@@ -194,9 +194,14 @@ public class EnemySpawner : MonoBehaviour
         enemy.IsGoingToRight = isGoingToRight;
     }
 
+    public void StopSpawner()
+    {
+        cts?.Cancel();
+    }
+
     void OnDestroy() 
     {
-        cts.Cancel();
+        StopSpawner();
     }
 
 }

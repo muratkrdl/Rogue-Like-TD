@@ -1,3 +1,4 @@
+using System.Net.Http.Headers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,15 +30,9 @@ public class LevelUpTower : MonoBehaviour
     float initialNormalTowerIconY;
     float initialNormalTowerIconTransformY;
 
-    bool isTowerFull = false;
-
-    public bool GetIsTowerFull
+    public Animator Animator
     {
-        get => isTowerFull;
-    }
-
-    public Animator SetAnimator
-    {
+        get => animator;
         set => animator = value;
     }
 
@@ -88,7 +83,6 @@ public class LevelUpTower : MonoBehaviour
 
         if(towerInfoKeeper.GetCurrentTowerCode > 3 && towerInfoKeeper.CurrentTowerLevel == 3)
         {
-            isTowerFull = true;
             GetComponent<BaseTowerPanelKeeper>().CloseAllCanvas();
             return;
         }
@@ -125,10 +119,9 @@ public class LevelUpTower : MonoBehaviour
     {
         if(animator == null) return;
         animator.SetTrigger(ConstStrings.RESET);
-        SetAnimator = null;
+        Animator = null;
         levelUpTowerIcon.rectTransform.sizeDelta = new(initialNormalTowerIconX, initialNormalTowerIconY);
         levelUpTowerIcon.rectTransform.localPosition = new(levelUpTowerIcon.rectTransform.localPosition.x, initialNormalTowerIconTransformY);
-        isTowerFull = false;
         choosenUnitAnimator.SetTrigger(ConstStrings.RESET);
         if(towerInfoKeeper.GetCurrentTowerCode != 2 && towerInfoKeeper.GetCurrentTowerCode != 8 && towerInfoKeeper.GetCurrentTowerCode != 9)
         {

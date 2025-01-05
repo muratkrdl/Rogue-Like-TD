@@ -56,10 +56,9 @@ public class TowerHealth : MonoBehaviour, IDamageable
             if(isMainTower)
             {
                 // gameOver 
-                GameStateManager.Instance.PauseGame();
                 GlobalUnitTargets.Instance.GetPlayerTarget().GetComponent<PlayerHealth>().IsDead = true;
                 MainTowerManager.Instance.OnInteractWithMainTower?.Invoke(this, new() { state = MainTowerInOutStates.inTower } );
-                GameOverMenu.Instance.GameOver();
+                GameOverMenu.Instance.GameOver(false);
                 Invoke(nameof(InvokeExploAnim), 1);
             }
             else

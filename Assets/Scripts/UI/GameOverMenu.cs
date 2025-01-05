@@ -11,6 +11,7 @@ public class GameOverMenu : MonoBehaviour
 
     [SerializeField] Animator[] otherMenus;
 
+    [SerializeField] GameObject winText;
     [SerializeField] TextMeshProUGUI gainedMoneyText;
 
     [SerializeField] Button quitButton;
@@ -33,14 +34,17 @@ public class GameOverMenu : MonoBehaviour
         gainedMoneyText.text = value.ToString();
     }
 
-    public void GameOver()
+    public void GameOver(bool win)
     {
+        GameStateManager.Instance.PauseGame();
+
         foreach(var item in otherMenus)
         {
             item.SetTrigger(ConstStrings.CLOSE);
         }
 
         isGameOver = true;
+        winText.SetActive(win);
         SetGainedMoneyText(Bank.Instance.GetGainedPermanentMoney);
         Invoke(nameof(InvokeMenuAnim), 3f);
     }

@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using System.Security.Permissions;
 using UnityEngine;
 
 
@@ -49,7 +50,12 @@ public class InventorySystem : MonoBehaviour
     void Invokestart()
     {
         if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex != 1 ) return;
-        LevelUpSkill(16);
+        int code = 12;
+        while(code == 12)
+        {
+            code = UnityEngine.Random.Range(10, 20);
+        }
+        LevelUpSkill(code);
     }
 
     public void LevelUpSkill(int code)

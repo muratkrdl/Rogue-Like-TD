@@ -22,6 +22,6 @@ MonoBehaviour:
   ProjectileCount: 0
   Size: 0
   KnockbackAmount: 0
-  Description: Throws a dagger
+  Description: 
   DamageType: 0
   NeededPasifeSkillSO: {fileID: 0}

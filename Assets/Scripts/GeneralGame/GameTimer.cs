@@ -57,6 +57,12 @@ public class GameTimer : MonoBehaviour
                         EnemySpawner.Instance.SetCanSpawnSpecial = true;
                     else if(currentMinute == 6)
                         EnemySpawner.Instance.SetCanSpawnBoss = true;
+                    else if(currentMinute == 20)
+                    {
+                        EnemySpawner.Instance.StopSpawner();
+                        GetComponent<CheckAllEnemyDied>().AllEnemyDied().Forget();
+                        cts.Cancel();
+                    }
                 }
             }
 
