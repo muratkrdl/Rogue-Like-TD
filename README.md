@@ -1,19 +1,5 @@
 # Rogu-Like-TD
 
-
-## Used design patterns in this project
-
-#### Singleton
-
-#### Object Pooling
-
-#### FlyWeight
-
-#### State Machine
-
-#### Observer
-
-
 # About game
 
 ## This is a rogu-lite tower defense game
