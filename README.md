@@ -173,71 +173,91 @@
 # PASIFE SKILLS
 
 
-- Armor 
+- Armor
+  
 > Reduces physical damage taken
+
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Armor.png" width="48px">
 
 
 
 
 - Clock
+  
 > Cooldown reduced active skills
+
 > <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Cooldown.png" width="48px">
 
 
 
 
 - Gold Dagger
-> Increases active skills damage 
+  
+> Increases active skills damage
+
 > <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Damage.png" width="48px">
 
 
 
 
 - PointHeart
+  
 > Increases health every second
+
 > <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/HealRegen.png" width="48px">
 
 
 
 
 - SecondHeart
+  
 > Base health up
+
 > <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Health.png" width="48px">
 
 
 
 
 - Lethality
+  
 > Ignores enemy's armor
+
 > <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Lethality.png" width="48px">
 
 
 
 
 - Tooths
+  
 > Steals hp damage of skill dealt
+
 > <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Life%20Steal.png" width="48px">
 
 
 
 
 - Magic Penetration
+  
 > Ignores enemy's magic resistance
+
 > <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Magic%20Penetration.png" width="48px">
 
 
 
 
 - Purple Shield
+  
 > Reduces magic damage taken
+
 > <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Magic%20Resistance.png" width="48px">
 
 
 
 
 - Magic Boots
+  
 > Increases movement speed
+
 > <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/MoveSpeed.png" width="48px">
 
 
@@ -245,90 +265,107 @@
 
 # ACTIVE SKILLS
 
-- Shoots a beam of light
+- Beam Of Light
 
-> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BOF.png" width="48px">  Beam Of Light
+> Shoots a beam of light
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BOF.png" width="48px">
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/BOF.gif" width="640px">
 
 
 
+- Raining Blood
+> Spawn a rain
 
-- Spawn a rain
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BloodRain.png" width="48px">
 
-> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BloodRain.png" width="48px"> Raining Blood
-
-> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Bloodrain.gif" width="640px">
-
-
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Bloodrain.gif" width="640px">
 
 
-- Reflects incoming damage to the sender
 
-> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BrightShield.png" width="48px"> BrightShield
+
+- BrightShield
+
+> Reflects incoming damage to the sender
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BrightShield.png" width="48px">
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/BrightShield.gif" width="640px">
 
 
 
 
-- Throws a dagger
+- Dagger
  
-> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Dagger.png" width="48px"> Dagger
+> Throws a dagger
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Dagger.png" width="48px">
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Dagger.gif" width="640px">
 
 
 
 
-- Spins a blade around
+- Dark Blade
 
-> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkBlade.png" width="48px"> Dark Blade
+> Spins a blade around
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkBlade.png" width="48px">
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/DarkBlade.gif" width="640px">
 
 
 
 
-- Damage to area
+- DarkAura
 
-> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkAura.png" width="48px"> DarkAura
+> Damage to area
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkAura.png" width="48px">
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/DarkAura.gif" width="640px">
 
 
 
 
-- Random shoots fireball
+- Fireball
 
-> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Fireball.png" width="48px"> Fireball
+> Random shoots fireball
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Fireball.png" width="48px">
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Fireball.gif" width="640px">
 
 
 
 
-- Pulls spikes out of the ground
+- Spike
 
-> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Spikes.png" width="48px"> Spike
+> Pulls spikes out of the ground
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Spikes.png" width="48px">
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Spike.gif" width="640px">
 
 
 
+- Tornado
 
-- Sends a tornado
+> Sends a tornado
 
-> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/tornado.png" width="48px"> Tornado
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/tornado.png" width="48px">
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Tornado.gif" width="640px">
 
 
 
 
-- Spins vines around
+- Vine
 
-> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Vine.png" width="48px"> Vine
+> Spins vines around
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Vine.png" width="48px">
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Vine.gif" width="640px">
 
