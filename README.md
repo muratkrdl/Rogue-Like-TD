@@ -12,28 +12,28 @@
 
 ### To build and manage towers, your character must be inside the tower
 
-## Outside Tower
+- Outside Tower
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20out.png" width="600px">
 
-### To enter the main tower, your character must be close to the main tower and you must click this button
+> To enter the main tower, your character must be close to the main tower and you must click this button
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20buttonn.png" width="600px">
 
-### After entering the main tower, you can manage all towerplacements
+> After entering the main tower, you can manage all towerplacements
 
-## Inside Tower
+- Inside Tower
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20inside.png" width="600px">
 
 
 ## Placetower mechanics
 
-### Each tower can be upgraded up to 4 levels.
+- Each tower can be upgraded up to 4 levels.
 
-### After reaching the fourth level the tower offers you two options
+- After reaching the fourth level the tower offers you two options
 
-### After choosing one of these two options and evolving the tower, the evolved tower can be upgraded to a maximum of level three.
+- After choosing one of these two options and evolving the tower, the evolved tower can be upgraded to a maximum of level three.
 
 ## TowerPlacement
 
@@ -45,125 +45,126 @@
 
 ### When you place the cursor on one of the buttons, an information panel will open as you can see in the picture
 
-### The yellow text is the price of the tower
+- The yellow text is the price of the tower
 
-### The text in the middle is a description of the tower
+- The text in the middle is a description of the tower
 
-### The numbers next to the skull show the damage to the tower
+- The numbers next to the skull show the damage to the tower
 
-#### If this text is orange, the tower has physical damage, if it is purple, it has magic damage
+- If this text is orange, the tower has physical damage, if it is purple, it has magic damage
 
+## Towers
 
-## Archer tower
+> Archer tower
 
-### Shoots arrows at the closest enemy
+- Shoots arrows at the closest enemy
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Archer/Archer1.gif" width="640px">
 
-### Archer tower evolve 1
+> Archer tower evolve 1
 
-#### Attack speed and damage increases
+> Attack speed and damage increases
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Archer/ArcherEvolved1.gif" width="640px">
 
-### Archer tower evolve 2
+- Archer tower evolve 2
 
-#### Hits slower but deals true damage, not physical damage
+> Hits slower but deals true damage, not physical damage
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Archer/ArcherEvolved2.gif" width="640px">
 
 
-## Magic tower
+- Magic tower
 
-### Casts a spell to the closest enemy
+> Casts a spell to the closest enemy
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Mage/Mage1.gif" width="640px">
 
-### Magic tower evolve 1
+- Magic tower evolve 1
 
-#### Attack speed and damage increases
+> Attack speed and damage increases
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Mage/MageEvolved1.gif" width="640px">
 
-### Magic tower evolve 2
+- Magic tower evolve 2
 
-#### It throws lightning and the lightning it throws bounces off other enemies
+> It throws lightning and the lightning it throws bounces off other enemies
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Mage/MageEvolved2.gif" width="640px">
 
 
-## Guard tower
+- Guard tower
 
-### spawns a soldier to defend the tower
+> spawns a soldier to defend the tower
 
-### If the soldier dies, it spawns another soldier after a certain period of time.
+> If the soldier dies, it spawns another soldier after a certain period of time.
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Guard/Guard1.gif" width="640px">
 
-### Guard tower evolve 1
+- Guard tower evolve 1
 
-#### The soldier does not take physical damage
+> The soldier does not take physical damage
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Guard/GuardEvolved2.gif" width="640px">
 
-### Guard tower evolve 2
+- Guard tower evolve 2
 
-#### The soldier does not take magic damage
+> The soldier does not take magic damage
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Guard/GuardEvolved1.gif" width="640px">
 
 
-## Catapult tower
+- Catapult tower
 
-### throws a stone to the closest enemy
+> throws a stone to the closest enemy
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Catapult/Catapult1.gif" width="640px">
 
-### Catapult evolve 1
+- Catapult evolve 1
 
-#### Attack speed and damage increases
+> Attack speed and damage increases
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Catapult/CatapultEvolved1.gif" width="640px">
 
-### Catapult evolve 2
+- Catapult evolve 2
 
-#### Shoots a ball of lightning that briefly stuns all enemies it hits
+> Shoots a ball of lightning that briefly stuns all enemies it hits
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Catapult/CatapultEvolved2.gif" width="640px">
 
 
 ## Enemy mechanics
 
-### Enemies come at certain periods
+- Enemies come at certain periods
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/Enemy1.png" width="auto">
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/Enemy1.png" width="480px">
 
-### Some enemies attack from close range, some from far away
+- Some enemies attack from close range, some from far away
 
-### You can avoid ranged enemies' shots
+- You can avoid ranged enemies' shots
 
-### Every enemy that dies drops a gem on the ground (The function of the gems will be explained in the player section)
+- Every enemy that dies drops a gem on the ground (The function of the gems will be explained in the player section)
 
 
 ## Player mechanics
 
-### Your character helps your towers to kill enemies
+- Your character helps your towers to kill enemies
 
-### When the character dies, it goes into a cooldown and when the time is up, she respawns from the main tower
+- When the character dies, it goes into a cooldown and when the time is up, she respawns from the main tower
 
-### The main character can manage towers during cooldown
+- The main character can manage towers during cooldown
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/PlayerDead.gif" width="auto">
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/PlayerDead.gif" width="640px">
 
-### You have 5 active and 5 passive skills to hit the enemies
+- You have 5 active and 5 passive skills to hit the enemies
 
-### To get these skills, you need to level up and fill the experience bar at the top to level up
+- To get these skills, you need to level up and fill the experience bar at the top to level up
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/LevelUPBar.png" width="auto">
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/LevelUPBar.png" width="640px">
 
-### To gain experience, you must collect the gems dropped by enemies
+- To gain experience, you must collect the gems dropped by enemies
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/Gem.png" width="auto">
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/Gem.png" width="640px">
 
 
 
