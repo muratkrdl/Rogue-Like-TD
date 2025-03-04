@@ -181,7 +181,7 @@
 
 
 - Clock
-#### Cooldown reduced active skills
+> Cooldown reduced active skills
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Cooldown.png" width="48px">
 
 
@@ -201,43 +201,43 @@
 
 
 
-## SecondHeart
-#### Base health up
+- SecondHeart
+> Base health up
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Health.png" width="48px">
 
 
 
 
-## Lethality
-#### Ignores enemy's armor
+- Lethality
+> Ignores enemy's armor
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Lethality.png" width="48px">
 
 
 
 
-## Tooths
-#### Steals hp damage of skill dealt
+- Tooths
+> Steals hp damage of skill dealt
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Life%20Steal.png" width="48px">
 
 
 
 
-## Magic Penetration
-#### Ignores enemy's magic resistance
+- Magic Penetration
+> Ignores enemy's magic resistance
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Magic%20Penetration.png" width="48px">
 
 
 
 
-## Purple Shield
-#### Reduces magic damage taken
+- Purple Shield
+> Reduces magic damage taken
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Magic%20Resistance.png" width="48px">
 
 
 
 
-## Magic Boots
-#### Increases movement speed
+- Magic Boots
+> Increases movement speed
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/MoveSpeed.png" width="48px">
 
 
@@ -245,80 +245,90 @@
 
 # ACTIVE SKILLS
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BOF.png" width="48px">  Beam Of Light
-#### Shoots a beam of light
+- Shoots a beam of light
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BOF.png" width="48px">  Beam Of Light
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/BOF.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BloodRain.png" width="48px"> Raining Blood
-#### Spawn a rain
+- Spawn a rain
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BloodRain.png" width="48px"> Raining Blood
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Bloodrain.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BrightShield.png" width="48px"> BrightShield
-#### Reflects incoming damage to the sender
+- Reflects incoming damage to the sender
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BrightShield.png" width="48px"> BrightShield
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/BrightShield.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Dagger.png" width="48px"> Dagger
-#### Throws a dagger
+- Throws a dagger
+ 
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Dagger.png" width="48px"> Dagger
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Dagger.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkBlade.png" width="48px"> Dark Blade
-#### Spins a blade around
+- Spins a blade around
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkBlade.png" width="48px"> Dark Blade
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/DarkBlade.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkAura.png" width="48px"> DarkAura
-#### Damage to area
+- Damage to area
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkAura.png" width="48px"> DarkAura
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/DarkAura.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Fireball.png" width="48px"> Fireball
-#### Random shoots fireball
+- Random shoots fireball
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Fireball.png" width="48px"> Fireball
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Fireball.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Spikes.png" width="48px"> Spike
-#### Pulls spikes out of the ground
+- Pulls spikes out of the ground
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Spikes.png" width="48px"> Spike
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Spike.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/tornado.png" width="48px"> Tornado
-#### Sends a tornado
+- Sends a tornado
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/tornado.png" width="48px"> Tornado
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Tornado.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Vine.png" width="48px"> Vine
-#### Spins vines around
+- Spins vines around
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Vine.png" width="48px"> Vine
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Normal/Vine.gif" width="640px">
 
@@ -344,80 +354,110 @@
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/EvolvePanel.png" width="auto">
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BOF%2B%2B.png" width="48px"> Beam Of Light Evolved
-#### The light beam is always on
+- Beam Of Light Evolved
+
+> The light beam is always on
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BOF%2B%2B.png" width="48px">
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Bof.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BloodRain%2B%2B.png" width="48px"> Raining Blood Evolved 
-#### Towers it touches gain extra attack speed
+- Raining Blood Evolved 
+
+> Towers it touches gain extra attack speed
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BloodRain%2B%2B.png" width="48px">
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/BloodRain.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BrightShield%2B%2B.png" width="48px"> BrightShield Evolved
-#### Gains HP from every enemy it hits
+- BrightShield Evolved
+
+> Gains HP from every enemy it hits
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/BrightShield%2B%2B.png" width="48px">
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/BrightShield.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Dagger%2B%2B%20v2.png" width="48px"> Dagger Evolved (Axe)
-#### Daggers turn into axes
+-Dagger Evolved (Axe)
+
+> Daggers turn into axes
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Dagger%2B%2B%20v2.png" width="48px"> 
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Dagger.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkBlade%2B%2B.png" width="48px"> Dark Blade Evolved 
-#### Gains HP from every enemy it hits
+- Dark Blade Evolved 
+
+> Gains HP from every enemy it hits
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkBlade%2B%2B.png" width="48px"> 
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/DarkBlade.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkAura%2B%2B.png" width="48px"> DarkAura Evolved 
-#### Towers it touches gain extra damage
+-DarkAura Evolved 
+
+> Towers it touches gain extra damage
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/DarkAura%2B%2B.png" width="48px"> 
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/DarkAura.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Fireball%2B%2B.png" width="48px"> Fireball Evolved
-#### Attack area increases
+-Fireball Evolved
+
+> Attack area increases
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Fireball%2B%2B.png" width="48px"> 
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/FireBall.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Spikes%2B%2B.png" width="48px"> Spike Evolved 
-#### Slows enemy it touchs
+-Spike Evolved 
+
+> Slows enemy it touchs
+
+><img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Spikes%2B%2B.png" width="48px"> 
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Spike.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Tornado%2B%2B.png" width="48px"> Tornado Evolved
-#### Poisons enemies and deals damage over time
+-Tornado Evolved
+
+> Poisons enemies and deals damage over time
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Tornado%2B%2B.png" width="48px"> 
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Tornado.gif" width="640px">
 
 
 
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Vine%2B%2B.png" width="48px"> Vine Evolved
-#### Vine size increases
+-Vine Evolved
+
+> Vine size increases
+
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Active%20Icon/Vine%2B%2B.png" width="48px"> 
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Skills/Evolved/Vine.gif" width="640px">
 
@@ -430,19 +470,19 @@
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SkillFulled.png" width="auto">
 
-### Gold
+- Gold
 
-#### Gain 200 gold
-
-
-### HP
-
-#### Gain 35 hp
+> Gain 200 gold
 
 
-### PD
+- HP
 
-### Gain 25 PD
+> Gain 35 hp
+
+
+- PD
+
+> Gain 25 PD
 
 
 ## Rogue-lite mechanics
@@ -456,9 +496,11 @@
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/Power-up.png" width="auto">
 
-## Koleks
-#### Extra cooldown for active skills
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/Koleks.png" width="48px">
+- Koleks
+- 
+> Extra cooldown for active skills
+> 
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/PD/Koleks.png" width="48px">
 
 
 
