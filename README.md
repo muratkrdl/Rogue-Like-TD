@@ -14,17 +14,17 @@
 
 - Outside Tower
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20out.png" width="600px">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20out.png" width="640px">
 
 > To enter the main tower, your character must be close to the main tower and you must click this button
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20buttonn.png" width="600px">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20buttonn.png" width="640px">
 
 > After entering the main tower, you can manage all towerplacements
 
 - Inside Tower
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20inside.png" width="600px">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20inside.png" width="640px">
 
 
 ## Placetower mechanics
@@ -37,11 +37,11 @@
 
 ## TowerPlacement
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/TOWERS/TowerPlacement.png" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/TOWERS/TowerPlacement.png" width="480px">
 
 ### After clicking on the towerplacement, you must choose one of these 4 options
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/TOWERS/TowerInfoPanel.png" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/TOWERS/TowerInfoPanel.png" width="480px">
 
 ### When you place the cursor on one of the buttons, an information panel will open as you can see in the picture
 
@@ -55,13 +55,13 @@
 
 ## Towers
 
-> Archer tower
+- Archer tower
 
-- Shoots arrows at the closest enemy
+> Shoots arrows at the closest enemy
 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Towers/Archer/Archer1.gif" width="640px">
 
-> Archer tower evolve 1
+- Archer tower evolve 1
 
 > Attack speed and damage increases
 
