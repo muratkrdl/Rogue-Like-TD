@@ -627,12 +627,7 @@
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/GIFS/Gameplay3.gif" width="auto">
 
 
-
-# Tutorial 
-
-## https://www.youtube.com/watch?v=DgDxK5A_f4g
+ [Tutorial](https://www.youtube.com/watch?v=DgDxK5A_f4g)
 
 
-# Gameplay 
-
-## https://www.youtube.com/watch?v=1yOtL2DiSMU
+[Gameplay](https://www.youtube.com/watch?v=1yOtL2DiSMU)
