@@ -174,7 +174,7 @@
 
 
 - Armor 
-#### Reduces physical damage taken
+> Reduces physical damage taken
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Armor.png" width="48px">
 
 
@@ -188,14 +188,14 @@
 
 
 - Gold Dagger
-#### Increases active skills damage 
+> Increases active skills damage 
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Damage.png" width="48px">
 
 
 
 
-## PointHeart
-#### Increases health every second
+- PointHeart
+> Increases health every second
 <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/HealRegen.png" width="48px">
 
 
