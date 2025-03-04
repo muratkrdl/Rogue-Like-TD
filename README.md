@@ -14,17 +14,17 @@
 
 ## Outside Tower
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20out.png" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20out.png" width="600px">
 
 ### To enter the main tower, your character must be close to the main tower and you must click this button
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20buttonn.png" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20buttonn.png" width="600px">
 
 ### After entering the main tower, you can manage all towerplacements
 
 ## Inside Tower
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20inside.png" width="auto">
+<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/MainTower/main%20tower%20inside.png" width="600px">
 
 
 ## Placetower mechanics
@@ -177,7 +177,7 @@
   
 > Reduces physical damage taken
 
-<img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Armor.png" width="48px">
+> <img src="https://github.com/muratkrdl/Rogu-Like-TD/blob/main/Pictures%20and%20gifs/SKILLS/Pasife/Armor.png" width="48px">
 
 
 
