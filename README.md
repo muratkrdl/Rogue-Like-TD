@@ -2,7 +2,7 @@
 
 # About game
 
-## This is a rogu-lite tower defense game
+## This is a rogue-lite tower defense game
 
 ## The main goal of the game is to protect the main tower.
 
