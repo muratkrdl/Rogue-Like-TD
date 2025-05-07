@@ -16204,7 +16204,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 180862708378194927, guid: 48f0ac82d53f62d478093b407f6aa401, type: 3}
       propertyPath: m_Name
-      value: UISKILL (1)
+      value: UISKILL_1
       objectReference: {fileID: 0}
     - target: {fileID: 180862708378194927, guid: 48f0ac82d53f62d478093b407f6aa401, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16281,10 +16281,6 @@ PrefabInstance:
     - target: {fileID: 4402356413718178559, guid: 48f0ac82d53f62d478093b407f6aa401, type: 3}
       propertyPath: m_SizeDelta.x
       value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 4402356413718178559, guid: 48f0ac82d53f62d478093b407f6aa401, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 4402356413718178559, guid: 48f0ac82d53f62d478093b407f6aa401, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19341,7 +19337,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 180862708378194927, guid: 48f0ac82d53f62d478093b407f6aa401, type: 3}
       propertyPath: m_Name
-      value: UISKILL (2)
+      value: UISKILL_2
       objectReference: {fileID: 0}
     - target: {fileID: 180862708378194927, guid: 48f0ac82d53f62d478093b407f6aa401, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19414,10 +19410,6 @@ PrefabInstance:
     - target: {fileID: 4402356413718178559, guid: 48f0ac82d53f62d478093b407f6aa401, type: 3}
       propertyPath: m_AnchorMin.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4402356413718178559, guid: 48f0ac82d53f62d478093b407f6aa401, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4402356413718178559, guid: 48f0ac82d53f62d478093b407f6aa401, type: 3}
       propertyPath: m_SizeDelta.y
