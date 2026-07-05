@@ -271,9 +271,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guardPrefabs:
-  - {fileID: 1418917027577501911, guid: b4f4d6a96989108458e426f5e61e675b, type: 3}
-  - {fileID: 1418917027577501911, guid: 504ef3f789f84fd4d8ef9c86772a9a8d, type: 3}
-  - {fileID: 1418917027577501911, guid: 81b4ab9aa78d83c438b3a5c023e2fe83, type: 3}
+  - {fileID: 1754666221791406274, guid: 5d997f1240600bb42ad9b31677343b35, type: 3}
+  - {fileID: 4343439954142478899, guid: d4c51bd3aec22b94792fede2e1ad692b, type: 3}
+  - {fileID: 4343439954142478899, guid: 4f36968b1d1b7414da0d33890414774b, type: 3}
   listsParent:
   - {fileID: 8193060530482317805}
   - {fileID: 8261263307859065837}
