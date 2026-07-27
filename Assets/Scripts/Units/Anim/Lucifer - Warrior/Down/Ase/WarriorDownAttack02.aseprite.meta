@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -244,13 +245,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1158219018
+    uuid:
+      value0: 2696738226
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1598229070
     name: WarriorDownAttack02
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: WarriorDownAttack02_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -259,7 +265,7 @@ ScriptedImporter:
         width: 60
         height: 105
       spriteId: 9e44ff6048d7ff247bd6e5b313729940
-    - name: WarriorDownAttack02_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -268,7 +274,7 @@ ScriptedImporter:
         width: 59
         height: 104
       spriteId: 26f77cac69d8b7e4889ce9efb8b28af7
-    - name: WarriorDownAttack02_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -277,7 +283,7 @@ ScriptedImporter:
         width: 58
         height: 105
       spriteId: 27f76672e8ec2ce4f9f6b0b7fcb893da
-    - name: WarriorDownAttack02_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -286,7 +292,7 @@ ScriptedImporter:
         width: 57
         height: 106
       spriteId: ff32b419d5ca2a34e9a2da2174632896
-    - name: WarriorDownAttack02_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -295,7 +301,7 @@ ScriptedImporter:
         width: 60
         height: 105
       spriteId: 2d27985cb8d51e944bbd01aa32b723bb
-    - name: WarriorDownAttack02_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -311,3 +317,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 256, y: 256}

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -304,13 +305,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 929991855
+    uuid:
+      value0: 445903403
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 445903403
     name: GoblinSlingerDownDeath
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GoblinSlingerDownDeath_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -319,7 +325,7 @@ ScriptedImporter:
         width: 21
         height: 31
       spriteId: 139a1817620c3104fade20b25aefed15
-    - name: GoblinSlingerDownDeath_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -328,7 +334,7 @@ ScriptedImporter:
         width: 20
         height: 31
       spriteId: 9ac848e116912e04f9e1448019943c88
-    - name: GoblinSlingerDownDeath_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -337,7 +343,7 @@ ScriptedImporter:
         width: 22
         height: 34
       spriteId: ed89b0505d3cd094c834fe7b5061b422
-    - name: GoblinSlingerDownDeath_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -346,7 +352,7 @@ ScriptedImporter:
         width: 23
         height: 30
       spriteId: fea5e6faa2f9a7844b566c57fe68c9ae
-    - name: GoblinSlingerDownDeath_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -355,7 +361,7 @@ ScriptedImporter:
         width: 26
         height: 29
       spriteId: f0dc261ace410ae4287d44a85ad2f2a3
-    - name: GoblinSlingerDownDeath_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -364,7 +370,7 @@ ScriptedImporter:
         width: 22
         height: 16
       spriteId: b919e97b0ff21e2479c1ae83ae973065
-    - name: GoblinSlingerDownDeath_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -373,7 +379,7 @@ ScriptedImporter:
         width: 22
         height: 16
       spriteId: 49aee92f0b40d5749a9d34da9fb9b8d8
-    - name: GoblinSlingerDownDeath_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -382,7 +388,7 @@ ScriptedImporter:
         width: 22
         height: 16
       spriteId: 50c083f411713e54985097f17d89c0bd
-    - name: GoblinSlingerDownDeath_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -398,3 +404,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}

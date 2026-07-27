@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -304,13 +305,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1927704231
+    uuid:
+      value0: 1595183619
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1595183619
     name: GoblinBeastUpAttack02
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GoblinBeastUpAttack02_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -319,7 +325,7 @@ ScriptedImporter:
         width: 24
         height: 33
       spriteId: 6311a6ae315626c4d893ba6e487ee884
-    - name: GoblinBeastUpAttack02_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -328,7 +334,7 @@ ScriptedImporter:
         width: 24
         height: 34
       spriteId: bf86d85c3b98dd44e84562e47983fa48
-    - name: GoblinBeastUpAttack02_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -337,7 +343,7 @@ ScriptedImporter:
         width: 24
         height: 33
       spriteId: c10bc86d9b0808a4e893f782b3d65975
-    - name: GoblinBeastUpAttack02_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -346,7 +352,7 @@ ScriptedImporter:
         width: 24
         height: 32
       spriteId: 9f42d0894f7959c44838a40105a4cb09
-    - name: GoblinBeastUpAttack02_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -355,7 +361,7 @@ ScriptedImporter:
         width: 24
         height: 32
       spriteId: 360a23c67fc215d429d90e6e78f7cdec
-    - name: GoblinBeastUpAttack02_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -364,7 +370,7 @@ ScriptedImporter:
         width: 24
         height: 33
       spriteId: 8cade70052b7e6c4682717735d802a15
-    - name: GoblinBeastUpAttack02_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -373,7 +379,7 @@ ScriptedImporter:
         width: 24
         height: 34
       spriteId: 155dfc0161e32f5468dca9a4c891c829
-    - name: GoblinBeastUpAttack02_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -382,7 +388,7 @@ ScriptedImporter:
         width: 24
         height: 35
       spriteId: cff947765a2b7344d803d00f14d25228
-    - name: GoblinBeastUpAttack02_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -398,3 +404,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 128, y: 128}

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -244,13 +245,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1260395128
+    uuid:
+      value0: 3454294616
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -840672680
     name: SkeletonKingDownIdle
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SkeletonKingDownIdle_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -259,7 +265,7 @@ ScriptedImporter:
         width: 29
         height: 33
       spriteId: 45d0d70fbf1366c47a5a5fcd0fda20e9
-    - name: SkeletonKingDownIdle_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -268,7 +274,7 @@ ScriptedImporter:
         width: 29
         height: 33
       spriteId: 5e8bf19af39b8cb4a8755f5e86a7f7af
-    - name: SkeletonKingDownIdle_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -277,7 +283,7 @@ ScriptedImporter:
         width: 29
         height: 33
       spriteId: 181a2864d4fdca242aea9c64cde544c6
-    - name: SkeletonKingDownIdle_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -286,7 +292,7 @@ ScriptedImporter:
         width: 29
         height: 32
       spriteId: 978b0d777b4ff734faa04ae3c92fc669
-    - name: SkeletonKingDownIdle_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -295,7 +301,7 @@ ScriptedImporter:
         width: 29
         height: 32
       spriteId: fd412353e0d0f2249a91bed0a9c7e2fd
-    - name: SkeletonKingDownIdle_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -311,3 +317,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}

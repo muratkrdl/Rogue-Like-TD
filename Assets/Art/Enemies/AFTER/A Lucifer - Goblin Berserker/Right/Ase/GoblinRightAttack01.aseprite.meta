@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -324,13 +325,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 350504074
+    uuid:
+      value0: 1677759282
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1677759282
     name: GoblinRightAttack01
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GoblinRightAttack01_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -339,7 +345,7 @@ ScriptedImporter:
         width: 25
         height: 28
       spriteId: c768b8a1cd7c49d4a9d15b58ce20328f
-    - name: GoblinRightAttack01_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -348,7 +354,7 @@ ScriptedImporter:
         width: 25
         height: 28
       spriteId: b7766afe2aa23c94ba6fa1da15658089
-    - name: GoblinRightAttack01_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -357,7 +363,7 @@ ScriptedImporter:
         width: 25
         height: 28
       spriteId: 2cdf40a101bda4045a3685b020829735
-    - name: GoblinRightAttack01_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -366,7 +372,7 @@ ScriptedImporter:
         width: 27
         height: 28
       spriteId: 8f63ce091f1f5ad42b4b5023cabb4516
-    - name: GoblinRightAttack01_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -375,7 +381,7 @@ ScriptedImporter:
         width: 17
         height: 27
       spriteId: 25bdcc4c1ca688a4ea36bd9c64750d3b
-    - name: GoblinRightAttack01_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -384,7 +390,7 @@ ScriptedImporter:
         width: 17
         height: 26
       spriteId: aba67109e62a9344584ceae950ba7560
-    - name: GoblinRightAttack01_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -393,7 +399,7 @@ ScriptedImporter:
         width: 17
         height: 26
       spriteId: 2ac7a9658f40f1846a4df80b8d8d0672
-    - name: GoblinRightAttack01_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -402,7 +408,7 @@ ScriptedImporter:
         width: 28
         height: 35
       spriteId: c55b62c1aa8aac34798dc413eea88e6b
-    - name: GoblinRightAttack01_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -411,7 +417,7 @@ ScriptedImporter:
         width: 23
         height: 25
       spriteId: a4135d40f23ddd041b1c6227acf8f0f0
-    - name: GoblinRightAttack01_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -427,3 +433,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}

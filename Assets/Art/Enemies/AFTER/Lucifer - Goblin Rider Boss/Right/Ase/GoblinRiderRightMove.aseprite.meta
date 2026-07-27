@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -204,13 +205,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1182963878
+    uuid:
+      value0: 3285861698
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1009105598
     name: GoblinRiderRightMove
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GoblinRiderRightMove_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -219,7 +225,7 @@ ScriptedImporter:
         width: 65
         height: 44
       spriteId: d5d37951540a6d74dbd9cdb60b0eec0c
-    - name: GoblinRiderRightMove_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -228,7 +234,7 @@ ScriptedImporter:
         width: 63
         height: 44
       spriteId: 982282ac2df7e9b4fafd040036f8498e
-    - name: GoblinRiderRightMove_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -237,7 +243,7 @@ ScriptedImporter:
         width: 70
         height: 45
       spriteId: 214637d620d79ae46bd77a63c41cb8ec
-    - name: GoblinRiderRightMove_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -253,3 +259,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 80}
+  previousTextureSize: {x: 128, y: 256}

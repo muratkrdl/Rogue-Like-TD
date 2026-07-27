@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -204,13 +205,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1456187961
+    uuid:
+      value0: 1810367069
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1810367069
     name: SkeletonKingRightHurt
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SkeletonKingRightHurt_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -219,7 +225,7 @@ ScriptedImporter:
         width: 29
         height: 33
       spriteId: 0de3f0c85fc195048bc24a68dffabb52
-    - name: SkeletonKingRightHurt_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -228,7 +234,7 @@ ScriptedImporter:
         width: 29
         height: 34
       spriteId: f95fa3c4077fe4f4f8ffeb76d4a572d1
-    - name: SkeletonKingRightHurt_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -237,7 +243,7 @@ ScriptedImporter:
         width: 29
         height: 35
       spriteId: 2bdf4455d7f0fdf45babe6b9a4663cf0
-    - name: SkeletonKingRightHurt_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -253,3 +259,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}

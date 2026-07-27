@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -244,13 +245,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -967890559
+    uuid:
+      value0: 4022065349
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -272901947
     name: GoblinRiderUpAttack01
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GoblinRiderUpAttack01_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -259,7 +265,7 @@ ScriptedImporter:
         width: 76
         height: 45
       spriteId: e842c0544d598334f847178389d3c9aa
-    - name: GoblinRiderUpAttack01_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -268,7 +274,7 @@ ScriptedImporter:
         width: 76
         height: 45
       spriteId: 0a53903fbcaefe040afde259643331ea
-    - name: GoblinRiderUpAttack01_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -277,7 +283,7 @@ ScriptedImporter:
         width: 76
         height: 44
       spriteId: 3e67d297a20684f428481ebcae5dffb1
-    - name: GoblinRiderUpAttack01_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -286,7 +292,7 @@ ScriptedImporter:
         width: 68
         height: 58
       spriteId: ab2b48f224fe1c04d831b39076f87814
-    - name: GoblinRiderUpAttack01_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -295,7 +301,7 @@ ScriptedImporter:
         width: 74
         height: 57
       spriteId: 7adf8e8778f3d434ca053a8c8cc00b72
-    - name: GoblinRiderUpAttack01_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -311,3 +317,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 80}
+  previousTextureSize: {x: 256, y: 256}

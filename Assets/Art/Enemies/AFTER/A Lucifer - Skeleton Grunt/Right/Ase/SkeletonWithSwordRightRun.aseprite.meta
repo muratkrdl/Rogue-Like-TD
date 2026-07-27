@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -244,13 +245,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 2058704347
+    uuid:
+      value0: 1541420807
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1541420807
     name: SkeletonWithSwordRightRun
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SkeletonWithSwordRightRun_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -259,7 +265,7 @@ ScriptedImporter:
         width: 17
         height: 29
       spriteId: 7b8f6cfa0c508eb45b0e1998fcbb0589
-    - name: SkeletonWithSwordRightRun_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -268,7 +274,7 @@ ScriptedImporter:
         width: 20
         height: 28
       spriteId: 8d2998f3da7985245a3fdbf4d4c3a55a
-    - name: SkeletonWithSwordRightRun_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -277,7 +283,7 @@ ScriptedImporter:
         width: 21
         height: 26
       spriteId: 2171cf0840b840740b06f95eb50e512c
-    - name: SkeletonWithSwordRightRun_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -286,7 +292,7 @@ ScriptedImporter:
         width: 17
         height: 29
       spriteId: 76c43249c82e72544a6e4936b0991cd5
-    - name: SkeletonWithSwordRightRun_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -295,7 +301,7 @@ ScriptedImporter:
         width: 15
         height: 28
       spriteId: 3a7d6f16104349f43a51d384656423c8
-    - name: SkeletonWithSwordRightRun_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -311,3 +317,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 64, y: 128}

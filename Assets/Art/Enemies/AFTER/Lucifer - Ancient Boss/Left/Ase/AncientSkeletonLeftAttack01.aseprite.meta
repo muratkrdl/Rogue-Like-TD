@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -264,13 +265,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -20386963
+    uuid:
+      value0: 2174478689
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -2120488607
     name: AncientSkeletonLeftAttack01
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: AncientSkeletonLeftAttack01_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -279,7 +285,7 @@ ScriptedImporter:
         width: 36
         height: 57
       spriteId: 4a18afdb7339eb643a91ce8abd9790f6
-    - name: AncientSkeletonLeftAttack01_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -288,7 +294,7 @@ ScriptedImporter:
         width: 36
         height: 57
       spriteId: b0a53d1bf217ca643913588f522b8735
-    - name: AncientSkeletonLeftAttack01_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -297,7 +303,7 @@ ScriptedImporter:
         width: 36
         height: 57
       spriteId: 5e00c05fd4757454596fb24f34d519f6
-    - name: AncientSkeletonLeftAttack01_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -306,7 +312,7 @@ ScriptedImporter:
         width: 55
         height: 57
       spriteId: 74e8367103981904782f63df450195fb
-    - name: AncientSkeletonLeftAttack01_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -315,7 +321,7 @@ ScriptedImporter:
         width: 50
         height: 57
       spriteId: 469b5df0c1e65da4db2ca5efdf46256b
-    - name: AncientSkeletonLeftAttack01_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -324,7 +330,7 @@ ScriptedImporter:
         width: 56
         height: 80
       spriteId: f688675acda6a9849ac04aab07896565
-    - name: AncientSkeletonLeftAttack01_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -340,3 +346,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 80}
+  previousTextureSize: {x: 256, y: 256}

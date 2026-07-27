@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -204,13 +205,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -770763615
+    uuid:
+      value0: 4011743333
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -283223963
     name: CultistLeftJump
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: CultistLeftJump_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -219,7 +225,7 @@ ScriptedImporter:
         width: 12
         height: 29
       spriteId: 90f589b03d0498648bc4075372d5c287
-    - name: CultistLeftJump_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -228,7 +234,7 @@ ScriptedImporter:
         width: 15
         height: 29
       spriteId: fc4cb0a708ea7c54e987f537e13ed73b
-    - name: CultistLeftJump_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -237,7 +243,7 @@ ScriptedImporter:
         width: 16
         height: 29
       spriteId: 2f25ab1d69389b84dbe5c0f72c51664a
-    - name: CultistLeftJump_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -253,3 +259,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 64, y: 128}

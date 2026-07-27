@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -264,13 +265,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 53501354
+    uuid:
+      value0: 1720285394
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1720285394
     name: SorceressUpAttack02
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SorceressUpAttack02_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -279,7 +285,7 @@ ScriptedImporter:
         width: 18
         height: 32
       spriteId: 521565df0ddfeaa448dbd0e88d9835df
-    - name: SorceressUpAttack02_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -288,7 +294,7 @@ ScriptedImporter:
         width: 24
         height: 32
       spriteId: 28a477435cd4c154e8d3f93c18ff7cdb
-    - name: SorceressUpAttack02_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -297,7 +303,7 @@ ScriptedImporter:
         width: 24
         height: 35
       spriteId: bc8d3a6f25839dd4d89f7792d9e903fa
-    - name: SorceressUpAttack02_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -306,7 +312,7 @@ ScriptedImporter:
         width: 24
         height: 41
       spriteId: 7046c994aa269c14ab476f4bf55c310e
-    - name: SorceressUpAttack02_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -315,7 +321,7 @@ ScriptedImporter:
         width: 40
         height: 41
       spriteId: 2e19ea631fd7dc24fa671af841a8c25d
-    - name: SorceressUpAttack02_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -324,7 +330,7 @@ ScriptedImporter:
         width: 40
         height: 41
       spriteId: 882b56b03010fdd479303fc94b18755c
-    - name: SorceressUpAttack02_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -340,3 +346,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 256}

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -244,13 +245,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 149392624
+    uuid:
+      value0: 1341877424
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1341877424
     name: Tower 04 - Level 03 - Projectile - Impact
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Tower 04 - Level 03 - Projectile - Impact_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -259,7 +265,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 67cab5c2692f54840b9801e87d9da81f
-    - name: Tower 04 - Level 03 - Projectile - Impact_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -268,7 +274,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 300f6807249739247ae484be5c755be5
-    - name: Tower 04 - Level 03 - Projectile - Impact_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -277,7 +283,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: ff4783fdc28f8864e9eea4e69f3556fd
-    - name: Tower 04 - Level 03 - Projectile - Impact_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -286,7 +292,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: da528b48b3a7f3944856dfbfb525309b
-    - name: Tower 04 - Level 03 - Projectile - Impact_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -295,7 +301,7 @@ ScriptedImporter:
         width: 64
         height: 64
       spriteId: 828e1c482e84ffb40a77b6a7be53e35b
-    - name: Tower 04 - Level 03 - Projectile - Impact_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -311,3 +317,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 256, y: 256}

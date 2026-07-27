@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -224,13 +225,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -2009502844
+    uuid:
+      value0: 1152523924
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1152523924
     name: GoblinRiderLeftIdle
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GoblinRiderLeftIdle_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -239,7 +245,7 @@ ScriptedImporter:
         width: 65
         height: 44
       spriteId: 2863a693846df35428687879d2a87365
-    - name: GoblinRiderLeftIdle_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -248,7 +254,7 @@ ScriptedImporter:
         width: 63
         height: 56
       spriteId: bf52ff1f663287d4488153fdb695fe20
-    - name: GoblinRiderLeftIdle_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -257,7 +263,7 @@ ScriptedImporter:
         width: 64
         height: 59
       spriteId: 9eb5dac9781ea1d49afe8bcf0771fe3c
-    - name: GoblinRiderLeftIdle_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -266,7 +272,7 @@ ScriptedImporter:
         width: 65
         height: 55
       spriteId: af742025af6f86140a4afda98619b2cf
-    - name: GoblinRiderLeftIdle_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -282,3 +288,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 80}
+  previousTextureSize: {x: 256, y: 128}

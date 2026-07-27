@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -244,13 +245,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 857776678
+    uuid:
+      value0: 1917045310
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1917045310
     name: WarriorUpClimb
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: WarriorUpClimb_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -259,7 +265,7 @@ ScriptedImporter:
         width: 59
         height: 105
       spriteId: c0ad7c575469ef54f9c760bf17d1470e
-    - name: WarriorUpClimb_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -268,7 +274,7 @@ ScriptedImporter:
         width: 60
         height: 104
       spriteId: 8edff8f96caacb24482bb52469f963c7
-    - name: WarriorUpClimb_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -277,7 +283,7 @@ ScriptedImporter:
         width: 60
         height: 105
       spriteId: 687e3a8f6ddede040a0d15f8d10e4e85
-    - name: WarriorUpClimb_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -286,7 +292,7 @@ ScriptedImporter:
         width: 59
         height: 105
       spriteId: acf09fafac766ea4d89e16907d1ecba7
-    - name: WarriorUpClimb_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -295,7 +301,7 @@ ScriptedImporter:
         width: 58
         height: 104
       spriteId: fc5547a740e62d54283ea61006b0157d
-    - name: WarriorUpClimb_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -311,3 +317,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 256, y: 256}

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -344,13 +345,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1957806082
+    uuid:
+      value0: 3067538806
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1227428490
     name: Tower 05 - Level 02 - Projectile - Impact
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Tower 05 - Level 02 - Projectile - Impact_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -359,7 +365,7 @@ ScriptedImporter:
         width: 10
         height: 10
       spriteId: e045ea9b426005c4895211ee400f9139
-    - name: Tower 05 - Level 02 - Projectile - Impact_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -368,7 +374,7 @@ ScriptedImporter:
         width: 6
         height: 6
       spriteId: 606895907132c8045886881ab65066d7
-    - name: Tower 05 - Level 02 - Projectile - Impact_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -377,7 +383,7 @@ ScriptedImporter:
         width: 4
         height: 4
       spriteId: 9384a5f870d196b45b850e3fe94a65a2
-    - name: Tower 05 - Level 02 - Projectile - Impact_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -386,7 +392,7 @@ ScriptedImporter:
         width: 2
         height: 2
       spriteId: 8890fe4b995e17044901f726395dc7cd
-    - name: Tower 05 - Level 02 - Projectile - Impact_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -395,7 +401,7 @@ ScriptedImporter:
         width: 2
         height: 2
       spriteId: da807ecd63f3aa34a855ac400cb4fdff
-    - name: Tower 05 - Level 02 - Projectile - Impact_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -404,7 +410,7 @@ ScriptedImporter:
         width: 2
         height: 2
       spriteId: a750ee9b241dbe943a9d2ef5bc855b15
-    - name: Tower 05 - Level 02 - Projectile - Impact_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -413,7 +419,7 @@ ScriptedImporter:
         width: 6
         height: 6
       spriteId: 3db9d6c32c8f2cb488068f00bd7be13c
-    - name: Tower 05 - Level 02 - Projectile - Impact_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -422,7 +428,7 @@ ScriptedImporter:
         width: 22
         height: 22
       spriteId: a29d2b6dc045aa645a2856644b5e6afa
-    - name: Tower 05 - Level 02 - Projectile - Impact_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -431,7 +437,7 @@ ScriptedImporter:
         width: 44
         height: 44
       spriteId: 02994ac5bfcf7f344a864a9617c8b6ca
-    - name: Tower 05 - Level 02 - Projectile - Impact_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -440,7 +446,7 @@ ScriptedImporter:
         width: 58
         height: 58
       spriteId: 22274ba0258035b43ae400d4c768b9a5
-    - name: Tower 05 - Level 02 - Projectile - Impact_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -456,3 +462,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 128, y: 256}

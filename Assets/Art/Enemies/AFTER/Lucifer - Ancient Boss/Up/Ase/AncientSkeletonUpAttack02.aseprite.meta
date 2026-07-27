@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -384,13 +385,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -413536882
+    uuid:
+      value0: 1892205894
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1892205894
     name: AncientSkeletonUpAttack02
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: AncientSkeletonUpAttack02_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -399,7 +405,7 @@ ScriptedImporter:
         width: 48
         height: 55
       spriteId: e098467ca90227e4da9d5f0f13cb215a
-    - name: AncientSkeletonUpAttack02_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -408,7 +414,7 @@ ScriptedImporter:
         width: 56
         height: 66
       spriteId: d7be242021d65404dac1ebc79a63c8c2
-    - name: AncientSkeletonUpAttack02_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -417,7 +423,7 @@ ScriptedImporter:
         width: 64
         height: 73
       spriteId: 9b6a654862924db4cb60d77a05ca9391
-    - name: AncientSkeletonUpAttack02_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -426,7 +432,7 @@ ScriptedImporter:
         width: 79
         height: 71
       spriteId: 11a20b172a761b14896e575bf61e068e
-    - name: AncientSkeletonUpAttack02_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -435,7 +441,7 @@ ScriptedImporter:
         width: 64
         height: 73
       spriteId: ee9b21b875e47914c8c25520fb4c8d08
-    - name: AncientSkeletonUpAttack02_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -444,7 +450,7 @@ ScriptedImporter:
         width: 64
         height: 73
       spriteId: b949519300231f04598290ad6f19218a
-    - name: AncientSkeletonUpAttack02_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -453,7 +459,7 @@ ScriptedImporter:
         width: 79
         height: 71
       spriteId: 764a29ccbfde0c54ca606a4d14bbacc4
-    - name: AncientSkeletonUpAttack02_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -462,7 +468,7 @@ ScriptedImporter:
         width: 64
         height: 73
       spriteId: bdf6d44f3176b7b44a41cec395f77854
-    - name: AncientSkeletonUpAttack02_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -471,7 +477,7 @@ ScriptedImporter:
         width: 64
         height: 73
       spriteId: 72d2ecc41a22c844e9902e0a408f4a94
-    - name: AncientSkeletonUpAttack02_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -480,7 +486,7 @@ ScriptedImporter:
         width: 79
         height: 71
       spriteId: 45b2344c57ec17240896dc775566ce2e
-    - name: AncientSkeletonUpAttack02_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -489,7 +495,7 @@ ScriptedImporter:
         width: 53
         height: 75
       spriteId: 3f93d145d6f339b4697b5499a2eb0d87
-    - name: AncientSkeletonUpAttack02_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -498,7 +504,7 @@ ScriptedImporter:
         width: 58
         height: 74
       spriteId: 327075d625a863a47b719e3771790af4
-    - name: AncientSkeletonUpAttack02_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -514,3 +520,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 80}
+  previousTextureSize: {x: 256, y: 512}

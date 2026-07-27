@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -224,13 +225,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -942260019
+    uuid:
+      value0: 484461633
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 484461633
     name: CultistUpDeath
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: CultistUpDeath_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -239,7 +245,7 @@ ScriptedImporter:
         width: 14
         height: 29
       spriteId: 7b9dd7d9bbf422644b27c58ef7de5318
-    - name: CultistUpDeath_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -248,7 +254,7 @@ ScriptedImporter:
         width: 22
         height: 29
       spriteId: 1e5e51b67836e8542b8859fd1a8d536c
-    - name: CultistUpDeath_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -257,7 +263,7 @@ ScriptedImporter:
         width: 16
         height: 22
       spriteId: 8fd69106d00b35f4caaf7e3742c559ed
-    - name: CultistUpDeath_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -266,7 +272,7 @@ ScriptedImporter:
         width: 17
         height: 21
       spriteId: c80d4e5b839e085408c9823e437a27b7
-    - name: CultistUpDeath_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -282,3 +288,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 64, y: 128}

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -224,13 +225,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1158219415
+    uuid:
+      value0: 2696738227
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1598229069
     name: WarriorDownAttack03
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: WarriorDownAttack03_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -239,7 +245,7 @@ ScriptedImporter:
         width: 59
         height: 104
       spriteId: 4be9531aa6c94f8458eb203958cb4b2a
-    - name: WarriorDownAttack03_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -248,7 +254,7 @@ ScriptedImporter:
         width: 59
         height: 110
       spriteId: f16106ab830402e49b77d5fec2bdfc29
-    - name: WarriorDownAttack03_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -257,7 +263,7 @@ ScriptedImporter:
         width: 59
         height: 110
       spriteId: aa0597beedbcb5c4798b72d31468c46a
-    - name: WarriorDownAttack03_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -266,7 +272,7 @@ ScriptedImporter:
         width: 60
         height: 105
       spriteId: 812dfa6f217087147bf943d5fa164009
-    - name: WarriorDownAttack03_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -282,3 +288,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 256, y: 256}

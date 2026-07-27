@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -284,13 +285,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 2084028619
+    uuid:
+      value0: 4213668279
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -81299017
     name: SkeletonWithSwordUpDeath
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SkeletonWithSwordUpDeath_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -299,7 +305,7 @@ ScriptedImporter:
         width: 24
         height: 29
       spriteId: f47463ddfc87b274cbeb35cd75bf44aa
-    - name: SkeletonWithSwordUpDeath_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -308,7 +314,7 @@ ScriptedImporter:
         width: 29
         height: 29
       spriteId: 95714f6bb02902c40b40dd5551ef62c9
-    - name: SkeletonWithSwordUpDeath_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -317,7 +323,7 @@ ScriptedImporter:
         width: 27
         height: 38
       spriteId: 8c00bf714e4d52341995b5c1e7bb877d
-    - name: SkeletonWithSwordUpDeath_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -326,7 +332,7 @@ ScriptedImporter:
         width: 28
         height: 43
       spriteId: d3b8512eddbc1314bb40cc87df842e64
-    - name: SkeletonWithSwordUpDeath_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -335,7 +341,7 @@ ScriptedImporter:
         width: 15
         height: 31
       spriteId: 0217c164a3931a744ab8700350c78bf1
-    - name: SkeletonWithSwordUpDeath_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -344,7 +350,7 @@ ScriptedImporter:
         width: 18
         height: 11
       spriteId: b9c0fdf0a5ba2f24db686692cd5b38f1
-    - name: SkeletonWithSwordUpDeath_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -353,7 +359,7 @@ ScriptedImporter:
         width: 19
         height: 12
       spriteId: 23301d86fae658841b28f850c37b17a5
-    - name: SkeletonWithSwordUpDeath_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -369,3 +375,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}

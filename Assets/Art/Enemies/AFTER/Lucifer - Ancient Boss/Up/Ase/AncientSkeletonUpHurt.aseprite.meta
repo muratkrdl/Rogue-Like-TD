@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -204,13 +205,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 982196497
+    uuid:
+      value0: 1787536021
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1787536021
     name: AncientSkeletonUpHurt
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: AncientSkeletonUpHurt_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -219,7 +225,7 @@ ScriptedImporter:
         width: 35
         height: 55
       spriteId: 0d3ded98f864bde409102230044d1ce9
-    - name: AncientSkeletonUpHurt_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -228,7 +234,7 @@ ScriptedImporter:
         width: 32
         height: 58
       spriteId: 0f8953af3a09e47459ac639d675c3f52
-    - name: AncientSkeletonUpHurt_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -237,7 +243,7 @@ ScriptedImporter:
         width: 32
         height: 58
       spriteId: 785261b9ef1226b4494bb79d4e5b9d46
-    - name: AncientSkeletonUpHurt_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -253,3 +259,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 80}
+  previousTextureSize: {x: 128, y: 256}

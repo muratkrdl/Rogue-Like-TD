@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -224,13 +225,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1423231892
+    uuid:
+      value0: 955618020
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 955618020
     name: WarriorRightDeath
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: WarriorRightDeath_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -239,7 +245,7 @@ ScriptedImporter:
         width: 43
         height: 32
       spriteId: f727f30f39172d94d95faef141ed2208
-    - name: WarriorRightDeath_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -248,7 +254,7 @@ ScriptedImporter:
         width: 44
         height: 32
       spriteId: b395087fcfd846643b148b9342460f9b
-    - name: WarriorRightDeath_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -257,7 +263,7 @@ ScriptedImporter:
         width: 44
         height: 32
       spriteId: ba2ea2b54d4eecf47bd3ca9ec4c2286b
-    - name: WarriorRightDeath_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -266,7 +272,7 @@ ScriptedImporter:
         width: 44
         height: 32
       spriteId: 4f8b79312678d6e408a721e52fcbd042
-    - name: WarriorRightDeath_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -282,3 +288,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}

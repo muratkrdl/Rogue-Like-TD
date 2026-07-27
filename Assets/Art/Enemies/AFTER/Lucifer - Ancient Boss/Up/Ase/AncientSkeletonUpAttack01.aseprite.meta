@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -140,7 +141,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 68, y: 69}
+    uvTransform: {x: 93, y: 86}
   - name: AncientSkeletonUpAttack01_Frame_1
     originalName: 
     pivot: {x: 0.4166667, y: -0.3090909}
@@ -160,7 +161,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 24, y: 69}
+    uvTransform: {x: 49, y: 86}
   - name: AncientSkeletonUpAttack01_Frame_2
     originalName: 
     pivot: {x: 0.5405405, y: -0.34545454}
@@ -180,7 +181,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 118, y: -13}
+    uvTransform: {x: 138, y: 4}
   - name: AncientSkeletonUpAttack01_Frame_3
     originalName: 
     pivot: {x: 0.5405405, y: -0.38181818}
@@ -200,7 +201,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 163, y: -13}
+    uvTransform: {x: 183, y: 4}
   - name: AncientSkeletonUpAttack01_Frame_4
     originalName: 
     pivot: {x: 0.5405405, y: -0.41818184}
@@ -220,7 +221,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -16, y: 69}
+    uvTransform: {x: 4, y: 86}
   - name: AncientSkeletonUpAttack01_Frame_5
     originalName: 
     pivot: {x: 0.47826084, y: -0.013513513}
@@ -240,7 +241,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -3, y: -1}
+    uvTransform: {x: 4, y: 4}
   - name: AncientSkeletonUpAttack01_Frame_6
     originalName: 
     pivot: {x: 0.30612245, y: 0}
@@ -260,78 +261,83 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 56, y: -1}
+    uvTransform: {x: 81, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -413538073
+    uuid:
+      value0: 1892205891
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1892205891
     name: AncientSkeletonUpAttack01
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: AncientSkeletonUpAttack01_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 80
-        height: 80
+        x: 25
+        y: 17
+        width: 35
+        height: 55
       spriteId: fa2830e56812ad848bcf0e07ab56742d
-    - name: AncientSkeletonUpAttack01_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 80
-        height: 80
+        x: 25
+        y: 17
+        width: 36
+        height: 55
       spriteId: 9a14144cd35b69245902ee4d8afccd49
-    - name: AncientSkeletonUpAttack01_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 2
-        width: 80
-        height: 80
+        x: 20
+        y: 19
+        width: 37
+        height: 55
       spriteId: 64e6be7e8c1022a489488caec9b04e02
-    - name: AncientSkeletonUpAttack01_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 4
-        width: 80
-        height: 80
+        x: 20
+        y: 21
+        width: 37
+        height: 55
       spriteId: bf0b49d7587dc4541832237454cf54d1
-    - name: AncientSkeletonUpAttack01_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 6
-        width: 80
-        height: 80
+        x: 20
+        y: 23
+        width: 37
+        height: 55
       spriteId: b03d86d3b5ead0343bdeceadd662fe06
-    - name: AncientSkeletonUpAttack01_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: -4
-        width: 80
-        height: 80
+        x: 7
+        y: 1
+        width: 69
+        height: 74
       spriteId: ecc11b6f09ab324499866bfc61b029bb
-    - name: AncientSkeletonUpAttack01_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: -5
-        width: 80
-        height: 80
+        x: 25
+        y: 0
+        width: 49
+        height: 67
       spriteId: bdcccdb42ac428d459339f30625c95a0
     linkedCells: []
     parentIndex: -1
@@ -340,3 +346,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 80}
+  previousTextureSize: {x: 256, y: 256}

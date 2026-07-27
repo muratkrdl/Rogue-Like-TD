@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -244,13 +245,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -32540340
+    uuid:
+      value0: 2509823356
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1785143940
     name: SkeletonWithBowRightRun
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SkeletonWithBowRightRun_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -259,7 +265,7 @@ ScriptedImporter:
         width: 18
         height: 30
       spriteId: 0b78630049527e347a73ea747c7dc51d
-    - name: SkeletonWithBowRightRun_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -268,7 +274,7 @@ ScriptedImporter:
         width: 22
         height: 29
       spriteId: 70cda451fdae78740b586ad5a4d16ea4
-    - name: SkeletonWithBowRightRun_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -277,7 +283,7 @@ ScriptedImporter:
         width: 23
         height: 27
       spriteId: f4f3a7ea7c2c6a84ca06d7f96ba8e977
-    - name: SkeletonWithBowRightRun_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -286,7 +292,7 @@ ScriptedImporter:
         width: 18
         height: 30
       spriteId: 6f01df714fa97db42ab85fb07760b30e
-    - name: SkeletonWithBowRightRun_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -295,7 +301,7 @@ ScriptedImporter:
         width: 15
         height: 29
       spriteId: 7d2d2bc1dd001da4fa4f665de15d896b
-    - name: SkeletonWithBowRightRun_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -311,3 +317,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 64, y: 128}

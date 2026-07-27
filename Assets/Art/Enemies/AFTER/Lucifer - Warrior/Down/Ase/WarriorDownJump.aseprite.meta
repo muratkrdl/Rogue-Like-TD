@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -224,13 +225,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1758249696
+    uuid:
+      value0: 2375653792
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1919313504
     name: WarriorDownJump
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: WarriorDownJump_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -239,7 +245,7 @@ ScriptedImporter:
         width: 60
         height: 105
       spriteId: 4b53aa0520a94cd46adc38df5a2367d1
-    - name: WarriorDownJump_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -248,7 +254,7 @@ ScriptedImporter:
         width: 59
         height: 104
       spriteId: a3109f211a162be4fb8f943f66ed3606
-    - name: WarriorDownJump_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -257,7 +263,7 @@ ScriptedImporter:
         width: 59
         height: 104
       spriteId: 15148fd968b04964e812ef1dfaeb3e57
-    - name: WarriorDownJump_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -266,7 +272,7 @@ ScriptedImporter:
         width: 59
         height: 105
       spriteId: d92429c7d134def4f9aee54cf51e6f7c
-    - name: WarriorDownJump_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -282,3 +288,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 256, y: 256}

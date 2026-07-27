@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -284,13 +285,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 284706683
+    uuid:
+      value0: 2359162663
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1935804633
     name: SkeletonWithBowDownDeath
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SkeletonWithBowDownDeath_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -299,7 +305,7 @@ ScriptedImporter:
         width: 17
         height: 30
       spriteId: 2c27cc69527ffa34ba73d6f1a798b233
-    - name: SkeletonWithBowDownDeath_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -308,7 +314,7 @@ ScriptedImporter:
         width: 23
         height: 29
       spriteId: ebd85017799a4f14f8633b089be38455
-    - name: SkeletonWithBowDownDeath_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -317,7 +323,7 @@ ScriptedImporter:
         width: 26
         height: 34
       spriteId: d8ecff46a39b51b41b7b42011adb089d
-    - name: SkeletonWithBowDownDeath_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -326,7 +332,7 @@ ScriptedImporter:
         width: 30
         height: 36
       spriteId: 23e94fc5680084646900fa3746ef6604
-    - name: SkeletonWithBowDownDeath_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -335,7 +341,7 @@ ScriptedImporter:
         width: 23
         height: 24
       spriteId: c7429801f2690f94b8d4ff7252d526e7
-    - name: SkeletonWithBowDownDeath_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -344,7 +350,7 @@ ScriptedImporter:
         width: 23
         height: 11
       spriteId: 79328533c93e1a24eb2b1badab426d3a
-    - name: SkeletonWithBowDownDeath_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -353,7 +359,7 @@ ScriptedImporter:
         width: 23
         height: 11
       spriteId: 2ca260a3640a3a54a8ec7b4ec68d1457
-    - name: SkeletonWithBowDownDeath_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -369,3 +375,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}

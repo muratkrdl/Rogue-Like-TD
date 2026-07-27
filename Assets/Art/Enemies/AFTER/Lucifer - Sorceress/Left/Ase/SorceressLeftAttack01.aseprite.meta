@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -224,13 +225,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -617444583
+    uuid:
+      value0: 2108063421
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 2108063421
     name: SorceressLeftAttack01
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SorceressLeftAttack01_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -239,7 +245,7 @@ ScriptedImporter:
         width: 18
         height: 32
       spriteId: f6bec1b1d88adba42bb75c073c5244a7
-    - name: SorceressLeftAttack01_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -248,7 +254,7 @@ ScriptedImporter:
         width: 18
         height: 32
       spriteId: eec1160c43d547541bb1969e3e3d625c
-    - name: SorceressLeftAttack01_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -257,7 +263,7 @@ ScriptedImporter:
         width: 21
         height: 32
       spriteId: 6cff368b93bf16349839a6e92105ae6a
-    - name: SorceressLeftAttack01_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -266,7 +272,7 @@ ScriptedImporter:
         width: 15
         height: 32
       spriteId: 9391388182eac6149b93401f23dff326
-    - name: SorceressLeftAttack01_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -282,3 +288,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 64, y: 128}

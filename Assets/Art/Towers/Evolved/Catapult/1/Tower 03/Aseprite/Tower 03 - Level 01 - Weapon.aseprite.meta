@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -284,13 +285,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1508785369
+    uuid:
+      value0: 2243241853
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -2051725443
     name: Tower 03 - Level 01 - Weapon
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Tower 03 - Level 01 - Weapon_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -299,7 +305,7 @@ ScriptedImporter:
         width: 42
         height: 36
       spriteId: 7e018685060caa14a9d7f1fb6d4ace39
-    - name: Tower 03 - Level 01 - Weapon_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -308,7 +314,7 @@ ScriptedImporter:
         width: 42
         height: 37
       spriteId: 0bc4b316c05441c4880751c85db8bafa
-    - name: Tower 03 - Level 01 - Weapon_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -317,7 +323,7 @@ ScriptedImporter:
         width: 42
         height: 38
       spriteId: c65d816790c6ba748a7542d40b85d68e
-    - name: Tower 03 - Level 01 - Weapon_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -326,7 +332,7 @@ ScriptedImporter:
         width: 42
         height: 38
       spriteId: b4f92b7c60954e14bb5de3e70b283ba2
-    - name: Tower 03 - Level 01 - Weapon_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -335,7 +341,7 @@ ScriptedImporter:
         width: 36
         height: 54
       spriteId: 3f1cf138ca6067547a3e0507c1bf51a9
-    - name: Tower 03 - Level 01 - Weapon_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -344,7 +350,7 @@ ScriptedImporter:
         width: 38
         height: 64
       spriteId: 19c3cdb832df1814b93c230ca48202f6
-    - name: Tower 03 - Level 01 - Weapon_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -353,7 +359,7 @@ ScriptedImporter:
         width: 40
         height: 34
       spriteId: 2e7035347f71bff47b0fea19e2a55133
-    - name: Tower 03 - Level 01 - Weapon_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -369,3 +375,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 96, y: 96}
+  previousTextureSize: {x: 256, y: 128}

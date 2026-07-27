@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -364,13 +365,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -359782943
+    uuid:
+      value0: 1394687653
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1394687653
     name: SkeletonKingRightAttack03
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SkeletonKingRightAttack03_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -379,7 +385,7 @@ ScriptedImporter:
         width: 29
         height: 33
       spriteId: d3764e4bf6594e04b83eec25ddcf4344
-    - name: SkeletonKingRightAttack03_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -388,7 +394,7 @@ ScriptedImporter:
         width: 43
         height: 36
       spriteId: 84f0c0ab37f640b4bb285321f04dd025
-    - name: SkeletonKingRightAttack03_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -397,7 +403,7 @@ ScriptedImporter:
         width: 45
         height: 35
       spriteId: 5b4286a9b287134498b877b329ea8b9e
-    - name: SkeletonKingRightAttack03_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -406,7 +412,7 @@ ScriptedImporter:
         width: 45
         height: 35
       spriteId: 1eb8e2e3df64e5348ae0c5e7c1c1651c
-    - name: SkeletonKingRightAttack03_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -415,7 +421,7 @@ ScriptedImporter:
         width: 45
         height: 35
       spriteId: af4b1ed6cd4f92c41951f9677c85c631
-    - name: SkeletonKingRightAttack03_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -424,7 +430,7 @@ ScriptedImporter:
         width: 45
         height: 35
       spriteId: 069e4607492d43b49b30abb643a4efe5
-    - name: SkeletonKingRightAttack03_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -433,7 +439,7 @@ ScriptedImporter:
         width: 45
         height: 38
       spriteId: 789c6ee0dc946694d8db0df6e91b81f9
-    - name: SkeletonKingRightAttack03_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -442,7 +448,7 @@ ScriptedImporter:
         width: 47
         height: 40
       spriteId: 778aaad95c1dce249ba3e87776977324
-    - name: SkeletonKingRightAttack03_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -451,7 +457,7 @@ ScriptedImporter:
         width: 48
         height: 42
       spriteId: 8ccd6d60de3eca04681711225ac5625d
-    - name: SkeletonKingRightAttack03_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -460,7 +466,7 @@ ScriptedImporter:
         width: 56
         height: 43
       spriteId: 270407b3c438f0247ad32aa65b08de9e
-    - name: SkeletonKingRightAttack03_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -469,7 +475,7 @@ ScriptedImporter:
         width: 64
         height: 51
       spriteId: e6ab68d61f3a36d4199aa4c6270ca200
-    - name: SkeletonKingRightAttack03_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -485,3 +491,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 256, y: 256}

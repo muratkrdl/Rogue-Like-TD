@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -224,13 +225,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1553248824
+    uuid:
+      value0: 2170617576
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -2124349720
     name: AncientSkeletonUpJump
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: AncientSkeletonUpJump_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -239,7 +245,7 @@ ScriptedImporter:
         width: 35
         height: 55
       spriteId: bd94d1bdd626c7344a6136d650b0a2d7
-    - name: AncientSkeletonUpJump_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -248,7 +254,7 @@ ScriptedImporter:
         width: 43
         height: 52
       spriteId: 6aabfe8b2d21be340911110fc84387b7
-    - name: AncientSkeletonUpJump_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -257,7 +263,7 @@ ScriptedImporter:
         width: 43
         height: 52
       spriteId: be671ffad42fc8e479b8dc16b98dd917
-    - name: AncientSkeletonUpJump_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -266,7 +272,7 @@ ScriptedImporter:
         width: 35
         height: 65
       spriteId: bfdbab767ea37bd42bd8a2ca631cd432
-    - name: AncientSkeletonUpJump_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -282,3 +288,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 80}
+  previousTextureSize: {x: 128, y: 256}

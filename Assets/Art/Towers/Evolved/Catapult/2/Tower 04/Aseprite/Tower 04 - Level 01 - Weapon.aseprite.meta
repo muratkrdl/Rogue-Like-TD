@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -464,13 +465,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -12045192
+    uuid:
+      value0: 1222466648
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1222466648
     name: Tower 04 - Level 01 - Weapon
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Tower 04 - Level 01 - Weapon_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -479,7 +485,7 @@ ScriptedImporter:
         width: 20
         height: 21
       spriteId: c7bf0756146193b4894c5517ef6bc3f4
-    - name: Tower 04 - Level 01 - Weapon_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -488,7 +494,7 @@ ScriptedImporter:
         width: 20
         height: 90
       spriteId: d4f490279b655cd49bce48be8b892100
-    - name: Tower 04 - Level 01 - Weapon_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -497,7 +503,7 @@ ScriptedImporter:
         width: 20
         height: 68
       spriteId: efc9692b56923b34b9ad35fccbf016c4
-    - name: Tower 04 - Level 01 - Weapon_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -506,7 +512,7 @@ ScriptedImporter:
         width: 20
         height: 68
       spriteId: 1b91247f955820e47bf93c4c20862eda
-    - name: Tower 04 - Level 01 - Weapon_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -515,7 +521,7 @@ ScriptedImporter:
         width: 20
         height: 68
       spriteId: edbc7e362bae6ef47a47b652c43891d9
-    - name: Tower 04 - Level 01 - Weapon_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -524,7 +530,7 @@ ScriptedImporter:
         width: 20
         height: 68
       spriteId: cdd833374fc803e47b7957cfca9b1592
-    - name: Tower 04 - Level 01 - Weapon_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -533,7 +539,7 @@ ScriptedImporter:
         width: 20
         height: 65
       spriteId: e02c1f78be63685429ad0d3dfdfc7155
-    - name: Tower 04 - Level 01 - Weapon_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -542,7 +548,7 @@ ScriptedImporter:
         width: 20
         height: 50
       spriteId: bc497882cb22e1746843dafa644a2037
-    - name: Tower 04 - Level 01 - Weapon_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -551,7 +557,7 @@ ScriptedImporter:
         width: 20
         height: 18
       spriteId: cff769bf0d0822a4ebb1a904f1c65641
-    - name: Tower 04 - Level 01 - Weapon_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -560,7 +566,7 @@ ScriptedImporter:
         width: 20
         height: 47
       spriteId: a4e1478998c1db840aaf7f1666f7cb34
-    - name: Tower 04 - Level 01 - Weapon_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -569,7 +575,7 @@ ScriptedImporter:
         width: 20
         height: 74
       spriteId: c8da53839d6130f449425dc547410b03
-    - name: Tower 04 - Level 01 - Weapon_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -578,7 +584,7 @@ ScriptedImporter:
         width: 20
         height: 74
       spriteId: 653aa907901fc6e478028640f209d5b6
-    - name: Tower 04 - Level 01 - Weapon_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -587,7 +593,7 @@ ScriptedImporter:
         width: 20
         height: 73
       spriteId: 162c4f9fbb520df48a86588ef979762b
-    - name: Tower 04 - Level 01 - Weapon_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -596,7 +602,7 @@ ScriptedImporter:
         width: 20
         height: 73
       spriteId: 765e01bc6c357ca4c92996e2a43a77a3
-    - name: Tower 04 - Level 01 - Weapon_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -605,7 +611,7 @@ ScriptedImporter:
         width: 20
         height: 58
       spriteId: f647cd77a9eb9d0458be4f0ce8d51c42
-    - name: Tower 04 - Level 01 - Weapon_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -614,7 +620,7 @@ ScriptedImporter:
         width: 20
         height: 66
       spriteId: 53005bc128502e147a15089281e274b1
-    - name: Tower 04 - Level 01 - Weapon_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -630,3 +636,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 128, y: 128}
+  previousTextureSize: {x: 256, y: 256}

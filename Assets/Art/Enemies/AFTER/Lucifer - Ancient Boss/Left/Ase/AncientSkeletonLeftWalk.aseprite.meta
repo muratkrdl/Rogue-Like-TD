@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -284,13 +285,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 77451025
+    uuid:
+      value0: 1601341589
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1601341589
     name: AncientSkeletonLeftWalk
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: AncientSkeletonLeftWalk_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -299,7 +305,7 @@ ScriptedImporter:
         width: 57
         height: 57
       spriteId: cae753cbd6a3cdf4daa3b10777821ef0
-    - name: AncientSkeletonLeftWalk_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -308,7 +314,7 @@ ScriptedImporter:
         width: 56
         height: 57
       spriteId: a540fc97315680545af3413bec5bc655
-    - name: AncientSkeletonLeftWalk_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -317,7 +323,7 @@ ScriptedImporter:
         width: 56
         height: 57
       spriteId: 4a0b21027c2249a408a28eb5a62585e2
-    - name: AncientSkeletonLeftWalk_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -326,7 +332,7 @@ ScriptedImporter:
         width: 55
         height: 57
       spriteId: ebbba20da774e2e4d800b628ccf3f7d3
-    - name: AncientSkeletonLeftWalk_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -335,7 +341,7 @@ ScriptedImporter:
         width: 58
         height: 57
       spriteId: 214ae928d865ecd44aa4d9e5fd2847a6
-    - name: AncientSkeletonLeftWalk_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -344,7 +350,7 @@ ScriptedImporter:
         width: 61
         height: 57
       spriteId: 25b4cf4e30609f041b1c1ae2f5ed1639
-    - name: AncientSkeletonLeftWalk_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -353,7 +359,7 @@ ScriptedImporter:
         width: 61
         height: 57
       spriteId: 4750a29485b863d4f828d763324eb374
-    - name: AncientSkeletonLeftWalk_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -369,3 +375,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 96, y: 96}
+  previousTextureSize: {x: 256, y: 256}

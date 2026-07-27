@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -364,13 +365,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1522699401
+    uuid:
+      value0: 3696111123
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -598856173
     name: SkeletonWithBowLeftAttack01
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SkeletonWithBowLeftAttack01_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -379,7 +385,7 @@ ScriptedImporter:
         width: 20
         height: 30
       spriteId: 399795eb0f7d97546b58bb7ff40db0fb
-    - name: SkeletonWithBowLeftAttack01_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -388,7 +394,7 @@ ScriptedImporter:
         width: 19
         height: 30
       spriteId: de426a37861abba45882725367b469e7
-    - name: SkeletonWithBowLeftAttack01_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -397,7 +403,7 @@ ScriptedImporter:
         width: 19
         height: 29
       spriteId: cb72b6dd0a2b66d44bdd766c769b034f
-    - name: SkeletonWithBowLeftAttack01_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -406,7 +412,7 @@ ScriptedImporter:
         width: 19
         height: 29
       spriteId: c98601a6a1e935347af4664fb3bfeb88
-    - name: SkeletonWithBowLeftAttack01_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -415,7 +421,7 @@ ScriptedImporter:
         width: 19
         height: 29
       spriteId: ef5f528e763b7f048bdfb86cfd317a53
-    - name: SkeletonWithBowLeftAttack01_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -424,7 +430,7 @@ ScriptedImporter:
         width: 19
         height: 30
       spriteId: f6e667681d368254c9d24e233efc0811
-    - name: SkeletonWithBowLeftAttack01_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -433,7 +439,7 @@ ScriptedImporter:
         width: 19
         height: 29
       spriteId: fed24d5d3c4ae3742bd139e07024b33d
-    - name: SkeletonWithBowLeftAttack01_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -442,7 +448,7 @@ ScriptedImporter:
         width: 19
         height: 29
       spriteId: 37468292314be19428e35cbe14295c3e
-    - name: SkeletonWithBowLeftAttack01_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -451,7 +457,7 @@ ScriptedImporter:
         width: 32
         height: 29
       spriteId: 7cf20d42e49606a4a82f4a324d4b2942
-    - name: SkeletonWithBowLeftAttack01_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -460,7 +466,7 @@ ScriptedImporter:
         width: 30
         height: 29
       spriteId: 08e5f1a3359d53741a7354f6ee0f8858
-    - name: SkeletonWithBowLeftAttack01_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -469,7 +475,7 @@ ScriptedImporter:
         width: 19
         height: 29
       spriteId: 194e81ab8022c2c46bb7c1fa6ac1c6ad
-    - name: SkeletonWithBowLeftAttack01_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -485,3 +491,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 256}

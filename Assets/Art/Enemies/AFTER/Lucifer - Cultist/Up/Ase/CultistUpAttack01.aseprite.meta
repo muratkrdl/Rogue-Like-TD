@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -344,13 +345,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1618033044
+    uuid:
+      value0: 407029532
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 407029532
     name: CultistUpAttack01
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: CultistUpAttack01_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -359,7 +365,7 @@ ScriptedImporter:
         width: 22
         height: 31
       spriteId: c6ac8d6853b264647903c79927e6ed52
-    - name: CultistUpAttack01_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -368,7 +374,7 @@ ScriptedImporter:
         width: 22
         height: 33
       spriteId: 90fa31e82da22ed479b7501ffa8126dc
-    - name: CultistUpAttack01_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -377,7 +383,7 @@ ScriptedImporter:
         width: 24
         height: 34
       spriteId: 46c9bdfcee6ac5446946c169ee689d4a
-    - name: CultistUpAttack01_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -386,7 +392,7 @@ ScriptedImporter:
         width: 24
         height: 34
       spriteId: 137ceb54bdb760f45bb3cb84a5be093f
-    - name: CultistUpAttack01_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -395,7 +401,7 @@ ScriptedImporter:
         width: 22
         height: 29
       spriteId: f19d38da6b14dd54d8c67e5e08b3488e
-    - name: CultistUpAttack01_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -404,7 +410,7 @@ ScriptedImporter:
         width: 22
         height: 29
       spriteId: 03755cf28677f3647838b493aea9a1f0
-    - name: CultistUpAttack01_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -413,7 +419,7 @@ ScriptedImporter:
         width: 22
         height: 29
       spriteId: 3cced2ec2697d554c9b4eb4eb8fab823
-    - name: CultistUpAttack01_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -422,7 +428,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: cd216216887f4d649ac7324024f2065a
-    - name: CultistUpAttack01_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -431,7 +437,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 0a3f7fae277de464ea26d5cfdf5af2dd
-    - name: CultistUpAttack01_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -440,7 +446,7 @@ ScriptedImporter:
         width: 14
         height: 29
       spriteId: d9a5a8e7fc402d44c95fa64869fa2ca3
-    - name: CultistUpAttack01_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -456,3 +462,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 256}

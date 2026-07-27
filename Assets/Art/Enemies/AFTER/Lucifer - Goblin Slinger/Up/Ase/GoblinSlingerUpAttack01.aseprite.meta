@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -544,13 +545,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 74188609
+    uuid:
+      value0: 487021957
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 487021957
     name: GoblinSlingerUpAttack01
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GoblinSlingerUpAttack01_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -559,7 +565,7 @@ ScriptedImporter:
         width: 21
         height: 31
       spriteId: fbc3cceb9e5bddc49a4e8679d7977474
-    - name: GoblinSlingerUpAttack01_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -568,7 +574,7 @@ ScriptedImporter:
         width: 16
         height: 31
       spriteId: 898682898b8247a449d63f06b72e1fec
-    - name: GoblinSlingerUpAttack01_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -577,7 +583,7 @@ ScriptedImporter:
         width: 16
         height: 30
       spriteId: f88a00a80a0559740a1369ba3874db0f
-    - name: GoblinSlingerUpAttack01_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -586,7 +592,7 @@ ScriptedImporter:
         width: 16
         height: 30
       spriteId: 19949ac593ab06d46b8d0fc689e6a8ea
-    - name: GoblinSlingerUpAttack01_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -595,7 +601,7 @@ ScriptedImporter:
         width: 16
         height: 30
       spriteId: 27e80cc369c5b0a4cb03235a91d9d49d
-    - name: GoblinSlingerUpAttack01_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -604,7 +610,7 @@ ScriptedImporter:
         width: 16
         height: 31
       spriteId: 303a213c5e655564cb508d886b94039f
-    - name: GoblinSlingerUpAttack01_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -613,7 +619,7 @@ ScriptedImporter:
         width: 16
         height: 30
       spriteId: 769e476460e37214b9ad0170b2b9ac8c
-    - name: GoblinSlingerUpAttack01_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -622,7 +628,7 @@ ScriptedImporter:
         width: 16
         height: 30
       spriteId: 0adfeea1a8f6c2840a5b124dd344ca31
-    - name: GoblinSlingerUpAttack01_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -631,7 +637,7 @@ ScriptedImporter:
         width: 16
         height: 30
       spriteId: 17710c288ea79954b94f092afaaea9da
-    - name: GoblinSlingerUpAttack01_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -640,7 +646,7 @@ ScriptedImporter:
         width: 16
         height: 33
       spriteId: 3f64435aa39247b4590f11f3cf782ec3
-    - name: GoblinSlingerUpAttack01_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -649,7 +655,7 @@ ScriptedImporter:
         width: 16
         height: 43
       spriteId: 77a4360f8bff86440b6f8b56c7ad86c4
-    - name: GoblinSlingerUpAttack01_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -658,7 +664,7 @@ ScriptedImporter:
         width: 16
         height: 31
       spriteId: 2728b3181e449ac4a8111265d31cd49c
-    - name: GoblinSlingerUpAttack01_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -667,7 +673,7 @@ ScriptedImporter:
         width: 16
         height: 30
       spriteId: 820b938d889c144418f52076bf4c331b
-    - name: GoblinSlingerUpAttack01_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -676,7 +682,7 @@ ScriptedImporter:
         width: 16
         height: 30
       spriteId: 0ed7a09606b8a7e42b8bb1b8fd884f47
-    - name: GoblinSlingerUpAttack01_Frame_14
+    - name: Frame_14
       frameIndex: 14
       additiveSortOrder: 0
       cellRect:
@@ -685,7 +691,7 @@ ScriptedImporter:
         width: 16
         height: 30
       spriteId: e33b4a452195f2447a4abc4e029ca28c
-    - name: GoblinSlingerUpAttack01_Frame_15
+    - name: Frame_15
       frameIndex: 15
       additiveSortOrder: 0
       cellRect:
@@ -694,7 +700,7 @@ ScriptedImporter:
         width: 16
         height: 33
       spriteId: ed1c146b5853a0047bfb2a5aab11c320
-    - name: GoblinSlingerUpAttack01_Frame_16
+    - name: Frame_16
       frameIndex: 16
       additiveSortOrder: 0
       cellRect:
@@ -703,7 +709,7 @@ ScriptedImporter:
         width: 16
         height: 43
       spriteId: d2f9462b02c450443af64f11a7e76893
-    - name: GoblinSlingerUpAttack01_Frame_17
+    - name: Frame_17
       frameIndex: 17
       additiveSortOrder: 0
       cellRect:
@@ -712,7 +718,7 @@ ScriptedImporter:
         width: 16
         height: 31
       spriteId: 462c4a40a6486514b81a93434c21b146
-    - name: GoblinSlingerUpAttack01_Frame_18
+    - name: Frame_18
       frameIndex: 18
       additiveSortOrder: 0
       cellRect:
@@ -721,7 +727,7 @@ ScriptedImporter:
         width: 16
         height: 30
       spriteId: f59e8125cbe289e44aefdd4ec5a4dfd7
-    - name: GoblinSlingerUpAttack01_Frame_19
+    - name: Frame_19
       frameIndex: 19
       additiveSortOrder: 0
       cellRect:
@@ -730,7 +736,7 @@ ScriptedImporter:
         width: 16
         height: 30
       spriteId: 44e6a8a018b0926419c8e2dc0de64804
-    - name: GoblinSlingerUpAttack01_Frame_20
+    - name: Frame_20
       frameIndex: 20
       additiveSortOrder: 0
       cellRect:
@@ -746,3 +752,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 256}

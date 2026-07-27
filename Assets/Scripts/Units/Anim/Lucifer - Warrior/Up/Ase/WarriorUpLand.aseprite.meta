@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -224,13 +225,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1682569412
+    uuid:
+      value0: 2881974484
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1412992812
     name: WarriorUpLand
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: WarriorUpLand_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -239,7 +245,7 @@ ScriptedImporter:
         width: 59
         height: 105
       spriteId: f9f222c6eaea77645a350883e7fbe34a
-    - name: WarriorUpLand_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -248,7 +254,7 @@ ScriptedImporter:
         width: 59
         height: 103
       spriteId: 98f56fc963efe1a448ffdeed99f83d9f
-    - name: WarriorUpLand_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -257,7 +263,7 @@ ScriptedImporter:
         width: 59
         height: 103
       spriteId: bfafd733c08c7c0409e7157d6e138b81
-    - name: WarriorUpLand_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -266,7 +272,7 @@ ScriptedImporter:
         width: 59
         height: 104
       spriteId: 53d9461f967f85846aa4a81c97692c95
-    - name: WarriorUpLand_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -282,3 +288,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 256, y: 256}

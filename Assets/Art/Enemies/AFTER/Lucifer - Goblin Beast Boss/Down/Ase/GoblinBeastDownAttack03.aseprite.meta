@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -404,13 +405,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 54022741
+    uuid:
+      value0: 1763560937
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1763560937
     name: GoblinBeastDownAttack03
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GoblinBeastDownAttack03_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -419,7 +425,7 @@ ScriptedImporter:
         width: 24
         height: 33
       spriteId: 3b79f2dd3ce12ac47a1df434f3d360bd
-    - name: GoblinBeastDownAttack03_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -428,7 +434,7 @@ ScriptedImporter:
         width: 24
         height: 33
       spriteId: 207449aa0984ffd408d6e72d48d0800a
-    - name: GoblinBeastDownAttack03_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -437,7 +443,7 @@ ScriptedImporter:
         width: 24
         height: 33
       spriteId: 0583d4f43e3838e4da1300ee85154596
-    - name: GoblinBeastDownAttack03_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -446,7 +452,7 @@ ScriptedImporter:
         width: 23
         height: 32
       spriteId: d3c86ec0246cce34fac86a81004a21c3
-    - name: GoblinBeastDownAttack03_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -455,7 +461,7 @@ ScriptedImporter:
         width: 23
         height: 31
       spriteId: 6c4ce0c6d1282b54eaf07d2e90b91e3e
-    - name: GoblinBeastDownAttack03_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -464,7 +470,7 @@ ScriptedImporter:
         width: 23
         height: 32
       spriteId: d830734239dbfc642b9b71e2a44e481b
-    - name: GoblinBeastDownAttack03_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -473,7 +479,7 @@ ScriptedImporter:
         width: 23
         height: 31
       spriteId: 91671c14070b54449bc946f2a207de02
-    - name: GoblinBeastDownAttack03_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -482,7 +488,7 @@ ScriptedImporter:
         width: 24
         height: 33
       spriteId: ba542e52da5b3ad4cb862f3cee1babdf
-    - name: GoblinBeastDownAttack03_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -491,7 +497,7 @@ ScriptedImporter:
         width: 24
         height: 33
       spriteId: 92971cf7b02542245bca08d1a793ae7a
-    - name: GoblinBeastDownAttack03_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -500,7 +506,7 @@ ScriptedImporter:
         width: 24
         height: 33
       spriteId: cdf5c914003e8bb4aa79f43284055a61
-    - name: GoblinBeastDownAttack03_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -509,7 +515,7 @@ ScriptedImporter:
         width: 23
         height: 32
       spriteId: 20f5e0540dd1d2e4d89eb024a3b7e64d
-    - name: GoblinBeastDownAttack03_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -518,7 +524,7 @@ ScriptedImporter:
         width: 23
         height: 31
       spriteId: 86ddbdaae7bfda244b825413e1f931fe
-    - name: GoblinBeastDownAttack03_Frame_12
+    - name: Frame_12
       frameIndex: 12
       additiveSortOrder: 0
       cellRect:
@@ -527,7 +533,7 @@ ScriptedImporter:
         width: 23
         height: 32
       spriteId: b37f8dabce9992445b59e059fcbce40b
-    - name: GoblinBeastDownAttack03_Frame_13
+    - name: Frame_13
       frameIndex: 13
       additiveSortOrder: 0
       cellRect:
@@ -543,3 +549,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 128, y: 256}

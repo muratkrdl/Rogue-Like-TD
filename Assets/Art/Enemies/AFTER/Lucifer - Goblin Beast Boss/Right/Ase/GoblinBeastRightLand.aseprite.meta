@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -204,13 +205,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1853426029
+    uuid:
+      value0: 2937979039
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1356988257
     name: GoblinBeastRightLand
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GoblinBeastRightLand_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -219,7 +225,7 @@ ScriptedImporter:
         width: 34
         height: 31
       spriteId: cbfd88dbaa8f4bc48a3f567d9fd0e716
-    - name: GoblinBeastRightLand_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -228,7 +234,7 @@ ScriptedImporter:
         width: 24
         height: 25
       spriteId: 90abbc70935551041af3d1d2f5a7c1a5
-    - name: GoblinBeastRightLand_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -237,7 +243,7 @@ ScriptedImporter:
         width: 24
         height: 25
       spriteId: 084a3405a8a719946b6808ed5540232e
-    - name: GoblinBeastRightLand_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -253,3 +259,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 64, y: 128}

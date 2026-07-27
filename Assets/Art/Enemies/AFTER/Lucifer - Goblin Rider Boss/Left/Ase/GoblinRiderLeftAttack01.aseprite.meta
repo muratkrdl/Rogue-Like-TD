@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -244,13 +245,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1218199775
+    uuid:
+      value0: 3519099675
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -775867621
     name: GoblinRiderLeftAttack01
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GoblinRiderLeftAttack01_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -259,7 +265,7 @@ ScriptedImporter:
         width: 65
         height: 44
       spriteId: f31e1d064a9dd15499e293bde114bbd0
-    - name: GoblinRiderLeftAttack01_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -268,7 +274,7 @@ ScriptedImporter:
         width: 65
         height: 44
       spriteId: f100149befde8a34397869d663dd46b4
-    - name: GoblinRiderLeftAttack01_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -277,7 +283,7 @@ ScriptedImporter:
         width: 65
         height: 45
       spriteId: f984b22d3073c6f49a27d97e83eea091
-    - name: GoblinRiderLeftAttack01_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -286,7 +292,7 @@ ScriptedImporter:
         width: 62
         height: 40
       spriteId: 9b44ad1eac03dd545af72b2c7c93c08e
-    - name: GoblinRiderLeftAttack01_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -295,7 +301,7 @@ ScriptedImporter:
         width: 64
         height: 41
       spriteId: 54468b358fbebfa4bb6b006c8ee89c88
-    - name: GoblinRiderLeftAttack01_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -311,3 +317,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 80}
+  previousTextureSize: {x: 256, y: 128}

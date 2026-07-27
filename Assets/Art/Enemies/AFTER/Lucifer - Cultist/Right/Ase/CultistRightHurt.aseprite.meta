@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -204,13 +205,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -141960301
+    uuid:
+      value0: 1687337375
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1687337375
     name: CultistRightHurt
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: CultistRightHurt_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -219,7 +225,7 @@ ScriptedImporter:
         width: 12
         height: 29
       spriteId: 5c92f9d008de6e3478f44d5ddc76eb52
-    - name: CultistRightHurt_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -228,7 +234,7 @@ ScriptedImporter:
         width: 14
         height: 29
       spriteId: ce04326aea4c40146a45e15ec774c1b5
-    - name: CultistRightHurt_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -237,7 +243,7 @@ ScriptedImporter:
         width: 12
         height: 29
       spriteId: 75596685102a187469bdb9c5cfafa63b
-    - name: CultistRightHurt_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -253,3 +259,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 64, y: 128}

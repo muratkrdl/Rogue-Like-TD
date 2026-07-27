@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -344,13 +345,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 133786697
+    uuid:
+      value0: 3981566125
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -313401171
     name: CultistRightAttack01
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: CultistRightAttack01_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -359,7 +365,7 @@ ScriptedImporter:
         width: 12
         height: 29
       spriteId: 36b1a48443621a94687af4ba9764cbf7
-    - name: CultistRightAttack01_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -368,7 +374,7 @@ ScriptedImporter:
         width: 22
         height: 31
       spriteId: 833d53c6ec7229540922d3da8ca6bc51
-    - name: CultistRightAttack01_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -377,7 +383,7 @@ ScriptedImporter:
         width: 22
         height: 32
       spriteId: 182e5faf4bad1ae489306b78a5b1a07d
-    - name: CultistRightAttack01_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -386,7 +392,7 @@ ScriptedImporter:
         width: 22
         height: 33
       spriteId: 96092fda0d831024d9d5202baab0aacb
-    - name: CultistRightAttack01_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -395,7 +401,7 @@ ScriptedImporter:
         width: 22
         height: 33
       spriteId: e44f3ee89b2288746a141d7e2aacf771
-    - name: CultistRightAttack01_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -404,7 +410,7 @@ ScriptedImporter:
         width: 20
         height: 29
       spriteId: fd09abfe69a1be844bc696ed24401dc8
-    - name: CultistRightAttack01_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -413,7 +419,7 @@ ScriptedImporter:
         width: 20
         height: 29
       spriteId: 06bb499d7bcf537498039089bc8a28d5
-    - name: CultistRightAttack01_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -422,7 +428,7 @@ ScriptedImporter:
         width: 20
         height: 29
       spriteId: 88d16ae74fd43224db38b74e20e16718
-    - name: CultistRightAttack01_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -431,7 +437,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: 5280c3dbfa9c6654596efa71c0869c07
-    - name: CultistRightAttack01_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -440,7 +446,7 @@ ScriptedImporter:
         width: 48
         height: 48
       spriteId: daf8aded846fcbe4e98d15ce8080ee4d
-    - name: CultistRightAttack01_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -456,3 +462,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 256}

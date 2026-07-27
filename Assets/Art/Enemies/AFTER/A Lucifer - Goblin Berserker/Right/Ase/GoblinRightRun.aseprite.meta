@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -244,13 +245,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -748809554
+    uuid:
+      value0: 1339614950
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1339614950
     name: GoblinRightRun
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GoblinRightRun_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -259,7 +265,7 @@ ScriptedImporter:
         width: 27
         height: 28
       spriteId: d5f8fadd3eb52fc479dcbf6e83a9e616
-    - name: GoblinRightRun_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -268,7 +274,7 @@ ScriptedImporter:
         width: 24
         height: 28
       spriteId: b1f7de0ff10c8b143b197ab883e7dc41
-    - name: GoblinRightRun_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -277,7 +283,7 @@ ScriptedImporter:
         width: 24
         height: 27
       spriteId: 092d7e805ec914543b4d3f3ebe0dad48
-    - name: GoblinRightRun_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -286,7 +292,7 @@ ScriptedImporter:
         width: 27
         height: 28
       spriteId: fb17c11edeacbe341817bb4b41b20eab
-    - name: GoblinRightRun_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -295,7 +301,7 @@ ScriptedImporter:
         width: 31
         height: 29
       spriteId: a5187bae56443c74c9047707462548af
-    - name: GoblinRightRun_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -311,3 +317,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}

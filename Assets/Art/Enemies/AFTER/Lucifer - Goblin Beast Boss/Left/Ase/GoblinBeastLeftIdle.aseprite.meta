@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -244,13 +245,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1340041369
+    uuid:
+      value0: 1078480323
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1078480323
     name: GoblinBeastLeftIdle
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GoblinBeastLeftIdle_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -259,7 +265,7 @@ ScriptedImporter:
         width: 24
         height: 33
       spriteId: 621e6d755a900c846a0525c62b7f5c86
-    - name: GoblinBeastLeftIdle_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -268,7 +274,7 @@ ScriptedImporter:
         width: 24
         height: 33
       spriteId: a6a5c57b60927254c955f2ce3f2704ef
-    - name: GoblinBeastLeftIdle_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -277,7 +283,7 @@ ScriptedImporter:
         width: 24
         height: 32
       spriteId: dd97b1a138d1abd40bbb2f86a492c372
-    - name: GoblinBeastLeftIdle_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -286,7 +292,7 @@ ScriptedImporter:
         width: 24
         height: 32
       spriteId: 4cd0f7155b2dfee499c184e4b9e240c9
-    - name: GoblinBeastLeftIdle_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -295,7 +301,7 @@ ScriptedImporter:
         width: 21
         height: 32
       spriteId: 14c20b7c5430c6d4db40226bfc780ab0
-    - name: GoblinBeastLeftIdle_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -311,3 +317,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 64, y: 128}

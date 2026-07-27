@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -204,13 +205,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1165173767
+    uuid:
+      value0: 267528989
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 267528989
     name: SorceressUpLand
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SorceressUpLand_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -219,7 +225,7 @@ ScriptedImporter:
         width: 22
         height: 32
       spriteId: f19c0edf75be3bd41b2cf9a7d998532a
-    - name: SorceressUpLand_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -228,7 +234,7 @@ ScriptedImporter:
         width: 16
         height: 29
       spriteId: 5491c424caffb414cb7dfc33a9f5d9f8
-    - name: SorceressUpLand_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -237,7 +243,7 @@ ScriptedImporter:
         width: 16
         height: 29
       spriteId: 68d404f2a78071e44be460628e9a05a2
-    - name: SorceressUpLand_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -253,3 +259,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 64, y: 128}

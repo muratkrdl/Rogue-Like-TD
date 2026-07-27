@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -244,13 +245,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -926712112
+    uuid:
+      value0: 3892346384
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -402620912
     name: Tower 06 - Level 03 - Weapon
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Tower 06 - Level 03 - Weapon_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -259,7 +265,7 @@ ScriptedImporter:
         width: 50
         height: 42
       spriteId: c0939f59c2c9e5e41b077b450bdfccb0
-    - name: Tower 06 - Level 03 - Weapon_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -268,7 +274,7 @@ ScriptedImporter:
         width: 50
         height: 63
       spriteId: 72ea912d2dd660b468b9d31c3524ac71
-    - name: Tower 06 - Level 03 - Weapon_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -277,7 +283,7 @@ ScriptedImporter:
         width: 50
         height: 36
       spriteId: 491b42c1ce950bc4aadcc8543d282665
-    - name: Tower 06 - Level 03 - Weapon_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -286,7 +292,7 @@ ScriptedImporter:
         width: 50
         height: 36
       spriteId: 68ad4edc1144d5749a6e4ab08da5e9ea
-    - name: Tower 06 - Level 03 - Weapon_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -295,7 +301,7 @@ ScriptedImporter:
         width: 50
         height: 36
       spriteId: 0e6c2948269a81d4fa8693f48420ef2d
-    - name: Tower 06 - Level 03 - Weapon_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -311,3 +317,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 96, y: 96}
+  previousTextureSize: {x: 128, y: 256}

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -244,13 +245,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 729560979
+    uuid:
+      value0: 899777951
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 899777951
     name: CultistLeftIdle
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: CultistLeftIdle_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -259,7 +265,7 @@ ScriptedImporter:
         width: 12
         height: 29
       spriteId: 56b082af40f15014cb2b6a1c91bae5e6
-    - name: CultistLeftIdle_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -268,7 +274,7 @@ ScriptedImporter:
         width: 12
         height: 29
       spriteId: 63236a0e280aa0a40acf2bdedccb5f05
-    - name: CultistLeftIdle_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -277,7 +283,7 @@ ScriptedImporter:
         width: 12
         height: 28
       spriteId: a0bc865684c18294da2cc2d0cad0f030
-    - name: CultistLeftIdle_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -286,7 +292,7 @@ ScriptedImporter:
         width: 12
         height: 28
       spriteId: 2c5ff8370bbe2ea408bbdb917c0620d2
-    - name: CultistLeftIdle_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -295,7 +301,7 @@ ScriptedImporter:
         width: 12
         height: 28
       spriteId: 3748fdaa7e4e58d4e9b0373dc229ca71
-    - name: CultistLeftIdle_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -311,3 +317,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 64, y: 128}

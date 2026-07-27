@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -364,13 +365,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 107125998
+    uuid:
+      value0: 4197870118
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -97097178
     name: SkeletonKingUpAttack03
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SkeletonKingUpAttack03_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -379,7 +385,7 @@ ScriptedImporter:
         width: 29
         height: 33
       spriteId: f5bf0e2ce4b840543b8175d7e2d26500
-    - name: SkeletonKingUpAttack03_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -388,7 +394,7 @@ ScriptedImporter:
         width: 43
         height: 38
       spriteId: 215f60b1d64f0214eba50f22dfe8b8c3
-    - name: SkeletonKingUpAttack03_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -397,7 +403,7 @@ ScriptedImporter:
         width: 47
         height: 34
       spriteId: 6417fbd7fb6f813458b18ce3f4950dfc
-    - name: SkeletonKingUpAttack03_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -406,7 +412,7 @@ ScriptedImporter:
         width: 47
         height: 34
       spriteId: 0408ba928df032d4ab520b14b64f29c0
-    - name: SkeletonKingUpAttack03_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -415,7 +421,7 @@ ScriptedImporter:
         width: 47
         height: 34
       spriteId: d33cf8b42945b344b8065229730bf656
-    - name: SkeletonKingUpAttack03_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -424,7 +430,7 @@ ScriptedImporter:
         width: 47
         height: 34
       spriteId: 08f95430e6a236643b9604f212d16688
-    - name: SkeletonKingUpAttack03_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -433,7 +439,7 @@ ScriptedImporter:
         width: 47
         height: 38
       spriteId: 6031eb65454c6dd4784203108c1f4cff
-    - name: SkeletonKingUpAttack03_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -442,7 +448,7 @@ ScriptedImporter:
         width: 49
         height: 40
       spriteId: 93368dca1ae70d547b26ebb0dfb03b22
-    - name: SkeletonKingUpAttack03_Frame_8
+    - name: Frame_8
       frameIndex: 8
       additiveSortOrder: 0
       cellRect:
@@ -451,7 +457,7 @@ ScriptedImporter:
         width: 50
         height: 42
       spriteId: 271d9b6e1cb81c94f9a4bb906d4ef3d7
-    - name: SkeletonKingUpAttack03_Frame_9
+    - name: Frame_9
       frameIndex: 9
       additiveSortOrder: 0
       cellRect:
@@ -460,7 +466,7 @@ ScriptedImporter:
         width: 58
         height: 42
       spriteId: e7ecd4ab8cf77ad4885e04728210a572
-    - name: SkeletonKingUpAttack03_Frame_10
+    - name: Frame_10
       frameIndex: 10
       additiveSortOrder: 0
       cellRect:
@@ -469,7 +475,7 @@ ScriptedImporter:
         width: 64
         height: 50
       spriteId: 2e6e00d323a88c444b9243011372ac9c
-    - name: SkeletonKingUpAttack03_Frame_11
+    - name: Frame_11
       frameIndex: 11
       additiveSortOrder: 0
       cellRect:
@@ -485,3 +491,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
+  previousTextureSize: {x: 256, y: 256}

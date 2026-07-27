@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -284,13 +285,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -94369063
+    uuid:
+      value0: 2120199549
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 2120199549
     name: SkeletonWithSwordLefttDeath
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SkeletonWithSwordLefttDeath_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -299,7 +305,7 @@ ScriptedImporter:
         width: 19
         height: 18
       spriteId: 432254c7a90971c4b87c02626a44d91f
-    - name: SkeletonWithSwordLefttDeath_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -308,7 +314,7 @@ ScriptedImporter:
         width: 19
         height: 18
       spriteId: fa9fcee451d38064b976773148794f6e
-    - name: SkeletonWithSwordLefttDeath_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -317,7 +323,7 @@ ScriptedImporter:
         width: 19
         height: 18
       spriteId: 2199a019ca49d35409bd5d34a142ef09
-    - name: SkeletonWithSwordLefttDeath_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -326,7 +332,7 @@ ScriptedImporter:
         width: 24
         height: 29
       spriteId: 8678bfaf4b9e63d4ca8aa168ff0960ce
-    - name: SkeletonWithSwordLefttDeath_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -335,7 +341,7 @@ ScriptedImporter:
         width: 27
         height: 36
       spriteId: 2775bfaf363f1aa4ab9e4b3c3aab3f01
-    - name: SkeletonWithSwordLefttDeath_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -344,7 +350,7 @@ ScriptedImporter:
         width: 27
         height: 35
       spriteId: bdb9d58fc7a129b4386ce9e5038d558c
-    - name: SkeletonWithSwordLefttDeath_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -353,7 +359,7 @@ ScriptedImporter:
         width: 29
         height: 42
       spriteId: 349175e6732aead4d987aafd085253c6
-    - name: SkeletonWithSwordLefttDeath_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -369,3 +375,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}

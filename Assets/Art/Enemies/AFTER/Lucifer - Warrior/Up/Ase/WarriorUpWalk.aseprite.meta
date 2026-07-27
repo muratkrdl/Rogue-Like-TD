@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -284,13 +285,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1682336540
+    uuid:
+      value0: 1423811956
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1423811956
     name: WarriorUpWalk
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: WarriorUpWalk_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -299,7 +305,7 @@ ScriptedImporter:
         width: 22
         height: 32
       spriteId: d787a3bc78201c74b9185b390e2b4c80
-    - name: WarriorUpWalk_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -308,7 +314,7 @@ ScriptedImporter:
         width: 60
         height: 104
       spriteId: 5dc7f2340dbcd5c4dacea0575f439985
-    - name: WarriorUpWalk_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -317,7 +323,7 @@ ScriptedImporter:
         width: 60
         height: 105
       spriteId: 76173e57a2819a643a9abaa4325e4313
-    - name: WarriorUpWalk_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -326,7 +332,7 @@ ScriptedImporter:
         width: 60
         height: 105
       spriteId: 528e5698c05f4404686f440eea290480
-    - name: WarriorUpWalk_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -335,7 +341,7 @@ ScriptedImporter:
         width: 22
         height: 32
       spriteId: 69eeef3ff1d12c34291fb804261f2e7f
-    - name: WarriorUpWalk_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -344,7 +350,7 @@ ScriptedImporter:
         width: 57
         height: 104
       spriteId: 4d0e2f1ab1ebecd4696042e28dfc9890
-    - name: WarriorUpWalk_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -353,7 +359,7 @@ ScriptedImporter:
         width: 57
         height: 105
       spriteId: 8d0ff43711175644aad7fcc80a8ce6e5
-    - name: WarriorUpWalk_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -369,3 +375,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 256, y: 256}

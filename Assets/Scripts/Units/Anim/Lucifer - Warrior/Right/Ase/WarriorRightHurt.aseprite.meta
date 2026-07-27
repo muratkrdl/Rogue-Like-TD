@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -204,13 +205,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 622186425
+    uuid:
+      value0: 98934237
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 98934237
     name: WarriorRightHurt
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: WarriorRightHurt_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -219,7 +225,7 @@ ScriptedImporter:
         width: 47
         height: 32
       spriteId: 1585a621de0df8d42a07d35f91d0693d
-    - name: WarriorRightHurt_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -228,7 +234,7 @@ ScriptedImporter:
         width: 43
         height: 32
       spriteId: c03f748a15f7f1344a7d6a259aa5b1d9
-    - name: WarriorRightHurt_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -237,7 +243,7 @@ ScriptedImporter:
         width: 43
         height: 32
       spriteId: 4e2adac9b73f97a45ad71640836ed704
-    - name: WarriorRightHurt_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -253,3 +259,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}

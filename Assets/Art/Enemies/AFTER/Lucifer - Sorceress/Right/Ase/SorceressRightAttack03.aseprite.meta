@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -264,13 +265,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -738324236
+    uuid:
+      value0: 1664198084
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1664198084
     name: SorceressRightAttack03
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SorceressRightAttack03_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -279,7 +285,7 @@ ScriptedImporter:
         width: 18
         height: 32
       spriteId: 97d5c8b6c33ac8642a8a537431706701
-    - name: SorceressRightAttack03_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -288,7 +294,7 @@ ScriptedImporter:
         width: 24
         height: 32
       spriteId: 0c7df7b83f7cca745a56cc70939d1326
-    - name: SorceressRightAttack03_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -297,7 +303,7 @@ ScriptedImporter:
         width: 24
         height: 32
       spriteId: dba09b02a4657454494e76a5a33dd965
-    - name: SorceressRightAttack03_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -306,7 +312,7 @@ ScriptedImporter:
         width: 20
         height: 35
       spriteId: 0f2ae0ae900d4aa40bd1a818460e1efd
-    - name: SorceressRightAttack03_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -315,7 +321,7 @@ ScriptedImporter:
         width: 26
         height: 23
       spriteId: 8a48b45e3bfd1ba44984bdd282ada78e
-    - name: SorceressRightAttack03_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -324,7 +330,7 @@ ScriptedImporter:
         width: 32
         height: 23
       spriteId: 69f7c2c73081ad146bd2afc100790ba7
-    - name: SorceressRightAttack03_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -340,3 +346,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}

@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -204,13 +205,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -149036099
+    uuid:
+      value0: 2823268081
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1471699215
     name: Tower 06 - Level 03 - Projectile
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Tower 06 - Level 03 - Projectile_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -219,7 +225,7 @@ ScriptedImporter:
         width: 10
         height: 37
       spriteId: e30f21f0789b54a43b10bc7d47936807
-    - name: Tower 06 - Level 03 - Projectile_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -228,7 +234,7 @@ ScriptedImporter:
         width: 8
         height: 37
       spriteId: 13578a1dfa2966a4e92a2cfbcea33951
-    - name: Tower 06 - Level 03 - Projectile_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -237,7 +243,7 @@ ScriptedImporter:
         width: 6
         height: 37
       spriteId: 02dd9a26a43f24d48b721be286d85d06
-    - name: Tower 06 - Level 03 - Projectile_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -253,3 +259,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 10, y: 37}
+  previousTextureSize: {x: 64, y: 64}

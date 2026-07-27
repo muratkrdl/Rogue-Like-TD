@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -140,7 +141,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 73, y: 69}
+    uvTransform: {x: 93, y: 86}
   - name: AncientSkeletonDownAttack01_Frame_1
     originalName: 
     pivot: {x: 0.5833333, y: -0.3090909}
@@ -160,7 +161,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 30, y: 69}
+    uvTransform: {x: 49, y: 86}
   - name: AncientSkeletonDownAttack01_Frame_2
     originalName: 
     pivot: {x: 0.45945945, y: -0.34545454}
@@ -180,7 +181,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 115, y: -13}
+    uvTransform: {x: 138, y: 4}
   - name: AncientSkeletonDownAttack01_Frame_3
     originalName: 
     pivot: {x: 0.45945945, y: -0.38181818}
@@ -200,7 +201,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 160, y: -13}
+    uvTransform: {x: 183, y: 4}
   - name: AncientSkeletonDownAttack01_Frame_4
     originalName: 
     pivot: {x: 0.45945945, y: -0.41818184}
@@ -220,7 +221,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -19, y: 69}
+    uvTransform: {x: 4, y: 86}
   - name: AncientSkeletonDownAttack01_Frame_5
     originalName: 
     pivot: {x: 0.5217391, y: -0.013513513}
@@ -240,7 +241,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 0, y: -1}
+    uvTransform: {x: 4, y: 4}
   - name: AncientSkeletonDownAttack01_Frame_6
     originalName: 
     pivot: {x: 0.6938776, y: 0}
@@ -260,78 +261,83 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 75, y: -1}
+    uvTransform: {x: 81, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -484325466
+    uuid:
+      value0: 831808958
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 831808958
     name: AncientSkeletonDownAttack01
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: AncientSkeletonDownAttack01_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 80
-        height: 80
+        x: 20
+        y: 17
+        width: 35
+        height: 55
       spriteId: e743fc7b547419f48abdff1778c3ddca
-    - name: AncientSkeletonDownAttack01_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 80
-        height: 80
+        x: 19
+        y: 17
+        width: 36
+        height: 55
       spriteId: 56d9293682db04a468c23de62a8aa79c
-    - name: AncientSkeletonDownAttack01_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 2
-        width: 80
-        height: 80
+        x: 23
+        y: 19
+        width: 37
+        height: 55
       spriteId: 6c573593238630f4791577ffcc84de1a
-    - name: AncientSkeletonDownAttack01_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 4
-        width: 80
-        height: 80
+        x: 23
+        y: 21
+        width: 37
+        height: 55
       spriteId: f5b512d3fd9c47c46b03e15fefb3e384
-    - name: AncientSkeletonDownAttack01_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: 6
-        width: 80
-        height: 80
+        x: 23
+        y: 23
+        width: 37
+        height: 55
       spriteId: ae40ea172818b7c458be62f956507874
-    - name: AncientSkeletonDownAttack01_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: -4
-        width: 80
-        height: 80
+        x: 4
+        y: 1
+        width: 69
+        height: 74
       spriteId: 05f2109272c05cb4e81ab17f3c74227e
-    - name: AncientSkeletonDownAttack01_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
-        x: 0
-        y: -5
-        width: 80
-        height: 80
+        x: 6
+        y: 0
+        width: 49
+        height: 67
       spriteId: 285424c1bca18c5409c0532c492fd4c0
     linkedCells: []
     parentIndex: -1
@@ -340,3 +346,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 80, y: 80}
+  previousTextureSize: {x: 256, y: 256}

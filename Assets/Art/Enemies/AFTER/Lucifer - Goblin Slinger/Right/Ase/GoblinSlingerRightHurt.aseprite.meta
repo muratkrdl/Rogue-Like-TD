@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -204,13 +205,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1388910888
+    uuid:
+      value0: 2470129608
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: -1824837688
     name: GoblinSlingerRightHurt
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: GoblinSlingerRightHurt_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -219,7 +225,7 @@ ScriptedImporter:
         width: 22
         height: 30
       spriteId: 282b960d5612bca40b956dfcfb9df4fd
-    - name: GoblinSlingerRightHurt_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -228,7 +234,7 @@ ScriptedImporter:
         width: 24
         height: 30
       spriteId: 64df88372f18edd46ad722bd6f7841ac
-    - name: GoblinSlingerRightHurt_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -237,7 +243,7 @@ ScriptedImporter:
         width: 22
         height: 29
       spriteId: e868c77dfe676a242b30518e4ee6263b
-    - name: GoblinSlingerRightHurt_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -253,3 +259,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 64, y: 128}

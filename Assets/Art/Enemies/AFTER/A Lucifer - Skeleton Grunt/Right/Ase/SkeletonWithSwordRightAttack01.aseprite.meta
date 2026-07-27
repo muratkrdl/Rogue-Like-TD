@@ -8,6 +8,7 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  importerVersion: 2
   textureImporterSettings:
     alphaSource: 1
     mipMapMode: 0
@@ -284,13 +285,18 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1975752781
+    uuid:
+      value0: 1596169791
+      value1: 0
+      value2: 0
+      value3: 0
+    guid: 1596169791
     name: SkeletonWithSwordRightAttack01
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: SkeletonWithSwordRightAttack01_Frame_0
+    - name: Frame_0
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -299,7 +305,7 @@ ScriptedImporter:
         width: 17
         height: 29
       spriteId: 0d6458b27bac6bf4f84f92f04740ff9b
-    - name: SkeletonWithSwordRightAttack01_Frame_1
+    - name: Frame_1
       frameIndex: 1
       additiveSortOrder: 0
       cellRect:
@@ -308,7 +314,7 @@ ScriptedImporter:
         width: 19
         height: 29
       spriteId: d7e19ab2c96ccb6499859dac3e849967
-    - name: SkeletonWithSwordRightAttack01_Frame_2
+    - name: Frame_2
       frameIndex: 2
       additiveSortOrder: 0
       cellRect:
@@ -317,7 +323,7 @@ ScriptedImporter:
         width: 19
         height: 28
       spriteId: 8b093bd559fbc8a45b0a3f712c8d3a1d
-    - name: SkeletonWithSwordRightAttack01_Frame_3
+    - name: Frame_3
       frameIndex: 3
       additiveSortOrder: 0
       cellRect:
@@ -326,7 +332,7 @@ ScriptedImporter:
         width: 19
         height: 28
       spriteId: 41e294ceaadc1da49ab1169a65331473
-    - name: SkeletonWithSwordRightAttack01_Frame_4
+    - name: Frame_4
       frameIndex: 4
       additiveSortOrder: 0
       cellRect:
@@ -335,7 +341,7 @@ ScriptedImporter:
         width: 19
         height: 28
       spriteId: d7ab5711c2433624e88e1d67e3441ef7
-    - name: SkeletonWithSwordRightAttack01_Frame_5
+    - name: Frame_5
       frameIndex: 5
       additiveSortOrder: 0
       cellRect:
@@ -344,7 +350,7 @@ ScriptedImporter:
         width: 19
         height: 28
       spriteId: d8c6803bf11a82c42a1f6bd91690086a
-    - name: SkeletonWithSwordRightAttack01_Frame_6
+    - name: Frame_6
       frameIndex: 6
       additiveSortOrder: 0
       cellRect:
@@ -353,7 +359,7 @@ ScriptedImporter:
         width: 24
         height: 29
       spriteId: 03945bceddf637d4ebe0db716554317a
-    - name: SkeletonWithSwordRightAttack01_Frame_7
+    - name: Frame_7
       frameIndex: 7
       additiveSortOrder: 0
       cellRect:
@@ -369,3 +375,4 @@ ScriptedImporter:
   secondarySpriteTextures: []
   spritePackingTag: 
   canvasSize: {x: 48, y: 48}
+  previousTextureSize: {x: 128, y: 128}
