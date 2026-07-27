@@ -31166,6 +31166,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenuButton_1
       objectReference: {fileID: 0}
+    - target: {fileID: 4169249464918100162, guid: 13bf53e567ae3e846acd2983263835ce, type: 3}
+      propertyPath: openMenuName
+      value: Game
+      objectReference: {fileID: 0}
     - target: {fileID: 7064000854244837579, guid: 13bf53e567ae3e846acd2983263835ce, type: 3}
       propertyPath: m_Sprite
       value: 
